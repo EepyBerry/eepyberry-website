@@ -7,7 +7,7 @@
 My website's source code! :3
 
 I've wanted to give back to the open-source community for a while now, and this is one of the first steps.<br>
-I'll be hosting some stuff about myself, bits of my work, and some experiments later on that hopefully someone will enjoy 😊
+I'll be hosting some stuff about myself, bits of my work, and some experiments later on that hopefully someone will enjoy! 😊
 
 ## 📓 Licensing
 
