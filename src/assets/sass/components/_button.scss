@@ -1,0 +1,9 @@
+button[icon-button] {
+  background: none;
+  color: var(--eepy-color-text);
+  border: none;
+  padding: 4px;
+}
+button:hover {
+  cursor: pointer;
+}

@@ -14,13 +14,9 @@ html {
   background: var(--eepy-color-background);
   background-attachment: fixed;
   scroll-behavior: smooth;
-
-  display: flex;
-  flex-direction: column;
 }
 
 body {
-  flex: 1;
   color: var(--eepy-color-text);
   border-radius: 2px;
   min-height: 100%;
@@ -37,4 +33,8 @@ body {
   display: flex;
   flex-direction: column;
   overflow: hidden;
+}
+
+.mono {
+  font-family: monospace;
 }

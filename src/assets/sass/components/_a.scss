@@ -1,0 +1,12 @@
+a, a:visited {
+  padding: 2px 4px;
+  border-radius: 2px;
+  color: var(--eepy-color-text);
+  
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+}
+a:hover {
+  background-color: var(--eepy-color-bg-link-hover);
+}
