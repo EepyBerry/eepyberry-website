@@ -1,0 +1,41 @@
+{
+  "name": "eepyberry-website",
+  "version": "1.0.0",
+  "description": "EepyBerry's personal website's source code",
+  "main": "index.ts",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EepyBerry/eepyberry-website.git"
+  },
+  "keywords": [
+    "vue",
+    "vuejs",
+    "typescript"
+  ],
+  "author": "EepyBerry",
+  "license": "BSD-3-Clause",
+  "bugs": {
+    "url": "https://github.com/EepyBerry/eepyberry-website/issues"
+  },
+  "homepage": "https://github.com/EepyBerry/eepyberry-website#readme",
+  "dependencies": {
+    "vue": "^3.4.21",
+    "vue-router": "^4.3.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.12.2",
+    "@vitejs/plugin-vue": "^5.0.4",
+    "@vue/tsconfig": "^0.5.1",
+    "eslint": "^8.57.0",
+    "eslint-plugin-vue": "^9.24.0",
+    "sass": "^1.72.0",
+    "typescript": "^5.4.3",
+    "vite": "^5.2.7",
+    "vue-tsc": "^2.0.7"
+  }
+}

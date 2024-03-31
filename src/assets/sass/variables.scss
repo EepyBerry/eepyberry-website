@@ -1,0 +1,9 @@
+:root {
+  --eepy-color-background: #ffe6e6;
+  --eepy-color-text: #221a1a;
+}
+
+:root[data-theme='dark'] {
+  --eepy-color-background: #18171d;
+  --eepy-color-text: #ffe6e6;
+}
