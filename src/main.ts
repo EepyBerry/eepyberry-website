@@ -9,6 +9,8 @@ import { far } from '@fortawesome/free-regular-svg-icons'
 import { fab } from '@fortawesome/free-brands-svg-icons'
 import { fas } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
+import AppButton from './components/AppButton.vue'
+import AppDivider from './components/AppDivider.vue'
 
 // FontAwesome icons
 library.add(far, fab, fas)
@@ -17,5 +19,7 @@ library.add(far, fab, fas)
 createApp(App)
   .use(router)
   .provide('ThemeHelper', new ThemeHelper())
+  .component('EepyButton', AppButton)
+  .component('EepyDivider', AppDivider)
   .component('fa-icon', FontAwesomeIcon)
   .mount('#app')

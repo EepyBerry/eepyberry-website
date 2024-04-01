@@ -1,20 +1,22 @@
 <template>
   <header>
-    <AppMenu></AppMenu>
     <AppThemeSelect />
   </header>
+  <aside>
+    <AppMenu />
+  </aside>
   <main>
     <RouterView />
   </main>
   <footer role="contentinfo">
-    <p>© 2024, EepyBerry</p>
-    <hr width="24">
     <p>
       made with 🌈 & ❤️<br>powered by
       <a href="https://vuejs.org" target="_blank" rel="external nofollow noopener">VueJS</a>
       &
       <a href="https://vitejs.dev" target="_blank" rel="external nofollow noopener">Vite</a>
     </p>
+    <hr width="12">
+    <p>© 2024, EepyBerry</p>
   </footer>
 </template>
 
@@ -34,30 +36,41 @@ onMounted(() => themeHelper.getCurrentTheme())
 
 <style lang="scss">
 header {
-  padding: 1.25rem 1.25rem 0;
+  position: sticky;
+  inset: 0 0 auto;
+  padding: 1.25rem;
   text-align: end;
-  z-index: 1;
-
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
 }
 main {
+  padding: 1.25rem;
   flex: 1;
-  overflow-y: auto;
   display: flex;
   flex-direction: column;
 }
 footer {
-  padding: 0 1.25rem 1.25rem;
+  padding: 1.25rem;
 
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  gap: 12px;
+  gap: 8px;
   text-align: end;
-  font-size: 0.875rem;
   font-weight: 500;
   z-index: 1;
+}
+aside {
+  position: fixed;
+  inset: 0 auto 0 0;
+  padding: 1.25rem;
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  z-index: 1;
+}
+
+[data-theme='dark'] header {
+  filter: drop-shadow(0 0 3px rgba(255, 255, 255, 0.5))
 }
 </style>
