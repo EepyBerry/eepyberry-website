@@ -1,6 +1,6 @@
 <template>
   <button icon-button @click="themeHelper.toggleSiteTheme()" aria-label="Open site theme selector">
-    <fa-icon :icon="['far', getThemeIcon()]" size="2x" />
+    <EepyIcon size="xl">{{ getThemeIcon() }}</EepyIcon>
   </button>
 </template>
 
@@ -12,8 +12,8 @@ const themeHelper: ThemeHelper = inject('ThemeHelper') as ThemeHelper
 
 function getThemeIcon() {
   switch (themeHelper.themeRef.value) {
-    case 'light': return 'sun'
-    case 'dark': return 'moon'
+    case 'light': return 'wb_sunny'
+    case 'dark': return 'dark_mode'
     default: return 'hourglass-half'
   }
 }

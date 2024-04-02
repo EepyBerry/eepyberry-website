@@ -1,5 +1,9 @@
 @font-face {
   font-family: 'Dosis';
   src: url("@/assets/fonts/Dosis/Dosis-VariableFont_wght.ttf") format("truetype");
-  font-weight: 550;
+  font-weight: 450;
+}
+
+span.material-symbols-rounded {
+  font-variation-settings: 'FILL' 0;
 }

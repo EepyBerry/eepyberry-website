@@ -4,16 +4,10 @@ import App from './App.vue'
 import router from './router.config'
 import { ThemeHelper } from './utils/theme.helper'
 
-import { library } from '@fortawesome/fontawesome-svg-core'
-import { far } from '@fortawesome/free-regular-svg-icons'
-import { fab } from '@fortawesome/free-brands-svg-icons'
-import { fas } from '@fortawesome/free-solid-svg-icons'
-import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import AppButton from './components/AppButton.vue'
 import AppDivider from './components/AppDivider.vue'
-
-// FontAwesome icons
-library.add(far, fab, fas)
+import '@material-symbols/font-700/rounded.css';
+import AppIcon from './components/AppIcon.vue'
 
 // Main application
 createApp(App)
@@ -21,5 +15,5 @@ createApp(App)
   .provide('ThemeHelper', new ThemeHelper())
   .component('EepyButton', AppButton)
   .component('EepyDivider', AppDivider)
-  .component('fa-icon', FontAwesomeIcon)
+  .component('EepyIcon', AppIcon)
   .mount('#app')

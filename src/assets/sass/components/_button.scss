@@ -1,10 +1,10 @@
 button {
   font-family: Dosis;
   font-size: 1rem;
+  color: var(--eepy-color-text);
 }
 button[icon-button] {
   background: none;
-  color: var(--eepy-color-text);
   border: none;
   padding: 4px;
 }

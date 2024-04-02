@@ -1,25 +1,31 @@
 <template>
   <nav>
-    <router-link to="about">
-        <fa-icon icon="fa-solid fa-house" size="xl" />
-      </router-link>
-      <router-link to="about">
-        <fa-icon icon="fa-regular fa-user" size="xl" />
-      </router-link>
-      <router-link to="projects">
-        <fa-icon icon="fa-regular fa-hard-drive" size="xl" />
-      </router-link>
-      <router-link to="contact">
-        <fa-icon icon="fa-regular fa-envelope-open" size="xl" />
-      </router-link>
-    </nav>
+    <router-link class="nav-link" to="/">
+      <EepyIcon size="xl">cottage</EepyIcon>
+    </router-link>
+    <router-link class="nav-link" to="about">
+      <EepyIcon size="xl">sentiment_excited</EepyIcon>
+    </router-link>
+    <router-link class="nav-link" to="projects">
+      <EepyIcon size="xl">data_object</EepyIcon>
+    </router-link>
+    <router-link class="nav-link" to="contact">
+      <EepyIcon size="xl">mail</EepyIcon>
+    </router-link>
+  </nav>
 </template>
 
+<!------------------------------------------------------------>
 <style scoped lang="scss">
 nav {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 1.5rem;
+  font-size: 2rem;
+  text-decoration: none;
+}
+.nav-link .icon {
+  transform: rotateZ(5deg);
 }
 </style>

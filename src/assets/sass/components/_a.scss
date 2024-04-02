@@ -7,10 +7,7 @@ a:not(.button-link), a:not(.button-link):visited {
   align-items: center;
   gap: 2px;
 }
-a:not(.button-link):hover {
-  background-color: var(--eepy-color-bg-link-hover);
-}
 
-a.button-link {
+a.button-link, a.nav-link {
   text-decoration: none;
 }

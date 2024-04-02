@@ -18,13 +18,13 @@
               -.2rem .2rem 0 var(--eepy-color-card-shadow);
   transition: transform 75ms ease;
   
-  svg {
+  .material-symbols-rounded {
     transform: rotate(7.5deg);
   }
 }
 .eepy-button:hover {
   cursor: pointer;
-  transform: translateY(-7.5%)
+  transform: translateY(-6.25%)
 }
 .eepy-button:active {
   cursor: pointer;

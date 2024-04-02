@@ -38,8 +38,9 @@ onMounted(() => themeHelper.getCurrentTheme())
 header {
   position: sticky;
   inset: 0 0 auto;
-  padding: 1.25rem;
+  padding: 1.25rem 1.25rem 0;
   text-align: end;
+  z-index: 1;
 }
 main {
   padding: 1.25rem;
@@ -48,7 +49,7 @@ main {
   flex-direction: column;
 }
 footer {
-  padding: 1.25rem;
+  padding: 0 1.25rem 1.25rem;
 
   display: flex;
   flex-direction: column;
@@ -68,9 +69,5 @@ aside {
   align-items: center;
   justify-content: flex-start;
   z-index: 1;
-}
-
-[data-theme='dark'] header {
-  filter: drop-shadow(0 0 3px rgba(255, 255, 255, 0.5))
 }
 </style>
