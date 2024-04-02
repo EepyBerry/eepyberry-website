@@ -1,4 +1,4 @@
-a, a:visited {
+a:not(.button-link), a:not(.button-link):visited {
   padding: 0 4px;
   border-radius: 4px;
   color: var(--eepy-color-text);
@@ -7,6 +7,10 @@ a, a:visited {
   align-items: center;
   gap: 2px;
 }
-a:hover {
+a:not(.button-link):hover {
   background-color: var(--eepy-color-bg-link-hover);
+}
+
+a.button-link {
+  text-decoration: none;
 }
