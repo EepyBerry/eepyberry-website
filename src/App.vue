@@ -1,11 +1,12 @@
 <template>
   <header>
+    <AppHomeButton />
     <AppThemeSelect />
   </header>
-  <aside>
-    <AppMenu />
-  </aside>
   <main>
+    <aside>
+      <AppMenu />
+    </aside>
     <RouterView />
   </main>
   <footer role="contentinfo">
@@ -26,6 +27,7 @@ import { inject, onMounted, provide } from 'vue';
 import type { ThemeHelper } from '@/utils/theme.helper';
 import AppThemeSelect from "@/components/AppThemeSelect.vue";
 import AppMenu from "@/components/AppMenu.vue"
+import AppHomeButton from "@/components/AppHomeButton.vue"
 
 const themeHelper: ThemeHelper = inject("ThemeHelper") as ThemeHelper;
 provide('$theme', themeHelper.themeRef)
@@ -41,6 +43,10 @@ header {
   padding: 1.25rem 1.25rem 0;
   text-align: end;
   z-index: 1;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 main {
   padding: 1.25rem;
@@ -50,6 +56,7 @@ main {
 }
 footer {
   padding: 0 1.25rem 1.25rem;
+  font-family: Dosis;
 
   display: flex;
   flex-direction: column;
@@ -60,8 +67,9 @@ footer {
   z-index: 1;
 }
 aside {
-  position: fixed;
-  inset: 0 auto 0 0;
+  position: absolute;
+  top: 0;
+  left: 0;
   padding: 1.25rem;
   width: fit-content;
   display: flex;

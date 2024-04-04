@@ -10,19 +10,21 @@
   align-items: center;
   justify-content: center;
   gap: .5rem;
-  background: var(--eepy-color-card);
+  background: var(--eepy-color-secondary);
+  color: white;
   padding: .75rem;
   border: none;
   border-radius: .75rem;
-  box-shadow: .2rem -.2rem 0 var(--eepy-color-card-shadow-light),
-              -.2rem .2rem 0 var(--eepy-color-card-shadow);
   transition: transform 75ms ease;
+
+  font-size: 1.1rem;
+  font-weight: 550;
   
   .material-symbols-rounded {
     transform: rotate(7.5deg);
   }
 }
-.eepy-button:hover {
+.eepy-button:hover, .eepy-button-visible {
   cursor: pointer;
   transform: translateY(-6.25%)
 }

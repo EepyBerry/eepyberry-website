@@ -1,11 +1,5 @@
 a:not(.button-link), a:not(.button-link):visited {
-  padding: 0 4px;
-  border-radius: 4px;
   color: var(--eepy-color-text);
-  
-  display: inline-flex;
-  align-items: center;
-  gap: 2px;
 }
 
 a.button-link, a.nav-link {

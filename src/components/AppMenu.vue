@@ -1,8 +1,5 @@
 <template>
   <nav>
-    <router-link class="nav-link" to="/">
-      <EepyIcon size="xl">cottage</EepyIcon>
-    </router-link>
     <router-link class="nav-link" to="about">
       <EepyIcon size="xl">sentiment_excited</EepyIcon>
     </router-link>
@@ -25,7 +22,7 @@ nav {
   font-size: 2rem;
   text-decoration: none;
 }
-.nav-link .icon {
+.nav-link .eepy-icon {
   transform: rotateZ(5deg);
 }
 </style>

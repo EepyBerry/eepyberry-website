@@ -1,21 +1,20 @@
 :root {
   --eepy-color-primary: #221a1a;
+  --eepy-color-secondary: #916076;
   --eepy-color-background: #ffeeef;
 
   --eepy-color-text: var(--eepy-color-primary);
-  --eepy-color-bg-link-hover: #f0d7d7;
-
   --eepy-color-card: #fff;
   --eepy-color-card-shadow: #dabcbc;
   --eepy-color-card-shadow-light: #f3d1d1;
 }
 
 :root[data-theme='dark'] {
-  --eepy-color-primary: #ffeeef;
+  --eepy-color-primary: #fcfcfc;
+  --eepy-color-secondary: #3d3652;
   --eepy-color-background: #0f0d16;
 
   --eepy-color-text: var(--eepy-color-primary);
-  --eepy-color-bg-link-hover: #34313d;
 
   --eepy-color-card: #1d1a27;
   --eepy-color-card-shadow: #373544;

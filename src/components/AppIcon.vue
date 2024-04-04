@@ -1,5 +1,5 @@
 <template>
-  <span class="icon material-symbols-rounded" :class="size">
+  <span class="eepy-icon material-symbols-rounded" :class="size">
     <slot></slot>
   </span>
 </template>

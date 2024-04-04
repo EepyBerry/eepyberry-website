@@ -10,9 +10,8 @@
     display: flex;
     flex-direction: row;
     gap: 4px;
-    width: max-content;
     
-    border: 1px solid var(--eepy-color-text);
+    background-color: var(--eepy-color-background);
     border-radius: .5rem;
     align-self: flex-start;
 }

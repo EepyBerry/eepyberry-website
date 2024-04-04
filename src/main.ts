@@ -9,11 +9,13 @@ import AppDivider from './components/AppDivider.vue'
 import '@material-symbols/font-700/rounded.css';
 import AppIcon from './components/AppIcon.vue'
 import AppChip from './components/AppChip.vue'
+import AppScoreCard from './components/AppScoreCard.vue'
 
 // Main application
 createApp(App)
   .use(router)
   .provide('ThemeHelper', new ThemeHelper())
+  .component('EepyScoreCard', AppScoreCard)
   .component('EepyButton', AppButton)
   .component('EepyDivider', AppDivider)
   .component('EepyIcon', AppIcon)
