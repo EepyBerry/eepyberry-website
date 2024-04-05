@@ -11,7 +11,7 @@
     flex-direction: row;
     gap: 4px;
     
-    background-color: var(--eepy-color-background);
+    background-color: var(--eepy-color-card);
     border-radius: .5rem;
     align-self: flex-start;
 }

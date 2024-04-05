@@ -38,15 +38,25 @@ body {
 
 h1 {
   font-family: Dosis;
-  font-size: 2.5rem;
-  font-weight: 700;
-  margin-bottom: 1rem;
+  font-size: clamp(2rem, 5vw, 5rem);
+  font-weight: 900;
+  line-height: 1.375;
 }
 h2 {
   font-family: Dosis;
-  font-size: 1.875rem;
-  font-weight: 600;
+  font-size: clamp(1.5rem, 4vw, 2.5rem);
+  font-weight: 700;
   margin-bottom: .5rem;
+}
+
+.subtitle {
+  font-family: Dosis;
+  font-size: clamp(1.5rem, 3.5vw, 2.5rem);
+  font-weight: 700;
+  opacity: 0.75;
+  text-wrap: wrap;
+  max-width: 95vw;
+  line-height: 1;
 }
 
 // Font overrides

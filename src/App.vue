@@ -16,7 +16,7 @@
       &
       <a href="https://vitejs.dev" target="_blank" rel="external nofollow noopener">Vite</a>
     </p>
-    <hr width="12">
+    <br>
     <p>© 2024, EepyBerry</p>
   </footer>
 </template>
@@ -49,7 +49,7 @@ header {
   justify-content: space-between;
 }
 main {
-  padding: 1.25rem;
+  padding: var(--app-padding-main);
   flex: 1;
   display: flex;
   flex-direction: column;

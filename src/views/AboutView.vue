@@ -1,12 +1,15 @@
 <template>
   <section id="section-about">
+    <div class="section-title">
+      <h1>Hello, I'm&nbsp;EepyBerry!&nbsp;🍓</h1>
+      <span class="subtitle">Software&nbsp;Engineer at&nbsp;work, Code&nbsp;Goblin&nbsp;at&nbsp;home&nbsp;>:3</span>
+    </div>
     <div class="about-text">
+      <EepyDivider w="4rem" />
       <article>
-        <h1 class="section-title">Hello World !</h1>
-        <p>Hello, I'm EepyBerry! I'm a software engineer at work, and a code goblin at home >:3</p>
-        <p>Oh, and I'm trans too!</p>
+        <h2>Some info!</h2>
         <p class="mt">
-            g
+          
         </p>
       </article>
       <EepyDivider w="4rem" />
@@ -48,29 +51,32 @@
 #section-about {
   flex: 1;
   display: grid;
-  grid-template-columns: 2fr 1fr;
+  grid-template-columns: 2.5fr 1fr;
   grid-template-rows: auto auto;
   align-items: center;
   margin: 0 auto;
   gap: 0 3rem;
 
-  background-color: var(--eepy-color-card);
-  padding: 3rem;
+  //background-color: var(--eepy-color-card);
   border-radius: 1rem;
 
   .section-title {
-    grid-column: 1 / span 2;
+    grid-column: 1;
+    margin-bottom: 2rem;
   }
 
   .about-text {
+    grid-column: 1;
     display: flex;
     flex-direction: column;
     gap: 1rem;
   }
   .about-avatar {
+    grid-column: 2;
+    grid-row: 1 / span 2;
     justify-self: center;
     align-self: flex-start;
-    width: min(80vw, 360px);
+    width: clamp(160px, 25vw, 380px);
     filter: brightness(150%);
   }
 }
@@ -105,4 +111,34 @@
   //grid-template-columns: 1fr 1fr 1fr;
   gap: 1rem;
 }
+
+@media screen and (min-width: 1024px) and (max-width: 1199px) {
+  #section-about {
+    .about-text {
+      grid-column: 1 / span 2;
+      grid-row: 2;
+    }
+    .about-avatar {
+      grid-row: 1;
+    }
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  #section-about {
+    padding: 1rem;
+    .section-title {
+      grid-column: 1 / span 2;
+      text-align: center;
+    }
+    .about-text {
+      grid-column: 1 / span 2;
+    }
+    .about-avatar {
+      display: none;
+    }
+  }
+
+}
+
 </style>
