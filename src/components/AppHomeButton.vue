@@ -19,7 +19,10 @@ const active: Ref<boolean> = ref(false)
 <style scoped lang=scss>
 .home-link {
   transition: transform 75ms ease;
-  img { width: 4rem; user-select: none; -webkit-user-drag: none;}
+  img {
+    width: 4rem; user-select: none; -webkit-user-drag: none;
+    transform: scale(105%);
+  }
 }
 .home-link:hover, .home-link:focus-visible {
   transform: scale(110%)

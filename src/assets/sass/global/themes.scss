@@ -1,6 +1,7 @@
 :root {
   --eepy-color-primary: #221a1a;
   --eepy-color-secondary: #aa767c;
+  --eepy-color-accent: #bea2a5;
   --eepy-color-background: #ffeeef;
 
   --eepy-color-text: var(--eepy-color-primary);
@@ -12,6 +13,7 @@
 :root[data-theme='dark'] {
   --eepy-color-primary: #fcfcfc;
   --eepy-color-secondary: #3d3652;
+  --eepy-color-accent: #433d58;
   --eepy-color-background: #0f0d16;
 
   --eepy-color-text: var(--eepy-color-primary);

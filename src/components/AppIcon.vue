@@ -15,6 +15,8 @@ defineProps({
 <style scoped lang="scss">
 span.material-symbols-rounded {
   &.md { font-size: 1.25rem; }
+  &.lg { font-size: 1.625rem; }
   &.xl { font-size: 2rem; }
+  &.xxl { font-size: 2.25rem; }
 }
 </style>

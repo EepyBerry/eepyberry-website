@@ -1,5 +1,5 @@
 <template>
-    <hr :class="{'w': !!w, 'h': !!h}">
+    <hr class="eepy-divider" :class="{'w': !!w, 'h': !!h}">
 </template>
 
 <!------------------------------------------------------------>

@@ -1,12 +1,11 @@
 <template>
   <header>
-    <AppHomeButton />
     <AppThemeSelect />
   </header>
+  <aside>
+    <AppSidebar />
+  </aside>
   <main>
-    <aside>
-      <AppMenu />
-    </aside>
     <RouterView />
   </main>
   <footer role="contentinfo">
@@ -26,8 +25,7 @@ import { RouterView } from 'vue-router'
 import { inject, onMounted, provide } from 'vue';
 import type { ThemeHelper } from '@/utils/theme.helper';
 import AppThemeSelect from "@/components/AppThemeSelect.vue";
-import AppMenu from "@/components/AppMenu.vue"
-import AppHomeButton from "@/components/AppHomeButton.vue"
+import AppSidebar from "@/components/AppSidebar.vue"
 
 const themeHelper: ThemeHelper = inject("ThemeHelper") as ThemeHelper;
 provide('$theme', themeHelper.themeRef)
@@ -40,13 +38,13 @@ onMounted(() => themeHelper.getCurrentTheme())
 header {
   position: sticky;
   inset: 0 0 auto;
-  padding: 1.25rem 1.25rem 0;
+  padding: 1.25rem;
   text-align: end;
   z-index: 1;
 
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-end;
 }
 main {
   padding: var(--app-padding-main);
@@ -55,7 +53,7 @@ main {
   flex-direction: column;
 }
 footer {
-  padding: 0 1.25rem 1.25rem;
+  padding: 1.25rem;
   font-family: Dosis;
 
   display: flex;
@@ -67,15 +65,16 @@ footer {
   z-index: 1;
 }
 aside {
-  position: absolute;
-  top: 0;
-  left: 0;
-  padding: 1.25rem;
+  position: fixed;
+  inset: 4rem auto auto 0;
+  border-radius: 0 1rem 1rem 0;
+  padding: .75rem .25rem 1rem;
   width: fit-content;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
   z-index: 1;
+  background-color: var(--eepy-color-accent);
 }
 </style>
