@@ -2,20 +2,20 @@
   <section id="section-home">
     <img id="avatar" :src="`eepyberry_${$theme}.svg`" aria-label="Sleeping strawberry with the text 'eepy berry'">
     <div class="home-cards">
-      <RouterLink to="" class="button-link">
-        <EepyButton tabindex="-1" aria-hidden="true">
+      <RouterLink to="experiments" class="button-link">
+        <EepyButton rainbow id="button-experiments" tabindex="-1" aria-hidden="true">
           <EepyIcon size="lg">science</EepyIcon>
           <span>Experiments!</span>
         </EepyButton>
       </RouterLink>
       <RouterLink to="about" class="button-link">
-        <EepyButton tabindex="-1" aria-hidden="true">
+        <EepyButton id="button-about" tabindex="-1" aria-hidden="true">
           <EepyIcon size="lg">sentiment_excited</EepyIcon>
           <span>About me :3</span>
         </EepyButton>
       </RouterLink>
       <a href="https://www.buymeacoffee.com/" target="_blank" rel="external nofollow noopener" class="button-link">
-        <EepyButton tabindex="-1" aria-hidden="true">
+        <EepyButton id="button-coffee" tabindex="-1" aria-hidden="true">
           <EepyIcon size="lg">coffee</EepyIcon>
           <span>Buy me a coffee (˶ᵔ ᵕ ᵔ˶)</span>
         </EepyButton>

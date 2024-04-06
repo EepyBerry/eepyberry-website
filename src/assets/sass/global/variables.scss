@@ -1,5 +1,5 @@
 :root {
-  --app-padding-main: 2rem 4.5rem;
+  --app-padding-main: 5rem;
 
   --eepy-score-unknown: #413333;
   --eepy-score-learning: #206dac;
@@ -11,10 +11,18 @@
   --eepy-color-angular: linear-gradient(90deg, #d4101d 0%, #cf21cd 50%, #8c11b1 100%);;
   --eepy-color-vuejs: #34495e;
   --eepy-color-java: #5382a1;
+  --eepy-color-docker: #1d63ed;
+  --eepy-color-kubernetes: #326ce5;
+  --eepy-color-aws: #1d63ed;
 }
 
 @media screen and (max-width: 1023px) {
   :root {
-    --app-padding-main: 2rem 1rem;
+    --app-padding-main: 2rem;
+  }
+}
+@media screen and (max-width: 767px) {
+  :root {
+    --app-padding-main: 1rem;
   }
 }

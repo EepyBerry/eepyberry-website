@@ -1,15 +1,16 @@
-import './assets/sass/index.scss'
 import { createApp } from 'vue'
+import { ThemeHelper } from './utils/theme.helper'
 import App from './App.vue'
 import router from './router.config'
-import { ThemeHelper } from './utils/theme.helper'
-
 import AppButton from './components/AppButton.vue'
 import AppDivider from './components/AppDivider.vue'
-import '@material-symbols/font-700/rounded.css';
 import AppIcon from './components/AppIcon.vue'
 import AppChip from './components/AppChip.vue'
 import AppScoreCard from './components/AppScoreCard.vue'
+
+import '@material-symbols/font-700/rounded.css';
+import './assets/sass/index.scss'
+import 'iconify-icon';
 
 // Main application
 createApp(App)

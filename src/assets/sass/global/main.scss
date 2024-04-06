@@ -38,30 +38,40 @@ body {
 
 h1 {
   font-family: Dosis;
-  font-size: clamp(2rem, 5vw, 5rem);
+  font-size: clamp(2.25rem, 5.25vw, 5rem);
   font-weight: 900;
-  line-height: 1.375;
+  line-height: 1;
+  margin-bottom: .75rem;
 }
 h2 {
   font-family: Dosis;
-  font-size: clamp(1.5rem, 4vw, 2.5rem);
+  font-size: clamp(1.5rem, 3.75vw, 2.5rem);
   font-weight: 700;
   margin-bottom: .5rem;
 }
 
+
 .subtitle {
+  margin-top: .5rem;
   font-family: Dosis;
   font-size: clamp(1.5rem, 3.5vw, 2.5rem);
   font-weight: 700;
   opacity: 0.75;
-  text-wrap: wrap;
   max-width: 95vw;
   line-height: 1;
 }
 
-// Font overrides
-.font-cute {
-  font-family: Dosis;
+ul {
+  list-style-type: disc;
+  padding-left: 2rem;
+}
+
+iconify-icon {
+  vertical-align: -15%;
+}
+.tx-mini {
+  font-size: 0.33em;
+  font-weight: 550;
 }
 
 // Padding/margin classes

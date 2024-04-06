@@ -1,5 +1,5 @@
 <template>
-  <RouterLink class="home-link" to="/"
+  <RouterLink class="home-link button-link" to="/"
     aria-label="Back to landing page"
     @mousedown="active = true"
     @mouseup="active = false"
@@ -20,12 +20,12 @@ const active: Ref<boolean> = ref(false)
 .home-link {
   transition: transform 75ms ease;
   img {
-    width: 4rem; user-select: none; -webkit-user-drag: none;
+    width: 3.5rem; user-select: none; -webkit-user-drag: none;
     transform: scale(105%);
   }
 }
 .home-link:hover, .home-link:focus-visible {
-  transform: scale(110%)
+  transform: scale(110%);
 }
 .home-link:active {
   transform: scale(97.5%);

@@ -3,6 +3,7 @@ import HomeView from "./views/HomeView.vue";
 import { SITE_TITLE } from "./utils/constants";
 import NotFoundView from "./views/NotFoundView.vue";
 import AboutView from "./views/AboutView.vue";
+import ExperimentsView from "./views/ExperimentsView.vue";
 
 const router = createRouter({
     history: createWebHistory(),
@@ -16,6 +17,11 @@ const router = createRouter({
         path: '/about',
         name: 'About',
         component: AboutView
+      },
+      {
+        path: '/experiments',
+        name: 'Experiments',
+        component: ExperimentsView
       },
       {
         path: '/page-not-found',

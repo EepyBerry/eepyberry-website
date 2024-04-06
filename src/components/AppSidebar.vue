@@ -2,14 +2,14 @@
 <template>
   <AppHomeButton />
   <nav class="mt">
-    <router-link class="nav-link" to="about">
-      <EepyIcon size="xxl">sentiment_excited</EepyIcon>
+    <router-link class="nav-link button-link" to="about">
+      <EepyIcon size="xl">sentiment_excited</EepyIcon>
     </router-link>
-    <router-link class="nav-link" to="projects">
-      <EepyIcon size="xxl">science</EepyIcon>
+    <router-link class="nav-link button-link" to="experiments">
+      <EepyIcon size="xl">science</EepyIcon>
     </router-link>
-    <router-link class="nav-link" to="contact">
-      <EepyIcon size="xxl">mail</EepyIcon>
+    <router-link class="nav-link button-link" to="contact">
+      <EepyIcon size="xl">mail</EepyIcon>
     </router-link>
   </nav>
 </template>
@@ -31,17 +31,17 @@ nav {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 3rem;
-  height: 3rem;
-  border-radius: .75rem;
-  //background-color: var(--eepy-color-card);
-  color: var(--eepy-color-text);
+  width: 2.75rem;
+  height: 2.75rem;
+  border-radius: 2rem;
+  //background-color: var(--eepy-color-text);
+  color: var(--white);
   .eepy-icon {
     transition: transform 100ms ease;
   }
 }
 .nav-link:hover .eepy-icon, .nav-link:focus-visible .eepy-icon {
-  transform: scale(120%) rotateZ(-5deg);
+  transform: scale(110%) rotateZ(-5deg);
 }
 .nav-link:active .eepy-icon {
   cursor: pointer;

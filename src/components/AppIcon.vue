@@ -19,4 +19,7 @@ span.material-symbols-rounded {
   &.xl { font-size: 2rem; }
   &.xxl { font-size: 2.25rem; }
 }
+span[inline] {
+  vertical-align: -25%;
+}
 </style>

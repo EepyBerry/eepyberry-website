@@ -25,6 +25,7 @@
   "homepage": "https://github.com/EepyBerry/eepyberry-website#readme",
   "dependencies": {
     "@material-symbols/font-700": "^0.17.1",
+    "iconify-icon": "^2.0.0",
     "vue": "^3.4.21",
     "vue-router": "^4.3.0"
   },

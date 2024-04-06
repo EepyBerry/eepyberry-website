@@ -2,7 +2,7 @@
   <div class="eepy-score-card">
     <span class="score-title"><slot></slot></span>
     <div class="score-value">
-      <EepyIcon size="xl">{{ getIconForScore() }}</EepyIcon>
+      <EepyIcon size="lg">{{ getIconForScore() }}</EepyIcon>
     </div>
   </div>
 </template>
@@ -34,8 +34,6 @@ function getIconForScore(): string {
   
   display: flex;
   flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
   gap: 4px;
 
   .score-title {
@@ -43,7 +41,7 @@ function getIconForScore(): string {
     display: flex;
     align-items: center;
     font-family: Dosis;
-    font-size: 1.25rem;
+    font-size: 1.125rem;
     font-weight: 600;
   }
   .score-value {
