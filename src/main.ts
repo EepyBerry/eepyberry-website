@@ -6,7 +6,7 @@ import AppButton from './components/AppButton.vue'
 import AppDivider from './components/AppDivider.vue'
 import AppIcon from './components/AppIcon.vue'
 import AppChip from './components/AppChip.vue'
-import AppScoreCard from './components/AppScoreCard.vue'
+import AppCardlet from './components/AppCardlet.vue'
 
 import '@material-symbols/font-700/rounded.css';
 import './assets/sass/index.scss'
@@ -16,7 +16,7 @@ import 'iconify-icon';
 createApp(App)
   .use(router)
   .provide('ThemeHelper', new ThemeHelper())
-  .component('EepyScoreCard', AppScoreCard)
+  .component('EepyCardlet', AppCardlet)
   .component('EepyButton', AppButton)
   .component('EepyDivider', AppDivider)
   .component('EepyIcon', AppIcon)

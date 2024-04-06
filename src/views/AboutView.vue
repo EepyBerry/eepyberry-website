@@ -4,31 +4,128 @@
       <h1>Hello, I'm EepyBerry!&nbsp;🍓</h1>
       <span class="subtitle">Software&nbsp;Engineer & Art&nbsp;Gremlin&nbsp;>:3</span>
     </div>
-    <div class="about-text">
+    <div class="section-content">
       <article>
         <h2>Byte-sized info! <span class="tx-mini">(get it? :3)</span></h2>
         <p class="mb">
           Here's some quick facts about me, because big blocks of text are <i>boooring</i>!
         </p>
         <ul>
-          <li><iconify-icon icon="noto:laptop-computer" height="1.25rem" />&nbsp; Started programming in C during high school</li>
-          <li><iconify-icon icon="noto:books" height="1.25rem" />&nbsp; Pretty much a full-stack developer these days</li>
-          <li><iconify-icon icon="noto:face-with-steam-from-nose" height="1.25rem" />&nbsp; Really likes Java, and will fight anyone disparaging it >:U</li>
-          <li><iconify-icon icon="noto:artist-palette" height="1.25rem" />&nbsp; Started drawing at the age of 6!</li>
-          <li><iconify-icon icon="noto:woman-raising-hand" height="1.25rem" />&nbsp; Very smol :3 (~5'2")</li>
-          <li><iconify-icon icon="noto:transgender-flag" height="1.25rem" />&nbsp; Came out as transfem in May 2024!</li>
+          <li><iconify-icon mode="style" icon="noto:laptop-computer" height="1.25rem" />&nbsp; Started programming in C during high school</li>
+          <li><iconify-icon mode="style" icon="noto:books" height="1.25rem" />&nbsp; Pretty much a full-stack developer now!</li>
+          <li><iconify-icon mode="style" icon="noto:face-with-steam-from-nose" height="1.25rem" />&nbsp; Really likes Java, and will fight anyone mocking it >:U</li>
+          <li><iconify-icon mode="style" icon="noto:artist-palette" height="1.25rem" />&nbsp; Started drawing at the age of 6!</li>
+          <li><iconify-icon mode="style" icon="noto:woman-raising-hand" height="1.25rem" />&nbsp; Very smol :3 (~5'2")</li>
+          <li><iconify-icon mode="style" icon="noto:transgender-flag" height="1.25rem" />&nbsp; Came out as transfem in May 2024!</li>
         </ul>
 
       </article>
       <article>
         <h2>Techs n' stuff</h2>
-        <p>Have a list of my fav techs & tools! Also includes stuff I'm learning right now:</p>
-        <div class="techs mt">
-          <EepyScoreCard class="java"       :score="5">Java</EepyScoreCard>
-          <EepyScoreCard class="vuejs"      :score="5">VueJS</EepyScoreCard>
-          <EepyScoreCard class="docker"     :score="4">Docker</EepyScoreCard>
-          <EepyScoreCard class="kubernetes" :score="3">Kubernetes</EepyScoreCard>
-          <EepyScoreCard class="aws"        :score="3">AWS</EepyScoreCard>
+        <p>Have a list of my favourite coding techs & tools! Also includes stuff I'm learning right now:</p>
+        <div class="cardlet-list mt">
+          <EepyCardlet class="java">
+            <iconify-icon icon="skill-icons:java-dark" height="2rem" aria-hidden="true" />Java
+          </EepyCardlet>
+          <EepyCardlet class="vuejs">
+            <iconify-icon
+              mode="style"
+              icon="simple-icons:vuedotjs"
+              style="color: #41b883; padding-left: .25rem"
+              height="1.5rem"
+            />
+            VueJS
+          </EepyCardlet>
+          <EepyCardlet class="angular">
+            <iconify-icon
+              mode="style"
+              icon="simple-icons:angular"
+              style="padding-left: .25rem"
+              height="1.5rem"
+            />
+            Angular
+          </EepyCardlet>
+          <EepyCardlet class="docker">
+            <iconify-icon
+              mode="style"
+              icon="simple-icons:docker"
+              style="padding-left: .25rem"
+              height="1.5rem"
+            />
+            Docker
+          </EepyCardlet>
+          <EepyCardlet class="kubernetes">
+            <iconify-icon
+              mode="style"
+              icon="simple-icons:kubernetes"
+              style="padding-left: .25rem"
+              height="1.5rem"
+            />
+            Kubernetes
+          </EepyCardlet>
+          <EepyCardlet class="aws">
+            <iconify-icon
+              mode="style"
+              icon="skill-icons:aws-dark"
+              height="2rem"
+            />
+            AWS
+          </EepyCardlet>
+        </div>
+        <div class="cardlet-list mt">
+          <EepyCardlet class="idea">
+            <iconify-icon
+              mode="style"
+              icon="skill-icons:idea-dark"
+              height="2rem"
+            />
+            IntelliJ&nbsp;IDEA
+          </EepyCardlet>
+          <EepyCardlet class="vscode">
+            <iconify-icon
+              mode="style"
+              icon="skill-icons:vscode-dark"
+              height="2rem"
+            />
+            VS&nbsp;Code
+          </EepyCardlet>
+          <EepyCardlet class="godot">
+            <iconify-icon
+              mode="style"
+              icon="skill-icons:godot-dark"
+              height="2rem"
+            />
+            Godot
+          </EepyCardlet>
+        </div>
+        <p class="mt-l">And these are my main drawing tools:</p>
+        <div class="cardlet-list mt">
+          <EepyCardlet class="illustrator">
+            <iconify-icon
+              mode="style"
+              icon="skill-icons:illustrator"
+              height="2rem"
+            />
+            Illustrator
+          </EepyCardlet>
+          <EepyCardlet class="krita">
+            <iconify-icon
+              mode="style"
+              icon="simple-icons:krita"
+              style="padding-left: .25rem"
+              height="1.5rem"
+            />
+            Krita
+          </EepyCardlet>
+          <EepyCardlet class="aseprite">
+            <iconify-icon
+              mode="style"
+              icon="simple-icons:aseprite"
+              style="padding-left: .25rem"
+              height="1.5rem"
+            />
+            Aseprite
+          </EepyCardlet>
         </div>
       </article>
       <article>
@@ -48,7 +145,7 @@
         </div>
       </article>
     </div>
-    <img class="about-avatar" src="/avatar.png">
+    <img class="avatar" src="/avatar.png" alt="Avatar" aria-label="avatar">
   </section>
 </template>
 
@@ -56,7 +153,7 @@
 #section-about {
   flex: 1;
   display: grid;
-  grid-template-columns: 2.5fr 1fr;
+  grid-template-columns: 2.25fr 1fr;
   grid-template-rows: auto auto;
   align-items: center;
   margin: 0 auto;
@@ -70,7 +167,7 @@
     margin: 2rem 0;
   }
 
-  .about-text {
+  .section-content {
     grid-column: 1;
     display: flex;
     flex-direction: column;
@@ -81,7 +178,7 @@
     }
     p { text-wrap: wrap;}
   }
-  .about-avatar {
+  .avatar {
     grid-column: 2;
     grid-row: 1 / span 2;
     justify-self: center;
@@ -91,7 +188,7 @@
   }
 }
 
-.techs {
+.cardlet-list {
   display: flex;
   flex-wrap: wrap;
   grid-template-columns: 1fr 1fr 1fr;
@@ -99,22 +196,14 @@
   gap: .5rem;
   & > * { flex: 0 1 0; }
 
-  .java {
-    background: var(--eepy-color-java);
-    color: white;
-  }
-  .vuejs {
-    background: var(--eepy-color-vuejs);
-    color: white;
-  }
-  .docker {
-    background: var(--eepy-color-docker);
-    color: white;
-  }
-  .kubernetes {
-    background: var(--eepy-color-kubernetes);
-    color: white;
-  }
+  .vuejs { background: var(--eepy-color-vuejs); }
+  .angular { background: var(--eepy-color-angular); }
+  .docker { background-color: var(--eepy-color-docker); }
+  .kubernetes { background-color: var(--eepy-color-kubernetes); }
+  .illustrator { background-color: var(--eepy-color-illustrator); }
+  .krita { background: var(--eepy-color-krita); }
+  .aseprite { background: var(--eepy-color-aseprite); }
+  .java, .aws, .godot, .idea, .vscode { background-color: var(--eepy-color-darktech); }
 }
 
 .chip-list {
@@ -124,18 +213,18 @@
   flex-wrap: wrap;
   flex: 0 1 0;
   //grid-template-columns: 1fr 1fr 1fr;
-  gap: 1rem;
+  gap: .5rem;
 }
 
 @media screen and (min-width: 768px) and (max-width: 1199px) {
   #section-about {
     grid-template-columns: 2fr 1fr;
     gap: 1rem;
-    .about-text {
+    .section-content {
       grid-column: 1 / span 2;
       grid-row: 2;
     }
-    .about-avatar {
+    .avatar {
       grid-row: 1;
     }
   }
@@ -148,10 +237,10 @@
       grid-column: 1;
       text-align: center;
     }
-    .about-text {
+    .section-contet {
       grid-column: 1;
     }
-    .about-avatar {
+    .avatar {
       display: none;
     }
   }

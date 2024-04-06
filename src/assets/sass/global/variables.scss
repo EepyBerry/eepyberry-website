@@ -1,19 +1,19 @@
 :root {
   --app-padding-main: 5rem;
 
-  --eepy-score-unknown: #413333;
-  --eepy-score-learning: #206dac;
-  --eepy-score-like: #4cac20;
-  --eepy-score-love: #b11515;
-  --eepy-score-love-plus: #ac55b8;
-  --eepy-score-fire: #e78c41;
-
-  --eepy-color-angular: linear-gradient(90deg, #d4101d 0%, #cf21cd 50%, #8c11b1 100%);;
   --eepy-color-vuejs: #34495e;
-  --eepy-color-java: #5382a1;
-  --eepy-color-docker: #1d63ed;
+  --eepy-color-angular: linear-gradient(90deg,
+    hsl(356, 83%, 43%) 0%,
+    hsl(308, 75%, 40%) 50%,
+    hsl(286, 82%, 38%) 100%
+    );
+  --eepy-color-java: #f4f2ed;
+  --eepy-color-docker: #0e7ab9;
   --eepy-color-kubernetes: #326ce5;
-  --eepy-color-aws: #1d63ed;
+  --eepy-color-illustrator: #300;
+  --eepy-color-krita: #5f60ab;
+  --eepy-color-aseprite: #583e46;
+  --eepy-color-darktech: #242938;
 }
 
 @media screen and (max-width: 1023px) {
