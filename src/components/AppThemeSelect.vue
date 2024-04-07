@@ -17,5 +17,18 @@ function getThemeIcon() {
     default: return 'hourglass-half'
   }
 }
-
 </script>
+
+<style scoped lang="scss">
+.eepy-icon {
+  transform: rotateZ(5deg);
+  transition: transform 100ms ease;
+}
+.eepy-icon:hover, .eepy-icon:focus-visible {
+  transform: scale(110%) rotateZ(-5deg);
+}
+.eepy-icon:active {
+  cursor: pointer;
+  transform: scale(97.5%)
+}
+</style>

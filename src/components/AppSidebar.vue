@@ -37,6 +37,7 @@ nav {
   //background-color: var(--eepy-color-text);
   color: var(--white);
   .eepy-icon {
+    transform: rotateZ(5deg);
     transition: transform 100ms ease;
   }
 }
@@ -46,8 +47,5 @@ nav {
 .nav-link:active .eepy-icon {
   cursor: pointer;
   transform: scale(97.5%)
-}
-.nav-link .eepy-icon {
-  transform: rotateZ(5deg);
 }
 </style>

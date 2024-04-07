@@ -41,11 +41,12 @@ header {
   justify-content: flex-end;
 }
 main {
-  padding: 0 var(--app-padding-main);
   flex: 1;
   display: flex;
   flex-direction: column;
   max-width: 1600px;
+  width: 100%;
+  padding: 0 var(--app-padding-main);
   margin: 0 auto;
 }
 footer {

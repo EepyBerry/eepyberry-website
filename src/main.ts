@@ -11,11 +11,13 @@ import AppCardlet from './components/AppCardlet.vue'
 import '@material-symbols/font-700/rounded.css';
 import './assets/sass/index.scss'
 import 'iconify-icon';
+import AppCard from './components/AppCard.vue'
 
 // Main application
 createApp(App)
   .use(router)
   .provide('ThemeHelper', new ThemeHelper())
+  .component('EepyCard', AppCard)
   .component('EepyCardlet', AppCardlet)
   .component('EepyButton', AppButton)
   .component('EepyDivider', AppDivider)

@@ -1,7 +1,7 @@
 <template>
   <section id="section-about">
     <div class="section-title">
-      <h1>Hello, I'm EepyBerry!&nbsp;🍓</h1>
+      <h1 class="title">Hello, I'm EepyBerry!&nbsp;🍓</h1>
       <span class="subtitle">Software&nbsp;Engineer & Art&nbsp;Gremlin&nbsp;>:3</span>
     </div>
     <div class="section-content">
@@ -202,8 +202,7 @@
   .kubernetes { background-color: var(--eepy-color-kubernetes); }
   .illustrator { background-color: var(--eepy-color-illustrator); }
   .krita { background: var(--eepy-color-krita); }
-  .aseprite { background: var(--eepy-color-aseprite); }
-  .java, .aws, .godot, .idea, .vscode { background-color: var(--eepy-color-darktech); }
+  .java, .aws, .godot, .idea, .vscode, .aseprite { background-color: var(--eepy-color-darktech); }
 }
 
 .chip-list {

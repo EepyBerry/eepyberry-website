@@ -11,8 +11,10 @@
   --eepy-color-docker: #0e7ab9;
   --eepy-color-kubernetes: #326ce5;
   --eepy-color-illustrator: #300;
-  --eepy-color-krita: #5f60ab;
-  --eepy-color-aseprite: #583e46;
+  --eepy-color-krita: linear-gradient(90deg,
+    hsl(239, 36%, 51%) 0%,
+    rgb(93, 57, 134) 100%
+  );
   --eepy-color-darktech: #242938;
 }
 
