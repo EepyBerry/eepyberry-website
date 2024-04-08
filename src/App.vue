@@ -65,7 +65,7 @@ aside {
   position: fixed;
   inset: 4rem auto auto 0;
   border-radius: 0 1rem 1rem 0;
-  padding: .5rem .125rem;
+  padding: .5rem 0;
   width: fit-content;
   display: flex;
   flex-direction: column;

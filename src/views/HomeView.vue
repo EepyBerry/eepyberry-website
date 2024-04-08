@@ -41,10 +41,11 @@ const $theme = inject('$theme')
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 2rem;
+  gap: 1rem;
 
   #avatar {
-    width: min(80vw, 480px)
+    width: min(80vw, 480px);
+    max-height: max(50vh, 360px);
   }
 
   .home-cards {

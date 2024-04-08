@@ -19,6 +19,7 @@ html {
 body {
   flex: 1;
   min-height: 100%;
+  position: relative;
 
   border-radius: 2px;
   color: var(--eepy-color-text);

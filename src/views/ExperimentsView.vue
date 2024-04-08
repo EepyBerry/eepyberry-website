@@ -27,7 +27,7 @@
             </p>
           </template>
         </EepyCard>
-        <EepyCard v-for="i in 11" placeholder>
+        <EepyCard v-for="i in 10" placeholder>
           <template v-slot:title></template>
           <iconify-icon mode="style" icon="material-symbols:question-mark-rounded" height="3rem" />
         </EepyCard>
