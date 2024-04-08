@@ -5,32 +5,45 @@
     </div>
     <div class="section-content">
       <div class="grid-experiments">
-        <EepyCard id="project-zephyrsd" centered>
-          <template v-slot:links>
-            <a href="https://github.com/EepyBerry/zephyr-sd-aws" target="_blank" rel="external nofollow noopener" aria-label="GitHub">
-              <iconify-icon mode="style" icon="simple-icons:github" style="color: white;" height="2rem" />
-            </a>
-          </template>
-          <img class="logo" src="/experiments/experiment-zephyrsd-logo.svg">
-          <template v-slot:footer>
-            <p class="mt-l">A dashboard for managing Stable Diffusion WebUIs 🚀</p>
-          </template>
-        </EepyCard>
-        <EepyCard>
-          <template v-slot:title>
-            <p>Project ORIN</p>
-            <iconify-icon mode="style" icon="noto:thinking-face" height="2rem" />
-          </template>
-          <template v-slot:footer>
-            <p class="tx-mono mt">
-              [REDACTED: UNDER CONSTRUCTION]
-            </p>
-          </template>
-        </EepyCard>
-        <EepyCard v-for="i in 10" placeholder>
-          <template v-slot:title></template>
-          <iconify-icon mode="style" icon="material-symbols:question-mark-rounded" height="3rem" />
-        </EepyCard>
+        <a class="card-link"
+           href="https://github.com/EepyBerry/zephyr-sd-aws"
+           target="_blank"
+           rel="external nofollow noopener"
+           aria-label="GitHub"
+        >
+          <EepyCard id="project-zephyrsd" centered>
+            <template v-slot:links>
+                <iconify-icon mode="style" icon="simple-icons:github" style="color: white;" height="2rem" />
+            </template>
+            <img class="logo" src="/experiments/experiment-zephyrsd-logo.svg">
+            <template v-slot:footer>
+              <p class="mt-l">A dashboard for managing Stable Diffusion WebUIs 🚀</p>
+            </template>
+          </EepyCard>
+        </a>
+        <a class="card-link disabled"
+           href="https://github.com/EepyBerry/zephyr-sd-aws"
+           target="_blank"
+           rel="external nofollow noopener"
+           aria-label="GitHub"
+           @click.prevent
+        >
+          <EepyCard>
+            <template v-slot:title>
+              <p>Project ORIN</p>
+              <iconify-icon mode="style" icon="noto:thinking-face" height="2rem" />
+            </template>
+            <template v-slot:footer>
+              <p class="tx-mono mt">
+                [REDACTED: UNDER CONSTRUCTION]
+              </p>
+            </template>
+          </EepyCard>
+        </a>
+          <EepyCard v-for="_ in 4" placeholder>
+            <template v-slot:title></template>
+            <iconify-icon mode="style" icon="material-symbols:question-mark-rounded" height="3rem" />
+          </EepyCard>
       </div>
     </div>
   </section>
@@ -48,19 +61,53 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 2rem;
-    & > .eepy-card {
+    & .eepy-card {
+      width: 100%;
       min-height: 12rem;
     }
   }
 
   #project-zephyrsd {
-    background-image: url('/experiments/experiment-zephyrsd.webp');
+    $bg: var(--eepy-color-zephyrsd);
+    background-image: url('/experiments/experiment-zephyrsd-1024.webp');
     background-position: top;
     background-size: cover;
+    background-color: $bg;
     color: white;
-    .logo { height: 6rem; backdrop-filter: blur(4px); }
-    .eepy-card-header { background: linear-gradient(to bottom, #131422 0%, #131422 50%, transparent 100%) }
-    .eepy-card-footer { background: linear-gradient(to top, #131422 0%, #131422 50%, transparent 100%) }
+    .logo {
+      height: 6rem;
+      backdrop-filter: blur(4px);
+    }
+    .eepy-card-header {
+      background: linear-gradient(to bottom, $bg 0%, $bg 50%, transparent 100%)
+    }
+    .eepy-card-footer {
+      background: linear-gradient(to top, $bg 0%, $bg 50%, transparent 100%)
+    }
+  }
+}
+
+@media screen and (max-width: 1199px) {
+  #section-experiments {
+    .grid-experiments {
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+    }
+    #project-zephyrsd {
+      background-image: url('/experiments/experiment-zephyrsd-640.webp');
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  #section-experiments {
+    .grid-experiments {
+      grid-template-columns: 1fr;
+      gap: 1rem;
+    }
+    #project-zephyrsd {
+      background-image: url('/experiments/experiment-zephyrsd-640.webp');
+    }
   }
 }
 </style>

@@ -40,8 +40,8 @@ defineProps<{ rainbow: boolean }>()
   }
   .rainbow-background {
     position: absolute;
-    width: 200px;
-    height: 200px;
+    width: calc(100% + 8px);
+    aspect-ratio: 1/1;
     animation: 2s linear infinite rotate;
     background: conic-gradient(
       from 90deg,

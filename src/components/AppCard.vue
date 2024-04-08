@@ -19,6 +19,7 @@
   flex-direction: column;
   justify-content: space-between;
   background-color: var(--eepy-color-card);
+  border: 1px solid var(--eepy-color-accent);
   border-radius: .5rem;
   overflow: hidden;
 
@@ -60,8 +61,8 @@
     align-items: center;
     justify-content: center;
     background-color: transparent;
-    border: 2px dashed var(--eepy-color-text);
-    color: var(--eepy-color-text);
+    border: 2px dashed var(--eepy-color-accent);
+    color: var(--eepy-color-accent);
     opacity: 0.5;
   }
   &[centered] {

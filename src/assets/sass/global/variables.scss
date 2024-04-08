@@ -1,6 +1,7 @@
 :root {
   --app-padding-main: 5rem;
 
+  // about
   --eepy-color-vuejs: #34495e;
   --eepy-color-angular: linear-gradient(90deg,
     hsl(356, 83%, 43%) 0%,
@@ -16,6 +17,9 @@
     rgb(93, 57, 134) 100%
   );
   --eepy-color-darktech: #242938;
+  
+  // experiments
+  --eepy-color-zephyrsd: #060915;
 }
 
 @media screen and (max-width: 1023px) {
