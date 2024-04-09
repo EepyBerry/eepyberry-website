@@ -1,5 +1,7 @@
 <template>
+  <img class="blob top" :src="`/blob_${themeHelper.themeRef.value}.svg`" aria-hidden="true">
   <header>
+    <!-- <img class="blob header" :src="`/blob_${themeHelper.themeRef.value}.svg`" aria-hidden="true"> -->
     <AppThemeSelect />
   </header>
   <aside>
@@ -10,9 +12,8 @@
   </main>
   <footer role="contentinfo">
     <AppFooter />
+    <img class="blob bottom" :src="`/blob-strawberries_${themeHelper.themeRef.value}.svg`" aria-hidden="true">
   </footer>
-  <img class="blob top" src="/blob.svg">
-  <img class="blob bottom" src="/blob-strawberries.svg">
 </template>
 
 <script setup lang="ts">
@@ -34,7 +35,7 @@ onMounted(() => themeHelper.getCurrentTheme())
 header {
   position: sticky;
   inset: 0 0 auto;
-  padding: 1.25rem;
+  padding: var(--app-padding-border);
   text-align: end;
   z-index: 1;
 
@@ -52,7 +53,7 @@ main {
   margin: 0 auto;
 }
 footer {
-  padding: 1.25rem;
+  padding: var(--app-padding-border);
   font-family: Dosis;
 
   display: flex;
@@ -81,9 +82,12 @@ aside {
 
 .blob {
   position: absolute;
-  height: max(140px, 20vh);
+  height: clamp(120px, 4rem + 7.5vw, 180px);
 
-  &.top {
+  &.header {
+    height: clamp(80px, 4rem + 7.5vw, 120px);
+  }
+  &.top, &.header {
     transform: rotateZ(180deg);
     top: 0;
     right: 0;

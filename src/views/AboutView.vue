@@ -2,7 +2,7 @@
   <section id="section-about">
     <div class="section-title">
       <h1 class="title">Hello, I'm EepyBerry!&nbsp;🍓</h1>
-      <span class="subtitle">Software&nbsp;Engineer & Art&nbsp;Gremlin&nbsp;>:3</span>
+      <span class="subtitle">Software&nbsp;Engineer & Art&nbsp;Gremlin&nbsp;<span class="tx-nowrap">>:3</span></span>
     </div>
     <div class="section-content">
       <article>
@@ -235,6 +235,7 @@
     .section-title {
       grid-column: 1;
       text-align: center;
+      padding: 0 1rem;
     }
     .section-contet {
       grid-column: 1;

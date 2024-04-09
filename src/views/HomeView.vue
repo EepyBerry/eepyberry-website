@@ -44,8 +44,7 @@ const $theme = inject('$theme')
   gap: 1rem;
 
   #avatar {
-    width: min(80vw, 480px);
-    max-height: max(50vh, 360px);
+    width: clamp(280px, 60vw, 480px);
   }
 
   .home-cards {
