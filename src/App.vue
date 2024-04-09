@@ -11,6 +11,8 @@
   <footer role="contentinfo">
     <AppFooter />
   </footer>
+  <img class="blob top" src="/blob.svg">
+  <img class="blob bottom" src="/blob-strawberries.svg">
 </template>
 
 <script setup lang="ts">
@@ -75,5 +77,20 @@ aside {
   background-color: var(--eepy-color-secondary);
   //border: 3px solid var(--eepy-color-text);
   //border-left: none;
+}
+
+.blob {
+  position: absolute;
+  height: max(140px, 20vh);
+
+  &.top {
+    transform: rotateZ(180deg);
+    top: 0;
+    right: 0;
+  }
+  &.bottom {
+    left: 0;
+    bottom: 0;
+  }
 }
 </style>

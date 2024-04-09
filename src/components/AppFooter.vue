@@ -23,5 +23,6 @@
   align-items: center;
   justify-content: flex-end;
   gap: 8px;
+  min-height: 2rem;
 }
 </style>

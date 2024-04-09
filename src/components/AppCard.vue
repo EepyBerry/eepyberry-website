@@ -60,7 +60,7 @@
     }
     align-items: center;
     justify-content: center;
-    background-color: transparent;
+    background-color: var(--eepy-color-background);
     border: 2px dashed var(--eepy-color-accent);
     color: var(--eepy-color-accent);
     opacity: 0.5;

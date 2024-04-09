@@ -7,7 +7,9 @@
 </template>
 
 <script setup lang="ts">
-defineProps<{ rainbow: boolean }>()
+defineProps({
+  rainbow: { type: Boolean, default: false }
+})
 </script>
 
 <style lang="scss">
