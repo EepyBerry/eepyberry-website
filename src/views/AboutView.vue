@@ -15,8 +15,8 @@
           <li><iconify-icon mode="style" icon="noto:books" height="1.25rem" />&nbsp; Pretty much a full-stack developer now!</li>
           <li><iconify-icon mode="style" icon="noto:face-with-steam-from-nose" height="1.25rem" />&nbsp; Really likes Java, and will fight anyone mocking it >:U</li>
           <li><iconify-icon mode="style" icon="noto:artist-palette" height="1.25rem" />&nbsp; Started drawing at the age of 6!</li>
-          <li><iconify-icon mode="style" icon="noto:woman-raising-hand" height="1.25rem" />&nbsp; Very smol :3 (~5'2")</li>
-          <li><iconify-icon mode="style" icon="noto:transgender-flag" height="1.25rem" />&nbsp; Came out as transfem in May 2024!</li>
+          <li><iconify-icon mode="style" icon="noto:woman-raising-hand" height="1.25rem" />&nbsp; Very smol (~5'2")</li>
+          <!-- <li><iconify-icon mode="style" icon="noto:transgender-flag" height="1.25rem" />&nbsp; Came out as transfem in May 2024!</li> -->
         </ul>
 
       </article>
