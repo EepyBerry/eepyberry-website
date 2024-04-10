@@ -14,19 +14,22 @@ defineProps({
 
 <style lang="scss">
 .eepy-button {
+  padding: .75rem;
+
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
   gap: .5rem;
+
   background: var(--eepy-color-secondary);
+  box-shadow: inset 0 4px .75rem var(--eepy-color-accent);
   color: white;
-  padding: .75rem;
   border: none;
   border-radius: .75rem;
-  transition: transform 75ms ease;
   clip-path: inset(-3px round .9rem);
 
+  transition: transform 75ms ease;
   font-size: 1.1rem;
   font-weight: 550;
   
@@ -37,6 +40,7 @@ defineProps({
   .rainbow-overlay {
     position: absolute;
     background-color: var(--eepy-color-secondary);
+    box-shadow: inset 0 4px .75rem var(--eepy-color-accent);
     inset: 0;
     border-radius: .75rem;
   }

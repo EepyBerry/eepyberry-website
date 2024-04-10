@@ -1,4 +1,6 @@
-a { display: inline-flex; gap: 4px }
+a {
+  display: inline-flex; gap: 4px
+}
 a.button-link, a.card-link {
   text-decoration: none;
   color: var(--eepy-color-text);

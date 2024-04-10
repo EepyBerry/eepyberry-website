@@ -76,6 +76,8 @@ aside {
   justify-content: flex-start;
   z-index: 1;
   background-color: var(--eepy-color-secondary);
+  
+  box-shadow: inset -2px 0 .75rem var(--eepy-color-accent);
   //border: 3px solid var(--eepy-color-text);
   //border-left: none;
 }

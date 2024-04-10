@@ -30,6 +30,25 @@
         >
           <EepyCard>
             <template v-slot:title>
+              <p>Planet-themed project</p>
+              <iconify-icon mode="style" icon="noto:thinking-face" height="2rem" />
+            </template>
+            <template v-slot:footer>
+              <p class="tx-mono mt">
+                [REDACTED: UNDER CONSTRUCTION]
+              </p>
+            </template>
+          </EepyCard>
+        </a>
+        <a class="card-link disabled"
+           href="https://github.com/EepyBerry/zephyr-sd-aws"
+           target="_blank"
+           rel="external nofollow noopener"
+           aria-label="GitHub"
+           @click.prevent
+        >
+          <EepyCard>
+            <template v-slot:title>
               <p>Project ORIN</p>
               <iconify-icon mode="style" icon="noto:thinking-face" height="2rem" />
             </template>
@@ -40,10 +59,10 @@
             </template>
           </EepyCard>
         </a>
-          <EepyCard v-for="_ in 4" placeholder>
-            <template v-slot:title></template>
-            <iconify-icon mode="style" icon="material-symbols:question-mark-rounded" height="3rem" />
-          </EepyCard>
+        <EepyCard v-for="_ in 3" placeholder>
+          <template v-slot:title></template>
+          <iconify-icon mode="style" icon="material-symbols:question-mark-rounded" height="3rem" />
+        </EepyCard>
       </div>
     </div>
   </section>

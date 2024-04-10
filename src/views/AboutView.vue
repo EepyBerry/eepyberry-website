@@ -132,7 +132,7 @@
         <h2>Other interests ?</h2>
         <p>Here's a cute little list of stuff I really enjoy outside of programming:</p>
         <div class="chip-list">
-          <EepyChip>🎨 Digital drawing (pixel, painting, vector)</EepyChip>
+          <EepyChip>🪐 Planets</EepyChip>
           <EepyChip>🧇 Crêpes & Waffles</EepyChip>
           <EepyChip>📖 SCP Foundation</EepyChip>
         </div>
