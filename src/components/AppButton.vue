@@ -24,7 +24,7 @@ defineProps({
 
   background: var(--eepy-color-secondary);
   box-shadow: inset 0 4px .75rem var(--eepy-color-accent);
-  color: white;
+  color: var(--white);
   border: none;
   border-radius: .75rem;
   clip-path: inset(-3px round .9rem);

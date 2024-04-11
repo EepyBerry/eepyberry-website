@@ -13,7 +13,7 @@
         >
           <EepyCard id="project-zephyrsd" centered>
             <template v-slot:links>
-                <iconify-icon mode="style" icon="simple-icons:github" style="color: white;" height="2rem" />
+                <iconify-icon mode="style" icon="simple-icons:github" style="color: var(--white);" height="2rem" />
             </template>
             <img class="logo" src="/experiments/experiment-zephyrsd-logo.svg">
             <template v-slot:footer>
@@ -92,7 +92,7 @@
     background-position: top;
     background-size: cover;
     background-color: $bg;
-    color: white;
+    color: var(--white);
     .logo {
       height: 6rem;
       backdrop-filter: blur(4px);

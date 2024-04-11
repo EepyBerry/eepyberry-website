@@ -2,9 +2,14 @@
 <template>
   <AppHomeButton />
   <nav class="mt">
-    <router-link class="nav-link button-link" to="about">
-      <EepyIcon size="xl">sentiment_excited</EepyIcon>
-    </router-link>
+    <EepyTooltipWrapper id="about-tooltip" reference="">
+      <template v-slot:reference>
+        <router-link class="nav-link button-link" to="about" aria-describedby="about-tooltip">
+          <EepyIcon size="xl">sentiment_excited</EepyIcon>
+        </router-link>
+      </template>
+      <template v-slot:tooltip>About me :3</template>
+    </EepyTooltipWrapper>
     <router-link class="nav-link button-link" to="experiments">
       <EepyIcon size="xl">science</EepyIcon>
     </router-link>
