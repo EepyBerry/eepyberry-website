@@ -5,8 +5,7 @@
     &
     <a href="https://vitejs.dev" target="_blank" rel="external nofollow noopener">Vite</a>
   </p>
-  <EepyDivider w="1rem" />
-  <p>© 2024, EepyBerry</p>
+  <p class="mt">© 2024, EepyBerry</p>
   <div class="links">
     <a href="https://github.com/EepyBerry" target="_blank" rel="external nofollow noopener" aria-label="GitHub">
       <iconify-icon mode="style" icon="simple-icons:github" height="2rem" />

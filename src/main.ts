@@ -12,7 +12,7 @@ import '@material-symbols/font-700/rounded.css';
 import './assets/sass/index.scss'
 import 'iconify-icon';
 import AppCard from './components/AppCard.vue'
-import AppTooltipWrapper from './components/AppTooltipWrapper.vue'
+import AppPanelWrapper from './components/AppPanelWrapper.vue'
 
 // Main application
 createApp(App)
@@ -24,5 +24,5 @@ createApp(App)
   .component('EepyDivider', AppDivider)
   .component('EepyIcon', AppIcon)
   .component('EepyChip', AppChip)
-  .component('EepyTooltipWrapper', AppTooltipWrapper)
+  .component('EepyPanelWrapper', AppPanelWrapper)
   .mount('#app')

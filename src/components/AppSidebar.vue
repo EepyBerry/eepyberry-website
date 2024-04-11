@@ -2,20 +2,33 @@
 <template>
   <AppHomeButton />
   <nav class="mt">
-    <EepyTooltipWrapper id="about-tooltip" reference="">
+    <EepyPanelWrapper id="about-tooltip" placement="right">
       <template v-slot:reference>
-        <router-link class="nav-link button-link" to="about" aria-describedby="about-tooltip">
+        <router-link class="nav-link button-link" to="about" aria-label="About page link">
           <EepyIcon size="xl">sentiment_excited</EepyIcon>
         </router-link>
       </template>
-      <template v-slot:tooltip>About me :3</template>
-    </EepyTooltipWrapper>
-    <router-link class="nav-link button-link" to="experiments">
-      <EepyIcon size="xl">science</EepyIcon>
-    </router-link>
-    <router-link class="nav-link button-link" to="contact">
-      <EepyIcon size="xl">mail</EepyIcon>
-    </router-link>
+      <template v-slot:panel>About me :3</template>
+    </EepyPanelWrapper>
+
+    <EepyPanelWrapper id="about-tooltip" placement="right">
+      <template v-slot:reference>
+        <router-link class="nav-link button-link" to="experiments" aria-label="Experiments page link">
+          <EepyIcon size="xl">science</EepyIcon>
+        </router-link>
+      </template>
+      <template v-slot:panel>Experiments!</template>
+    </EepyPanelWrapper>
+
+    <EepyPanelWrapper id="about-tooltip" placement="right">
+      <template v-slot:reference>
+        <router-link class="nav-link button-link" to="contact" aria-label="Contact page link">
+          <EepyIcon size="xl">mail</EepyIcon>
+        </router-link>
+      </template>
+      <template v-slot:panel>Contact me!</template>
+    </EepyPanelWrapper>
+    
   </nav>
 </template>
 
@@ -43,7 +56,7 @@ nav {
   color: var(--white);
   .eepy-icon {
     transform: rotateZ(5deg);
-    transition: transform 100ms ease;
+    transition: transform 200ms ease;
   }
 }
 .nav-link:hover .eepy-icon, .nav-link:focus-visible .eepy-icon {

@@ -35,7 +35,7 @@ onMounted(() => themeHelper.getCurrentTheme())
 header {
   position: sticky;
   inset: 0 0 auto;
-  padding: var(--app-padding-border);
+  padding: var(--app-padding-border) var(--app-padding-border) 0;
   text-align: end;
   z-index: 1;
 
@@ -53,7 +53,7 @@ main {
   margin: 0 auto;
 }
 footer {
-  padding: var(--app-padding-border);
+  padding: 0 var(--app-padding-border) var(--app-padding-border);
   font-family: Dosis;
 
   display: flex;
@@ -77,7 +77,7 @@ aside {
   z-index: 1;
   background-color: var(--eepy-color-secondary);
   
-  box-shadow: inset -2px 0 .75rem var(--eepy-color-accent);
+  //box-shadow: inset -2px 0 .75rem var(--eepy-color-accent);
   //border: 3px solid var(--eepy-color-text);
   //border-left: none;
 }
