@@ -19,7 +19,7 @@
   flex-direction: column;
   justify-content: space-between;
   background-color: var(--eepy-color-card);
-  border: 1px solid var(--eepy-color-accent);
+  //border: 1px solid var(--eepy-color-accent);
   border-radius: .5rem;
   overflow: hidden;
 

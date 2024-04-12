@@ -16,7 +16,7 @@
           <li><iconify-icon mode="style" icon="noto:face-with-steam-from-nose" height="1.25rem" />&nbsp; Really likes Java, and will fight anyone mocking it >:U</li>
           <li><iconify-icon mode="style" icon="noto:artist-palette" height="1.25rem" />&nbsp; Started drawing at the age of 6!</li>
           <li><iconify-icon mode="style" icon="noto:woman-raising-hand" height="1.25rem" />&nbsp; Very smol (~5'2")</li>
-          <!-- <li><iconify-icon mode="style" icon="noto:transgender-flag" height="1.25rem" />&nbsp; Came out as transfem in May 2024!</li> -->
+          <li><iconify-icon mode="style" icon="noto:transgender-flag" height="1.25rem" />&nbsp; Came out as transfem in May 2024!</li>
         </ul>
 
       </article>
@@ -145,7 +145,9 @@
         </div>
       </article>
     </div>
-    <img class="avatar" src="/avatar.png" alt="Avatar" aria-label="avatar">
+    <div class="avatar-wrapper">
+      <img class="avatar" src="/avatar.webp" alt="Avatar" aria-label="avatar">
+    </div>
   </section>
 </template>
 
@@ -172,19 +174,22 @@
     display: flex;
     flex-direction: column;
     gap: 2rem;
+
     article {
       border-left: 2px solid var(--eepy-color-accent);
       padding-left: 1rem;
+      backdrop-filter: blur(4px);
     }
-    p { text-wrap: wrap;}
+    p { text-wrap: wrap; }
   }
-  .avatar {
+  .avatar-wrapper {
     grid-column: 2;
     grid-row: 1 / span 2;
     justify-self: center;
     align-self: flex-start;
-    width: clamp(160px, 25vw, 380px);
-    filter: brightness(150%);
+    .avatar {
+      width: clamp(160px, 25vw, 380px);
+    }
   }
 }
 
@@ -223,7 +228,7 @@
       grid-column: 1 / span 2;
       grid-row: 2;
     }
-    .avatar {
+    .avatar-wrapper {
       grid-row: 1;
     }
   }
@@ -240,7 +245,7 @@
     .section-contet {
       grid-column: 1;
     }
-    .avatar {
+    .avatar-wrapper {
       display: none;
     }
   }

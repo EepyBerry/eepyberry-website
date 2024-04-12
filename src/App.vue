@@ -1,5 +1,6 @@
 <template>
-  <img class="blob top" :src="`/blob_${themeHelper.themeRef.value}.svg`" aria-hidden="true">
+  <AppStars :visible="themeHelper.themeRef.value === 'dark'" :size="5" :density="8" />
+  <img class="blob top" :src="`/page_elements/blob_${themeHelper.themeRef.value}.svg`" aria-hidden="true">
   <header>
     <!-- <img class="blob header" :src="`/blob_${themeHelper.themeRef.value}.svg`" aria-hidden="true"> -->
     <AppThemeSelect />
@@ -12,7 +13,7 @@
   </main>
   <footer role="contentinfo">
     <AppFooter />
-    <img class="blob bottom" :src="`/blob-strawberries_${themeHelper.themeRef.value}.svg`" aria-hidden="true">
+    <img class="blob bottom" :src="`/page_elements/blob-strawberries_${themeHelper.themeRef.value}.svg`" aria-hidden="true">
   </footer>
 </template>
 
@@ -23,6 +24,7 @@ import type { ThemeHelper } from '@/utils/theme.helper';
 import AppThemeSelect from "@/components/AppThemeSelect.vue";
 import AppSidebar from "@/components/AppSidebar.vue"
 import AppFooter from './components/AppFooter.vue';
+import AppStars from './components/AppStars.vue';
 
 const themeHelper: ThemeHelper = inject("ThemeHelper") as ThemeHelper;
 provide('$theme', themeHelper.themeRef)
@@ -53,6 +55,9 @@ main {
   margin: 0 auto;
 }
 footer {
+  //background-image: url('/ground.svg');
+  background-position: 50% 0;
+  background-size: cover;
   padding: 0 var(--app-padding-border) var(--app-padding-border);
   font-family: Dosis;
 

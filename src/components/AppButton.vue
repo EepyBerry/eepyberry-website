@@ -73,12 +73,27 @@ defineProps({
     z-index: -1;
   }
 }
-.eepy-button:hover, .eepy-button-visible {
+.eepy-button:hover, .eepy-button:focus-visible {
   cursor: pointer;
   transform: translateY(-6.25%)
 }
 .eepy-button:active {
   cursor: pointer;
   transform: scale(97.5%)
+}
+
+@media(prefers-reduced-motion) {
+  .eepy-button {
+    transition: none;
+    .rainbow-background {
+      animation: none;
+    }
+  }
+  .eepy-button:hover, .eepy-button:focus-visible {
+    transform: none;
+  }
+  .eepy-button:active {
+    transform: scale(97.5%);
+  }
 }
 </style>

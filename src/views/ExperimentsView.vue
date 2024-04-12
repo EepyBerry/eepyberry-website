@@ -15,7 +15,7 @@
             <template v-slot:links>
                 <iconify-icon mode="style" icon="simple-icons:github" style="color: var(--white);" height="2rem" />
             </template>
-            <img class="logo" src="/experiments/experiment-zephyrsd-logo.svg">
+            <img class="logo" src="/experiments/experiment-zephyrsd-logo.svg" alt="ZephyrSD Logo" aria-label="ZephyrSD logo">
             <template v-slot:footer>
               <p class="mt-l">A dashboard for managing Stable Diffusion WebUIs 🚀</p>
             </template>
@@ -30,7 +30,7 @@
         >
           <EepyCard>
             <template v-slot:title>
-              <p>Planet-themed project</p>
+              <p>Planet-themed web project</p>
               <iconify-icon mode="style" icon="noto:thinking-face" height="2rem" />
             </template>
             <template v-slot:footer>
@@ -41,10 +41,10 @@
           </EepyCard>
         </a>
         <a class="card-link disabled"
-           href="https://github.com/EepyBerry/zephyr-sd-aws"
+           href=""
            target="_blank"
            rel="external nofollow noopener"
-           aria-label="GitHub"
+           aria-label="Under construction"
            @click.prevent
         >
           <EepyCard>
@@ -59,7 +59,26 @@
             </template>
           </EepyCard>
         </a>
-        <EepyCard v-for="_ in 3" placeholder>
+        <a class="card-link disabled"
+           href=""
+           target="_blank"
+           rel="external nofollow noopener"
+           aria-label="Under construction"
+           @click.prevent
+        >
+          <EepyCard>
+            <template v-slot:title>
+              <p>Blockbench web project</p>
+              <iconify-icon mode="style" icon="noto:thinking-face" height="2rem" />
+            </template>
+            <template v-slot:footer>
+              <p class="tx-mono mt">
+                [REDACTED: UNDER CONSTRUCTION]
+              </p>
+            </template>
+          </EepyCard>
+        </a>
+        <EepyCard v-for="_ in 5" placeholder>
           <template v-slot:title></template>
           <iconify-icon mode="style" icon="material-symbols:question-mark-rounded" height="3rem" />
         </EepyCard>
@@ -71,6 +90,10 @@
 <style lang="scss">
 #section-experiments {
   flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 
   .section-content {
     margin-top: 4rem;
