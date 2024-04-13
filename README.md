@@ -11,5 +11,13 @@ I'll be hosting some stuff about myself, bits of my work, and some experiments l
 
 ## 📓 Licensing
 
-**This project is provided under a BSD-3 Clause "New" or "Revised" License.<br>
-Please consult the [license file](LICENSE) for full information.**
+### Source code (.html, .ts, .vue, ...)
+
+The entirety of this project's source code is provided under a **BSD 3-Clause "New" or "Revised" License**.<br>
+Please consult the main [license file](LICENSE) for full information.
+
+### Original art & graphics (.svg, .webp, ...)
+
+All original artwork in the `/public` folder and below is provided under a CC BY-NC-SA 4.0 "Attribution-NonCommercial-ShareAlike" licence.<br>
+In short: usage and adaptation are allowed for non-commercial purposes, as long as I am credited and adaptations are shared under the same or a compatible license.<br>
+Please consult the `/public` folder's [license file](public/LICENSE) for full information.

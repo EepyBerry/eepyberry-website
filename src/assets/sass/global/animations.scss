@@ -1,23 +1,17 @@
 @keyframes rotate {
-  0% {
-    transform: rotate(0deg);
-  }
-  50% {
-    transform: rotate(180deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
+  0% { transform: rotate(0deg); }
+  50% { transform: rotate(180deg); }
+  100% { transform: rotate(360deg); }
 }
 
 @keyframes bounce {
-  0% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-.5rem);
-  }
-  100% {
-    transform: translateY(0);
-  }
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-.5rem); }
+  100% { transform: translateY(0); }
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 0 }
+  10%, 90% { opacity: 0 }
+  33%, 67% { opacity: 1 }
 }

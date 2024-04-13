@@ -1,7 +1,14 @@
 <template>
-  <button icon-button @click="themeHelper.toggleSiteTheme()" aria-label="Open site theme selector">
-    <EepyIcon size="xl">{{ getThemeIcon() }}</EepyIcon>
-  </button>
+  <EepyPanelWrapper mode="hover" placement="bottom-end">
+    <template v-slot:reference>
+      <button icon-button @click="themeHelper.toggleSiteTheme()" aria-label="Open site theme selector">
+        <EepyIcon size="xl">{{ getThemeIcon() }}</EepyIcon>
+      </button>
+    </template>
+    <template v-slot:panel>
+      yosdfsdfsfsfdf
+    </template>
+  </EepyPanelWrapper>
 </template>
 
 <script setup lang="ts">

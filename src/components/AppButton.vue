@@ -14,7 +14,7 @@ defineProps({
 
 <style lang="scss">
 .eepy-button {
-  padding: .75rem;
+  padding: .625rem .75rem;
 
   display: flex;
   flex-direction: row;

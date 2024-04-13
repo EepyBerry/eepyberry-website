@@ -1,8 +1,10 @@
 <template>
   <div class="eepy-tooltip-wrapper">
     <div ref="reference" class="eepy-tooltip-ref"
-      @mouseenter="displayTooltip(true)" @mouseleave="displayTooltip(false)"
-      @focus="displayTooltip(true)" @blur="displayTooltip(false)"
+      @mouseenter="mode === 'hover' ? display(true) : undefined"
+      @mouseleave="mode === 'hover' ? display(false) : undefined"
+      @focus="display(true)"
+      @blur="display(false)"
     >
       <slot name="reference"></slot>
     </div>
@@ -28,7 +30,7 @@
 import { ref, type Ref } from 'vue';
 import { useFloating, autoUpdate, offset, arrow, type Placement } from '@floating-ui/vue';
 
-const $props = defineProps<{ placement: Placement }>()
+const $props = defineProps<{ mode: 'click' | 'hover', placement: Placement }>()
 
 const reference: Ref<any | null> = ref(null)
 const floating: Ref<any | null> = ref(null)
@@ -43,7 +45,7 @@ const { floatingStyles, middlewareData } = useFloating(reference, floating, {
   whileElementsMounted: autoUpdate,
 });
 
-function displayTooltip(value: boolean) {
+function display(value: boolean) {
   floating.value.style.display = value ? 'block' : '';
 }
 
@@ -59,13 +61,13 @@ function displayTooltip(value: boolean) {
   padding: 2px 8px;
   border-radius: 8px;
 
-  background-color: var(--eepy-color-tooltip);
+  background-color: var(--eepy-color-panel);
   font-family: Dosis;
   font-weight: 600;
   color: var(--white);
 }
 .eepy-tooltip-inner-arrow {
-  background: var(--eepy-color-tooltip);
+  background: var(--eepy-color-panel);
   width: 8px;
   height: 8px;
   transform: rotate(45deg);

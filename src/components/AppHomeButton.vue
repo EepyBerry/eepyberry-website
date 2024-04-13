@@ -1,5 +1,5 @@
 <template>
-  <EepyPanelWrapper id="about-tooltip" placement="right">
+  <EepyPanelWrapper id="about-tooltip" mode="hover" placement="right">
     <template v-slot:reference>
       <RouterLink class="home-link button-link" to="/"
         aria-label="Back to landing page"

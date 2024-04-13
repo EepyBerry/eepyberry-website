@@ -2,7 +2,7 @@
 <template>
   <AppHomeButton />
   <nav class="mt">
-    <EepyPanelWrapper id="about-tooltip" placement="right">
+    <EepyPanelWrapper id="about-tooltip" mode="hover" placement="right">
       <template v-slot:reference>
         <router-link class="nav-link button-link" to="about" aria-label="About page link">
           <EepyIcon size="xl">sentiment_excited</EepyIcon>
@@ -11,7 +11,7 @@
       <template v-slot:panel>About me :3</template>
     </EepyPanelWrapper>
 
-    <EepyPanelWrapper id="about-tooltip" placement="right">
+    <EepyPanelWrapper id="about-tooltip" mode="hover" placement="right">
       <template v-slot:reference>
         <router-link class="nav-link button-link" to="experiments" aria-label="Experiments page link">
           <EepyIcon size="xl">science</EepyIcon>
@@ -20,7 +20,7 @@
       <template v-slot:panel>Experiments!</template>
     </EepyPanelWrapper>
 
-    <EepyPanelWrapper id="about-tooltip" placement="right">
+    <EepyPanelWrapper id="about-tooltip" mode="hover" placement="right">
       <template v-slot:reference>
         <router-link class="nav-link button-link" to="contact" aria-label="Contact page link">
           <EepyIcon size="xl">mail</EepyIcon>

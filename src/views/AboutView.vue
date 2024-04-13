@@ -167,6 +167,7 @@
   .section-title {
     grid-column: 1;
     margin: 2rem 0;
+    backdrop-filter: blur(4px);
   }
 
   .section-content {

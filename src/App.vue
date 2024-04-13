@@ -1,15 +1,22 @@
 <template>
-  <AppStars :visible="themeHelper.themeRef.value === 'dark'" :size="5" :density="8" />
-  <img class="blob top" :src="`/page_elements/blob_${themeHelper.themeRef.value}.svg`" aria-hidden="true">
+  <AppScatter :mode="themeHelper.themeRef.value === 'dark' ? 'dot' : 'svg'"
+            :visible="true"
+            :size="themeHelper.themeRef.value === 'dark' ? 5 : 16"
+            :density="themeHelper.themeRef.value === 'dark' ? 8 : 6"
+  />
+  <!-- <img class="blob top" :src="`/page_elements/blob_${themeHelper.themeRef.value}.svg`" aria-hidden="true"> -->
   <header>
-    <!-- <img class="blob header" :src="`/blob_${themeHelper.themeRef.value}.svg`" aria-hidden="true"> -->
     <AppThemeSelect />
   </header>
   <aside>
     <AppSidebar />
   </aside>
   <main>
-    <RouterView />
+    <RouterView v-slot="{ Component, route }">
+      <Transition name="fade" mode="out-in">
+        <component :key="$route.path" :is="Component" />
+      </Transition>
+    </RouterView>
   </main>
   <footer role="contentinfo">
     <AppFooter />
@@ -18,19 +25,18 @@
 </template>
 
 <script setup lang="ts">
-import { RouterView } from 'vue-router'
-import { inject, onMounted, provide } from 'vue';
+import { defineAsyncComponent, inject, onMounted, provide, Transition } from 'vue';
 import type { ThemeHelper } from '@/utils/theme.helper';
 import AppThemeSelect from "@/components/AppThemeSelect.vue";
 import AppSidebar from "@/components/AppSidebar.vue"
 import AppFooter from './components/AppFooter.vue';
-import AppStars from './components/AppStars.vue';
 
+const AppScatter = defineAsyncComponent(() => import('./components/AppScatter.vue'))
 const themeHelper: ThemeHelper = inject("ThemeHelper") as ThemeHelper;
-provide('$theme', themeHelper.themeRef)
 
 onMounted(() => themeHelper.getCurrentTheme())
 
+provide('$theme', themeHelper.themeRef)
 </script>
 
 <style lang="scss">
@@ -103,5 +109,15 @@ aside {
     left: 0;
     bottom: 0;
   }
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.375s ease;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
 }
 </style>
