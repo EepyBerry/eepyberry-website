@@ -6,9 +6,12 @@
   />
   <!-- <img class="blob top" :src="`/page_elements/blob_${themeHelper.themeRef.value}.svg`" aria-hidden="true"> -->
   <header>
+    <button :style="{ visibility: displayMenuButton ? 'visible' : 'hidden' }" icon-button @click="toggleMenu(!menuOpen)">
+      <EepyIcon size="xl">{{ menuOpen ? 'menu_open' : 'menu' }}</EepyIcon>
+    </button>
     <AppThemeSelect />
   </header>
-  <aside>
+  <aside :class="menuOpen ? 'expanded' : 'collapsed'" @focusout="$event.relatedTarget ? undefined : toggleMenu(false)">
     <AppSidebar />
   </aside>
   <main>
@@ -25,16 +28,36 @@
 </template>
 
 <script setup lang="ts">
-import { defineAsyncComponent, inject, onMounted, provide, Transition } from 'vue';
+import { defineAsyncComponent, inject, onMounted, onUnmounted, provide, ref, Transition, watch, type Ref } from 'vue';
 import type { ThemeHelper } from '@/utils/theme.helper';
-import AppThemeSelect from "@/components/AppThemeSelect.vue";
-import AppSidebar from "@/components/AppSidebar.vue"
-import AppFooter from './components/AppFooter.vue';
+import AppThemeSelect from "@/components/main/AppThemeSelect.vue";
+import AppSidebar from "@/components/main/AppSidebar.vue"
+import AppFooter from './components/main/AppFooter.vue';
 
 const AppScatter = defineAsyncComponent(() => import('./components/AppScatter.vue'))
 const themeHelper: ThemeHelper = inject("ThemeHelper") as ThemeHelper;
 
-onMounted(() => themeHelper.getCurrentTheme())
+const displayMenuButton: Ref<boolean> = ref(false)
+const menuOpen: Ref<boolean> = ref(false)
+
+const resizeHandler = () => {
+    menuOpen.value = window.innerWidth >= 768
+    displayMenuButton.value = window.innerWidth < 768
+}
+
+onMounted(() => {
+  themeHelper.loadCurrentTheme()
+  if (window.innerWidth >= 768) menuOpen.value = true
+  window.addEventListener('resize', resizeHandler)
+})
+onUnmounted(() => {
+  window.removeEventListener('resize', resizeHandler)
+})
+
+function toggleMenu(open: boolean) {
+  if (!open && window.innerWidth >= 768) return
+  menuOpen.value = open
+}
 
 provide('$theme', themeHelper.themeRef)
 </script>
@@ -49,7 +72,7 @@ header {
 
   display: flex;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: space-between;
 }
 main {
   flex: 1;
@@ -87,10 +110,13 @@ aside {
   justify-content: flex-start;
   z-index: 1;
   background-color: var(--eepy-color-secondary);
-  
+  transition: transform 250ms ease;
   //box-shadow: inset -2px 0 .75rem var(--eepy-color-accent);
   //border: 3px solid var(--eepy-color-text);
   //border-left: none;
+
+  &.expanded { transform: translateX(0); }
+  &.collapsed { transform: translateX(-4rem); }
 }
 
 .blob {
@@ -119,5 +145,9 @@ aside {
 .fade-enter-from,
 .fade-leave-to {
   opacity: 0;
+}
+
+@media(prefers-reduced-motion) {
+  aside { transition: none; }
 }
 </style>

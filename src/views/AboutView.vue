@@ -250,7 +250,6 @@
       display: none;
     }
   }
-
 }
 
 </style>

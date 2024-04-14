@@ -11,7 +11,7 @@ export class ThemeHelper {
     // Expose ref to watch for in relevant components
     themeRef: Ref<string> = ref('')
 
-    getCurrentTheme(): UserTheme {
+    loadCurrentTheme(): UserTheme {
         // Return immediately if found in local storage
         if (localStorage.getItem(LOCAL_STORAGE_THEME_KEY)) {
             const currentTheme = <UserTheme> localStorage.getItem(LOCAL_STORAGE_THEME_KEY)
@@ -43,6 +43,18 @@ export class ThemeHelper {
             localStorage.setItem(LOCAL_STORAGE_THEME_KEY, UserTheme.LIGHT);
             document.documentElement.setAttribute('data-theme', UserTheme.LIGHT)
             this.themeRef.value = UserTheme.LIGHT
+        }
+    }
+
+    setSiteTheme(theme: string): void {
+        if (theme === 'light') {
+            localStorage.setItem(LOCAL_STORAGE_THEME_KEY, UserTheme.LIGHT);
+            document.documentElement.setAttribute('data-theme', UserTheme.LIGHT)
+            this.themeRef.value = UserTheme.LIGHT
+        } else if (theme === 'dark') {
+            localStorage.setItem(LOCAL_STORAGE_THEME_KEY, UserTheme.DARK);
+            document.documentElement.setAttribute('data-theme', UserTheme.DARK)
+            this.themeRef.value = UserTheme.DARK
         }
     }
 }

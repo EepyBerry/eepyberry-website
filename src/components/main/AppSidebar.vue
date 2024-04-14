@@ -2,31 +2,31 @@
 <template>
   <AppHomeButton />
   <nav class="mt">
-    <EepyPanelWrapper id="about-tooltip" mode="hover" placement="right">
+    <EepyPanelWrapper id="about-tooltip" mode="hover" floatingPlacement="right">
       <template v-slot:reference>
         <router-link class="nav-link button-link" to="about" aria-label="About page link">
           <EepyIcon size="xl">sentiment_excited</EepyIcon>
         </router-link>
       </template>
-      <template v-slot:panel>About me :3</template>
+      <template v-slot:tooltip>About me :3</template>
     </EepyPanelWrapper>
 
-    <EepyPanelWrapper id="about-tooltip" mode="hover" placement="right">
+    <EepyPanelWrapper id="about-tooltip" mode="hover" floatingPlacement="right">
       <template v-slot:reference>
         <router-link class="nav-link button-link" to="experiments" aria-label="Experiments page link">
           <EepyIcon size="xl">science</EepyIcon>
         </router-link>
       </template>
-      <template v-slot:panel>Experiments!</template>
+      <template v-slot:tooltip>Experiments!</template>
     </EepyPanelWrapper>
 
-    <EepyPanelWrapper id="about-tooltip" mode="hover" placement="right">
+    <EepyPanelWrapper id="about-tooltip" mode="hover" floatingPlacement="right">
       <template v-slot:reference>
         <router-link class="nav-link button-link" to="contact" aria-label="Contact page link">
           <EepyIcon size="xl">mail</EepyIcon>
         </router-link>
       </template>
-      <template v-slot:panel>Contact me!</template>
+      <template v-slot:tooltip>Contact me!</template>
     </EepyPanelWrapper>
     
   </nav>

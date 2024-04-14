@@ -1,5 +1,5 @@
 <template>
-  <EepyPanelWrapper id="about-tooltip" mode="hover" placement="right">
+  <EepyPanelWrapper id="about-tooltip" mode="hover" floatingPlacement="right">
     <template v-slot:reference>
       <RouterLink class="home-link button-link" to="/"
         aria-label="Back to landing page"
@@ -10,7 +10,7 @@
         <img :src="`eepyberry_small_${active ? 'boop_' : ''}${$theme}.svg`" aria-label="Home link">
       </RouterLink>
     </template>
-    <template v-slot:panel>Home!</template>
+    <template v-slot:tooltip>Home!</template>
   </EepyPanelWrapper>
   
 </template>
