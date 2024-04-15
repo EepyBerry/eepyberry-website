@@ -87,6 +87,15 @@
   </section>
 </template>
 
+<!------------------------------------------------------------>
+<script setup lang="ts">
+import { useHead } from '@unhead/vue';
+useHead({ meta: [
+  { name: 'description', content: 'A repository of my various projects, available on this website or on my GitHub!' }
+]})
+</script>
+
+<!------------------------------------------------------------>
 <style lang="scss">
 #section-experiments {
   flex: 1;

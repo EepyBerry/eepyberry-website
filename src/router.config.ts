@@ -11,22 +11,22 @@ const router = createRouter({
       {
         path: '/',
         name: 'Home',
-        component: HomeView
+        component: () => import('./views/HomeView.vue')
       },
       {
         path: '/about',
         name: 'About',
-        component: AboutView
+        component: () => import('./views/AboutView.vue')
       },
       {
         path: '/experiments',
         name: 'Experiments',
-        component: ExperimentsView
+        component: () => import('./views/ExperimentsView.vue')
       },
       {
         path: '/page-not-found',
         name: 'Not Found',
-        component: NotFoundView
+        component: () => import('./views/NotFoundView.vue')
       },
       { 
         path: '/:pathMatch(.*)*',
@@ -35,7 +35,7 @@ const router = createRouter({
     ]
 })
 router.afterEach((to) => {
-document.title = (to.name ? `${String(to.name)} · ` : '') + SITE_TITLE;
+  document.title = (to.name ? `${String(to.name)} · ` : '') + SITE_TITLE;
 })
 
 export default router

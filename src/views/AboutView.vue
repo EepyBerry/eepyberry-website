@@ -151,6 +151,15 @@
   </section>
 </template>
 
+<!------------------------------------------------------------>
+<script setup lang="ts">
+import { useHead } from '@unhead/vue';
+useHead({ meta: [
+  { name: 'description', content: 'Who am I? What do I like to do? Why strawberries? It\'s all in here!' }
+]})
+</script>
+
+<!------------------------------------------------------------>
 <style scoped lang="scss">
 #section-about {
   flex: 1;

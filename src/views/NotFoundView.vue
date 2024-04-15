@@ -22,6 +22,15 @@
     </svg>
   </section>
 </template>
+
+<script setup lang="ts">
+import { useHead } from '@unhead/vue';
+useHead({ meta: [
+  { name: 'robots', content: 'noindex' },
+  { name: 'description', content: 'Default error page' }
+]})
+</script>
+
 <style scoped lang="scss">
 #not-found {
   flex: 1;

@@ -29,8 +29,12 @@
 
 <!------------------------------------------------------------>
 <script setup lang="ts">
-import { inject } from '@vue/runtime-dom';
+import { useHead } from '@unhead/vue';
+import { inject } from 'vue';
 const $theme = inject('$theme')
+useHead({ meta: [
+  { name: 'description', content: 'A small website about myself, my projects, and general shenanigans. Welcome! 🍓' }
+]})
 </script>
 
 <!------------------------------------------------------------>

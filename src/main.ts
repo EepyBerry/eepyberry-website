@@ -13,10 +13,12 @@ import './assets/sass/index.scss'
 import 'iconify-icon';
 import AppCard from './components/AppCard.vue'
 import AppPanelWrapper from './components/AppPanelWrapper.vue'
+import { createHead } from '@unhead/vue'
 
 // Main application
 createApp(App)
   .use(router)
+  .use(createHead())
   .provide('ThemeHelper', new ThemeHelper())
   .component('EepyCard', AppCard)
   .component('EepyCardlet', AppCardlet)

@@ -87,12 +87,13 @@ footer {
   //background-image: url('/ground.svg');
   background-position: 50% 0;
   background-size: cover;
-  padding: 0 var(--app-padding-border) var(--app-padding-border);
+  padding: var(--app-padding-border);
   font-family: Dosis;
 
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: flex-end;
+  justify-content: space-between;
   gap: 8px;
   text-align: end;
   font-weight: 500;
@@ -145,6 +146,14 @@ aside {
 .fade-enter-from,
 .fade-leave-to {
   opacity: 0;
+}
+
+@media screen and (max-width: 767px) {
+  footer {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 }
 
 @media(prefers-reduced-motion) {
