@@ -14,12 +14,14 @@ import 'iconify-icon';
 import AppCard from './components/AppCard.vue'
 import AppPanelWrapper from './components/AppPanelWrapper.vue'
 import { createHead } from '@unhead/vue'
+import AppArticle from './components/AppArticle.vue'
 
 // Main application
 createApp(App)
   .use(router)
   .use(createHead())
   .provide('ThemeHelper', new ThemeHelper())
+  .component('EepyArticle', AppArticle)
   .component('EepyCard', AppCard)
   .component('EepyCardlet', AppCardlet)
   .component('EepyButton', AppButton)

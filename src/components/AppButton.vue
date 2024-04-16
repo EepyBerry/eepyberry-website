@@ -23,7 +23,6 @@ defineProps({
   gap: .5rem;
 
   background: var(--eepy-color-secondary);
-  //box-shadow: inset 0 4px .75rem var(--eepy-color-accent);
   color: var(--white);
   border: none;
   border-radius: .75rem;
@@ -40,7 +39,6 @@ defineProps({
   .rainbow-overlay {
     position: absolute;
     background-color: var(--eepy-color-secondary);
-    //box-shadow: inset 0 4px .75rem var(--eepy-color-accent);
     inset: 0;
     border-radius: .75rem;
   }
@@ -55,7 +53,6 @@ defineProps({
       hsl(266, 100%, 52%),
       hsl(251, 100%, 53%),
       hsl(234, 100%, 54%),
-      hsl(226, 100%, 52%),
       hsl(214, 100%, 50%),
       hsl(192, 100%, 44%),
       hsl(170, 100%, 50%),

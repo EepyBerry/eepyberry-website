@@ -24,6 +24,7 @@
   <footer role="contentinfo">
     <AppFooter />
     <img class="blob bottom" :src="`/page_elements/blob-strawberries_${themeHelper.themeRef.value}.svg`" aria-hidden="true">
+    <img v-if="showRightBlob" class="blob bottom right" :src="`/page_elements/blob-strawberries_${themeHelper.themeRef.value}.svg`" aria-hidden="true">
   </footer>
 </template>
 
@@ -39,10 +40,12 @@ const themeHelper: ThemeHelper = inject("ThemeHelper") as ThemeHelper;
 
 const displayMenuButton: Ref<boolean> = ref(false)
 const menuOpen: Ref<boolean> = ref(false)
+const showRightBlob: Ref<boolean> = ref(false)
 
 const resizeHandler = () => {
-    menuOpen.value = window.innerWidth >= 768
-    displayMenuButton.value = window.innerWidth < 768
+    menuOpen.value = window.innerWidth >= 1024
+    displayMenuButton.value = window.innerWidth < 1024
+    showRightBlob.value = window.innerWidth < 768
 }
 
 onMounted(() => {
@@ -73,6 +76,10 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  & > * {
+    border-radius: 0.5rem;
+    backdrop-filter: blur(4px);
+  }
 }
 main {
   flex: 1;
@@ -97,7 +104,6 @@ footer {
   gap: 8px;
   text-align: end;
   font-weight: 500;
-  z-index: 1;
 }
 aside {
   position: fixed;
@@ -112,9 +118,6 @@ aside {
   z-index: 1;
   background-color: var(--eepy-color-secondary);
   transition: transform 250ms ease;
-  //box-shadow: inset -2px 0 .75rem var(--eepy-color-accent);
-  //border: 3px solid var(--eepy-color-text);
-  //border-left: none;
 
   &.expanded { transform: translateX(0); }
   &.collapsed { transform: translateX(-4rem); }
@@ -122,19 +125,17 @@ aside {
 
 .blob {
   position: absolute;
-  height: clamp(120px, 4rem + 7.5vw, 180px);
+  height: clamp(100px, 4rem + 7.5vw, 180px);
+  z-index: -1;
 
-  &.header {
-    height: clamp(80px, 4rem + 7.5vw, 120px);
-  }
-  &.top, &.header {
-    transform: rotateZ(180deg);
-    top: 0;
-    right: 0;
-  }
   &.bottom {
     left: 0;
     bottom: 0;
+  }
+  &.bottom.right {
+    left: auto;
+    right: 0;
+    transform: rotateY(180deg)
   }
 }
 

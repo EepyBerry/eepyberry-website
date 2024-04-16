@@ -5,8 +5,10 @@
       <span class="subtitle">Software&nbsp;Engineer & Art&nbsp;Gremlin&nbsp;<span class="tx-nowrap">>:3</span></span>
     </div>
     <div class="section-content">
-      <article>
-        <h2>Byte-sized info! <span class="tx-mini">(get it? :3)</span></h2>
+      <EepyArticle>
+        <template v-slot:title>
+          <h2>Byte-sized info! <span class="tx-mini">(get it? :3)</span></h2>
+        </template>
         <p class="mb">
           Here's some quick facts about me, because big blocks of text are <i>boooring</i>!
         </p>
@@ -18,10 +20,9 @@
           <li><iconify-icon mode="style" icon="noto:woman-raising-hand" height="1.25rem" />&nbsp; Very smol (~5'2")</li>
           <li><iconify-icon mode="style" icon="noto:transgender-flag" height="1.25rem" />&nbsp; Came out as transfem in May 2024!</li>
         </ul>
-
-      </article>
-      <article>
-        <h2>Techs n' stuff</h2>
+      </EepyArticle>
+      <EepyArticle>
+        <template v-slot:title><h2>Techs n' stuff</h2></template>
         <p>Have a list of my favourite coding techs & tools! Also includes stuff I'm learning right now:</p>
         <div class="cardlet-list mt">
           <EepyCardlet class="java">
@@ -127,9 +128,9 @@
             Aseprite
           </EepyCardlet>
         </div>
-      </article>
-      <article>
-        <h2>Other interests ?</h2>
+      </EepyArticle>
+      <EepyArticle>
+        <template v-slot:title><h2>Other interests ?</h2></template>
         <p>Here's a cute little list of stuff I really enjoy outside of programming:</p>
         <div class="chip-list">
           <EepyChip>🪐 Planets</EepyChip>
@@ -143,7 +144,7 @@
           <EepyChip>💡 OMORI</EepyChip>
           <EepyChip>🔥 ULTRAKILL</EepyChip>
         </div>
-      </article>
+      </EepyArticle>
     </div>
     <div class="avatar-wrapper">
       <img class="avatar" src="/avatar.webp" alt="Avatar" aria-label="avatar">
@@ -164,11 +165,11 @@ useHead({ meta: [
 #section-about {
   flex: 1;
   display: grid;
-  grid-template-columns: 2.25fr 1fr;
+  grid-template-columns: 2fr 1fr;
   grid-template-rows: auto auto;
   align-items: center;
   margin: 0 auto;
-  gap: 1.5rem 3rem;
+  gap: 1.5rem 4rem;
 
   //background-color: var(--eepy-color-card);
   border-radius: 1rem;
@@ -184,13 +185,6 @@ useHead({ meta: [
     display: flex;
     flex-direction: column;
     gap: 2rem;
-
-    article {
-      border-left: 2px solid var(--eepy-color-accent);
-      padding-left: 1rem;
-      backdrop-filter: blur(4px);
-    }
-    p { text-wrap: wrap; }
   }
   .avatar-wrapper {
     grid-column: 2;
