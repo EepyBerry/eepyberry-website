@@ -1,8 +1,8 @@
 <template>
   <section id="section-about">
     <div class="section-title">
-      <h1 class="title">Hello, I'm EepyBerry!&nbsp;🍓</h1>
-      <span class="subtitle">Software&nbsp;Engineer & Art&nbsp;Gremlin&nbsp;<span class="tx-nowrap">>:3</span></span>
+      <h1 class="tx-title">Hello, I'm EepyBerry!&nbsp;🍓</h1>
+      <span class="tx-subtitle">Software&nbsp;Engineer & Art&nbsp;Gremlin&nbsp;<span class="tx-nowrap">>:3</span></span>
     </div>
     <div class="section-content">
       <EepyArticle>
@@ -73,6 +73,7 @@
             AWS
           </EepyCardlet>
         </div>
+        <!------------------------------------------------>
         <div class="cardlet-list mt">
           <EepyCardlet class="idea">
             <iconify-icon
@@ -99,6 +100,7 @@
             Godot
           </EepyCardlet>
         </div>
+
         <p class="mt-l">And these are my main drawing tools:</p>
         <div class="cardlet-list mt">
           <EepyCardlet class="illustrator">
@@ -131,18 +133,27 @@
       </EepyArticle>
       <EepyArticle>
         <template v-slot:title><h2>Other interests ?</h2></template>
-        <p>Here's a cute little list of stuff I really enjoy outside of programming:</p>
+        <p>Here's a cute little list of stuff I really enjoy outside of programming/drawing:</p>
         <div class="chip-list">
-          <EepyChip>🪐 Planets</EepyChip>
-          <EepyChip>🧇 Crêpes & Waffles</EepyChip>
+          <EepyChip>🧰 Blender</EepyChip>
           <EepyChip>📖 SCP Foundation</EepyChip>
+          <EepyChip>🧇 Crêpes & Waffles</EepyChip>
+          <EepyChip>🫐 Berries!</EepyChip>
+          <EepyChip>🪐 Planets</EepyChip>
+          <EepyChip>🧩 Board Games</EepyChip>
         </div>
         <p class="mt-l">And of course, games I like/love/am clearly too obsessed with :</p>
         <div class="chip-list">
-          <EepyChip>🎩 A Hat in Time</EepyChip>
           <EepyChip>🍓 Celeste</EepyChip>
+          <EepyChip>😶 Hollow Knight</EepyChip>
           <EepyChip>💡 OMORI</EepyChip>
+          <EepyChip>🎩 A Hat in Time</EepyChip>
           <EepyChip>🔥 ULTRAKILL</EepyChip>
+          <EepyChip>💤 Yume Nikki / 2kki</EepyChip>
+          <EepyChip>🍸 VA-11 Hall-A</EepyChip>
+          <EepyChip>🧩 The Talos Principle 1/2</EepyChip>
+          <EepyChip>⚙️ Submachine</EepyChip>
+          <EepyChip>💎 GemCraft Series</EepyChip>
         </div>
       </EepyArticle>
     </div>
