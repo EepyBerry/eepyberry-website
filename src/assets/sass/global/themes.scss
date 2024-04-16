@@ -14,6 +14,8 @@
   --eepy-color-card-shadow-light: #f3d1d1;
   --eepy-color-cardlet: #915375;
   --eepy-color-panel: #683f58;
+
+  --eepy-color-alert: #f00;
 }
 
 :root[data-theme='dark'] {
@@ -30,4 +32,6 @@
   --eepy-color-card-shadow-light: #514e5f;
   --eepy-color-cardlet: #243a3f;
   --eepy-color-panel: #20182e;
+  
+  --eepy-color-alert: rgb(255, 116, 92);
 }

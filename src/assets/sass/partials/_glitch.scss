@@ -1,0 +1,51 @@
+// Sourced from: https://codepen.io/mondo-iwanow/pen/xoxvgE
+
+@use "sass:math";
+
+$primaryColor: var(--eepy-color-text);
+$secondaryColor: var(--eepy-color-card);
+$steps: 20;
+
+.tx-glitch {
+  position: relative;
+  margin: 0 auto;
+  color: $primaryColor;
+  font-weight: 600;
+  letter-spacing: 0.25rem;
+  transform: scale3d(1,1,1);
+
+
+  &::before,
+  &::after {
+      content: attr(data-text);
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      overflow: hidden;
+      background: $secondaryColor;
+      color: $primaryColor;
+      clip: rect(0, 900px, 0, 0);
+
+  }
+
+  &::before {
+      left: 2px;
+      text-shadow: 1px 5 green;
+      animation: glitch-effect 3s infinite linear alternate-reverse;
+  }
+
+  &::after {
+      left: 1px;
+      text-shadow: -1px 0 red;
+      animation: glitch-effect 2s infinite linear alternate-reverse;
+  }
+}
+
+@keyframes glitch-effect{
+  @for $i from 0 through $steps{
+      #{percentage($i*math.div(1,$steps))}{
+          clip:rect(random(20)+px,9999px,random(20)+px,0);
+      }
+  }
+}

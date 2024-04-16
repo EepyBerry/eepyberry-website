@@ -50,11 +50,11 @@
           <EepyCard>
             <template v-slot:title>
               <p>Project ORIN</p>
-              <iconify-icon mode="style" icon="noto:thinking-face" height="2rem" />
+              <iconify-icon mode="style" icon="noto:construction" height="2rem" />
             </template>
             <template v-slot:footer>
-              <p class="tx-mono mt">
-                [REDACTED: UNDER CONSTRUCTION]
+              <p class="tx-glitch tx-mono mt" data-text="WARNING: DO NOT PROCEED!">
+                WARNING: DO NOT PROCEED!
               </p>
             </template>
           </EepyCard>
