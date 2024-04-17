@@ -48,9 +48,7 @@ function getThemeIcon() {
 
 .theme-panel {
   display: flex;
-  gap: 4px;
-  button {
-    color: var(--white);
-  }
+  gap: 1rem;
+  padding-right: 4px;
 }
 </style>

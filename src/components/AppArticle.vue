@@ -7,13 +7,14 @@
 
 <style scoped lang="scss">
 article.eepy-article {
-  border-radius: 1rem;
-  padding: 1.5rem;
+  border-radius: .5rem;
+  padding: 1.5rem 0;
   backdrop-filter: blur(4px);
-  background-color: var(--eepy-color-card);
+  //background-color: var(--eepy-color-card);
 
   .eepy-article-title {
     line-height: 1;
+    margin-bottom: 1rem;
   }
 }
 p { text-wrap: wrap; }

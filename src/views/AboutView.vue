@@ -142,7 +142,7 @@
           <EepyChip>🪐 Planets</EepyChip>
           <EepyChip>🧩 Board Games</EepyChip>
         </div>
-        <p class="mt-l">And of course, games I like/love/am clearly too obsessed with :</p>
+        <p class="mt-l">And of course, games I like/love/am clearly too obsessed with:</p>
         <div class="chip-list">
           <EepyChip>🍓 Celeste</EepyChip>
           <EepyChip>😶 Hollow Knight</EepyChip>
@@ -235,7 +235,7 @@ useHead({ meta: [
   gap: .5rem;
 }
 
-@media screen and (min-width: 768px) and (max-width: 1199px) {
+@media screen and (min-width: 768px) and (max-width: 1023px) {
   #section-about {
     grid-template-columns: 2fr 1fr;
     gap: 1rem;

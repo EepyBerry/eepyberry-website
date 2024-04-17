@@ -4,7 +4,6 @@
             :size="themeHelper.themeRef.value === 'dark' ? 5 : 16"
             :density="themeHelper.themeRef.value === 'dark' ? 8 : 6"
   />
-  <!-- <img class="blob top" :src="`/page_elements/blob_${themeHelper.themeRef.value}.svg`" aria-hidden="true"> -->
   <header>
     <button :style="{ visibility: displayMenuButton ? 'visible' : 'hidden' }" icon-button @click="toggleMenu(!menuOpen)">
       <EepyIcon size="xl">{{ menuOpen ? 'menu_open' : 'menu' }}</EepyIcon>
@@ -42,7 +41,7 @@ const displayMenuButton: Ref<boolean> = ref(false)
 const menuOpen: Ref<boolean> = ref(false)
 const showRightBlob: Ref<boolean> = ref(false)
 
-const resizeHandler = () => {
+const handleResize = () => {
     menuOpen.value = window.innerWidth >= 1024
     displayMenuButton.value = window.innerWidth < 1024
     showRightBlob.value = window.innerWidth < 768
@@ -50,11 +49,11 @@ const resizeHandler = () => {
 
 onMounted(() => {
   themeHelper.loadCurrentTheme()
-  if (window.innerWidth >= 768) menuOpen.value = true
-  window.addEventListener('resize', resizeHandler)
+  window.addEventListener('resize', handleResize)
+  handleResize()
 })
 onUnmounted(() => {
-  window.removeEventListener('resize', resizeHandler)
+  window.removeEventListener('resize', handleResize)
 })
 
 function toggleMenu(open: boolean) {
@@ -107,20 +106,18 @@ footer {
 }
 aside {
   position: fixed;
-  inset: 4rem auto auto 0;
+  inset: auto 0;
   border-radius: 0 1rem 1rem 0;
-  padding: .5rem 0;
+  padding: var(--app-padding-border) calc(var(--app-padding-border) / 2);
   width: fit-content;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
   z-index: 1;
-  background-color: var(--eepy-color-secondary);
-  transition: transform 250ms ease;
 
   &.expanded { transform: translateX(0); }
-  &.collapsed { transform: translateX(-4rem); }
+  &.collapsed { transform: translateX(-8rem); }
 }
 
 .blob {
@@ -147,6 +144,16 @@ aside {
 .fade-enter-from,
 .fade-leave-to {
   opacity: 0;
+}
+
+@media screen and (max-width: 1023px) {
+  aside {
+    top: 4rem;
+    padding: calc(var(--app-padding-border) / 2);
+    padding-right: .25rem;
+    background-color: var(--eepy-color-secondary);
+    transition: transform 250ms ease;
+  }
 }
 
 @media screen and (max-width: 767px) {

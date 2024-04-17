@@ -23,14 +23,19 @@
   --eepy-color-zephyrsd: #060915;
 }
 
-@media screen and (max-width: 1199px) {
+/* @media screen and (max-width: 1023px) {
   :root {
     --app-padding-main: 2rem;
   }
-}
+} */
 @media screen and (max-width: 767px) {
   :root {
-    --app-padding-main: 1rem;
+    --app-padding-main: 2rem;
     --app-padding-border: .75rem;
+  }
+}
+@media screen and (max-width: 567px) {
+  :root {
+    --app-padding-main: 1rem;
   }
 }

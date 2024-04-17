@@ -1,89 +1,98 @@
 <template>
-  <section id="section-experiments">
-    <div class="section-title">
-      <h1>Experiments & projects!</h1>
-    </div>
-    <div class="section-content">
-      <div class="grid-experiments">
-        <a class="card-link"
-           href="https://github.com/EepyBerry/zephyr-sd-aws"
-           target="_blank"
-           rel="external nofollow noopener"
-           aria-label="GitHub"
-        >
-          <EepyCard id="project-zephyrsd" centered>
-            <template v-slot:links>
-                <iconify-icon mode="style" icon="simple-icons:github" style="color: var(--white);" height="2rem" />
-            </template>
-            <img class="logo" src="/experiments/experiment-zephyrsd-logo.svg" alt="ZephyrSD Logo" aria-label="ZephyrSD logo">
-            <template v-slot:footer>
-              <p class="mt-l">A dashboard for managing Stable Diffusion WebUIs 🚀</p>
-            </template>
+  <section id="section-projects-experiments">
+    <section id="section-projects">
+      <h2 class="section-title">Main projects <EepyDivider w="auto" h="3px" /></h2>
+      <div class="section-content">
+        <div class="grid-experiments">
+          <a class="card-link"
+            href="https://github.com/EepyBerry/zephyr-sd-aws"
+            target="_blank"
+            rel="external nofollow noopener"
+            aria-label="GitHub"
+          >
+            <EepyCard id="project-zephyrsd" centered>
+              <template v-slot:links>
+                  <iconify-icon mode="style" icon="simple-icons:github" style="color: var(--white);" height="2rem" />
+              </template>
+              <img class="logo" src="/experiments/experiment-zephyrsd-logo.svg" alt="ZephyrSD Logo" aria-label="ZephyrSD logo">
+              <template v-slot:footer>
+                <p class="mt-l">A dashboard for managing Stable Diffusion WebUIs 🚀</p>
+              </template>
+            </EepyCard>
+          </a>
+          <a class="card-link disabled"
+            href=""
+            target="_blank"
+            rel="external nofollow noopener"
+            aria-label="Under construction"
+            @click.prevent
+          >
+            <EepyCard>
+              <template v-slot:title>
+                <p>Project ORIN</p>
+                <iconify-icon mode="style" icon="noto:construction" height="2rem" />
+              </template>
+              <template v-slot:footer>
+                <p class="tx-glitch tx-mono mt" data-text="WARNING: DO NOT PROCEED!">
+                  WARNING: DO NOT PROCEED!
+                </p>
+              </template>
+            </EepyCard>
+          </a>
+          <EepyCard v-for="_ in 4" placeholder>
+            <template v-slot:title></template>
+            <iconify-icon mode="style" icon="material-symbols:question-mark-rounded" height="3rem" />
           </EepyCard>
-        </a>
-        <a class="card-link disabled"
-           href="https://github.com/EepyBerry/zephyr-sd-aws"
-           target="_blank"
-           rel="external nofollow noopener"
-           aria-label="GitHub"
-           @click.prevent
-        >
-          <EepyCard>
-            <template v-slot:title>
-              <p>Planet-themed web project</p>
-              <iconify-icon mode="style" icon="noto:thinking-face" height="2rem" />
-            </template>
-            <template v-slot:footer>
-              <p class="tx-mono mt">
-                [REDACTED: UNDER CONSTRUCTION]
-              </p>
-            </template>
-          </EepyCard>
-        </a>
-        <a class="card-link disabled"
-           href=""
-           target="_blank"
-           rel="external nofollow noopener"
-           aria-label="Under construction"
-           @click.prevent
-        >
-          <EepyCard>
-            <template v-slot:title>
-              <p>Project ORIN</p>
-              <iconify-icon mode="style" icon="noto:construction" height="2rem" />
-            </template>
-            <template v-slot:footer>
-              <p class="tx-glitch tx-mono mt" data-text="WARNING: DO NOT PROCEED!">
-                WARNING: DO NOT PROCEED!
-              </p>
-            </template>
-          </EepyCard>
-        </a>
-        <a class="card-link disabled"
-           href=""
-           target="_blank"
-           rel="external nofollow noopener"
-           aria-label="Under construction"
-           @click.prevent
-        >
-          <EepyCard>
-            <template v-slot:title>
-              <p>Blockbench web project</p>
-              <iconify-icon mode="style" icon="noto:thinking-face" height="2rem" />
-            </template>
-            <template v-slot:footer>
-              <p class="tx-mono mt">
-                [REDACTED: UNDER CONSTRUCTION]
-              </p>
-            </template>
-          </EepyCard>
-        </a>
-        <EepyCard v-for="_ in 5" placeholder>
-          <template v-slot:title></template>
-          <iconify-icon mode="style" icon="material-symbols:question-mark-rounded" height="3rem" />
-        </EepyCard>
+        </div>
       </div>
-    </div>
+    </section>
+    <section id="section-experiments">
+      <h2 class="section-title">Experiments <EepyDivider w="auto" h="3px" /></h2>
+      <div class="section-content">
+        <div class="grid-experiments">
+          <a class="card-link disabled"
+            href="https://github.com/EepyBerry/zephyr-sd-aws"
+            target="_blank"
+            rel="external nofollow noopener"
+            aria-label="GitHub"
+            @click.prevent
+          >
+            <EepyCard>
+              <template v-slot:title>
+                <p>Lagrange</p>
+                <iconify-icon mode="style" icon="noto:construction" height="2rem" />
+              </template>
+              <template v-slot:footer>
+                <p class="mt-l">A small planet-making app 🪐</p>
+              </template>
+            </EepyCard>
+          </a>
+          <a class="card-link disabled"
+            href=""
+            target="_blank"
+            rel="external nofollow noopener"
+            aria-label="Under construction"
+            @click.prevent
+          >
+            <EepyCard>
+              <template v-slot:title>
+                <p>Blockbench web project</p>
+                <iconify-icon mode="style" icon="noto:thinking-face" height="2rem" />
+              </template>
+              <template v-slot:footer>
+                <p class="tx-mono mt">
+                  [REDACTED: UNDER CONSTRUCTION]
+                </p>
+              </template>
+            </EepyCard>
+          </a>
+          <EepyCard v-for="_ in 4" placeholder>
+            <template v-slot:title></template>
+            <iconify-icon mode="style" icon="material-symbols:question-mark-rounded" height="3rem" />
+          </EepyCard>
+        </div>
+      </div>
+    </section>
   </section>
 </template>
 
@@ -97,15 +106,28 @@ useHead({ meta: [
 
 <!------------------------------------------------------------>
 <style lang="scss">
-#section-experiments {
+#section-projects-experiments {
+  display: flex;
+  flex-direction: column;
+  gap: 8rem;
+  margin-top: 4rem;
+}
+#section-projects, #section-experiments {
   flex: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 
+  .section-title {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    .eepy-divider { flex: 1 }
+  }
   .section-content {
-    margin-top: 4rem;
+    width: 100%;
   }
   .grid-experiments {
     margin-top: 1rem;

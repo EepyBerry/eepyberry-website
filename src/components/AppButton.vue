@@ -14,7 +14,8 @@ defineProps({
 
 <style lang="scss">
 .eepy-button {
-  padding: .625rem .75rem;
+  height: 44px;
+  padding: 0 .75rem;
 
   display: flex;
   flex-direction: row;
@@ -31,10 +32,6 @@ defineProps({
   transition: transform 75ms ease;
   font-size: 1.1rem;
   font-weight: 550;
-  
-  .material-symbols-rounded {
-    transform: rotate(7.5deg);
-  }
 
   .rainbow-overlay {
     position: absolute;

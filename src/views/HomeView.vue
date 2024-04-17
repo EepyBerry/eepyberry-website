@@ -4,13 +4,13 @@
     <div class="home-cards">
       <RouterLink to="experiments" class="button-link" aria-label="Experiments page link">
         <EepyButton rainbow id="button-experiments" tabindex="-1" aria-hidden="true">
-          <EepyIcon size="lg">science</EepyIcon>
+          <iconify-icon class="icon" mode="style" icon="mingcute:flask-line" height="1.75rem" />
           <span>Experiments!</span>
         </EepyButton>
       </RouterLink>
       <RouterLink to="about" class="button-link" aria-label="About page link">
         <EepyButton id="button-about" tabindex="-1" aria-hidden="true">
-          <EepyIcon size="lg">sentiment_excited</EepyIcon>
+          <iconify-icon class="icon flip" mode="style" icon="mingcute:happy-line" height="1.75rem" />
           <span>About me :3</span>
         </EepyButton>
       </RouterLink>
@@ -19,7 +19,7 @@
         aria-label="Buy Me a Coffee website link"
       >
         <EepyButton id="button-coffee" tabindex="-1" aria-hidden="true">
-          <EepyIcon size="lg">coffee</EepyIcon>
+          <iconify-icon class="icon" mode="style" icon="circum:coffee-cup" height="2rem" />
           <span>Buy me a coffee (˶ᵔ ᵕ ᵔ˶)</span>
         </EepyButton>
       </a>

@@ -1,11 +1,11 @@
 
 <template>
   <AppHomeButton />
-  <nav class="mt">
+  <nav>
     <EepyPanelWrapper id="about-tooltip" mode="hover" floatingPlacement="right">
       <template v-slot:reference>
         <router-link class="nav-link button-link" to="about" aria-label="About page link">
-          <EepyIcon size="xl">sentiment_excited</EepyIcon>
+          <iconify-icon class="icon flip" mode="style" icon="mingcute:happy-line" height="2.25rem" />
         </router-link>
       </template>
       <template v-slot:tooltip>About me :3</template>
@@ -14,7 +14,7 @@
     <EepyPanelWrapper id="about-tooltip" mode="hover" floatingPlacement="right">
       <template v-slot:reference>
         <router-link class="nav-link button-link" to="experiments" aria-label="Experiments page link">
-          <EepyIcon size="xl">science</EepyIcon>
+          <iconify-icon class="icon" mode="style" icon="mingcute:flask-line" height="2.25rem" />
         </router-link>
       </template>
       <template v-slot:tooltip>Experiments!</template>
@@ -23,7 +23,7 @@
     <EepyPanelWrapper id="about-tooltip" mode="hover" floatingPlacement="right">
       <template v-slot:reference>
         <router-link class="nav-link button-link" to="contact" aria-label="Contact page link">
-          <EepyIcon size="xl">mail</EepyIcon>
+          <iconify-icon class="icon flip" mode="style" icon="mingcute:mail-line" height="2.25rem" />
         </router-link>
       </template>
       <template v-slot:tooltip>Contact me!</template>
@@ -44,6 +44,7 @@ nav {
   align-items: center;
   gap: 1rem;
   text-decoration: none;
+  margin-top: 1rem;
 }
 .nav-link {
   display: flex;
@@ -52,18 +53,23 @@ nav {
   width: 2.75rem;
   height: 2.75rem;
   border-radius: 2rem;
-  //background-color: var(--eepy-color-text);
-  color: var(--white);
-  .eepy-icon {
+  .icon {
     transform: rotateZ(5deg);
     transition: transform 200ms ease;
   }
 }
-.nav-link:hover .eepy-icon, .nav-link:focus-visible .eepy-icon {
+.nav-link:hover .icon, .nav-link:focus-visible .icon {
   transform: scale(110%) rotateZ(-5deg);
 }
-.nav-link:active .eepy-icon {
+.nav-link:active .icon {
   cursor: pointer;
   transform: scale(97.5%)
 }
+
+@media screen and (max-width: 767px) {
+  .nav-link {
+    color: white;
+  }
+}
+
 </style>

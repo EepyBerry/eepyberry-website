@@ -12,7 +12,7 @@ button {
 button[icon-button] {
   background: none;
   border: none;
-  padding: 4px;
+  padding: 0;
 }
 button:hover {
   cursor: pointer;
@@ -36,3 +36,12 @@ a.button-link, a.card-link {
 
 [data-theme="dark"] a:not(.button-link, .card-link):hover { filter: brightness(80%); }
 [data-theme="light"] a:not(.button-link, .card-link):hover { filter: brightness(250%); }
+
+
+  
+.icon {
+  transform: rotateZ(5deg);
+}
+.icon.flip {
+  transform: rotateY(180deg) rotateZ(-5deg);
+}
