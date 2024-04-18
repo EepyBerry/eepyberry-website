@@ -2,15 +2,16 @@
 <template>
   <AppHomeButton />
   <nav>
+    <EepyDivider dashed h="1rem" />
     <EepyPanelWrapper id="about-tooltip" mode="hover" floatingPlacement="right">
       <template v-slot:reference>
         <router-link class="nav-link button-link" to="about" aria-label="About page link">
           <iconify-icon class="icon flip" mode="style" icon="mingcute:happy-line" height="2.25rem" />
         </router-link>
       </template>
-      <template v-slot:tooltip>About me :3</template>
+      <template v-slot:tooltip>About me!</template>
     </EepyPanelWrapper>
-
+    <EepyDivider dashed h="1rem" />
     <EepyPanelWrapper id="about-tooltip" mode="hover" floatingPlacement="right">
       <template v-slot:reference>
         <router-link class="nav-link button-link" to="experiments" aria-label="Experiments page link">
@@ -19,7 +20,7 @@
       </template>
       <template v-slot:tooltip>Experiments!</template>
     </EepyPanelWrapper>
-
+    <EepyDivider dashed h="1rem" />
     <EepyPanelWrapper id="about-tooltip" mode="hover" floatingPlacement="right">
       <template v-slot:reference>
         <router-link class="nav-link button-link" to="contact" aria-label="Contact page link">
@@ -42,9 +43,7 @@ nav {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 1rem;
   text-decoration: none;
-  margin-top: 1rem;
 }
 .nav-link {
   display: flex;

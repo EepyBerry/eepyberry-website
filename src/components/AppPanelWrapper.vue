@@ -64,7 +64,7 @@ const f_panel = initFloatingElement(panel, panelArrow, $props.panelPlacement)
 function initFloatingElement(object: Ref<any | null>, objectArrow: Ref<any | null> | undefined, placement?: Placement) {
   return useFloating(reference, object, {
     placement: placement ?? 'bottom',
-    middleware: [offset(4), arrow({ element: objectArrow, padding: 8 })],
+    middleware: [arrow({ element: objectArrow, padding: 8 })],
     whileElementsMounted: autoUpdate,
   });
 }
@@ -99,12 +99,18 @@ function hidePanel() {
   padding: 2px 8px;
   border-radius: 8px;
 
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
   //background-color: var(--eepy-color-panel);
   font-size: 1.125rem;
   font-family: Dosis;
   font-weight: 600;
   //color: var(--white);
   transition: opacity 150ms;
+
+  .eepy-divider { border-color: var(--eepy-color-text); opacity: 0.5; }
 }
 .eepy-panel-inner {
   display: none;

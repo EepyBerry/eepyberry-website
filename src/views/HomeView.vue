@@ -48,7 +48,9 @@ useHead({ meta: [
   gap: 1rem;
 
   #avatar {
-    width: clamp(280px, 60vw, 480px);
+    width: clamp(280px, 60vw, 540px);
+    filter: drop-shadow(0 6px 2px var(--eepy-color-accent));
+    animation: bounce 4s ease-in-out infinite;
   }
 
   .home-cards {
@@ -57,6 +59,23 @@ useHead({ meta: [
     justify-content: center;
     gap: 2rem;
     flex-wrap: wrap;
+  }
+}
+
+@media screen and (max-width: 567px) {
+  #section-home {
+    #avatar {
+      width: clamp(280px, 60vw, 480px);
+      filter: drop-shadow(0 4px 2px var(--eepy-color-accent));
+    }
+  }
+}
+
+@media (prefers-reduced-motion: true) {
+  #section-home {
+    #avatar {
+      animation: none;
+    }
   }
 }
 </style>

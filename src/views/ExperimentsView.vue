@@ -1,7 +1,7 @@
 <template>
   <section id="section-projects-experiments">
     <section id="section-projects">
-      <h2 class="section-title">Main projects <EepyDivider w="auto" h="3px" /></h2>
+      <h2 class="section-title">Main projects <EepyDivider w="auto" /></h2>
       <div class="section-content">
         <div class="grid-experiments">
           <a class="card-link"
@@ -47,7 +47,7 @@
       </div>
     </section>
     <section id="section-experiments">
-      <h2 class="section-title">Experiments <EepyDivider w="auto" h="3px" /></h2>
+      <h2 class="section-title">Experiments <EepyDivider w="auto" /></h2>
       <div class="section-content">
         <div class="grid-experiments">
           <a class="card-link disabled"
