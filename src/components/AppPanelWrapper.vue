@@ -97,13 +97,13 @@ function hidePanel() {
   width: max-content;
 
   padding: 2px 8px;
-  border-radius: 8px;
+  border-radius: 16px;
 
   display: flex;
   align-items: center;
   gap: 8px;
 
-  //background-color: var(--eepy-color-panel);
+  background-color: var(--eepy-color-background);
   font-size: 1.125rem;
   font-family: Dosis;
   font-weight: 600;

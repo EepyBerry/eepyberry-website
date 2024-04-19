@@ -27,13 +27,13 @@
             aria-label="Under construction"
             @click.prevent
           >
-            <EepyCard>
-              <template v-slot:title>
-                <p>Project ORIN</p>
+            <EepyCard id="project-orin" centered>
+              <template v-slot:links>
                 <iconify-icon mode="style" icon="noto:construction" height="2rem" />
               </template>
+              <span class="logo tx-mono">OR█████ IN███████</span>
               <template v-slot:footer>
-                <p class="tx-glitch tx-mono mt" data-text="WARNING: DO NOT PROCEED!">
+                <p class="tx-glitch tx-mono mt-l" data-text="WARNING: DO NOT PROCEED!">
                   WARNING: DO NOT PROCEED!
                 </p>
               </template>
@@ -110,7 +110,6 @@ useHead({ meta: [
   display: flex;
   flex-direction: column;
   gap: 8rem;
-  margin-top: 4rem;
 }
 #section-projects, #section-experiments {
   flex: 1;
@@ -156,6 +155,11 @@ useHead({ meta: [
     }
     .eepy-card-footer {
       background: linear-gradient(to top, $bg 0%, $bg 50%, transparent 100%)
+    }
+  }
+  #project-orin {
+    .logo {
+      font-size: 1.5rem;
     }
   }
 }

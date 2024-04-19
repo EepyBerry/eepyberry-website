@@ -48,7 +48,6 @@ async function init(): Promise<void> {
     const dirVec = vec_randomUnit()
     stars.push({ el$: child, left: left, top: top, dirX: dirVec[0], dirY: dirVec[1], rot: randomMinMax(0, 45) })
   }
-  console.log(stars)
 }
 
 function animate(timestamp: number) {

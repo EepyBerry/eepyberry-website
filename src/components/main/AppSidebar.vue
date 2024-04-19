@@ -44,6 +44,7 @@ nav {
   flex-direction: column;
   align-items: center;
   text-decoration: none;
+  backdrop-filter: blur(4px);
 }
 .nav-link {
   display: flex;
