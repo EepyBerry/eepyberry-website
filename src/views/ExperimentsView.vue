@@ -40,8 +40,7 @@
             </EepyCard>
           </a>
           <EepyCard v-for="_ in 4" placeholder>
-            <template v-slot:title></template>
-            <iconify-icon mode="style" icon="material-symbols:question-mark-rounded" height="3rem" />
+            <IconEepyBerry class="placeholder-icon" />
           </EepyCard>
         </div>
       </div>
@@ -87,8 +86,7 @@
             </EepyCard>
           </a>
           <EepyCard v-for="_ in 4" placeholder>
-            <template v-slot:title></template>
-            <iconify-icon mode="style" icon="material-symbols:question-mark-rounded" height="3rem" />
+            <IconEepyBerry class="placeholder-icon" />
           </EepyCard>
         </div>
       </div>
@@ -98,6 +96,7 @@
 
 <!------------------------------------------------------------>
 <script setup lang="ts">
+import IconEepyBerry from '@/components/icons/IconEepyBerry.vue';
 import { useHead } from '@unhead/vue';
 useHead({ meta: [
   { name: 'description', content: 'A repository of my various projects, available on this website or on my GitHub!' }
@@ -160,6 +159,13 @@ useHead({ meta: [
   #project-orin {
     .logo {
       font-size: 1.5rem;
+    }
+  }
+
+  .eepy-card[placeholder] {
+    .placeholder-icon {
+      height: 3.5rem;
+      color: red;
     }
   }
 }

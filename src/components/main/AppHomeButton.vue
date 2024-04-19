@@ -1,5 +1,5 @@
 <template>
-  <EepyPanelWrapper id="about-tooltip" mode="hover" floatingPlacement="right">
+  <EepyPanelWrapper mode="hover" floatingPlacement="right">
     <template v-slot:reference>
       <RouterLink class="home-link button-link" to="/"
         aria-label="Back to landing page"
@@ -7,7 +7,8 @@
         @mouseup="active = false"
         @mouseleave="active = false"
       >
-        <img :src="`eepyberry_small_${active ? 'boop_' : ''}${$theme}.svg`" aria-label="Home link">
+        <SvgEepyBerrySmall v-show="!active" :dark="$theme === 'dark'" class="home-symbol" />
+        <SvgEepyBerrySmallBoop v-show="active" :dark="$theme === 'dark'" class="home-symbol" />
       </RouterLink>
     </template>
     <template v-slot:tooltip>Home!</template>
@@ -17,6 +18,8 @@
 
 <script setup lang="ts">
 import { inject, ref, type Ref } from 'vue';
+import SvgEepyBerrySmall from '../svg/SvgEepyBerrySmall.vue';
+import SvgEepyBerrySmallBoop from '../svg/SvgEepyBerrySmallBoop.vue';
 
 const $theme: string = inject("$theme") as string;
 const active: Ref<boolean> = ref(false)
@@ -25,7 +28,7 @@ const active: Ref<boolean> = ref(false)
 <style scoped lang=scss>
 .home-link {
   transition: transform 200ms ease;
-  img {
+  .home-symbol {
     width: 3.5rem; user-select: none; -webkit-user-drag: none;
     transform: scale(105%);
   }

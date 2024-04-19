@@ -15,6 +15,7 @@
 <script setup lang="ts">
 import { random, randomMinMax, vec_randomUnit } from '@/utils/functions'
 import { onMounted, onUnmounted, onUpdated, ref, type Ref } from 'vue';
+import SvgStar from './svg/SvgStar.vue';
 
 const $props = defineProps<{ size: number, density: number, visible: boolean, mode: 'svg' | 'dot' }>()
 

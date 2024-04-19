@@ -1,6 +1,6 @@
 <template>
   <section id="section-home">
-    <img id="avatar" :src="`eepyberry_${$theme}.svg`" aria-label="Sleeping strawberry with the text 'eepy berry'">
+    <SvgEepyBerryLogo id="avatar" :dark="$theme === 'dark'" aria-label="Sleeping strawberry with the text 'eepy berry'" />
     <div class="home-cards">
       <RouterLink to="experiments" class="button-link" aria-label="Experiments page link">
         <EepyButton rainbow id="button-experiments" tabindex="-1" aria-hidden="true">
@@ -29,6 +29,7 @@
 
 <!------------------------------------------------------------>
 <script setup lang="ts">
+import SvgEepyBerryLogo from '@/components/svg/SvgEepyBerryLogo.vue';
 import { useHead } from '@unhead/vue';
 import { inject } from 'vue';
 const $theme = inject('$theme')

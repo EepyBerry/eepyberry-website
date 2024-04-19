@@ -22,8 +22,8 @@
   </main>
   <footer role="contentinfo">
     <AppFooter />
-    <img class="blob bottom" :src="`/page_elements/blob-strawberries_${themeHelper.themeRef.value}.svg`" aria-hidden="true">
-    <img v-if="showRightBlob" class="blob bottom right" :src="`/page_elements/blob-strawberries_${themeHelper.themeRef.value}.svg`" aria-hidden="true">
+    <SvgCornerStrawberries :dark="themeHelper.themeRef.value === 'dark'" class="blob bottom" aria-hidden="true" />
+    <SvgCornerStrawberries v-if="showRightBlob" :dark="themeHelper.themeRef.value === 'dark'" class="blob bottom right" aria-hidden="true" />
   </footer>
 </template>
 
@@ -33,6 +33,7 @@ import type { ThemeHelper } from '@/utils/theme.helper';
 import AppThemeSelect from "@/components/main/AppThemeSelect.vue";
 import AppSidebar from "@/components/main/AppSidebar.vue"
 import AppFooter from './components/main/AppFooter.vue';
+import SvgCornerStrawberries from './components/svg/SvgCornerStrawberries.vue';
 
 const AppScatter = defineAsyncComponent(() => import('./components/AppScatter.vue'))
 const themeHelper: ThemeHelper = inject("ThemeHelper") as ThemeHelper;
@@ -121,8 +122,9 @@ aside {
 }
 
 .blob {
+  will-change: width height;
   position: absolute;
-  height: clamp(100px, 4rem + 7.5vw, 180px);
+  width: clamp(100px, 4rem + 7.5vw, 180px);
   z-index: -1;
 
   &.bottom {

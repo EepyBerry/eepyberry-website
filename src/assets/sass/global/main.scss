@@ -36,13 +36,17 @@ body {
   overflow-x: hidden;
 }
 
-
+// Lists
 ul {
   list-style-type: none;
   padding-left: 1rem;
   border-left: 2px solid var(--eepy-color-accent);
 }
 
+// SVG wrappers
+.svg-wrapper { display: flex; }
+
+// Text classes
 iconify-icon {
   vertical-align: -15%;
   display: inline-flex;
