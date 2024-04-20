@@ -31,13 +31,19 @@
               <template v-slot:links>
                 <iconify-icon mode="style" icon="noto:construction" height="2rem" />
               </template>
-              <span class="logo tx-mono">OR█████ IN███████</span>
+              <span class="logo tx-mono">OR█████_IN███████</span>
               <template v-slot:footer>
                 <p class="tx-glitch tx-mono mt-l" data-text="WARNING: DO NOT PROCEED!">
                   WARNING: DO NOT PROCEED!
                 </p>
               </template>
             </EepyCard>
+            <!------------------------------------------------->
+            <!---████ GROUP - NETWORK DIVISION - SAFETY NOTE--->
+            <!------------REMOVE BEFORE UPDATING!!------------->
+            <!------------------------------------------------->
+            <!-- ██/██/2016: We are unable to remove this link. It seems tha_#█████████████████████[█████]_leeqi_fjapsvt_tgdsh_#█████████████ -->
+            <!-- The link has been deactivated until further notice. Permanent removal is actively being investigated. -->
           </a>
           <EepyCard v-for="_ in 4" placeholder>
             <IconEepyBerry class="placeholder-icon" />
@@ -50,7 +56,7 @@
       <div class="section-content">
         <div class="grid-experiments">
           <a class="card-link disabled"
-            href="https://github.com/EepyBerry/zephyr-sd-aws"
+            href="https://eepyberry.me/experiments/lagrange"
             target="_blank"
             rel="external nofollow noopener"
             aria-label="GitHub"
@@ -66,26 +72,7 @@
               </template>
             </EepyCard>
           </a>
-          <a class="card-link disabled"
-            href=""
-            target="_blank"
-            rel="external nofollow noopener"
-            aria-label="Under construction"
-            @click.prevent
-          >
-            <EepyCard>
-              <template v-slot:title>
-                <p>Blockbench web project</p>
-                <iconify-icon mode="style" icon="noto:thinking-face" height="2rem" />
-              </template>
-              <template v-slot:footer>
-                <p class="tx-mono mt">
-                  [REDACTED: UNDER CONSTRUCTION]
-                </p>
-              </template>
-            </EepyCard>
-          </a>
-          <EepyCard v-for="_ in 4" placeholder>
+          <EepyCard v-for="_ in 5" placeholder>
             <IconEepyBerry class="placeholder-icon" />
           </EepyCard>
         </div>
@@ -156,9 +143,20 @@ useHead({ meta: [
       background: linear-gradient(to top, $bg 0%, $bg 50%, transparent 100%)
     }
   }
+  
   #project-orin {
+    background-image: url('/experiments/experiment-orin-540.webp');
+    background-position: top;
+    background-size: cover;
+    color: var(--white);
     .logo {
-      font-size: 1.5rem;
+      text-align: center;
+      font-size: 2rem;
+    }
+    .tx-glitch, .tx-glitch::before,
+    .tx-glitch::after {
+      color: white;
+      background: transparent;
     }
   }
 
@@ -171,7 +169,7 @@ useHead({ meta: [
 }
 
 @media screen and (max-width: 1199px) {
-  #section-experiments {
+  #section-projects, #section-experiments {
     .grid-experiments {
       grid-template-columns: 1fr 1fr;
       gap: 1.5rem;
@@ -183,7 +181,7 @@ useHead({ meta: [
 }
 
 @media screen and (max-width: 767px) {
-  #section-experiments {
+  #section-projects, #section-experiments {
     .grid-experiments {
       grid-template-columns: 1fr;
       gap: 1rem;

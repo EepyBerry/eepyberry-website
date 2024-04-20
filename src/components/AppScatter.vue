@@ -1,14 +1,24 @@
 <template>
   <div ref="starContainer" class="star-container" :style="{ visibility: visible ? 'visible' : 'hidden' }" aria-hidden="true">
-    <div v-for="_ of (16 * density)"
-      :class="`${mode === 'svg' ? `star-${random(2) + 3}` : 'dot'} delay-${random(5)}`"
+    <SvgStar v-if="mode === 'svg'" v-for="_ of (16 * density)"
+      :variant="`${random(2) + 3}p`"
+      :class="`star-${random(2) + 3} delay-${random(5)}`"
       :style="{
         top: `${random(100)}vmax`,
         left: `${random(100)}vmax`,
-        width: `${mode === 'svg' ? randomMinMax(4, size) : random(size)}px`,
+        width: `${randomMinMax(4, size)}px`,
         transform: `rotateZ(${random(180)}deg)`
       }"
-    ></div>
+    />
+    <span v-else v-for="_ of (16 * density)"
+      :class="`dot delay-${random(5)}`"
+      :style="{
+        top: `${random(100)}vmax`,
+        left: `${random(100)}vmax`,
+        width: `${random(size)}px`,
+        transform: `rotateZ(${random(180)}deg)`
+      }"
+    ></span>
   </div>
 </template>
 
@@ -109,13 +119,11 @@ function animate(timestamp: number) {
 }
 .star-4 {
   position: absolute;
-  content: url('/page_elements/star4.svg');
   width: 4px;
   aspect-ratio: 1/1;
 }
 .star-5 {
   position: absolute;
-  content: url('/page_elements/star5.svg');
   width: 4px;
   aspect-ratio: 1/1;
 }

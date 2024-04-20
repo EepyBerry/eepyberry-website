@@ -8,10 +8,10 @@
     <template v-slot:panel>
       <div class="theme-panel">
         <button icon-button @click="themeHelper.setSiteTheme('light')" aria-label="Open site theme selector">
-          <EepyIcon size="lg">wb_sunny</EepyIcon>
+          <iconify-icon mode="style" class="eepy-icon" icon="material-symbols:wb-sunny-outline-rounded" height="1.75rem" />
         </button>
         <button icon-button @click="themeHelper.setSiteTheme('dark')" aria-label="Open site theme selector">
-          <EepyIcon size="lg">dark_mode</EepyIcon>
+          <iconify-icon mode="style" class="eepy-icon" icon="material-symbols:mode-night-outline-rounded" height="1.75rem" />
         </button>
       </div>
     </template>

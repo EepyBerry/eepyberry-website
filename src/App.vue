@@ -6,7 +6,7 @@
   />
   <header>
     <button :style="{ visibility: displayMenuButton ? 'visible' : 'hidden' }" icon-button @click="toggleMenu(!menuOpen)">
-      <EepyIcon size="xl">{{ menuOpen ? 'menu_open' : 'menu' }}</EepyIcon>
+      <iconify-icon mode="style" class="eepy-icon" :icon="`material-symbols:menu-${menuOpen ? 'open-' : null}rounded`" height="3rem" />
     </button>
     <AppThemeSelect />
   </header>

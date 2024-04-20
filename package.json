@@ -26,7 +26,6 @@
   "homepage": "https://github.com/EepyBerry/eepyberry-website#readme",
   "dependencies": {
     "@floating-ui/vue": "^1.0.6",
-    "@material-symbols/font-700": "^0.17.1",
     "@unhead/vue": "^1.9.5",
     "iconify-icon": "^2.0.0",
     "vue": "^3.4.21",
