@@ -26,7 +26,6 @@ $steps: 20;
       background: $secondaryColor;
       color: $primaryColor;
       clip: rect(0, 900px, 0, 0);
-
   }
 
   &::before {
@@ -45,7 +44,7 @@ $steps: 20;
 @keyframes glitch-effect{
   @for $i from 0 through $steps{
       #{percentage($i*math.div(1,$steps))}{
-          clip:rect(random(24)+px,900px,random(24)+px,0);
+          clip:rect(random(100)+px,900px,random(100)+px,0);
       }
   }
 }

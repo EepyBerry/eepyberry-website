@@ -21,7 +21,7 @@
             </EepyCard>
           </a>
           <a class="card-link disabled"
-            href=""
+            href="null"
             target="_blank"
             rel="external nofollow noopener"
             aria-label="Under construction"
@@ -31,18 +31,13 @@
               <template v-slot:links>
                 <iconify-icon mode="style" icon="noto:construction" height="2rem" />
               </template>
-              <span class="logo tx-mono">OR█████_IN███████</span>
+              <span class="logo tx-mono tx-glitch" data-text="WARNING: DO NOT PROCEED!">WARNING: DO NOT PROCEED!</span>
               <template v-slot:footer>
-                <p class="tx-glitch tx-mono mt-l" data-text="WARNING: DO NOT PROCEED!">
-                  WARNING: DO NOT PROCEED!
-                </p>
+                <p class="mt-l">████████████████</p>
               </template>
             </EepyCard>
-            <!------------------------------------------------->
-            <!---████ GROUP - NETWORK DIVISION - SAFETY NOTE--->
-            <!------------REMOVE BEFORE UPDATING!!------------->
-            <!------------------------------------------------->
-            <!-- ██/██/2016: We are unable to remove this link. It seems tha_#█████████████████████[█████]_leeqi_fjapsvt_tgdsh_#█████████████ -->
+            <!-- REMOVE BEFORE UPDATING !! -->
+            <!-- ███#███#01█████████#__#████#██#re unable to remove this link. It seems tha_#████████████████[█████]_leeqi_fjapsvt_tgdsh_#███████████ -->
             <!-- The link has been deactivated until further notice. Permanent removal is actively being investigated. -->
           </a>
           <EepyCard v-for="_ in 4" placeholder>
@@ -151,12 +146,15 @@ useHead({ meta: [
     color: var(--white);
     .logo {
       text-align: center;
-      font-size: 2rem;
+      text-wrap: nowrap;
+      font-size: 1.125rem;
     }
     .tx-glitch, .tx-glitch::before,
     .tx-glitch::after {
       color: white;
       background: transparent;
+      text-align: center;
+      text-wrap: nowrap;
     }
   }
 
