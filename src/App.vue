@@ -13,9 +13,10 @@
     <AppSidebar />
   </aside>
   <main>
+    <TitleSection />
     <RouterView v-slot="{ Component, route }">
       <Transition name="fade" mode="out-in">
-        <component :key="$route.path" :is="Component" />
+        <component :key="route.path" :is="Component" />
       </Transition>
     </RouterView>
   </main>
@@ -30,6 +31,7 @@ import type { ThemeHelper } from '@/utils/theme.helper';
 import AppThemeSelect from "@/components/main/AppThemeSelect.vue";
 import AppSidebar from "@/components/main/AppSidebar.vue"
 import AppFooter from './components/main/AppFooter.vue';
+import TitleSection from '@/components/sections/TitleSection.vue';
 
 const AppScatter = defineAsyncComponent(() => import('./components/AppScatter.vue'))
 const themeHelper: ThemeHelper = inject("ThemeHelper") as ThemeHelper;

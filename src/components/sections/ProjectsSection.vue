@@ -1,12 +1,12 @@
 <template>
     <section id="section-projects">
-      <h2 class="section-title">showcased projects</h2>
+      <h2 class="section-title">current projects!</h2>
       <div class="section-content">
         <a class="card-link"
-            href="https://lagrange.eepyberry.me"
-            target="_blank"
-            rel="external nofollow noopener"
-            aria-label="GitHub"
+          href="https://lagrange.eepyberry.me"
+          target="_blank"
+          rel="external nofollow noopener"
+          aria-label="GitHub"
         >
             <EepyCard id="project-lagrange">
             <template v-slot:links>
@@ -19,11 +19,11 @@
             </EepyCard>
         </a>
         <a class="card-link disabled"
-            href="null"
-            target="_blank"
-            rel="external nofollow noopener"
-            aria-label="Under construction"
-            @click.prevent
+          href="null"
+          target="_blank"
+          rel="external nofollow noopener"
+          aria-label="Under construction"
+          @click.prevent
         >
             <EepyCard id="project-redacted" centered>
             <template v-slot:links>
@@ -45,11 +45,7 @@
   <!------------------------------------------------------------>
   <script setup lang="ts">
   import IconEepyBerry from '@/components/icons/IconEepyBerry.vue';
-  import { useHead } from '@unhead/vue';
-import SvgLagrangeLogo from '../svg/SvgLagrangeLogo.vue';
-  useHead({ meta: [
-    { name: 'description', content: 'A repository of my various projects, available on this website or on my GitHub!' }
-  ]})
+  import SvgLagrangeLogo from '../svg/SvgLagrangeLogo.vue';
   </script>
   
   <!------------------------------------------------------------>
@@ -67,7 +63,7 @@ import SvgLagrangeLogo from '../svg/SvgLagrangeLogo.vue';
     .section-content {
       width: 100%;
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(24rem, auto));
+      grid-template-columns: repeat(auto-fill, minmax(22rem, auto));
       gap: 2rem;
       & .eepy-card {
         width: 100%;
@@ -79,12 +75,11 @@ import SvgLagrangeLogo from '../svg/SvgLagrangeLogo.vue';
       background-image: url('/projects/project-lagrange.webp');
       color: var(--white);
       .logo {
-        max-width: 18rem;
         position: absolute;
+        width: 16rem;
         inset: 0;
-        transform: translateY(0.5rem);
-        justify-self: center;
-        align-self: center;
+        margin: auto;
+        transform: translateY(0.25rem);
       }
     }
     

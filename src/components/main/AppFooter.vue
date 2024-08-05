@@ -18,7 +18,7 @@
         <iconify-icon mode="style" icon="simple-icons:bluesky" height="2rem" />
       </a>
     </div>
-    <p class="mt">© 2024, EepyBerry</p>
+    <p class="mt">© {{ new Date().getFullYear() }}, EepyBerry</p>
   </div>
 </template>
 

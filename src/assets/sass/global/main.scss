@@ -19,6 +19,7 @@ body {
   flex: 1;
   min-height: 100%;
   position: relative;
+  border: 1rem solid var(--eepy-color-accent-half);
 
   border-radius: 2px;
   color: var(--eepy-color-text);
@@ -95,3 +96,9 @@ $pad-xl: 2.5rem;
 .mr-xl { margin-right: $pad-xl; }
 .mb-xl { margin-bottom: $pad-xl; }
 .ml-xl { margin-left: $pad-xl; }
+
+@media screen and (max-width: 567px) {
+  body {
+    border: 0.5rem solid var(--eepy-color-accent-half);
+  }
+}
