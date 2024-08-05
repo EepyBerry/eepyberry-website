@@ -1,6 +1,5 @@
 <template>
-  <AppScatter :mode="themeHelper.themeRef.value === 'dark' ? 'dot' : 'svg'"
-            :visible="true"
+  <AppScatter :visible="themeHelper.themeRef.value === 'dark'"
             :size="themeHelper.themeRef.value === 'dark' ? 5 : 16"
             :density="themeHelper.themeRef.value === 'dark' ? 8 : 6"
   />
@@ -22,8 +21,6 @@
   </main>
   <footer role="contentinfo">
     <AppFooter />
-    <SvgCornerStrawberries :dark="themeHelper.themeRef.value === 'dark'" class="blob bottom" aria-hidden="true" />
-    <SvgCornerStrawberries v-if="showRightBlob" :dark="themeHelper.themeRef.value === 'dark'" class="blob bottom right" aria-hidden="true" />
   </footer>
 </template>
 
@@ -33,7 +30,6 @@ import type { ThemeHelper } from '@/utils/theme.helper';
 import AppThemeSelect from "@/components/main/AppThemeSelect.vue";
 import AppSidebar from "@/components/main/AppSidebar.vue"
 import AppFooter from './components/main/AppFooter.vue';
-import SvgCornerStrawberries from './components/svg/SvgCornerStrawberries.vue';
 
 const AppScatter = defineAsyncComponent(() => import('./components/AppScatter.vue'))
 const themeHelper: ThemeHelper = inject("ThemeHelper") as ThemeHelper;
@@ -67,7 +63,7 @@ provide('$theme', themeHelper.themeRef)
 
 <style lang="scss">
 header {
-  position: sticky;
+  position: fixed;
   inset: 0 0 auto;
   padding: var(--app-padding-border) var(--app-padding-border) 0;
   text-align: end;
@@ -76,10 +72,6 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  & > * {
-    border-radius: 0.5rem;
-    backdrop-filter: blur(4px);
-  }
 }
 main {
   flex: 1;

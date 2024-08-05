@@ -4,6 +4,7 @@
   "description": "EepyBerry's personal website's source code",
   "main": "index.ts",
   "type": "module",
+  "private": true,
   "scripts": {
     "dev": "vite",
     "dev-host": "vite --host",

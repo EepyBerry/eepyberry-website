@@ -14,15 +14,6 @@
     <EepyDivider dashed h="1rem" />
     <EepyPanelWrapper id="about-tooltip" mode="hover" floatingPlacement="right">
       <template v-slot:reference>
-        <router-link class="nav-link button-link" to="experiments" aria-label="Experiments page link">
-          <iconify-icon class="icon" mode="style" icon="mingcute:flask-line" height="2.25rem" />
-        </router-link>
-      </template>
-      <template v-slot:tooltip>Experiments!</template>
-    </EepyPanelWrapper>
-    <EepyDivider dashed h="1rem" />
-    <EepyPanelWrapper id="about-tooltip" mode="hover" floatingPlacement="right">
-      <template v-slot:reference>
         <router-link class="nav-link button-link" to="contact" aria-label="Contact page link">
           <iconify-icon class="icon flip" mode="style" icon="mingcute:mail-line" height="2.25rem" />
         </router-link>

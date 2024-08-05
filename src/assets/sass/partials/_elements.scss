@@ -8,11 +8,14 @@ button {
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
+  height: 2rem;
 }
 button[icon-button] {
   background: none;
   border: none;
   padding: 0;
+  width: 2rem;
+  height: 2rem;
 }
 button:hover {
   cursor: pointer;
@@ -37,8 +40,14 @@ a.button-link, a.card-link {
 [data-theme="dark"] a:not(.button-link, .card-link):hover { filter: brightness(80%); }
 [data-theme="light"] a:not(.button-link, .card-link):hover { filter: brightness(250%); }
 
+// ------------------------------------------------------------------------------------------------------------------
+// hr
 
-  
+hr { border-radius: 2px; }
+
+// ------------------------------------------------------------------------------------------------------------------
+// misc
+
 .icon {
   transform: rotateZ(5deg);
 }
