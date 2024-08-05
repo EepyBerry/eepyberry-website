@@ -32,13 +32,6 @@
 
     display: flex;
     justify-content: space-between;
-
-    a {
-      transition: transform 75ms ease;
-    }
-    a:hover, a:focus-visible {
-      transform: scale(1.25);
-    }
   }
   &-content {
     flex: 1;

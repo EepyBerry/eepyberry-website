@@ -81,7 +81,7 @@ defineProps<{ dark: boolean }>()
   .cls-2, .cls-3, .cls-4, .cls-5 { stroke-width: 0px; }
 }
 .light {
-  .cls-1{ fill:#33212d; }
+  .cls-1{ fill:#0f0b0f; }
   .cls-2{ fill:#aed27a; }
   .cls-3{ fill:#f1808b; }
   .cls-1,.cls-2,.cls-3{ stroke-width:0px; }

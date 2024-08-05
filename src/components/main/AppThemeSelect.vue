@@ -57,11 +57,11 @@ function setTheme(theme: string) {
 
 .theme-panel {
   position: absolute;
-  top: 0;
-  right: 3rem;
+  top: 3rem;
+  right: 0;
   
   display: flex;
+  flex-direction: column;
   gap: 1rem;
-  padding-right: 4px;
 }
 </style>

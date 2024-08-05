@@ -2,30 +2,20 @@
   <section id="section-title">
     <SvgEepyBerryLogo id="avatar" :dark="$theme === 'dark'" aria-label="Sleeping strawberry with the text 'eepy berry'" />
     <hr>
-    <h1>developer &<br>illustrator</h1>
-    <!-- <div class="home-cards">
-      <RouterLink to="experiments" class="button-link" aria-label="Experiments page link">
-        <EepyButton rainbow id="button-experiments" tabindex="-1" aria-hidden="true">
-          <iconify-icon class="icon" mode="style" icon="mingcute:flask-line" height="1.75rem" />
-          <span>Experiments!</span>
-        </EepyButton>
-      </RouterLink>
-      <RouterLink to="about" class="button-link" aria-label="About page link">
-        <EepyButton id="button-about" tabindex="-1" aria-hidden="true">
-          <iconify-icon class="icon flip" mode="style" icon="mingcute:happy-line" height="1.75rem" />
-          <span>About me :3</span>
-        </EepyButton>
-      </RouterLink>
-      <a href="https://www.buymeacoffee.com/" target="_blank" rel="external nofollow noopener"
-        class="button-link"
-        aria-label="Buy Me a Coffee website link"
-      >
-        <EepyButton id="button-coffee" tabindex="-1" aria-hidden="true">
-          <iconify-icon class="icon" mode="style" icon="circum:coffee-cup" height="2rem" />
-          <span>Buy me a coffee (˶ᵔ ᵕ ᵔ˶)</span>
-        </EepyButton>
-      </a>
-    </div> -->
+    <div id="intro">
+      <p class="intro-desc">developer &<br>hobby-artist</p>
+      <!-- <div class="links">
+        <a href="https://github.com/EepyBerry" target="_blank" rel="external nofollow noopener" aria-label="GitHub">
+          <iconify-icon mode="style" icon="simple-icons:github" height="2rem" />
+        </a>
+        <a href="https://bsky.app/profile/eepyberry.bsky.social" target="_blank" rel="external nofollow noopener" aria-label="Bluesky">
+          <iconify-icon mode="style" icon="simple-icons:bluesky" height="2rem" />
+        </a>
+      </div> -->
+    </div>
+  </section>
+  
+  <section id="section-links">
   </section>
 </template>
 
@@ -48,17 +38,34 @@ useHead({ meta: [
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  padding-top: 2rem;
+  padding-top: 1rem;
 
   #avatar {
-    width: clamp(180px, 80vw, 300px);
+    width: clamp(180px, 95vw, 260px);
     filter: drop-shadow(0 4px 1px var(--eepy-color-accent));
-    animation: bounce 4s ease-in-out infinite;
   }
 
-  hr {
+  #intro {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    .intro-desc {
+      font-family: Dosis;
+      font-size: 2.25rem;
+      font-weight: 700;
+      line-height: 1;
+    }
+  }
+
+  .links {
+    display: flex;
+    gap: 1rem;
+  }
+
+  & > hr {
     margin-right: 1.75rem;
-    height: 6rem;
+    height: 7rem;
     border: 2px solid var(--eepy-color-accent);
   }
 
@@ -69,6 +76,13 @@ useHead({ meta: [
     gap: 2rem;
     flex-wrap: wrap;
   }
+}
+#section-links {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
 }
 
 @media screen and (max-width: 767px) {
