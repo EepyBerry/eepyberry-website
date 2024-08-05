@@ -41,15 +41,15 @@ const menuOpen: Ref<boolean> = ref(false)
 const showRightBlob: Ref<boolean> = ref(false)
 
 const handleResize = () => {
-    menuOpen.value = window.innerWidth >= 1024
-    displayMenuButton.value = window.innerWidth < 1024
-    showRightBlob.value = window.innerWidth < 768
+  menuOpen.value = window.innerWidth >= 1024
+  displayMenuButton.value = window.innerWidth < 1024
+  showRightBlob.value = window.innerWidth < 768
 }
 
 onMounted(() => {
   themeHelper.loadCurrentTheme()
-  window.addEventListener('resize', handleResize)
   handleResize()
+  window.addEventListener('resize', handleResize)
 })
 onUnmounted(() => {
   window.removeEventListener('resize', handleResize)
@@ -66,8 +66,9 @@ provide('$theme', themeHelper.themeRef)
 <style lang="scss">
 header {
   position: fixed;
-  inset: 0 0 auto;
   padding: var(--app-padding-border) var(--app-padding-border) 0;
+  left: var(--app-padding-border);
+  right: var(--app-padding-border);
   text-align: end;
   z-index: 1;
 
@@ -77,12 +78,14 @@ header {
 }
 main {
   flex: 1;
-  display: flex;
-  flex-direction: column;
   max-width: 1600px;
   width: 100%;
   padding: 0 var(--app-padding-main);
   margin: 0 auto;
+
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
 }
 footer {
   //background-image: url('/ground.svg');
@@ -102,8 +105,9 @@ footer {
 aside {
   position: fixed;
   inset: auto 0;
+  padding: 0.5rem;
+  left: var(--app-padding-border);
   border-radius: 0 1rem 1rem 0;
-  padding: var(--app-padding-border) calc(var(--app-padding-border) / 2);
   width: fit-content;
   display: flex;
   flex-direction: column;

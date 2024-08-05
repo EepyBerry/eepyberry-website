@@ -2,8 +2,6 @@ import { createApp } from 'vue'
 import { ThemeHelper } from './utils/theme.helper'
 import App from './App.vue'
 import router from './router.config'
-import AppButton from './components/AppButton.vue'
-import AppDivider from './components/AppDivider.vue'
 import AppChip from './components/AppChip.vue'
 import AppCardlet from './components/AppCardlet.vue'
 
@@ -22,8 +20,6 @@ createApp(App)
   .component('EepyArticle', AppArticle)
   .component('EepyCard', AppCard)
   .component('EepyCardlet', AppCardlet)
-  .component('EepyButton', AppButton)
-  .component('EepyDivider', AppDivider)
   .component('EepyChip', AppChip)
   .component('EepyPanelWrapper', AppPanelWrapper)
   .mount('#app')

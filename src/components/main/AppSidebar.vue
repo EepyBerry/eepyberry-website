@@ -2,7 +2,6 @@
 <template>
   <AppHomeButton />
   <nav>
-    <EepyDivider dashed h="1rem" />
     <EepyPanelWrapper id="about-tooltip" mode="hover" floatingPlacement="right">
       <template v-slot:reference>
         <router-link class="nav-link button-link" to="about" aria-label="About page link">
@@ -11,7 +10,6 @@
       </template>
       <template v-slot:tooltip>About me!</template>
     </EepyPanelWrapper>
-    <EepyDivider dashed h="1rem" />
     <EepyPanelWrapper id="about-tooltip" mode="hover" floatingPlacement="right">
       <template v-slot:reference>
         <router-link class="nav-link button-link" to="contact" aria-label="Contact page link">
@@ -20,7 +18,6 @@
       </template>
       <template v-slot:tooltip>Contact me!</template>
     </EepyPanelWrapper>
-    
   </nav>
 </template>
 
@@ -31,22 +28,26 @@ import AppHomeButton from './AppHomeButton.vue';
 <!------------------------------------------------------------>
 <style scoped lang="scss">
 nav {
+  text-decoration: none;
+  backdrop-filter: blur(4px);
+
   display: flex;
   flex-direction: column;
   align-items: center;
-  text-decoration: none;
-  backdrop-filter: blur(4px);
+  margin-top: 0.5rem;
+  gap: 0.5rem;
 }
 .nav-link {
-  display: flex;
-  align-items: center;
-  justify-content: center;
   width: 2.75rem;
   height: 2.75rem;
   border-radius: 2rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
   .icon {
     transform: rotateZ(5deg);
-    transition: transform 200ms ease;
+    transition: transform 100ms ease;
   }
 }
 .nav-link:hover .icon, .nav-link:focus-visible .icon {
@@ -54,7 +55,7 @@ nav {
 }
 .nav-link:active .icon {
   cursor: pointer;
-  transform: scale(97.5%)
+  transform: scale(97.5%);
 }
 
 @media screen and (max-width: 767px) {

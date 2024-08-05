@@ -27,7 +27,7 @@ const active: Ref<boolean> = ref(false)
 
 <style scoped lang=scss>
 .home-link {
-  transition: transform 200ms ease;
+  transition: transform 100ms ease;
   .home-symbol {
     width: 3.5rem; user-select: none; -webkit-user-drag: none;
     transform: scale(105%);

@@ -44,7 +44,7 @@ const $theme = inject('$theme')
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    padding-top: 1rem;
+    margin-top: 2rem;
 
     #avatar {
       width: clamp(180px, 95vw, 200px);
