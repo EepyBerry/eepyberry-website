@@ -1,23 +1,13 @@
 
 <template>
-  <AppHomeButton />
   <nav>
-    <EepyPanelWrapper id="about-tooltip" mode="hover" floatingPlacement="right">
-      <template v-slot:reference>
-        <router-link class="nav-link button-link" to="about" aria-label="About page link">
-          <iconify-icon class="icon flip" mode="style" icon="mingcute:happy-line" height="2.25rem" />
-        </router-link>
-      </template>
-      <template v-slot:tooltip>About me!</template>
-    </EepyPanelWrapper>
-    <EepyPanelWrapper id="about-tooltip" mode="hover" floatingPlacement="right">
-      <template v-slot:reference>
-        <router-link class="nav-link button-link" to="contact" aria-label="Contact page link">
-          <iconify-icon class="icon flip" mode="style" icon="mingcute:mail-line" height="2.25rem" />
-        </router-link>
-      </template>
-      <template v-slot:tooltip>Contact me!</template>
-    </EepyPanelWrapper>
+    <AppHomeButton />
+    <router-link class="nav-link button-link" to="about" aria-label="About page link">
+      <iconify-icon class="icon flip" mode="style" icon="mingcute:happy-line" height="2.25rem" />
+    </router-link>
+    <router-link class="nav-link button-link" to="contact" aria-label="Contact page link">
+      <iconify-icon class="icon flip" mode="style" icon="mingcute:mail-line" height="2.25rem" />
+    </router-link>
   </nav>
 </template>
 
@@ -29,13 +19,11 @@ import AppHomeButton from './AppHomeButton.vue';
 <style scoped lang="scss">
 nav {
   text-decoration: none;
-  backdrop-filter: blur(4px);
 
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 0.5rem;
-  gap: 0.5rem;
+  gap: 1rem;
 }
 .nav-link {
   width: 2.75rem;
@@ -45,23 +33,20 @@ nav {
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: transform 100ms ease;
+
   .icon {
     transform: rotateZ(5deg);
-    transition: transform 100ms ease;
+    user-select: none;
+    pointer-events: none;
   }
 }
-.nav-link:hover .icon, .nav-link:focus-visible .icon {
-  transform: scale(110%) rotateZ(-5deg);
+.nav-link:hover, .nav-link:focus-visible {
+  transform: scale(110%) rotateZ(-10deg);
 }
-.nav-link:active .icon {
+.nav-link:active {
   cursor: pointer;
   transform: scale(97.5%);
-}
-
-@media screen and (max-width: 767px) {
-  .nav-link {
-    color: white;
-  }
 }
 
 </style>

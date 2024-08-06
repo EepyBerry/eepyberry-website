@@ -1,6 +1,6 @@
 <template>
     <section id="section-projects">
-      <h2 class="section-title">current projects!</h2>
+      <h2 class="section-title">dev projects!</h2>
       <div class="section-content">
         <a class="card-link"
           href="https://lagrange.eepyberry.me"

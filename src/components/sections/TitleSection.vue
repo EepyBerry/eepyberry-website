@@ -3,22 +3,20 @@
     <div class="title">
       <SvgEepyBerryLogo id="avatar" :dark="$theme === 'dark'" aria-label="Sleeping strawberry with the text 'eepy berry'" />
       <hr>
-      <p id="intro">
-        developer&nbsp;&
-        <br>
-        hobby-artist
-      </p>
+      <p id="intro">developer&nbsp;& illustrator&nbsp;:></p>
     </div>
     <div class="links">
+      <span class="bracket">[</span>
       <a href="https://ko-fi.com" target="_blank" rel="external" aria-label="Ko-fi">
-        <iconify-icon mode="style" icon="simple-icons:kofi" height="3rem" aria-hidden="true" />
+        <iconify-icon mode="style" icon="simple-icons:kofi" height="2.5rem" aria-hidden="true" />
       </a>
       <a href="https://github.com/EepyBerry" target="_blank" rel="external nofollow noopener" aria-label="GitHub">
-        <iconify-icon mode="style" icon="mdi:github" height="3rem" aria-hidden="true" />
+        <iconify-icon mode="style" icon="mdi:github" height="2.5rem" aria-hidden="true" />
       </a>
       <a href="https://bsky.app/profile/eepyberry.bsky.social" target="_blank" rel="external nofollow noopener" aria-label="Bluesky">
-        <iconify-icon mode="style" icon="ri:bluesky-fill" height="3rem" aria-hidden="true" />
+        <iconify-icon mode="style" icon="ri:bluesky-fill" height="2.5rem" aria-hidden="true" />
       </a>
+      <span class="bracket">]</span>
     </div>
   </section>
 </template>
@@ -37,7 +35,7 @@ const $theme = inject('$theme')
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 1rem;
+  gap: 0.5rem;
 
   .title {
     display: flex;
@@ -47,7 +45,7 @@ const $theme = inject('$theme')
     margin-top: 2rem;
 
     #avatar {
-      width: clamp(180px, 95vw, 200px);
+      width: clamp(160px, 25vw, 200px);
       filter: drop-shadow(0 4px 1px var(--eepy-color-accent));
       animation: bounce 4s ease-in-out infinite;
     }
@@ -55,10 +53,10 @@ const $theme = inject('$theme')
       display: flex;
       flex-direction: column;
       gap: 1rem;
-      width: clamp(180px, 95vw, 200px);
+      width: clamp(160px, 25vw, 200px);
 
       font-family: Dosis;
-      font-size: 2.25rem;
+      font-size: clamp(1.75rem, 5vw, 2.25rem);
       font-weight: 400;
       line-height: 1;
     }
@@ -72,35 +70,34 @@ const $theme = inject('$theme')
 
   .links {
     display: flex;
+    align-items: center;
     gap: 2rem;
-  }
-}
-#section-links {
-  padding: 0.25rem;
-  border: 1px solid var(--eepy-color-accent);
-  border-radius: 2rem;
 
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  gap: 1rem;
+    & > .bracket {
+      font-family: Dosis;
+      font-size: 2.5rem;
+      font-weight: 100;
+      line-height: 1;
+    }
+  }
 }
 
 @media screen and (max-width: 567px) {
   #section-title {
-    gap: 1.5rem;
+    gap: 1rem;
 
     .title {
       flex-direction: column;
       text-align: center;
-      padding-top: 4rem;
 
+      #intro {
+        width: fit-content;
+      }
       & > hr {
-        margin-top: 1rem;
-        margin-bottom: 1rem;
+        margin-top: 0.5rem;
+        margin-bottom: 0.75rem;
         height: 0;
-        width: 10rem;
+        width: 4rem;
       }
     }
   }

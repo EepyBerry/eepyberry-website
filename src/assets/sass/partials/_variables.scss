@@ -1,6 +1,6 @@
 :root {
-  --app-padding-main: 5rem;
-  --app-padding-border: 1rem;
+  --app-padding-main: 4.5rem;
+  --app-padding-border: .75rem;
 
   // about
   --eepy-color-vuejs: #34495e;
@@ -18,9 +18,6 @@
     rgb(93, 57, 134) 100%
   );
   --eepy-color-darktech: #242938;
-  
-  // experiments
-  --eepy-color-zephyrsd: #060915;
 }
 
 /* @media screen and (max-width: 1023px) {
@@ -30,13 +27,12 @@
 } */
 @media screen and (max-width: 767px) {
   :root {
-    --app-padding-main: 2rem;
-    --app-padding-border: .75rem;
+    --app-padding-main: 3rem;
+    --app-padding-border: .5rem;
   }
 }
 @media screen and (max-width: 567px) {
   :root {
     --app-padding-main: 1rem;
-    --app-padding-border: .5rem;
   }
 }

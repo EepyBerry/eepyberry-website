@@ -58,7 +58,7 @@ defineProps<{ dark: boolean }>()
 }
 .light {
   .cls-1 { fill: #f1808b; }
-  .cls-2 { fill: #33212d; }
+  .cls-2 { fill: #0f0b0f; }
   .cls-3 { fill: #aed27a; } 
   .cls-1, .cls-2, .cls-3 {
     stroke-width: 0px;

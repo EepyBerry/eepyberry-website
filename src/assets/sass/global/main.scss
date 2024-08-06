@@ -2,7 +2,6 @@
 *::before,
 *::after {
   box-sizing: border-box;
-  position: relative;
   margin: 0;
 }
 
@@ -12,13 +11,12 @@ html {
 
   display: flex;
   flex-direction: column;
-  min-height: 100%;
+  min-height: 100lvh;
 }
 
 body {
   flex: 1;
-  min-height: 100%;
-  position: relative;
+  min-height: 100lvh;
   border: var(--app-padding-border) solid var(--eepy-color-accent-half);
 
   border-radius: 2px;
@@ -46,25 +44,6 @@ ul {
 
 // SVG wrappers
 .svg-wrapper { display: flex; }
-
-// Text classes
-iconify-icon {
-  vertical-align: -15%;
-  display: inline-flex;
-  align-items: center;
-}
-.tx-nowrap {
-  text-wrap: nowrap;
-  word-break: keep-all;
-}
-.tx-mini {
-  font-size: 0.33em;
-  font-weight: 550;
-}
-.tx-mono {
-  font-family: monospace;
-  font-size: 1.25em;
-}
 
 // Padding/margin classes
 $pad-md: .5rem;

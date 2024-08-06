@@ -8,7 +8,12 @@
   "scripts": {
     "dev": "vite",
     "dev-host": "vite --host",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "run-p type-check prettify \"build-only {@}\" --",
+    "preview": "vite preview",
+    "build-only": "vite build",
+    "type-check": "vue-tsc --build --force",
+    "prettify": "prettier . --write",
+    "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore"
   },
   "repository": {
     "type": "git",
@@ -38,6 +43,7 @@
     "@vue/tsconfig": "^0.5.1",
     "eslint": "^8.57.0",
     "eslint-plugin-vue": "^9.24.0",
+    "prettier": "^3.3.3",
     "sass": "^1.72.0",
     "typescript": "^5.4.3",
     "vite": "^5.2.7",

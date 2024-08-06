@@ -4,12 +4,10 @@
             :density="themeHelper.themeRef.value === 'dark' ? 8 : 6"
   />
   <header>
-    <button :style="{ visibility: displayMenuButton ? 'visible' : 'hidden' }" icon-button @click="toggleMenu(!menuOpen)">
-      <iconify-icon mode="style" class="eepy-icon" :icon="`material-symbols:menu-${menuOpen ? 'open-' : null}rounded`" height="3rem" />
-    </button>
+    <AppHomeButton />
     <AppThemeSelect />
   </header>
-  <aside :class="menuOpen ? 'expanded' : 'collapsed'" @focusout="$event.relatedTarget ? undefined : toggleMenu(false)">
+  <aside>
     <AppSidebar />
   </aside>
   <main>
@@ -55,20 +53,16 @@ onUnmounted(() => {
   window.removeEventListener('resize', handleResize)
 })
 
-function toggleMenu(open: boolean) {
-  if (!open && window.innerWidth >= 768) return
-  menuOpen.value = open
-}
-
 provide('$theme', themeHelper.themeRef)
 </script>
 
 <style lang="scss">
+
 header {
   position: fixed;
-  padding: var(--app-padding-border) var(--app-padding-border) 0;
-  left: var(--app-padding-border);
-  right: var(--app-padding-border);
+  left: 0;
+  right: 0;
+  top: 0;
   text-align: end;
   z-index: 1;
 
@@ -77,7 +71,7 @@ header {
   justify-content: space-between;
 }
 main {
-  flex: 1;
+  flex-grow: 1;
   max-width: 1600px;
   width: 100%;
   padding: 0 var(--app-padding-main);
@@ -104,8 +98,8 @@ footer {
 }
 aside {
   position: fixed;
-  inset: auto 0;
-  padding: 0.5rem;
+  top: var(--app-padding-border);
+  padding: 0.25rem;
   left: var(--app-padding-border);
   border-radius: 0 1rem 1rem 0;
   width: fit-content;
@@ -146,25 +140,20 @@ aside {
   opacity: 0;
 }
 
-@media screen and (max-width: 1023px) {
-  aside {
-    top: 4rem;
-    padding: calc(var(--app-padding-border) / 2);
-    padding-right: .25rem;
-    background-color: var(--eepy-color-secondary);
-    transition: transform 250ms ease;
-  }
-}
-
 @media screen and (max-width: 767px) {
+  header {
+    position: absolute;
+  }
+  aside {
+    position: absolute;
+  }
+  main {
+    gap: 0;
+  }
   footer {
     flex-direction: column;
     justify-content: center;
     align-items: center;
   }
-}
-
-@media(prefers-reduced-motion) {
-  aside { transition: none; }
 }
 </style>

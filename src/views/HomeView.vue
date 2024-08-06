@@ -1,11 +1,13 @@
 <template>
   <div class="page-container">
     <ProjectsSection />
+    <ArtSection />
   </div>
 </template>
 
 <!------------------------------------------------------------>
 <script setup lang="ts">
+import ArtSection from '@/components/sections/ArtSection.vue';
 import ProjectsSection from  '@/components/sections/ProjectsSection.vue';
 import { useHead } from '@unhead/vue';
 useHead({ meta: [

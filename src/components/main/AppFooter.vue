@@ -1,5 +1,5 @@
 <template>
-  <div class="footer-filler"></div>
+  <span class="footer-filler"></span>
   <div id="footer-info">
     <p> made with 🌈&nbsp;&&nbsp;❤️</p>
     <p>
@@ -11,6 +11,9 @@
   </div>
   <div id="footer-copyright-links">
     <div id="links">
+      <a href="https://ko-fi.com" target="_blank" rel="external" aria-label="Ko-fi">
+        <iconify-icon mode="style" icon="simple-icons:kofi" height="2.5rem" aria-hidden="true" />
+      </a>
       <a href="https://github.com/EepyBerry" target="_blank" rel="external nofollow noopener" aria-label="GitHub">
         <iconify-icon mode="style" icon="simple-icons:github" height="2rem" />
       </a>

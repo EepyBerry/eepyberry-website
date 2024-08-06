@@ -1,19 +1,13 @@
 <template>
-  <EepyPanelWrapper mode="hover" floatingPlacement="right">
-    <template v-slot:reference>
-      <RouterLink class="home-link button-link" to="/"
-        aria-label="Back to landing page"
-        @mousedown="active = true"
-        @mouseup="active = false"
-        @mouseleave="active = false"
-      >
-        <SvgEepyBerrySmall v-show="!active" :dark="$theme === 'dark'" class="home-symbol" />
-        <SvgEepyBerrySmallBoop v-show="active" :dark="$theme === 'dark'" class="home-symbol" />
-      </RouterLink>
-    </template>
-    <template v-slot:tooltip>Home!</template>
-  </EepyPanelWrapper>
-  
+  <RouterLink class="home-link button-link" to="/"
+    aria-label="Back to landing page"
+    @mousedown="active = true"
+    @mouseup="active = false"
+    @mouseleave="active = false"
+  >
+    <SvgEepyBerrySmall v-show="!active" :dark="$theme === 'dark'" class="home-symbol" />
+    <SvgEepyBerrySmallBoop v-show="active" :dark="$theme === 'dark'" class="home-symbol" />
+  </RouterLink>
 </template>
 
 <script setup lang="ts">
@@ -28,6 +22,8 @@ const active: Ref<boolean> = ref(false)
 <style scoped lang=scss>
 .home-link {
   transition: transform 100ms ease;
+  background: var(--eepy-color-background);
+  border-radius: 50%;
   .home-symbol {
     width: 3.5rem; user-select: none; -webkit-user-drag: none;
     transform: scale(105%);

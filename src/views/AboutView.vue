@@ -1,13 +1,9 @@
 <template>
   <section id="section-about">
-    <div class="section-title">
-      <h1 class="tx-title">Hello, I'm EepyBerry!&nbsp;🍓</h1>
-      <span class="tx-subtitle">Software&nbsp;Engineer & Art&nbsp;Gremlin&nbsp;<span class="tx-nowrap">>:3</span></span>
-    </div>
     <div class="section-content">
       <EepyArticle>
         <template v-slot:title>
-          <h2>Byte-sized info! <span class="tx-mini">(get it? :3)</span></h2>
+          <h2>Byte-sized info!</h2>
         </template>
         <p class="mb">
           Here's some quick facts about me, because big blocks of text are <i>boooring</i>!
