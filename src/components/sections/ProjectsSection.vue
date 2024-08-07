@@ -10,7 +10,7 @@
         >
             <EepyCard id="project-lagrange">
             <template v-slot:links>
-              <iconify-icon mode="style" icon="mingcute:external-link-line" style="color: var(--white);" height="2rem" />
+              <iconify-icon mode="svg" icon="mingcute:external-link-line" style="color: var(--white);" height="2rem" />
             </template>
             <SvgLagrangeLogo class="logo" />
             <template v-slot:footer>
@@ -27,7 +27,7 @@
         >
             <EepyCard id="project-redacted" centered>
             <template v-slot:links>
-                <iconify-icon mode="style" icon="noto:construction" height="2rem" />
+                <iconify-icon mode="svg" icon="noto:construction" height="2rem" />
             </template>
             <span class="logo tx-mono tx-glitch" data-text="[REDACTED]">[REDACTED]</span>
             <template v-slot:footer>

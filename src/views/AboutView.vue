@@ -9,12 +9,12 @@
           Here's some quick facts about me, because big blocks of text are <i>boooring</i>!
         </p>
         <ul>
-          <li><iconify-icon mode="style" icon="noto:laptop-computer" height="1.25rem" />&nbsp; Started programming in C during high school</li>
-          <li><iconify-icon mode="style" icon="noto:books" height="1.25rem" />&nbsp; Pretty much a full-stack developer now!</li>
-          <li><iconify-icon mode="style" icon="noto:face-with-steam-from-nose" height="1.25rem" />&nbsp; Really likes Java, and will fight anyone mocking it >:U</li>
-          <li><iconify-icon mode="style" icon="noto:artist-palette" height="1.25rem" />&nbsp; Started drawing at the age of 6!</li>
-          <li><iconify-icon mode="style" icon="noto:woman-raising-hand" height="1.25rem" />&nbsp; Very smol (~5'2")</li>
-          <li><iconify-icon mode="style" icon="noto:transgender-flag" height="1.25rem" />&nbsp; Came out as transfem in May 2024!</li>
+          <li><iconify-icon mode="svg" icon="noto:laptop-computer" height="1.25rem" />&nbsp; Started programming in C during high school</li>
+          <li><iconify-icon mode="svg" icon="noto:books" height="1.25rem" />&nbsp; Pretty much a full-stack developer now!</li>
+          <li><iconify-icon mode="svg" icon="noto:face-with-steam-from-nose" height="1.25rem" />&nbsp; Really likes Java, and will fight anyone mocking it >:U</li>
+          <li><iconify-icon mode="svg" icon="noto:artist-palette" height="1.25rem" />&nbsp; Started drawing at the age of 6!</li>
+          <li><iconify-icon mode="svg" icon="noto:woman-raising-hand" height="1.25rem" />&nbsp; Very smol (~5'2")</li>
+          <li><iconify-icon mode="svg" icon="noto:transgender-flag" height="1.25rem" />&nbsp; Came out as transfem in May 2024!</li>
         </ul>
       </EepyArticle>
       <EepyArticle>
@@ -26,7 +26,7 @@
           </EepyCardlet>
           <EepyCardlet class="vuejs">
             <iconify-icon
-              mode="style"
+              mode="svg"
               icon="simple-icons:vuedotjs"
               style="color: #41b883; padding-left: .25rem"
               height="1.5rem"
@@ -35,7 +35,7 @@
           </EepyCardlet>
           <EepyCardlet class="angular">
             <iconify-icon
-              mode="style"
+              mode="svg"
               icon="simple-icons:angular"
               style="padding-left: .25rem"
               height="1.5rem"
@@ -44,7 +44,7 @@
           </EepyCardlet>
           <EepyCardlet class="docker">
             <iconify-icon
-              mode="style"
+              mode="svg"
               icon="simple-icons:docker"
               style="padding-left: .25rem"
               height="1.5rem"
@@ -53,7 +53,7 @@
           </EepyCardlet>
           <EepyCardlet class="kubernetes">
             <iconify-icon
-              mode="style"
+              mode="svg"
               icon="simple-icons:kubernetes"
               style="padding-left: .25rem"
               height="1.5rem"
@@ -62,7 +62,7 @@
           </EepyCardlet>
           <EepyCardlet class="aws">
             <iconify-icon
-              mode="style"
+              mode="svg"
               icon="skill-icons:aws-dark"
               height="2rem"
             />
@@ -73,7 +73,7 @@
         <div class="cardlet-list mt">
           <EepyCardlet class="idea">
             <iconify-icon
-              mode="style"
+              mode="svg"
               icon="skill-icons:idea-dark"
               height="2rem"
             />
@@ -81,7 +81,7 @@
           </EepyCardlet>
           <EepyCardlet class="vscode">
             <iconify-icon
-              mode="style"
+              mode="svg"
               icon="skill-icons:vscode-dark"
               height="2rem"
             />
@@ -89,7 +89,7 @@
           </EepyCardlet>
           <EepyCardlet class="godot">
             <iconify-icon
-              mode="style"
+              mode="svg"
               icon="skill-icons:godot-dark"
               height="2rem"
             />
@@ -101,7 +101,7 @@
         <div class="cardlet-list mt">
           <EepyCardlet class="illustrator">
             <iconify-icon
-              mode="style"
+              mode="svg"
               icon="skill-icons:illustrator"
               height="2rem"
             />
@@ -109,7 +109,7 @@
           </EepyCardlet>
           <EepyCardlet class="krita">
             <iconify-icon
-              mode="style"
+              mode="svg"
               icon="simple-icons:krita"
               style="padding-left: .25rem"
               height="1.5rem"
@@ -118,7 +118,7 @@
           </EepyCardlet>
           <EepyCardlet class="aseprite">
             <iconify-icon
-              mode="style"
+              mode="svg"
               icon="simple-icons:aseprite"
               style="padding-left: .25rem"
               height="1.5rem"

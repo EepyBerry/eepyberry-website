@@ -37,20 +37,20 @@ const displayMenuButton: Ref<boolean> = ref(false)
 const menuOpen: Ref<boolean> = ref(false)
 const showRightBlob: Ref<boolean> = ref(false)
 
-const handleResize = () => {
-  menuOpen.value = window.innerWidth >= 1024
-  displayMenuButton.value = window.innerWidth < 1024
-  showRightBlob.value = window.innerWidth < 768
-}
-
 onMounted(() => {
   themeHelper.loadCurrentTheme()
-  handleResize()
   window.addEventListener('resize', handleResize)
+  handleResize()
 })
 onUnmounted(() => {
   window.removeEventListener('resize', handleResize)
 })
+
+function handleResize() {
+  menuOpen.value = window.innerWidth >= 1024
+  displayMenuButton.value = window.innerWidth < 1024
+  showRightBlob.value = window.innerWidth < 768
+}
 
 provide('$theme', themeHelper.themeRef)
 </script>

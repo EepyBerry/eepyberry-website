@@ -8,14 +8,14 @@
     <div class="links">
       <span class="bracket">[</span>
       <a href="#" disabled @click="$event.preventDefault()" aria-label="Ko-fi">
-        <iconify-icon mode="style" icon="simple-icons:kofi" height="2.5rem" aria-hidden="true" />
+        <iconify-icon mode="svg" icon="simple-icons:kofi" height="2.5rem" aria-hidden="true" />
         <span class="coming-soon" aria-hidden="true">coming soon!</span>
       </a>
       <a href="https://github.com/EepyBerry" target="_blank" rel="external nofollow noopener" aria-label="GitHub">
-        <iconify-icon mode="style" icon="mdi:github" height="2.5rem" aria-hidden="true" />
+        <iconify-icon mode="svg" icon="mdi:github" height="2.5rem" aria-hidden="true" />
       </a>
       <a href="https://bsky.app/profile/eepyberry.bsky.social" target="_blank" rel="external nofollow noopener" aria-label="Bluesky">
-        <iconify-icon mode="style" icon="ri:bluesky-fill" height="2.5rem" aria-hidden="true" />
+        <iconify-icon mode="svg" icon="ri:bluesky-fill" height="2.5rem" aria-hidden="true" />
       </a>
       <span class="bracket">]</span>
     </div>

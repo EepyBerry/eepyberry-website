@@ -2,10 +2,10 @@
   <nav>
     <AppHomeButton />
     <router-link class="nav-link button-link" to="about" aria-label="About page link">
-      <iconify-icon mode="style" icon="mingcute:happy-line" height="2.25rem" />
+      <iconify-icon mode="svg" icon="mingcute:happy-line" height="2.25rem" />
     </router-link>
     <router-link class="nav-link button-link" to="contact" aria-label="Contact page link">
-      <iconify-icon mode="style" icon="mingcute:mail-line" height="2.25rem" />
+      <iconify-icon mode="svg" icon="mingcute:mail-line" height="2.25rem" />
     </router-link>
   </nav>
 </template>
