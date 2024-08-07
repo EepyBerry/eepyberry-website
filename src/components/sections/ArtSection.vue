@@ -7,10 +7,10 @@
           <img src="/thumbnails/2024-08-03_1000-LC.jpg">
         </li>
         <li class="image-wrapper" style="width: 20rem;">
-          <img src="/thumbnails/2023-01-09_Heart_of_the_Mountain.jpg">
+          <img src="/thumbnails/2023-01-09_Heart_of_the_Mountain.jpg" style="scale: 120%">
         </li>
         <li class="image-wrapper" style="width: 20rem;">
-          <img src="/thumbnails/2022-12-11_Niko_Holding_the_Sun.jpg">
+          <img src="/thumbnails/2022-12-11_Niko_Holding_the_Sun.jpg" style="scale: 120%">
         </li>
         <li class="image-wrapper" style="width: 20rem;">
           <img src="/thumbnails/2022-02-12_Strange_Reflection.jpg">

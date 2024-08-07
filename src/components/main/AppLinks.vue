@@ -29,6 +29,7 @@ import SvgKofi from '../svg/icons/SvgKofi.vue';
   align-items: center;
   gap: 1.75rem;
   backdrop-filter: blur(4px);
+  padding: 0.5rem 1rem;
 
   & > .bracket {
     font-family: Dosis;
@@ -48,6 +49,7 @@ import SvgKofi from '../svg/icons/SvgKofi.vue';
       text-align: center;
       line-height: 1.1;
       pointer-events: none;
+      backdrop-filter: blur(4px);
     }
   }
 }

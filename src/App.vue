@@ -80,23 +80,6 @@ aside {
   &.collapsed { transform: translateX(-8rem); }
 }
 
-.blob {
-  will-change: width height;
-  position: absolute;
-  width: clamp(100px, 4rem + 7.5vw, 180px);
-  z-index: -1;
-
-  &.bottom {
-    left: 0;
-    bottom: 0;
-  }
-  &.bottom.right {
-    left: auto;
-    right: 0;
-    transform: rotateY(180deg)
-  }
-}
-
 .fade-enter-active,
 .fade-leave-active {
   transition: opacity 0.5s ease;

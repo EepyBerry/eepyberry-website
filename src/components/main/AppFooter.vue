@@ -2,7 +2,7 @@
   <footer role="contentinfo">
     <AppLinks />
     <div id="copyright-notice">
-      <p class="mt">© {{ new Date().getFullYear() }}, EepyBerry</p>
+      <p>© {{ new Date().getFullYear() }}, EepyBerry</p>
       <p>
         All content under
         <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="external nofollow noopener">CC-BY-NC-SA 4.0</a>

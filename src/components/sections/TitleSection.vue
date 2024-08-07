@@ -24,7 +24,6 @@ const $theme = inject('$theme')
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 0.5rem;
 
   .title {
     display: flex;
