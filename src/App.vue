@@ -8,7 +8,7 @@
     <AppThemeSelect />
   </header>
   <aside>
-    <AppSidebar />
+    <AppNavigation />
   </aside>
   <main>
     <TitleSection />
@@ -27,7 +27,7 @@
 import { defineAsyncComponent, inject, onMounted, onUnmounted, provide, ref, Transition, watch, type Ref } from 'vue';
 import type { ThemeHelper } from '@/utils/theme.helper';
 import AppThemeSelect from "@/components/main/AppThemeSelect.vue";
-import AppSidebar from "@/components/main/AppSidebar.vue"
+import AppNavigation from "@/components/main/AppNavigation.vue"
 import AppFooter from './components/main/AppFooter.vue';
 import TitleSection from '@/components/sections/TitleSection.vue';
 

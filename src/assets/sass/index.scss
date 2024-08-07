@@ -1,2 +1,7 @@
-@import "./global";
-@import "./partials";
+@use "./main";
+@use "./themes";
+@use "./fonts";
+@use "./animations";
+@use "./variables";
+@use "./effects";
+@use "./native";

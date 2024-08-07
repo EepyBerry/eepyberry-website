@@ -11,7 +11,7 @@
   </div>
   <div id="footer-copyright-links">
     <div id="links">
-      <a href="https://ko-fi.com" target="_blank" rel="external" aria-label="Ko-fi">
+      <a href="https://ko-fi.com" target="_blank" rel="external" aria-label="Ko-fi" disabled>
         <iconify-icon mode="style" icon="simple-icons:kofi" height="2.5rem" aria-hidden="true" />
       </a>
       <a href="https://github.com/EepyBerry" target="_blank" rel="external nofollow noopener" aria-label="GitHub">

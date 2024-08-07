@@ -1,12 +1,11 @@
-
 <template>
   <nav>
     <AppHomeButton />
     <router-link class="nav-link button-link" to="about" aria-label="About page link">
-      <iconify-icon class="icon flip" mode="style" icon="mingcute:happy-line" height="2.25rem" />
+      <iconify-icon mode="style" icon="mingcute:happy-line" height="2.25rem" />
     </router-link>
     <router-link class="nav-link button-link" to="contact" aria-label="Contact page link">
-      <iconify-icon class="icon flip" mode="style" icon="mingcute:mail-line" height="2.25rem" />
+      <iconify-icon mode="style" icon="mingcute:mail-line" height="2.25rem" />
     </router-link>
   </nav>
 </template>
@@ -35,7 +34,7 @@ nav {
   justify-content: center;
   transition: transform 100ms ease;
 
-  .icon {
+  & > iconify-icon {
     transform: rotateZ(5deg);
     user-select: none;
     pointer-events: none;
