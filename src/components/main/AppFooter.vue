@@ -33,7 +33,7 @@ import SvgKofi from '../svg/icons/SvgKofi.vue';
 footer {
   background-position: 50% 0;
   background-size: cover;
-  margin-bottom: 3rem;
+  margin: 3rem 0;
   font-family: Dosis;
 
   display: flex;

@@ -27,7 +27,7 @@
 import { useHead } from '@unhead/vue';
 useHead({ meta: [
   { name: 'robots', content: 'noindex' },
-  { name: 'description', content: 'Default error page' }
+  { name: 'description', content: 'Page not found' }
 ]})
 </script>
 
