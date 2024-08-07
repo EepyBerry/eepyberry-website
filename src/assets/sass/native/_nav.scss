@@ -1,9 +1,19 @@
+// Native
 a { display: inline-flex; gap: 4px; }
-a.disabled { cursor: not-allowed; }
+a:not(.button-link, .card-link)[disabled], a:not(.button-link, .card-link)[disabled]:visited {
+  cursor: not-allowed;
+  color: var(--eepy-color-disabled);
+}
 
-a.card-link:not(.disabled):hover { transform: scale(101.5%); }
-a.card-link:not(.disabled) { transition: transform 100ms ease-out; }
+// Card-link
+a.card-link:not([disabled]):hover {
+  transform: scale(101.5%);
+}
+a.card-link:not([disabled]) {
+  transition: transform 100ms ease-out;
+}
 
+// Other links
 a:not(.button-link, .card-link), a:not(.button-link, .card-link):visited {
   color: var(--eepy-color-text);
 }
@@ -12,5 +22,14 @@ a.button-link, a.card-link {
   color: var(--eepy-color-text);
 }
 
-[data-theme="dark"] a:not(.button-link, .card-link):hover { filter: brightness(80%); }
-[data-theme="light"] a:not(.button-link, .card-link):hover { filter: brightness(250%); }
+// Theme-based selectors
+[data-theme="dark"] {
+  a:not(.button-link, .card-link, [disabled]):hover {
+    filter: brightness(80%);
+  }
+} 
+[data-theme="light"] {
+  a:not(.button-link, .card-link, [disabled]):hover {
+    filter: brightness(250%);
+  }
+}

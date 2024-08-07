@@ -11,14 +11,14 @@
   </div>
   <div id="footer-copyright-links">
     <div id="links">
-      <a href="https://ko-fi.com" target="_blank" rel="external" aria-label="Ko-fi" disabled>
-        <iconify-icon mode="style" icon="simple-icons:kofi" height="2.5rem" aria-hidden="true" />
+      <a href="#" disabled @click="$event.preventDefault()" aria-label="Ko-fi" aria-disabled="true">
+        <iconify-icon mode="style" icon="simple-icons:kofi" height="2rem" aria-hidden="true" />
       </a>
       <a href="https://github.com/EepyBerry" target="_blank" rel="external nofollow noopener" aria-label="GitHub">
-        <iconify-icon mode="style" icon="simple-icons:github" height="2rem" />
+        <iconify-icon mode="style" icon="mdi:github" height="2rem" />
       </a>
       <a href="https://bsky.app/profile/eepyberry.bsky.social" target="_blank" rel="external nofollow noopener" aria-label="Bluesky">
-        <iconify-icon mode="style" icon="simple-icons:bluesky" height="2rem" />
+        <iconify-icon mode="style" icon="ri:bluesky-fill" height="2rem" />
       </a>
     </div>
     <p class="mt">© {{ new Date().getFullYear() }}, EepyBerry</p>

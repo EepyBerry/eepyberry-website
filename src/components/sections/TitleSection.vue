@@ -7,8 +7,9 @@
     </div>
     <div class="links">
       <span class="bracket">[</span>
-      <a href="https://ko-fi.com" target="_blank" rel="external" aria-label="Ko-fi">
+      <a href="#" disabled @click="$event.preventDefault()" aria-label="Ko-fi">
         <iconify-icon mode="style" icon="simple-icons:kofi" height="2.5rem" aria-hidden="true" />
+        <span class="coming-soon" aria-hidden="true">coming soon!</span>
       </a>
       <a href="https://github.com/EepyBerry" target="_blank" rel="external nofollow noopener" aria-label="GitHub">
         <iconify-icon mode="style" icon="mdi:github" height="2.5rem" aria-hidden="true" />
@@ -78,6 +79,20 @@ const $theme = inject('$theme')
       font-size: 2.5rem;
       font-weight: 100;
       line-height: 1;
+    }
+    & > a {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      .coming-soon {
+        position: absolute;
+        bottom: -90%;
+        text-align: center;
+        line-height: 1.1;
+        pointer-events: none;
+      }
     }
   }
 }

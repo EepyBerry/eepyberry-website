@@ -4,7 +4,6 @@
             :density="themeHelper.themeRef.value === 'dark' ? 8 : 6"
   />
   <header>
-    <AppHomeButton />
     <AppThemeSelect />
   </header>
   <aside>
