@@ -1,49 +1,54 @@
 <template>
-  <span class="footer-filler"></span>
-  <div id="footer-info">
-    <p> made with 🌈&nbsp;&&nbsp;❤️</p>
-    <p>
-      powered by
-      <a href="https://vuejs.org" target="_blank" rel="external nofollow noopener">VueJS</a>
-      &
-      <a href="https://vitejs.dev" target="_blank" rel="external nofollow noopener">Vite</a>
-    </p>
-  </div>
-  <div id="footer-copyright-links">
-    <div id="links">
-      <a href="#" disabled @click="$event.preventDefault()" aria-label="Ko-fi" aria-disabled="true">
-        <iconify-icon mode="svg" icon="simple-icons:kofi" height="2rem" aria-hidden="true" />
-      </a>
-      <a href="https://github.com/EepyBerry" target="_blank" rel="external nofollow noopener" aria-label="GitHub">
-        <iconify-icon mode="svg" icon="mdi:github" height="2rem" />
-      </a>
-      <a href="https://bsky.app/profile/eepyberry.bsky.social" target="_blank" rel="external nofollow noopener" aria-label="Bluesky">
-        <iconify-icon mode="svg" icon="ri:bluesky-fill" height="2rem" />
-      </a>
+  <footer role="contentinfo">
+    <AppLinks />
+    <div id="copyright-notice">
+      <p class="mt">© {{ new Date().getFullYear() }}, EepyBerry</p>
+      <p>
+        All content under
+        <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="external nofollow noopener">CC-BY-NC-SA 4.0</a>
+      </p>
     </div>
-    <p class="mt">© {{ new Date().getFullYear() }}, EepyBerry</p>
-    <p>
-      All content under
-      <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="external nofollow noopener">CC-BY-NC-SA 4.0</a>
-    </p>
-  </div>
+    <div id="app-info">
+      <p> made with 🌈&nbsp;&&nbsp;❤️</p>
+      <p>
+        powered by
+        <a href="https://vuejs.org" target="_blank" rel="external nofollow noopener">VueJS</a>
+        &
+        <a href="https://vitejs.dev" target="_blank" rel="external nofollow noopener">Vite</a>
+      </p>
+    </div>
+  </footer>
 </template>
 
+<script setup lang="ts">
+import AppLinks from '../main/AppLinks.vue';
+import SvgBluesky from '../svg/icons/SvgBluesky.vue';
+import SvgGithub from '../svg/icons/SvgGithub.vue';
+import SvgKofi from '../svg/icons/SvgKofi.vue';
+</script>
+
+
 <style scoped lang="scss">
-#links {
+
+footer {
+  background-position: 50% 0;
+  background-size: cover;
+  margin-bottom: 3rem;
+  font-family: Dosis;
+
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: flex-end;
-  gap: 8px;
-  min-height: 2rem;
-}
+  justify-content: center;
+  gap: 1rem;
+  text-align: center;
+  font-weight: 500;
 
-.footer-filler { flex: 1; display: block; }
-#footer-info { flex: 1; text-align: center; }
-#footer-copyright-links { flex: 1;  text-align: end; }
-
-@media screen and (max-width: 767px) {
-  #links { justify-content: center; }
-  #footer-copyright-links { text-align: center; }
+  #copyright-notice {
+    font-size: clamp(1rem, 5vw, 1.25rem);
+  }
+  #app-info {
+    font-weight: 200;
+  }
 }
 </style>

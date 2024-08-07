@@ -5,26 +5,14 @@
       <hr>
       <p id="intro">developer&nbsp;& illustrator&nbsp;:></p>
     </div>
-    <div class="links">
-      <span class="bracket">[</span>
-      <a href="#" disabled @click="$event.preventDefault()" aria-label="Ko-fi">
-        <iconify-icon mode="svg" icon="simple-icons:kofi" height="2.5rem" aria-hidden="true" />
-        <span class="coming-soon" aria-hidden="true">coming soon!</span>
-      </a>
-      <a href="https://github.com/EepyBerry" target="_blank" rel="external nofollow noopener" aria-label="GitHub">
-        <iconify-icon mode="svg" icon="mdi:github" height="2.5rem" aria-hidden="true" />
-      </a>
-      <a href="https://bsky.app/profile/eepyberry.bsky.social" target="_blank" rel="external nofollow noopener" aria-label="Bluesky">
-        <iconify-icon mode="svg" icon="ri:bluesky-fill" height="2.5rem" aria-hidden="true" />
-      </a>
-      <span class="bracket">]</span>
-    </div>
+    <AppLinks />
   </section>
 </template>
 
 
 <!------------------------------------------------------------>
 <script setup lang="ts">
+import AppLinks from '../main/AppLinks.vue';
 import SvgEepyBerryLogo from '@/components/svg/SvgEepyBerryLogo.vue';
 import { inject } from 'vue';
 const $theme = inject('$theme')
@@ -66,33 +54,6 @@ const $theme = inject('$theme')
       margin-right: 1.75rem;
       height: 6rem;
       border: 1px solid var(--eepy-color-accent);
-    }
-  }
-
-  .links {
-    display: flex;
-    align-items: center;
-    gap: 2rem;
-
-    & > .bracket {
-      font-family: Dosis;
-      font-size: 2.5rem;
-      font-weight: 100;
-      line-height: 1;
-    }
-    & > a {
-      position: relative;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-
-      .coming-soon {
-        position: absolute;
-        bottom: -90%;
-        text-align: center;
-        line-height: 1.1;
-        pointer-events: none;
-      }
     }
   }
 }

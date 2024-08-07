@@ -5,16 +5,15 @@
       :style="{
         top: `${random(100)}vmax`,
         left: `${random(100)}vmax`,
-        width: `${random(size)}px`,
-        transform: `rotateZ(${random(180)}deg)`
+        width: `${random(size)}px`
       }"
     ></span>
   </div>
 </template>
 
 <script setup lang="ts">
-import { random, randomMinMax, vec_randomUnit } from '@/utils/functions'
-import { onMounted, onUnmounted, onUpdated, ref, type Ref } from 'vue';
+import { random } from '@/utils/functions'
+import { onMounted, ref, type Ref } from 'vue';
 
 defineProps<{ size: number, density: number, visible: boolean }>()
 
@@ -56,16 +55,6 @@ async function init(): Promise<void> {
   &.delay-3 { animation-delay: -3s; }
   &.delay-4 { animation-delay: -4s; }
   &.delay-5 { animation-delay: -5s; }
-}
-.star-4 {
-  position: absolute;
-  width: 4px;
-  aspect-ratio: 1/1;
-}
-.star-5 {
-  position: absolute;
-  width: 4px;
-  aspect-ratio: 1/1;
 }
 
 @media(prefers-reduced-motion) {

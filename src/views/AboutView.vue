@@ -5,9 +5,6 @@
         <template v-slot:title>
           <h2>Byte-sized info!</h2>
         </template>
-        <p class="mb">
-          Here's some quick facts about me, because big blocks of text are <i>boooring</i>!
-        </p>
         <ul>
           <li><iconify-icon mode="svg" icon="noto:books" height="1.25rem" />&nbsp; Full-stack developer!</li>
           <li><iconify-icon mode="svg" icon="noto:face-with-steam-from-nose" height="1.25rem" />&nbsp; Really likes Java, and will fight anyone mocking it >:U</li>

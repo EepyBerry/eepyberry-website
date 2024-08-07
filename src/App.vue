@@ -3,9 +3,7 @@
             :size="themeHelper.themeRef.value === 'dark' ? 5 : 16"
             :density="themeHelper.themeRef.value === 'dark' ? 8 : 6"
   />
-  <header>
-    <AppThemeSelect />
-  </header>
+  <AppHeader />
   <aside>
     <AppNavigation />
   </aside>
@@ -17,18 +15,16 @@
       </Transition>
     </RouterView>
   </main>
-  <footer role="contentinfo">
-    <AppFooter />
-  </footer>
+  <AppFooter />
 </template>
 
 <script setup lang="ts">
 import { defineAsyncComponent, inject, onMounted, onUnmounted, provide, ref, Transition, watch, type Ref } from 'vue';
 import type { ThemeHelper } from '@/utils/theme.helper';
-import AppThemeSelect from "@/components/main/AppThemeSelect.vue";
 import AppNavigation from "@/components/main/AppNavigation.vue"
 import AppFooter from './components/main/AppFooter.vue';
 import TitleSection from '@/components/sections/TitleSection.vue';
+import AppHeader from './components/main/AppHeader.vue';
 
 const AppScatter = defineAsyncComponent(() => import('./components/AppScatter.vue'))
 const themeHelper: ThemeHelper = inject("ThemeHelper") as ThemeHelper;
@@ -56,19 +52,6 @@ provide('$theme', themeHelper.themeRef)
 </script>
 
 <style lang="scss">
-
-header {
-  position: fixed;
-  left: 0;
-  right: 0;
-  top: 0;
-  text-align: end;
-  z-index: 1;
-
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
 main {
   flex-grow: 1;
   max-width: 1600px;
@@ -79,21 +62,6 @@ main {
   display: flex;
   flex-direction: column;
   gap: 4rem;
-}
-footer {
-  //background-image: url('/ground.svg');
-  background-position: 50% 0;
-  background-size: cover;
-  padding: var(--app-padding-border);
-  font-family: Dosis;
-
-  display: flex;
-  flex-direction: row;
-  align-items: flex-end;
-  justify-content: space-between;
-  gap: 8px;
-  text-align: end;
-  font-weight: 500;
 }
 aside {
   position: fixed;
@@ -140,19 +108,11 @@ aside {
 }
 
 @media screen and (max-width: 767px) {
-  header {
-    position: absolute;
-  }
   aside {
     position: absolute;
   }
   main {
     gap: 2rem;
-  }
-  footer {
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
   }
 }
 </style>
