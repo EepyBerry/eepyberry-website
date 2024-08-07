@@ -147,7 +147,7 @@ aside {
     position: absolute;
   }
   main {
-    gap: 0;
+    gap: 2rem;
   }
   footer {
     flex-direction: column;

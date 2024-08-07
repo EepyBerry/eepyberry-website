@@ -9,11 +9,10 @@
           Here's some quick facts about me, because big blocks of text are <i>boooring</i>!
         </p>
         <ul>
-          <li><iconify-icon mode="svg" icon="noto:laptop-computer" height="1.25rem" />&nbsp; Started programming in C during high school</li>
-          <li><iconify-icon mode="svg" icon="noto:books" height="1.25rem" />&nbsp; Pretty much a full-stack developer now!</li>
+          <li><iconify-icon mode="svg" icon="noto:books" height="1.25rem" />&nbsp; Full-stack developer!</li>
           <li><iconify-icon mode="svg" icon="noto:face-with-steam-from-nose" height="1.25rem" />&nbsp; Really likes Java, and will fight anyone mocking it >:U</li>
           <li><iconify-icon mode="svg" icon="noto:artist-palette" height="1.25rem" />&nbsp; Started drawing at the age of 6!</li>
-          <li><iconify-icon mode="svg" icon="noto:woman-raising-hand" height="1.25rem" />&nbsp; Very smol (~5'2")</li>
+          <li><iconify-icon mode="svg" icon="noto:woman-raising-hand" height="1.25rem" />&nbsp; Very smol :></li>
           <li><iconify-icon mode="svg" icon="noto:transgender-flag" height="1.25rem" />&nbsp; Came out as transfem in May 2024!</li>
         </ul>
       </EepyArticle>

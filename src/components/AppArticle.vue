@@ -1,7 +1,7 @@
 <template>
   <article class="eepy-article">
-      <div class="eepy-article-title"><slot name="title">Title</slot></div>
-      <slot>Text</slot>
+    <div class="eepy-article-title"><slot name="title">Title</slot></div>
+    <slot>Text</slot>
   </article>
 </template>
 
