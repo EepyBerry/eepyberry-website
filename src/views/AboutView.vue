@@ -1,129 +1,15 @@
 <template>
-  <section id="section-about">
-    <div class="section-content">
-      <EepyArticle>
-        <template v-slot:title>
-          <h2>Byte-sized info!</h2>
-        </template>
-        <ul>
-          <li><iconify-icon mode="svg" icon="noto:books" height="1.25rem" />&nbsp; Full-stack developer!</li>
-          <li><iconify-icon mode="svg" icon="noto:face-with-steam-from-nose" height="1.25rem" />&nbsp; Really likes Java, and will fight anyone mocking it >:U</li>
-          <li><iconify-icon mode="svg" icon="noto:artist-palette" height="1.25rem" />&nbsp; Started drawing at the age of 6!</li>
-          <li><iconify-icon mode="svg" icon="noto:woman-raising-hand" height="1.25rem" />&nbsp; Very smol :></li>
-          <li><iconify-icon mode="svg" icon="noto:transgender-flag" height="1.25rem" />&nbsp; Came out as transfem in May 2024!</li>
-        </ul>
-      </EepyArticle>
-      <EepyArticle>
-        <template v-slot:title><h2>Techs n' stuff</h2></template>
-        <p>Have a list of my favourite coding techs & tools! Also includes stuff I'm learning right now:</p>
-        <div class="cardlet-list mt">
-          <EepyCardlet class="java">
-            <iconify-icon icon="skill-icons:java-dark" height="2rem" aria-hidden="true" />Java
-          </EepyCardlet>
-          <EepyCardlet class="vuejs">
-            <iconify-icon
-              mode="svg"
-              icon="simple-icons:vuedotjs"
-              style="color: #41b883; padding-left: .25rem"
-              height="1.5rem"
-            />
-            VueJS
-          </EepyCardlet>
-          <EepyCardlet class="angular">
-            <iconify-icon
-              mode="svg"
-              icon="simple-icons:angular"
-              style="padding-left: .25rem"
-              height="1.5rem"
-            />
-            Angular
-          </EepyCardlet>
-          <EepyCardlet class="docker">
-            <iconify-icon
-              mode="svg"
-              icon="simple-icons:docker"
-              style="padding-left: .25rem"
-              height="1.5rem"
-            />
-            Docker
-          </EepyCardlet>
-          <EepyCardlet class="kubernetes">
-            <iconify-icon
-              mode="svg"
-              icon="simple-icons:kubernetes"
-              style="padding-left: .25rem"
-              height="1.5rem"
-            />
-            Kubernetes
-          </EepyCardlet>
-          <EepyCardlet class="aws">
-            <iconify-icon
-              mode="svg"
-              icon="skill-icons:aws-dark"
-              height="2rem"
-            />
-            AWS
-          </EepyCardlet>
-        </div>
-        <!------------------------------------------------>
-        <div class="cardlet-list mt">
-          <EepyCardlet class="idea">
-            <iconify-icon
-              mode="svg"
-              icon="skill-icons:idea-dark"
-              height="2rem"
-            />
-            IntelliJ&nbsp;IDEA
-          </EepyCardlet>
-          <EepyCardlet class="vscode">
-            <iconify-icon
-              mode="svg"
-              icon="skill-icons:vscode-dark"
-              height="2rem"
-            />
-            VS&nbsp;Code
-          </EepyCardlet>
-          <EepyCardlet class="godot">
-            <iconify-icon
-              mode="svg"
-              icon="skill-icons:godot-dark"
-              height="2rem"
-            />
-            Godot
-          </EepyCardlet>
-        </div>
-
-        <p class="mt-l">And these are my main drawing tools:</p>
-        <div class="cardlet-list mt">
-          <EepyCardlet class="illustrator">
-            <iconify-icon
-              mode="svg"
-              icon="skill-icons:illustrator"
-              height="2rem"
-            />
-            Illustrator
-          </EepyCardlet>
-          <EepyCardlet class="krita">
-            <iconify-icon
-              mode="svg"
-              icon="simple-icons:krita"
-              style="padding-left: .25rem"
-              height="1.5rem"
-            />
-            Krita
-          </EepyCardlet>
-          <EepyCardlet class="aseprite">
-            <iconify-icon
-              mode="svg"
-              icon="simple-icons:aseprite"
-              style="padding-left: .25rem"
-              height="1.5rem"
-            />
-            Aseprite
-          </EepyCardlet>
-        </div>
-      </EepyArticle>
-      <EepyArticle>
+  <div class="page-container">
+    <TitleSection />
+    <div class="layout-grid">
+      <AboutInfoSection />
+      <AboutTechsSection />
+      <AboutToolsSection />
+      <AboutInterestsSection />
+      <div class="avatar-wrapper">
+        <img class="avatar" src="/avatar.webp" alt="Avatar" aria-label="avatar">
+      </div>
+      <!-- <EepyArticle>
         <template v-slot:title><h2>Other interests ?</h2></template>
         <p>Here's a cute little list of stuff I really enjoy outside of programming/drawing:</p>
         <div class="chip-list">
@@ -147,16 +33,18 @@
           <EepyChip>⚙️ Submachine</EepyChip>
           <EepyChip>💎 GemCraft Series</EepyChip>
         </div>
-      </EepyArticle>
+      </EepyArticle> -->
     </div>
-    <div class="avatar-wrapper">
-      <img class="avatar" src="/avatar.webp" alt="Avatar" aria-label="avatar">
-    </div>
-  </section>
+  </div>
 </template>
 
 <!------------------------------------------------------------>
 <script setup lang="ts">
+import AboutInfoSection from '@/components/sections/AboutInfoSection.vue';
+import AboutInterestsSection from '@/components/sections/AboutInterestsSection.vue';
+import AboutTechsSection from '@/components/sections/AboutTechsSection.vue';
+import AboutToolsSection from '@/components/sections/AboutToolsSection.vue';
+import TitleSection from '@/components/sections/TitleSection.vue';
 import { useHead } from '@unhead/vue';
 useHead({ meta: [
   { name: 'description', content: 'Who am I? What do I like to do? Why strawberries? It\'s all in here!' }
@@ -165,56 +53,51 @@ useHead({ meta: [
 
 <!------------------------------------------------------------>
 <style scoped lang="scss">
-#section-about {
-  flex: 1;
-  display: grid;
-  grid-template-columns: 2fr 1fr;
-  grid-template-rows: auto auto;
-  align-items: center;
-  margin: 0 auto;
-  gap: 1.5rem 4rem;
+.page-container {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
 
-  //background-color: var(--eepy-color-card);
-  border-radius: 1rem;
+  .layout-grid {
+    display: grid;
+    grid-template-areas:
+      "info      info      info"
+      "tech      avatar    interests"
+      "tool      avatar    interests";
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    margin: 0 auto;
+    gap: 4rem;
+    
+    #section-about-info {
+      grid-area: info;
+      align-self: flex-end;
+    }
+    #section-about-techs {
+      grid-area: tech;
+      align-self: flex-start;
+    }
+    #section-about-tools {
+      grid-area: tool;
+      align-self: flex-start;
+    }
+    #section-about-interests {
+      grid-area: interests;
+      align-self: flex-start;
+    }
+    .avatar-wrapper {
+      grid-area: avatar;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      height: 100%;
 
-  .section-title {
-    grid-column: 1;
-    margin: 2rem 0;
-    backdrop-filter: blur(4px);
-  }
-
-  .section-content {
-    grid-column: 1;
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-  }
-  .avatar-wrapper {
-    grid-column: 2;
-    grid-row: 1 / span 2;
-    justify-self: center;
-    align-self: flex-start;
-    .avatar {
-      width: clamp(160px, 25vw, 380px);
+      .avatar {
+        width: clamp(160px, 33vw, 320px);
+      }
     }
   }
-}
-
-.cardlet-list {
-  display: flex;
-  flex-wrap: wrap;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-auto-rows: auto;
-  gap: .5rem;
-  & > * { flex: 0 1 0; }
-
-  .vuejs { background: var(--eepy-color-vuejs); }
-  .angular { background: var(--eepy-color-angular); }
-  .docker { background-color: var(--eepy-color-docker); }
-  .kubernetes { background-color: var(--eepy-color-kubernetes); }
-  .illustrator { background-color: var(--eepy-color-illustrator); }
-  .krita { background: var(--eepy-color-krita); }
-  .java, .aws, .godot, .idea, .vscode, .aseprite { background-color: var(--eepy-color-darktech); }
 }
 
 .chip-list {
@@ -227,33 +110,69 @@ useHead({ meta: [
   gap: .5rem;
 }
 
-@media screen and (min-width: 768px) and (max-width: 1023px) {
-  #section-about {
-    grid-template-columns: 2fr 1fr;
-    gap: 1rem;
-    .section-content {
-      grid-column: 1 / span 2;
-      grid-row: 2;
+@media screen and (max-width: 1377px) {
+  .page-container {
+    .layout-grid {
+      grid-template-areas:
+        "info      info      info"
+        "tech      avatar    tool"
+        "interests interests interests";
+      gap: 3rem;
+      #section-about-techs {
+        align-self: flex-start;
+      }
+      #section-about-tools {
+        align-self: flex-start;
+      }
     }
-    .avatar-wrapper {
-      grid-row: 1;
+  }
+}
+
+@media screen and (max-width: 1199px) {
+  .page-container {
+    .layout-grid {
+      grid-template-areas:
+        "info      info"
+        "tech      avatar"
+        "tool      avatar"
+        "interests interests";
+      grid-template-columns: 3fr 2fr;
+      gap: 3rem;
+    }
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  .page-container {
+    .layout-grid {
+      grid-template-areas:
+        "info      info"
+        "tech      tool"
+        "interests interests";
+      grid-template-columns: 1fr 1fr;
+      
+      #section-about-techs {
+        align-self: flex-start;
+      }
+      #section-about-tools {
+        align-self: flex-start;
+      }
+      .avatar-wrapper {
+        display: none;
+      }
     }
   }
 }
 
 @media screen and (max-width: 767px) {
-  #section-about {
-    grid-template-columns: 1fr;
-    .section-title {
-      grid-column: 1;
-      text-align: center;
-      padding: 0 1rem;
-    }
-    .section-contet {
-      grid-column: 1;
-    }
-    .avatar-wrapper {
-      display: none;
+  .page-container {
+    .layout-grid {
+      grid-template-areas:
+        "info"
+        "tech"
+        "tool"
+        "interests";
+      grid-template-columns: 1fr;
     }
   }
 }

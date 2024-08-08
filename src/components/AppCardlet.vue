@@ -12,7 +12,7 @@
   color: var(--white);
   //border: 1px solid var(--eepy-color-secondary);
   //box-shadow: 0 1px 2px rgba(0,0,0,0.5);
-  border-radius: .5rem;
+  border-radius: 8px;
   
   display: flex;
   flex-direction: row;

@@ -7,7 +7,7 @@
 
 <style scoped lang="scss">
 article.eepy-article {
-  border-radius: .5rem;
+  border-radius: 8px;
   padding: 1.5rem 0;
   backdrop-filter: blur(4px);
   //background-color: var(--eepy-color-card);

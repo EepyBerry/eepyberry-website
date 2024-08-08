@@ -1,5 +1,6 @@
 <template>
   <div class="page-container">
+    <TitleSection />
     <ProjectsSection />
     <ArtSection />
   </div>
@@ -9,6 +10,7 @@
 <script setup lang="ts">
 import ArtSection from '@/components/sections/ArtSection.vue';
 import ProjectsSection from  '@/components/sections/ProjectsSection.vue';
+import TitleSection from '@/components/sections/TitleSection.vue';
 import { useHead } from '@unhead/vue';
 useHead({ meta: [
   { name: 'description', content: 'A small website about myself, my projects, and general shenanigans. Welcome! 🍓' }

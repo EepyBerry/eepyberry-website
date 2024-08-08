@@ -5,7 +5,9 @@
       <slot name="links"></slot>
     </div>
     <div class="eepy-card-content">
-      <slot></slot>
+      <slot>
+        <IconEepyBerry class="placeholder-icon" />
+      </slot>
     </div>
     <div class="eepy-card-footer">
       <slot name="footer"></slot>
@@ -13,14 +15,20 @@
   </div>
 </template>
 
+<!------------------------------------------------------------>
+<script setup lang="ts">
+import IconEepyBerry from '@/components/svg/icons/IconEepyBerry.vue';
+</script>
+
+<!------------------------------------------------------------>
 <style scoped lang="scss">
 .eepy-card {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   background-color: var(--eepy-color-card);
-  border: 2px solid var(--eepy-color-accent-half);
-  border-radius: .5rem;
+  border: 1px solid var(--eepy-color-accent-half);
+  border-radius: 8px;
   overflow: hidden;
 
   &-header {
@@ -38,36 +46,36 @@
     width: 100%;
     padding: 0 .75rem;
     position: relative;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
   &-footer {
     z-index: 1;
     width: 100%;
     padding: 0 .75rem .5rem;
   }
-
-  &[placeholder] {
+}
+.eepy-card.placeholder {
+  align-items: center;
+  justify-content: center;
+  background-color: var(--eepy-color-background);
+  border: 2px dashed var(--eepy-color-accent);
+  color: var(--eepy-color-accent);
+  opacity: 0.5;
+  
+  &-header { display: none }
+  &-footer { display: none }
+  &-content {
+    display: flex;
     align-items: center;
     justify-content: center;
-    background-color: var(--eepy-color-background);
-    border: 2px dashed var(--eepy-color-accent);
-    color: var(--eepy-color-accent);
-    opacity: 0.5;
-    
-    .eepy-card-header { display: none }
-    .eepy-card-footer { display: none }
-    .eepy-card-content {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
   }
-  &[centered] {
-    .eepy-card-content {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-    }
-  }
+}
+
+:deep(.placeholder-icon) {
+  height: 3.5rem;
 }
 </style>

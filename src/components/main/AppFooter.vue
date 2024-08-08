@@ -4,7 +4,7 @@
     <div id="copyright-notice">
       <p>© {{ new Date().getFullYear() }}, EepyBerry</p>
       <p>
-        All content under
+        All original content under
         <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="external nofollow noopener">CC BY-NC-SA 4.0</a>
       </p>
     </div>
@@ -33,7 +33,7 @@ import SvgKofi from '../svg/icons/SvgKofi.vue';
 footer {
   background-position: 50% 0;
   background-size: cover;
-  margin: 3rem 0;
+  margin: 4rem 0;
   font-family: Dosis;
 
   display: flex;

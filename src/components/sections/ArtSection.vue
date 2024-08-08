@@ -25,7 +25,7 @@
 </template>
 
 <script setup lang="ts">
-import IconEepyBerry from '../icons/IconEepyBerry.vue';
+import IconEepyBerry from '../svg/icons/IconEepyBerry.vue';
 </script>
 
 <!------------------------------------------------------------>

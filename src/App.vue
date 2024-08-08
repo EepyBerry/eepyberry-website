@@ -8,7 +8,6 @@
     <AppNavigation />
   </aside>
   <main>
-    <TitleSection />
     <RouterView v-slot="{ Component, route }">
       <Transition name="fade" mode="out-in">
         <component :key="route.path" :is="Component" />
@@ -23,7 +22,6 @@ import { defineAsyncComponent, inject, onMounted, onUnmounted, provide, ref, Tra
 import type { ThemeHelper } from '@/utils/theme.helper';
 import AppNavigation from "@/components/main/AppNavigation.vue"
 import AppFooter from './components/main/AppFooter.vue';
-import TitleSection from '@/components/sections/TitleSection.vue';
 import AppHeader from './components/main/AppHeader.vue';
 
 const AppScatter = defineAsyncComponent(() => import('./components/AppScatter.vue'))

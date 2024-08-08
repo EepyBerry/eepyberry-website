@@ -25,7 +25,7 @@
           aria-label="Under construction"
           @click.prevent
         >
-            <EepyCard id="project-redacted" centered>
+          <EepyCard id="project-redacted">
             <template v-slot:links>
                 <iconify-icon mode="svg" icon="noto:construction" height="2rem" />
             </template>
@@ -33,18 +33,15 @@
             <template v-slot:footer>
                 <p>████████████████</p>
             </template>
-            </EepyCard>
+          </EepyCard>
         </a>
-        <EepyCard v-for="_ in 1" placeholder>
-            <IconEepyBerry class="placeholder-icon" />
-        </EepyCard>
+        <EepyCard v-for="_ in 1" class="placeholder" />
       </div>
     </section>
   </template>
   
   <!------------------------------------------------------------>
   <script setup lang="ts">
-  import IconEepyBerry from '@/components/icons/IconEepyBerry.vue';
   import SvgLagrangeLogo from '../svg/SvgLagrangeLogo.vue';
   </script>
   
@@ -99,12 +96,6 @@
         background: transparent;
         text-align: center;
         text-wrap: nowrap;
-      }
-    }
-  
-    .eepy-card[placeholder] {
-      .placeholder-icon {
-        height: 3.5rem;
       }
     }
   }
