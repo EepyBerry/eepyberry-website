@@ -40,6 +40,7 @@
     position: relative;
   }
   &-footer {
+    z-index: 1;
     width: 100%;
     padding: 0 .75rem .5rem;
   }

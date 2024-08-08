@@ -4,19 +4,19 @@
     <div class="section-content">
       <ul class="gallery">
         <li class="image-wrapper" style="width: 36rem;">
-          <img src="/thumbnails/2024-08-03_1000-LC.jpg">
+          <img src="/artwork/2024-08-03_1000-LC.jpg">
         </li>
         <li class="image-wrapper" style="width: 20rem;">
-          <img src="/thumbnails/2023-01-09_Heart_of_the_Mountain.jpg" style="scale: 120%">
+          <img src="/artwork/2023-01-09_Heart_of_the_Mountain.jpg" style="scale: 120%">
         </li>
         <li class="image-wrapper" style="width: 20rem;">
-          <img src="/thumbnails/2022-12-11_Niko_Holding_the_Sun.jpg" style="scale: 120%">
+          <img src="/artwork/2022-12-11_Niko_Holding_the_Sun.jpg" style="scale: 120%">
         </li>
         <li class="image-wrapper" style="width: 20rem;">
-          <img src="/thumbnails/2022-02-12_Strange_Reflection.jpg">
+          <img src="/artwork/2022-02-12_Strange_Reflection.jpg">
         </li>
         <li class="image-wrapper" style="width: 20rem;">
-          <img src="/thumbnails/2024-08-03_1000-LC.jpg">
+          <img src="/artwork/2024-08-03_1000-LC.jpg">
         </li>
       </ul>
     </div>
@@ -37,6 +37,7 @@
   .section-content {
     display: flex;
     flex-direction: column;
+    max-width: 100%;
   }
 }
 
@@ -53,6 +54,7 @@
     
     border-radius: 4px;
     max-width: 100%;
+    width: 100%;
     height: 24rem;
     overflow: hidden;
     

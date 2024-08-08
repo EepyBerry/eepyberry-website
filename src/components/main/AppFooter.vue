@@ -5,7 +5,7 @@
       <p>© {{ new Date().getFullYear() }}, EepyBerry</p>
       <p>
         All content under
-        <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="external nofollow noopener">CC-BY-NC-SA 4.0</a>
+        <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="external nofollow noopener">CC BY-NC-SA 4.0</a>
       </p>
     </div>
     <div id="app-info">
