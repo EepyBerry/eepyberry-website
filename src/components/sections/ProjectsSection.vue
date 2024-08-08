@@ -14,7 +14,7 @@
             </template>
             <SvgLagrangeLogo class="logo" />
             <template v-slot:footer>
-                <p class="mt-l">A fully procedural planet-building app 🪐</p>
+                <p>A fully procedural planet-building app 🪐</p>
             </template>
             </EepyCard>
         </a>
@@ -31,7 +31,7 @@
             </template>
             <span class="logo tx-mono tx-glitch" data-text="[REDACTED]">[REDACTED]</span>
             <template v-slot:footer>
-                <p class="mt-l">████████████████</p>
+                <p>████████████████</p>
             </template>
             </EepyCard>
         </a>
@@ -105,7 +105,6 @@
     .eepy-card[placeholder] {
       .placeholder-icon {
         height: 3.5rem;
-        color: red;
       }
     }
   }
