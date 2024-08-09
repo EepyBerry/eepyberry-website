@@ -96,4 +96,12 @@ aside {
     gap: 2rem;
   }
 }
+
+
+@media screen and (prefers-reduced-motion) {
+  .fade-enter-active,
+  .fade-leave-active {
+    transition: none;
+  }
+}
 </style>

@@ -58,7 +58,10 @@ function computeDialogMode() {
 
 function closeDialog() {
   dialogRef.value?.classList.remove('animate')
-  setTimeout(() => dialogRef.value?.close(), 400)
+  setTimeout(
+    () => dialogRef.value?.close(),
+    window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 0 : 400
+  )
   
   resetHash()
 }
@@ -138,6 +141,14 @@ function resetHash() {
   .dialog.portrait {
     #hash-image, .hash-image-content, img {
       width: 100%;
+    }
+  }
+}
+
+@media screen and (prefers-reduced-motion) {
+  .page-container {
+    .dialog {
+      transition: none;
     }
   }
 }
