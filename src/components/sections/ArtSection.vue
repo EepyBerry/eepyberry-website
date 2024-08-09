@@ -5,19 +5,19 @@
     <div class="section-content">
       <ul class="gallery">
         <li class="image-wrapper" style="width: 36rem;">
-          <img src="/artwork/2024-08-03_1000-LC.jpg">
+          <a href="#/artwork/2024-08-03_1000-LC.jpg"><img src="/artwork/2024-08-03_1000-LC.jpg"></a>
         </li>
         <li class="image-wrapper" style="width: 20rem;">
-          <img src="/artwork/2023-01-09_Heart_of_the_Mountain.jpg" style="scale: 120%">
+          <a href="#/artwork/2023-01-09_Heart_of_the_Mountain.jpg"><img src="/artwork/2023-01-09_Heart_of_the_Mountain.jpg" style="scale: 120%"></a>
         </li>
         <li class="image-wrapper" style="width: 20rem;">
-          <img src="/artwork/2022-12-11_Niko_Holding_the_Sun.jpg" style="scale: 120%">
+          <a href="#/artwork/2022-12-11_Niko_Holding_the_Sun.jpg"><img src="/artwork/2022-12-11_Niko_Holding_the_Sun.jpg" style="scale: 120%"></a>
         </li>
         <li class="image-wrapper" style="width: 20rem;">
-          <img src="/artwork/2022-02-12_Strange_Reflection.jpg">
+          <a href="#/artwork/2022-02-12_Strange_Reflection.jpg"><img src="/artwork/2022-02-12_Strange_Reflection.jpg"></a>
         </li>
         <li class="image-wrapper placeholder" style="width: 20rem;">
-          <IconEepyBerry class="placeholder-icon" />
+          <a href="#/artwork/2024-08-03_1000-LC.jpg"></a><IconEepyBerry class="placeholder-icon" />
         </li>
       </ul>
     </div>
@@ -62,7 +62,7 @@ import IconEepyBerry from '../svg/icons/IconEepyBerry.vue';
     width: 100%;
     height: 24rem;
     overflow: hidden;
-    transition: transform 100ms ease;
+    transition: transform 150ms ease;
     display: flex;
 
     &.placeholder {
@@ -77,13 +77,19 @@ import IconEepyBerry from '../svg/icons/IconEepyBerry.vue';
         height: 3.5rem;
       }
     }
-
     img {
       flex-grow: 1;
-      flex-shrink: 1;
       object-position: center;
       object-fit: cover;
-      max-width: 100%;
+      width: 100%;
+    }
+
+    a {
+      flex: 1;
+    }
+    a:hover, a:visited:hover {
+      filter: brightness(100%);
+      width: 100%;
     }
   }
   .image-wrapper:not(.placeholder):hover {
@@ -102,7 +108,6 @@ import IconEepyBerry from '../svg/icons/IconEepyBerry.vue';
     }
   }
 }
-
 
 @media screen and (prefers-reduced-motion) {
   .gallery {
