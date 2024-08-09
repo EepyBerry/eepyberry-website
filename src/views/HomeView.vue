@@ -3,10 +3,10 @@
     <TitleSection />
     <ProjectsSection />
     <ArtSection />
-    <dialog ref="dialogRef" class="dialog" :class="dialogClasses" @abort="resetHash" @keydown.esc="resetHash">
+    <dialog ref="dialogRef" class="dialog" :class="hashDialogMode" @abort="resetHash" @keydown.esc="resetHash">
       <div class="dialog-container">
         <button icon-button class="dialog-close" @click="closeDialog">
-          <iconify-icon icon="mingcute:close-line" width="2.5rem"/>
+          <iconify-icon icon="mingcute:close-line" width="3rem"/>
         </button>
         <div id="hash-image">
           <img :src="hashImgSrc">
@@ -35,9 +35,7 @@ const dialogRef: Ref<HTMLDialogElement|null> = ref(null)
 const hashImgSrc: Ref<string|undefined> = ref()
 const hashDialogMode: Ref<'portrait'|'landscape'> = ref('landscape')
 
-const dialogClasses = computed(() => {
-  return [dialogRef.value?.open ? 'open' : '', hashDialogMode.value]
-})
+const dialogClasses = computed(() => [dialogRef.value?.open ? 'animated' : '', hashDialogMode.value])
 
 onMounted(() => window.addEventListener("deviceorientation", computeDialogMode, true))
 onUnmounted(() => window.removeEventListener("deviceorientation", computeDialogMode, true))
@@ -48,7 +46,10 @@ watch(() => route.hash, (hash: string) => {
   }
   console.log('huh')
   hashImgSrc.value = '/artwork/'+hash.split('/').at(-1)
-  setTimeout(() => dialogRef.value!.showModal(), 50)
+  setTimeout(() => {
+    dialogRef.value!.showModal()
+    dialogRef.value?.classList.add('animate')
+  }, 50)
 }, { immediate: true })
 
 function computeDialogMode() {
@@ -56,7 +57,9 @@ function computeDialogMode() {
 }
 
 function closeDialog() {
-  dialogRef.value?.close()
+  dialogRef.value?.classList.remove('animate')
+  setTimeout(() => dialogRef.value?.close(), 400)
+  
   resetHash()
 }
 
@@ -82,8 +85,12 @@ function resetHash() {
     background: transparent;
     width: 100%;
     height: 100%;
+    opacity: 0;
+    transition: opacity 400ms ease-in-out, background-color 400ms ease-in-out;
   }
-
+  .dialog.animate {
+    opacity: 1;
+  }
   .dialog-container {
     border-radius: 8px;
     background: transparent;
@@ -96,36 +103,30 @@ function resetHash() {
 
     button {
       position: absolute;
-      top: 0;
-      right: 0;
-      width: 3rem;
-      height: 3rem;
-      color: #ccc;
+      top: 24px;
+      right: 24px;
+      width: 4rem;
+      height: 4rem;
+      color: white;
     }
     button:hover > iconify-icon {
       transform: scale(110%);
     }
   }
   .dialog::backdrop {
-    background: #000c;
+    background-color: #0009;
   }
 
   #hash-image {
     padding: 0;
     margin: auto;
     border-radius: 8px;
-    transition: opacity 250ms;
     overflow: hidden;
     max-width: calc(100% - 2rem);
     max-height: calc(100% - 2rem);
     img {
       object-fit: contain;
     }
-  }
-
-  // anims
-  .dialog.open {
-    opacity: 1;
   }
 
   // orientation
