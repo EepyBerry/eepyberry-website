@@ -2,6 +2,7 @@
   <div class="page-container">
     <TitleSection />
     <ProjectsSection />
+    <hr>
     <ArtSection />
     <dialog ref="dialogRef" class="dialog" :class="hashDialogMode" @abort="resetHash" @keydown.esc="resetHash">
       <div class="dialog-container">
@@ -78,6 +79,14 @@ function resetHash() {
   display: flex;
   flex-direction: column;
   gap: 3rem;
+
+  hr {
+    width: 75%;
+    align-self: center;
+    border: 1px solid var(--eepy-color-accent-half);
+    border-radius: 2px;
+    margin-top: 3rem;
+  }
 
   .dialog {
     position: fixed;

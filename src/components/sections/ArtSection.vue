@@ -17,7 +17,7 @@
           <a href="#/artwork/2022-02-12_Strange_Reflection.jpg"><img src="/artwork/2022-02-12_Strange_Reflection.jpg"></a>
         </li>
         <li class="image-wrapper placeholder" style="width: 20rem;">
-          <a href="#/artwork/2024-08-03_1000-LC.jpg"></a><IconEepyBerry class="placeholder-icon" />
+          <IconEepyBerry class="placeholder-icon" />
         </li>
       </ul>
     </div>
