@@ -1,7 +1,7 @@
 <template>
   <section id="section-about-interests">
     <h2>interests and stuff!</h2>
-    <ul class="tool-list">
+    <ul class="interests-list">
       <li class="space">
         <div>
           <iconify-icon mode="svg" icon="noto:ringed-planet" height="2.5rem" />
@@ -36,7 +36,7 @@
         <div>
           <iconify-icon icon="noto:lotus" height="2.5rem" aria-hidden="true" />
         </div>
-        <span>Yoga!</span>
+        <span>Yoga (sometimes)!</span>
       </li>
     </ul>
   </section>
@@ -44,15 +44,16 @@
 
 <style scoped lang="scss">
 #section-about-interests {
-  .tool-list {
+  .interests-list {
     list-style-type: none;
     max-width: 100%;
 
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(12rem, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr));
     gap: 1rem;
 
     li {
+      position: relative;
       flex-grow: 1;
       flex-shrink: 1;
       max-width: 100%;

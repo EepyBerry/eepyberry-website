@@ -63,6 +63,7 @@
     max-width: 100%;
 
     li {
+      position: relative;
       flex-grow: 1;
       flex-shrink: 1;
       min-width: 10rem;
@@ -133,7 +134,7 @@ iconify-icon {
     }
   }
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 895px) {
   #section-about-tools {
     h2 {
       text-align: center;

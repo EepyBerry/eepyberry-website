@@ -145,7 +145,7 @@ iconify-icon {
     }
   }
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 895px) {
   #section-about-techs {
     h2 {
       text-align: center;

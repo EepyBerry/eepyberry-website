@@ -69,6 +69,7 @@
     gap: 1rem;
 
     li {
+      position: relative;
       flex-grow: 1;
       flex-shrink: 1;
       max-width: 100%;
@@ -129,9 +130,6 @@ iconify-icon {
   #section-about-info {
     .info-list {
       grid-template-columns: repeat(auto-fill, minmax(13rem, 1fr));
-    }
-    h2 {
-      text-align: center;
     }
   }
 }

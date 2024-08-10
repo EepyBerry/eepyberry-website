@@ -4,7 +4,7 @@
     <router-link class="nav-link button-link" to="about" aria-label="About page link">
       <iconify-icon mode="svg" icon="mingcute:happy-line" height="2.25rem" />
     </router-link>
-    <router-link class="nav-link button-link" to="contact" aria-label="Contact page link">
+    <router-link class="nav-link button-link" to="" aria-label="Contact page link" disabled>
       <iconify-icon mode="svg" icon="mingcute:mail-line" height="2.25rem" />
     </router-link>
   </nav>
@@ -40,12 +40,17 @@ nav {
     pointer-events: none;
   }
 }
-.nav-link:hover, .nav-link:focus-visible {
+.nav-link:not([disabled]):hover, .nav-link:not([disabled]):focus-visible {
   transform: scale(110%) rotateZ(-10deg);
 }
-.nav-link:active {
+.nav-link:not([disabled]):active {
   cursor: pointer;
   transform: scale(97.5%);
+}
+.nav-link[disabled] {
+  cursor: not-allowed;
+  color: var(--eepy-color-disabled);
+  transition: none;
 }
 
 </style>
