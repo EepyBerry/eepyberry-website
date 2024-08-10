@@ -1,23 +1,13 @@
 <template>
   <div class="page-container">
     <TitleSection />
-    <div class="layout-grid">
+    <div class="main-grid">
       <AboutInfoSection />
-      <AboutTechsSection />
-      <AboutToolsSection />
       <AboutInterestsSection />
       <div class="avatar-wrapper">
         <img class="avatar" src="/avatar.webp" alt="Avatar" aria-label="avatar">
       </div>
-      <!-- <EepyArticle>
-        <template v-slot:title><h2>Other interests ?</h2></template>
-        <p>Here's a cute little list of stuff I really enjoy outside of programming/drawing:</p>
-        <div class="chip-list">
-          <EepyChip>📖 SCP Foundation</EepyChip>
-          <EepyChip>🪐 Planets & Space</EepyChip>
-          <EepyChip>🧩 Board Games</EepyChip>
-        </div>
-        <p class="mt-l">And of course, games I like/love/am clearly too obsessed with:</p>
+      <!-- 
         <div class="chip-list">
           <EepyChip>🍓 Celeste</EepyChip>
           <EepyChip>😶 Hollow Knight</EepyChip>
@@ -30,7 +20,12 @@
           <EepyChip>⚙️ Submachine</EepyChip>
           <EepyChip>💎 GemCraft Series</EepyChip>
         </div>
-      </EepyArticle> -->
+      -->
+    </div>
+    <hr>
+    <div class="misc-grid">
+      <AboutTechsSection />
+      <AboutToolsSection />
     </div>
   </div>
 </template>
@@ -55,27 +50,28 @@ useHead({ meta: [
   flex-direction: column;
   gap: 3rem;
 
-  .layout-grid {
+  hr {
+    width: 75%;
+    align-self: center;
+    border: 1px solid var(--eepy-color-accent-half);
+    border-radius: 2px;
+    margin-top: 1.5rem;
+  }
+
+  .main-grid {
     display: grid;
     grid-template-areas:
-      "info   info        avatar"
-      "tech   tool        interests";
-    grid-template-columns: 1fr 1fr 1fr;
+      "info        info        avatar"
+      "interests   interests   avatar";
+    grid-template-columns: 1fr 1fr min-content;
     align-items: center;
     margin: 0 auto;
     gap: 1.5rem 4rem;
+    width: 100%;
     
     #section-about-info {
       grid-area: info;
       align-self: center;
-    }
-    #section-about-techs {
-      grid-area: tech;
-      align-self: flex-start;
-    }
-    #section-about-tools {
-      grid-area: tool;
-      align-self: flex-start;
     }
     #section-about-interests {
       grid-area: interests;
@@ -84,18 +80,22 @@ useHead({ meta: [
     .avatar-wrapper {
       grid-area: avatar;
       align-self: flex-end;
-
-      display: flex;
-      align-items: flex-end;
-      justify-content: center;
       width: 100%;
       height: 100%;
 
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
       .avatar {
-        width: clamp(160px, 33vw, 320px);
-        max-width: 320px;
+        width: clamp(160px, 33vw, 360px);
       }
     }
+  }
+  .misc-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
   }
 }
 
@@ -109,33 +109,15 @@ useHead({ meta: [
   gap: .5rem;
 }
 
-@media screen and (max-width: 1377px) {
-  .page-container {
-    .layout-grid {
-      grid-template-areas:
-        "info   info   avatar"
-        "tech   tech   tool"
-        "interests   interests   interests";
-        grid-template-columns: 1fr 1fr 1.5fr;
-      #section-about-techs {
-        align-self: flex-start;
-      }
-      #section-about-tools {
-        align-self: flex-start;
-      }
-    }
-  }
-}
-
 @media screen and (max-width: 1199px) {
   .page-container {
-    .layout-grid {
-      grid-template-columns: 1fr 1fr 2fr;
+    gap: 1.5rem;
+    hr {
+      margin-top: 1.5rem;
+    }
+    .main-grid {
       #section-about-info {
         align-self: center;
-      }
-      .avatar-wrapper {
-        align-items: flex-end;
       }
     }
   }
@@ -143,20 +125,11 @@ useHead({ meta: [
 
 @media screen and (max-width: 1023px) {
   .page-container {
-    .layout-grid {
+    .main-grid {
+      grid-template-columns: 1fr min-content;
       grid-template-areas:
-        "info      info"
-        "tech      avatar"
-        "tool      avatar"
+        "info      avatar"
         "interests interests";
-      grid-template-columns: 1fr auto;
-      
-      #section-about-techs {
-        align-self: flex-start;
-      }
-      #section-about-tools {
-        align-self: flex-start;
-      }
       .avatar-wrapper {
         align-items: center;
       }
@@ -166,16 +139,17 @@ useHead({ meta: [
 
 @media screen and (max-width: 895px) {
   .page-container {
-    .layout-grid {
+    .main-grid {
       grid-template-areas:
         "info      info"
-        "tech      avatar"
-        "tool      tool"
         "interests interests";
       grid-template-columns: 1fr auto;
-      
-      #section-about-techs {
-        align-self: center;
+
+      #section-about-interests {
+        text-align: center;
+      }
+      .avatar-wrapper {
+        display: none;
       }
     }
   }
@@ -183,17 +157,15 @@ useHead({ meta: [
 
 @media screen and (max-width: 767px) {
   .page-container {
-    .layout-grid {
+    .main-grid {
       grid-template-areas:
         "info"
-        "tech"
-        "tool"
         "interests";
       grid-template-columns: 1fr;
       gap: 3rem;
-      .avatar-wrapper {
-        display: none;
-      }
+    }
+    .misc-grid {
+      grid-template-columns: 1fr;
     }
   }
 }

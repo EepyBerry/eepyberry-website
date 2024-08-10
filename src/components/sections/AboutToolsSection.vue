@@ -121,6 +121,10 @@
     }
   }
 }
+iconify-icon {
+  filter: drop-shadow(0 1px 1px var(--eepy-color-primary))
+}
+
 @media screen and (max-width: 1023px) {
   #section-about-tools {
     .tool-list {

@@ -6,25 +6,31 @@
         <div>
           <iconify-icon mode="svg" icon="noto:transgender-flag" height="2.5rem" />
         </div>
-        <span>Came out as transfem in May 2024!</span>
+        <span>Transfem and proud!</span>
       </li>
       <li>
         <div>
           <iconify-icon mode="svg" icon="noto:books" height="2.5rem" />
         </div>
-        <span>Full-Stack Software&nbsp;Engineer!</span>
+        <span>Full-Stack Software Engineer!</span>
       </li>
       <li>
         <div>
           <iconify-icon mode="svg" icon="noto:artist-palette" height="2.5rem" />
         </div>
-        <span>Does pixel art, digital painting & vector graphics!</span>
+        <span>Does pixel, digital & vector&nbsp;art!</span>
       </li>
       <li>
         <div>
           <iconify-icon mode="svg" icon="noto:woman-raising-hand" height="2.5rem" />
         </div>
         <span>Very, very smol :></span>
+      </li>
+      <li>
+        <div>
+          <iconify-icon mode="svg" icon="noto:exclamation-question-mark" height="2.5rem" />
+        </div>
+        <span>Often curious :3</span>
       </li>
       <li>
         <div>
@@ -52,30 +58,27 @@
 #section-about-info {
   .info-list {
     list-style-type: none;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 1rem;
     max-width: 100%;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(12rem, 1fr));
+    gap: 1rem;
 
     li {
       flex-grow: 1;
       flex-shrink: 1;
       max-width: 100%;
-      min-width: 16rem;
       min-height: 5rem;
       height: 5rem;
       padding: 1rem;
-
-      background: var(--eepy-color-accent-semi);
-      //border: 1px solid var(--eepy-color-accent-half);
-      border-radius: 8px;
       backdrop-filter: blur(4px);
+      background: var(--eepy-color-accent-semi);
+      border: 1px solid var(--eepy-color-accent-half);
+      border-radius: 8px;
 
       display: flex;
       flex-direction: row;
       align-items: center;
-      justify-content: center;
       gap: 0.5rem;
       
       font-family: Dosis;
@@ -89,29 +92,31 @@
       }
       & > span {
         text-wrap: wrap;
-        text-align: center;
       }
     }
   }
 }
+iconify-icon {
+  filter: drop-shadow(0 1px 1px var(--eepy-color-primary))
+}
 
 @media screen and (max-width: 1199px) {
   #section-about-info {
+    .info-list {
+      grid-template-columns: repeat(auto-fill, minmax(10rem, 1fr));
+    }
     h2 {
       text-align: center;
     }
+  }
+}
+@media screen and (max-width: 895px) {
+  #section-about-info {
     .info-list {
-      li {
-        min-width: 0;
-        min-height: 3.5rem;
-        height: 3.5rem;
-        flex-direction: row;
-        justify-content: space-between;
-
-        & > span {
-          text-align: end;
-        }
-      }
+      grid-template-columns: repeat(auto-fill, minmax(12rem, 1fr));
+    }
+    h2 {
+      text-align: center;
     }
   }
 }

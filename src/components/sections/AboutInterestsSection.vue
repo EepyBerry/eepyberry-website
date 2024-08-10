@@ -2,47 +2,29 @@
   <section id="section-about-interests">
     <h2>interests and stuff!</h2>
     <ul class="tool-list">
-      <li class="idea">
+      <li class="scpfoundation">
         <div>
-          <iconify-icon icon="logos:intellij-idea" height="1.5rem" aria-hidden="true" />
+          <iconify-icon icon="simple-icons:scpfoundation" height="2.5rem" aria-hidden="true" />
         </div>
-        <span>Intellij IDEA</span>
+        <span>SCP Foundation!</span>
       </li>
       <li class="vscode">
         <div>
-          <iconify-icon mode="svg" icon="devicon:vscode" height="1.5rem" />
+          <iconify-icon mode="svg" icon="noto:ringed-planet" height="2.5rem" />
         </div>
-        <span>VS Code</span>
+        <span>Planets & Space!</span>
       </li>
-      <li class="godot">
+      <li class="boardgames">
         <div>
-          <iconify-icon mode="svg" icon="logos:godot-icon" height="1.5rem" />
+          <iconify-icon mode="svg" icon="noto:game-die" height="2.5rem" />
         </div>
-        <span>Godot</span>
+        <span>Board Games!</span>
       </li>
-      <li class="illustrator">
+      <li class="videogames">
         <div>
-          <iconify-icon icon="skill-icons:illustrator" height="1.5rem" aria-hidden="true" />
+          <iconify-icon icon="noto:video-game" height="2.5rem" aria-hidden="true" />
         </div>
-        <span>Illustrator</span>
-      </li>
-      <li class="krita">
-        <div>
-          <iconify-icon mode="svg" icon="simple-icons:krita" height="1.5rem" />
-        </div>
-        <span>Krita</span>
-      </li>
-      <li class="aseprite">
-        <div>
-          <iconify-icon mode="svg" icon="simple-icons:aseprite" height="1.5rem" />
-        </div>
-        <span>Aseprite</span>
-      </li>
-      <li class="blender">
-        <div>
-          <iconify-icon mode="svg" icon="logos:blender" height="1.5rem" />
-        </div>
-        <span>Blender</span>
+        <span>Video Games!</span>
       </li>
     </ul>
   </section>
@@ -52,43 +34,48 @@
 #section-about-interests {
   .tool-list {
     list-style-type: none;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 1rem;
     max-width: 100%;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(12rem, 1fr));
+    gap: 1rem;
 
     li {
       flex-grow: 1;
       flex-shrink: 1;
       max-width: 100%;
-      height: 3rem;
+      min-height: 5rem;
+      height: 5rem;
+      padding: 1rem;
       background: var(--eepy-color-accent-semi);
+      border: 1px solid var(--eepy-color-accent-half);
       border-radius: 8px;
       backdrop-filter: blur(4px);
 
       display: flex;
       align-items: center;
-      justify-content: space-between;
+      justify-content: center;
+      gap: 0.5rem;
 
       font-family: Dosis;
       font-size: 1.125rem;
       font-weight: 500;
       line-height: 1rem;
 
-      &>span {
-        padding: 1rem;
-        color: var(--white);
-      }
       &>div {
-        padding: 0.75rem;
-        width: 3rem;
-        height: 3rem;
-        color: var(--white);
+        width: 2.5rem;
+        height: 2.5rem;
+      }
+      &>span {
+        text-wrap: wrap;
       }
     }
   }
 }
+iconify-icon {
+  filter: drop-shadow(0 1px 1px var(--eepy-color-primary))
+}
+
 @media screen and (max-width: 767px) {
   #section-about-interests {
     h2 {
