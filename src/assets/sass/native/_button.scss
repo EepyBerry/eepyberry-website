@@ -1,0 +1,18 @@
+button {
+  font-family: Dosis;
+  font-size: 1rem;
+  color: var(--eepy-color-text);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  height: 2rem;
+}
+button[icon-button] {
+  background: none;
+  border: none;
+  padding: 0;
+}
+button:hover {
+  cursor: pointer;
+}

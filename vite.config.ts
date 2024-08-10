@@ -1,15 +1,21 @@
-import { fileURLToPath, URL } from 'node:url'
+import { fileURLToPath, URL } from "node:url";
+import { defineConfig } from "vite";
+import vue, { Options } from "@vitejs/plugin-vue";
+import viteCompression from "vite-plugin-compression";
 
-import { defineConfig } from 'vite'
-import vue from '@vitejs/plugin-vue'
+const vuePluginConfig: Options = {
+  template: {
+    compilerOptions: {
+      isCustomElement: (tag) => tag.startsWith("iconify-"),
+    },
+  },
+};
 
 export default defineConfig({
-  plugins: [
-    vue(),
-  ],
+  plugins: [vue(vuePluginConfig), viteCompression()],
   resolve: {
     alias: {
-      '@': fileURLToPath(new URL('./src', import.meta.url)),
-    }
+      "@": fileURLToPath(new URL("./src", import.meta.url)),
+    },
   },
-})
+});
