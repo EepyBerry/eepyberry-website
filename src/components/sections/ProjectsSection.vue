@@ -8,7 +8,7 @@
           rel="external nofollow noopener"
           aria-label="GitHub"
         >
-            <EepyCard id="project-lagrange">
+          <EepyCard id="project-lagrange">
             <template v-slot:links>
               <iconify-icon mode="svg" icon="mingcute:external-link-line" style="color: var(--white);" height="2rem" />
             </template>
@@ -16,7 +16,7 @@
             <template v-slot:footer>
                 <p>A fully procedural planet-building app 🪐</p>
             </template>
-            </EepyCard>
+          </EepyCard>
         </a>
         <a class="card-link disabled"
           href="null"

@@ -22,8 +22,6 @@ const active: Ref<boolean> = ref(false)
 <style scoped lang=scss>
 .home-link {
   transition: transform 100ms ease;
-  background: var(--eepy-color-background);
-  border-radius: 50%;
   .home-symbol {
     width: 3.5rem; user-select: none; -webkit-user-drag: none;
     transform: scale(105%);

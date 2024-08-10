@@ -12,9 +12,9 @@ import AppThemeSelect from './AppThemeSelect.vue';
 <style lang="scss">
 header {
   position: fixed;
-  left: 0;
-  right: 0;
-  top: 0;
+  right: var(--app-padding-border);
+  top: var(--app-padding-border);
+  padding: 0.25rem;
   text-align: end;
   z-index: 1;
 

@@ -13,11 +13,8 @@
         <template v-slot:title><h2>Other interests ?</h2></template>
         <p>Here's a cute little list of stuff I really enjoy outside of programming/drawing:</p>
         <div class="chip-list">
-          <EepyChip>🧰 Blender</EepyChip>
           <EepyChip>📖 SCP Foundation</EepyChip>
-          <EepyChip>🧇 Crêpes & Waffles</EepyChip>
-          <EepyChip>🫐 Berries!</EepyChip>
-          <EepyChip>🪐 Planets</EepyChip>
+          <EepyChip>🪐 Planets & Space</EepyChip>
           <EepyChip>🧩 Board Games</EepyChip>
         </div>
         <p class="mt-l">And of course, games I like/love/am clearly too obsessed with:</p>
@@ -61,17 +58,16 @@ useHead({ meta: [
   .layout-grid {
     display: grid;
     grid-template-areas:
-      "info      info      info"
-      "tech      avatar    interests"
-      "tool      avatar    interests";
-    grid-template-columns: 1fr auto 1fr;
+      "info   info        avatar"
+      "tech   tool        interests";
+    grid-template-columns: 1fr 1fr 1fr;
     align-items: center;
     margin: 0 auto;
-    gap: 4rem;
+    gap: 1.5rem 4rem;
     
     #section-about-info {
       grid-area: info;
-      align-self: flex-end;
+      align-self: center;
     }
     #section-about-techs {
       grid-area: tech;
@@ -87,14 +83,17 @@ useHead({ meta: [
     }
     .avatar-wrapper {
       grid-area: avatar;
+      align-self: flex-end;
+
       display: flex;
-      align-items: center;
+      align-items: flex-end;
       justify-content: center;
       width: 100%;
       height: 100%;
 
       .avatar {
         width: clamp(160px, 33vw, 320px);
+        max-width: 320px;
       }
     }
   }
@@ -114,10 +113,10 @@ useHead({ meta: [
   .page-container {
     .layout-grid {
       grid-template-areas:
-        "info      info      info"
-        "tech      avatar    tool"
-        "interests interests interests";
-      gap: 3rem;
+        "info   info   avatar"
+        "tech   tech   tool"
+        "interests   interests   interests";
+        grid-template-columns: 1fr 1fr 1.5fr;
       #section-about-techs {
         align-self: flex-start;
       }
@@ -131,13 +130,13 @@ useHead({ meta: [
 @media screen and (max-width: 1199px) {
   .page-container {
     .layout-grid {
-      grid-template-areas:
-        "info      info"
-        "tech      avatar"
-        "tool      avatar"
-        "interests interests";
-      grid-template-columns: 3fr 2fr;
-      gap: 3rem;
+      grid-template-columns: 1fr 1fr 2fr;
+      #section-about-info {
+        align-self: center;
+      }
+      .avatar-wrapper {
+        align-items: flex-end;
+      }
     }
   }
 }
@@ -147,9 +146,10 @@ useHead({ meta: [
     .layout-grid {
       grid-template-areas:
         "info      info"
-        "tech      tool"
+        "tech      avatar"
+        "tool      avatar"
         "interests interests";
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: 1fr auto;
       
       #section-about-techs {
         align-self: flex-start;
@@ -158,7 +158,24 @@ useHead({ meta: [
         align-self: flex-start;
       }
       .avatar-wrapper {
-        display: none;
+        align-items: center;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 895px) {
+  .page-container {
+    .layout-grid {
+      grid-template-areas:
+        "info      info"
+        "tech      avatar"
+        "tool      tool"
+        "interests interests";
+      grid-template-columns: 1fr auto;
+      
+      #section-about-techs {
+        align-self: center;
       }
     }
   }
@@ -173,6 +190,10 @@ useHead({ meta: [
         "tool"
         "interests";
       grid-template-columns: 1fr;
+      gap: 3rem;
+      .avatar-wrapper {
+        display: none;
+      }
     }
   }
 }

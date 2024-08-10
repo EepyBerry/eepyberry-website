@@ -36,16 +36,19 @@ const dialogRef: Ref<HTMLDialogElement|null> = ref(null)
 const hashImgSrc: Ref<string|undefined> = ref()
 const hashDialogMode: Ref<'portrait'|'landscape'> = ref('landscape')
 
-const dialogClasses = computed(() => [dialogRef.value?.open ? 'animated' : '', hashDialogMode.value])
-
-onMounted(() => window.addEventListener("deviceorientation", computeDialogMode, true))
-onUnmounted(() => window.removeEventListener("deviceorientation", computeDialogMode, true))
+onMounted(() => {
+  window.addEventListener("resize", computeDialogMode, true)
+  window.addEventListener("deviceorientation", computeDialogMode, true)
+})
+onUnmounted(() => {
+  window.removeEventListener("resize", computeDialogMode, true)
+  window.removeEventListener("deviceorientation", computeDialogMode, true)
+})
 watch(() => route.hash, (hash: string) => {
   computeDialogMode()
   if (!hash) {
     return
   }
-  console.log('huh')
   hashImgSrc.value = '/artwork/'+hash.split('/').at(-1)
   setTimeout(() => {
     dialogRef.value!.showModal()
@@ -60,11 +63,12 @@ function computeDialogMode() {
 function closeDialog() {
   dialogRef.value?.classList.remove('animate')
   setTimeout(
-    () => dialogRef.value?.close(),
+    () => {
+      resetHash()
+      dialogRef.value?.close()
+    },
     window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 0 : 400
   )
-  
-  resetHash()
 }
 
 function resetHash() {
@@ -150,6 +154,18 @@ function resetHash() {
   .dialog.portrait {
     #hash-image, .hash-image-content, img {
       width: 100%;
+    }
+  }
+}
+
+@media screen and (max-width:1199px) {
+  .page-container {
+    gap: 1.5rem;
+    hr {
+      margin-top: 1.5rem;
+    }
+    #section-art {
+      margin-top: 0;
     }
   }
 }

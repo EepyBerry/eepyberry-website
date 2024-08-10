@@ -29,8 +29,7 @@ button {
   height: 3.5rem;
   padding: 0;
   padding-top: 1rem;
-  margin-top: var(--app-padding-border);
-  margin-right: var(--app-padding-border);
+  margin-top: 0.5rem;
   background: none;
   border: none;
 

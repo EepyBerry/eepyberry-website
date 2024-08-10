@@ -65,6 +65,7 @@
     li {
       flex-grow: 1;
       flex-shrink: 1;
+      min-width: 10rem;
       max-width: 100%;
       height: 3rem;
       background: var(--eepy-color-accent-semi);
@@ -120,11 +121,19 @@
     }
   }
 }
-@media screen and (min-width: 1200px) and (max-width: 1377px) {
+@media screen and (max-width: 1023px) {
   #section-about-tools {
     .tool-list {
-      flex-direction: column;
-      flex-wrap: nowrap;
+      li {
+        min-width: 0;
+      }
+    }
+  }
+}
+@media screen and (max-width: 767px) {
+  #section-about-tools {
+    h2 {
+      text-align: center;
     }
   }
 }

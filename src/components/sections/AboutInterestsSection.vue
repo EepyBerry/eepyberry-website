@@ -89,4 +89,11 @@
     }
   }
 }
+@media screen and (max-width: 767px) {
+  #section-about-interests {
+    h2 {
+      text-align: center;
+    }
+  }
+}
 </style>
