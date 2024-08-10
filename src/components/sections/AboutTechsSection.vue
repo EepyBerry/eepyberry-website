@@ -169,7 +169,7 @@
   }
 }
 iconify-icon {
-  filter: drop-shadow(0 1px 1px var(--eepy-color-primary));
+  filter: drop-shadow(0 1px 1px #000);
 }
 
 @media screen and (max-width: 1023px) {
