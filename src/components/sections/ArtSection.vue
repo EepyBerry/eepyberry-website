@@ -16,6 +16,16 @@
         <li class="image-wrapper" style="width: 20rem;">
           <a href="#/artwork/2022-02-12_Strange_Reflection.jpg"><img src="/artwork/2022-02-12_Strange_Reflection.jpg"></a>
         </li>
+        <!-- placeholders -->
+        <li class="image-wrapper placeholder" style="width: 20rem;">
+          <IconEepyBerry class="placeholder-icon" />
+        </li>
+        <li class="image-wrapper placeholder" style="width: 20rem;">
+          <IconEepyBerry class="placeholder-icon" />
+        </li>
+        <li class="image-wrapper placeholder" style="width: 36rem;">
+          <IconEepyBerry class="placeholder-icon" />
+        </li>
         <li class="image-wrapper placeholder" style="width: 20rem;">
           <IconEepyBerry class="placeholder-icon" />
         </li>

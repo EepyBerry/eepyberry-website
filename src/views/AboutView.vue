@@ -116,6 +116,10 @@ useHead({ meta: [
       margin-top: 1.5rem;
     }
     .main-grid {
+      grid-template-columns: 1fr min-content;
+      grid-template-areas:
+        "info      avatar"
+        "interests interests";
       #section-about-info {
         align-self: center;
       }
@@ -126,10 +130,6 @@ useHead({ meta: [
 @media screen and (max-width: 1023px) {
   .page-container {
     .main-grid {
-      grid-template-columns: 1fr min-content;
-      grid-template-areas:
-        "info      avatar"
-        "interests interests";
       .avatar-wrapper {
         align-items: center;
       }

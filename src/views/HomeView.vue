@@ -6,7 +6,7 @@
     <ArtSection />
     <dialog ref="dialogRef" class="dialog" :class="hashDialogMode" @abort="resetHash" @keydown.esc="resetHash">
       <div class="dialog-container">
-        <button icon-button class="dialog-close" @click="closeDialog">
+        <button icon-button class="dialog-close" @click="closeDialog" tabindex="0">
           <iconify-icon icon="mingcute:close-line" width="3rem"/>
         </button>
         <div id="hash-image">
@@ -23,7 +23,7 @@ import ArtSection from '@/components/sections/ArtSection.vue';
 import ProjectsSection from  '@/components/sections/ProjectsSection.vue';
 import TitleSection from '@/components/sections/TitleSection.vue';
 import { useHead } from '@unhead/vue';
-import { computed, onMounted, onUnmounted, ref, watch, type Ref } from 'vue';
+import { onMounted, onUnmounted, onUpdated, ref, watch, type Ref } from 'vue';
 import { useRoute, useRouter } from 'vue-router';
 
 useHead({ meta: [
@@ -37,13 +37,21 @@ const hashImgSrc: Ref<string|undefined> = ref()
 const hashDialogMode: Ref<'portrait'|'landscape'> = ref('landscape')
 
 onMounted(() => {
+  window.addEventListener("click", handleClick, true)
   window.addEventListener("resize", computeDialogMode, true)
-  window.addEventListener("deviceorientation", computeDialogMode, true)
+  window.addEventListener("deviceorientation", closeDialog, true)
 })
 onUnmounted(() => {
+  window.removeEventListener("click", handleClick, true)
   window.removeEventListener("resize", computeDialogMode, true)
-  window.removeEventListener("deviceorientation", computeDialogMode, true)
+  window.removeEventListener("deviceorientation", closeDialog, true)
 })
+onUpdated(() => {
+  if (dialogRef.value?.open) {
+    dialogRef.value?.classList.add('animate')
+  }
+})
+
 watch(() => route.hash, (hash: string) => {
   computeDialogMode()
   if (!hash) {
@@ -58,6 +66,12 @@ watch(() => route.hash, (hash: string) => {
 
 function computeDialogMode() {
   hashDialogMode.value = window.innerWidth > window.innerHeight ? 'landscape' : 'portrait'
+}
+
+function handleClick($event: MouseEvent) {
+  if (($event.target as HTMLElement).classList.contains('dialog-container')) {
+    closeDialog()
+  }
 }
 
 function closeDialog() {
@@ -99,8 +113,8 @@ function resetHash() {
     margin: auto;
     border: none;
     background: transparent;
-    width: 100%;
-    height: 100%;
+    width: 100lvw;
+    height: 100lvh;
     opacity: 0;
     transition: opacity 400ms ease-in-out, background-color 400ms ease-in-out;
   }
@@ -140,6 +154,9 @@ function resetHash() {
     overflow: hidden;
     max-width: calc(100% - 2rem);
     max-height: calc(100% - 2rem);
+    display: flex;
+    align-items: center;
+    justify-content: center;
     img {
       object-fit: contain;
     }
@@ -166,6 +183,37 @@ function resetHash() {
     }
     #section-art {
       margin-top: 0;
+    }
+    .dialog-container {
+      button {
+        position: absolute;
+        top: 8px;
+        right: 8px;
+        width: 4rem;
+        height: 4rem;
+        color: white;
+      }
+    }
+  }
+}
+@media screen and (max-width:767px) {
+  .page-container {
+    gap: 1.5rem;
+    hr {
+      margin-top: 1.5rem;
+    }
+    #section-art {
+      margin-top: 0;
+    }
+    .dialog-container {
+      button {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 4rem;
+        height: 4rem;
+        color: white;
+      }
     }
   }
 }

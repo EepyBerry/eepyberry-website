@@ -2,17 +2,17 @@
   <section id="section-about-interests">
     <h2>interests and stuff!</h2>
     <ul class="tool-list">
+      <li class="space">
+        <div>
+          <iconify-icon mode="svg" icon="noto:ringed-planet" height="2.5rem" />
+        </div>
+        <span>Planets & Space!</span>
+      </li>
       <li class="scpfoundation">
         <div>
           <iconify-icon icon="simple-icons:scpfoundation" height="2.5rem" aria-hidden="true" />
         </div>
         <span>SCP Foundation!</span>
-      </li>
-      <li class="vscode">
-        <div>
-          <iconify-icon mode="svg" icon="noto:ringed-planet" height="2.5rem" />
-        </div>
-        <span>Planets & Space!</span>
       </li>
       <li class="boardgames">
         <div>
@@ -25,6 +25,18 @@
           <iconify-icon icon="noto:video-game" height="2.5rem" aria-hidden="true" />
         </div>
         <span>Video Games!</span>
+      </li>
+      <li class="videogames">
+        <div>
+          <iconify-icon icon="noto:bicycle" height="2.5rem" aria-hidden="true" />
+        </div>
+        <span>Bicycling!</span>
+      </li>
+      <li class="videogames">
+        <div>
+          <iconify-icon icon="noto:lotus" height="2.5rem" aria-hidden="true" />
+        </div>
+        <span>Yoga!</span>
       </li>
     </ul>
   </section>
@@ -50,7 +62,6 @@
       background: var(--eepy-color-accent-semi);
       border: 1px solid var(--eepy-color-accent-half);
       border-radius: 8px;
-      backdrop-filter: blur(4px);
 
       display: flex;
       align-items: center;

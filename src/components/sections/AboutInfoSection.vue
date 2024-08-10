@@ -11,6 +11,7 @@
       <li>
         <div>
           <iconify-icon mode="svg" icon="noto:books" height="2.5rem" />
+          <span class="bite-mark"></span>
         </div>
         <span>Full-Stack Software Engineer!</span>
       </li>
@@ -29,6 +30,7 @@
       <li>
         <div>
           <iconify-icon mode="svg" icon="noto:exclamation-question-mark" height="2.5rem" />
+          <span class="bite-mark-alt"></span>
         </div>
         <span>Often curious :3</span>
       </li>
@@ -41,12 +43,14 @@
       <li>
         <div>
           <iconify-icon mode="svg" icon="noto:strawberry" height="2.5rem" />
+          <span class="bite-mark-alt"></span>
         </div>
         <span>Fav. fruit: strawberries!</span>
       </li>
       <li>
         <div>
           <iconify-icon mode="svg" icon="noto:waffle" height="2.5rem" />
+          <span class="bite-mark"></span>
         </div>
         <span>Fav. dessert: waffles!</span>
       </li>
@@ -61,7 +65,7 @@
     max-width: 100%;
 
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(12rem, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr));
     gap: 1rem;
 
     li {
@@ -71,7 +75,6 @@
       min-height: 5rem;
       height: 5rem;
       padding: 1rem;
-      backdrop-filter: blur(4px);
       background: var(--eepy-color-accent-semi);
       border: 1px solid var(--eepy-color-accent-half);
       border-radius: 8px;
@@ -96,6 +99,28 @@
     }
   }
 }
+.bite-mark {
+  position: absolute;
+  top: -1px;
+  right: -1px;
+  width: 1.25rem;
+  height: 1rem;
+  background: var(--eepy-color-background);
+  border-bottom-left-radius: 1rem;
+  border-bottom: 1px solid var(--eepy-color-accent-half);
+  border-left: 1px solid var(--eepy-color-accent-half);
+}
+.bite-mark-alt {
+  position: absolute;
+  left: -1px;
+  bottom: -1px;
+  width: 1.25rem;
+  height: 1rem;
+  background: var(--eepy-color-background);
+  border-top-right-radius: 1rem;
+  border-top: 1px solid var(--eepy-color-accent-half);
+  border-right: 1px solid var(--eepy-color-accent-half);
+}
 iconify-icon {
   filter: drop-shadow(0 1px 1px var(--eepy-color-primary))
 }
@@ -103,10 +128,17 @@ iconify-icon {
 @media screen and (max-width: 1199px) {
   #section-about-info {
     .info-list {
-      grid-template-columns: repeat(auto-fill, minmax(10rem, 1fr));
+      grid-template-columns: repeat(auto-fill, minmax(13rem, 1fr));
     }
     h2 {
       text-align: center;
+    }
+  }
+}
+@media screen and (max-width: 1023px) {
+  #section-about-info {
+    .info-list {
+      grid-template-columns: repeat(auto-fill, minmax(11rem, 1fr));
     }
   }
 }

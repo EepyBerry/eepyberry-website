@@ -35,7 +35,7 @@
             </template>
           </EepyCard>
         </a>
-        <EepyCard v-for="_ in 1" class="placeholder" />
+        <EepyCard v-for="_ in 2" class="placeholder" />
       </div>
     </section>
   </template>

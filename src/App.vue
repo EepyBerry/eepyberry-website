@@ -3,10 +3,10 @@
             :size="themeHelper.themeRef.value === 'dark' ? 5 : 16"
             :density="themeHelper.themeRef.value === 'dark' ? 8 : 6"
   />
-  <AppHeader />
   <aside>
     <AppNavigation />
   </aside>
+  <AppHeader />
   <main>
     <RouterView v-slot="{ Component, route }">
       <Transition name="fade" mode="out-in">
@@ -52,7 +52,7 @@ provide('$theme', themeHelper.themeRef)
 <style lang="scss">
 main {
   flex-grow: 1;
-  max-width: 1600px;
+  max-width: 1800px;
   width: 100%;
   padding: 0 var(--app-padding-main);
   margin: 0 auto;

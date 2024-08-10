@@ -77,7 +77,6 @@
       height: 3rem;
       background: var(--eepy-color-accent-semi);
       border-radius: 8px;
-      backdrop-filter: blur(4px);
 
       display: flex;
       align-items: center;
