@@ -4,10 +4,19 @@
     <ul class="tool-list">
       <li class="idea">
         <div>
-          <iconify-icon icon="logos:intellij-idea" height="1.5rem" aria-hidden="true" />
+          <iconify-icon
+            icon="logos:intellij-idea"
+            height="1.5rem"
+            aria-hidden="true"
+          />
         </div>
         <span>Intellij IDEA</span>
-        <iconify-icon icon="noto:glowing-star" class="star" height="1.25rem" aria-hidden="true" />
+        <iconify-icon
+          icon="noto:glowing-star"
+          class="star"
+          height="1.25rem"
+          aria-hidden="true"
+        />
       </li>
       <li class="vscode">
         <div>
@@ -17,10 +26,19 @@
       </li>
       <li class="aseprite">
         <div>
-          <iconify-icon mode="svg" icon="simple-icons:aseprite" height="1.5rem" />
+          <iconify-icon
+            mode="svg"
+            icon="simple-icons:aseprite"
+            height="1.5rem"
+          />
         </div>
         <span>Aseprite</span>
-        <iconify-icon icon="noto:glowing-star" class="star" height="1.25rem" aria-hidden="true" />
+        <iconify-icon
+          icon="noto:glowing-star"
+          class="star"
+          height="1.25rem"
+          aria-hidden="true"
+        />
       </li>
       <li class="godot">
         <div>
@@ -39,14 +57,28 @@
           <iconify-icon mode="svg" icon="simple-icons:krita" height="1.5rem" />
         </div>
         <span>Krita</span>
-        <iconify-icon icon="noto:glowing-star" class="star" height="1.25rem" aria-hidden="true" />
+        <iconify-icon
+          icon="noto:glowing-star"
+          class="star"
+          height="1.25rem"
+          aria-hidden="true"
+        />
       </li>
       <li class="illustrator">
         <div>
-          <iconify-icon icon="skill-icons:illustrator" height="1.5rem" aria-hidden="true" />
+          <iconify-icon
+            icon="skill-icons:illustrator"
+            height="1.5rem"
+            aria-hidden="true"
+          />
         </div>
         <span>Illustrator</span>
-        <iconify-icon icon="noto:glowing-star" class="star" height="1.25rem" aria-hidden="true" />
+        <iconify-icon
+          icon="noto:glowing-star"
+          class="star"
+          height="1.25rem"
+          aria-hidden="true"
+        />
       </li>
     </ul>
   </section>
@@ -81,23 +113,23 @@
       font-weight: 500;
       line-height: 1rem;
 
-      &>span {
+      & > span {
         padding: 1rem;
         color: var(--white);
       }
-      &>div {
+      & > div {
         padding: 0.75rem;
         width: 3rem;
         height: 3rem;
         color: var(--white);
       }
-      &>.star {
+      & > .star {
         z-index: 1;
         position: absolute;
         top: -0.25rem;
         right: -0.25rem;
         transform: rotateZ(36deg);
-        filter: drop-shadow(0 0 2px #000)
+        filter: drop-shadow(0 0 2px #000);
       }
 
       // Tool overrides
@@ -122,7 +154,7 @@
   }
 }
 iconify-icon {
-  filter: drop-shadow(0 1px 1px var(--eepy-color-primary))
+  filter: drop-shadow(0 1px 1px var(--eepy-color-primary));
 }
 
 @media screen and (max-width: 1023px) {

@@ -4,7 +4,11 @@
     <ul class="info-list">
       <li>
         <div>
-          <iconify-icon mode="svg" icon="noto:transgender-flag" height="2.5rem" />
+          <iconify-icon
+            mode="svg"
+            icon="noto:transgender-flag"
+            height="2.5rem"
+          />
         </div>
         <span>Transfem and proud!</span>
       </li>
@@ -23,13 +27,21 @@
       </li>
       <li>
         <div>
-          <iconify-icon mode="svg" icon="noto:woman-raising-hand" height="2.5rem" />
+          <iconify-icon
+            mode="svg"
+            icon="noto:woman-raising-hand"
+            height="2.5rem"
+          />
         </div>
         <span>Very, very smol :></span>
       </li>
       <li>
         <div>
-          <iconify-icon mode="svg" icon="noto:exclamation-question-mark" height="2.5rem" />
+          <iconify-icon
+            mode="svg"
+            icon="noto:exclamation-question-mark"
+            height="2.5rem"
+          />
           <span class="bite-mark-alt"></span>
         </div>
         <span>Often curious :3</span>
@@ -84,7 +96,7 @@
       flex-direction: row;
       align-items: center;
       gap: 0.5rem;
-      
+
       font-family: Dosis;
       font-size: 1.125rem;
       font-weight: 500;
@@ -123,7 +135,7 @@
   border-right: 1px solid var(--eepy-color-accent-half);
 }
 iconify-icon {
-  filter: drop-shadow(0 1px 1px var(--eepy-color-primary))
+  filter: drop-shadow(0 1px 1px var(--eepy-color-primary));
 }
 
 @media screen and (max-width: 1199px) {

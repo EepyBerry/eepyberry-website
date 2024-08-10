@@ -1,10 +1,20 @@
 <template>
   <span class="top-hider"></span>
-  <button class="theme-select-button" aria-label="Open site theme selector" @click="toggleTheme">
+  <button
+    class="theme-select-button"
+    aria-label="Open site theme selector"
+    @click="toggleTheme"
+  >
     <div class="lightbulb">
       <span class="cord"></span>
-      <iconify-icon mode="svg" class="eepy-icon"
-        :icon="themeHelper.themeRef.value === 'light' ? 'clarity:lightbulb-solid' : 'clarity:lightbulb-line'"
+      <iconify-icon
+        mode="svg"
+        class="eepy-icon"
+        :icon="
+          themeHelper.themeRef.value === 'light'
+            ? 'clarity:lightbulb-solid'
+            : 'clarity:lightbulb-line'
+        "
         height="2.25rem"
         aria-hidden="true"
       />
@@ -13,13 +23,13 @@
 </template>
 
 <script setup lang="ts">
-import { inject } from 'vue'
-import type { ThemeHelper } from '@/utils/theme.helper'
+import { inject } from "vue";
+import type { ThemeHelper } from "@/utils/theme.helper";
 
-const themeHelper: ThemeHelper = inject('ThemeHelper') as ThemeHelper
+const themeHelper: ThemeHelper = inject("ThemeHelper") as ThemeHelper;
 
 function toggleTheme() {
-  themeHelper.toggleSiteTheme()
+  themeHelper.toggleSiteTheme();
 }
 </script>
 
@@ -59,7 +69,8 @@ button {
     }
   }
 }
-button:hover, button:focus-visible {
+button:hover,
+button:focus-visible {
   .lightbulb {
     transform: translateY(0.125rem);
   }

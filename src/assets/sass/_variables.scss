@@ -1,14 +1,15 @@
 :root {
   --app-padding-main: 5rem;
-  --app-padding-border: .5rem;
+  --app-padding-border: 0.5rem;
 
   // about
   --eepy-color-vuejs: #34495e;
-  --eepy-color-angular: linear-gradient(90deg,
+  --eepy-color-angular: linear-gradient(
+    90deg,
     hsl(356, 83%, 43%) 0%,
     hsl(308, 75%, 40%) 50%,
     hsl(286, 82%, 38%) 100%
-    );
+  );
   --eepy-color-java: #f4f2ed;
   --eepy-color-spring: #469420;
   --eepy-color-docker: #0e7ab9;
@@ -16,7 +17,8 @@
   --eepy-color-git: #c7402b;
   --eepy-color-godot: #313b60;
   --eepy-color-illustrator: #300;
-  --eepy-color-krita: linear-gradient(90deg,
+  --eepy-color-krita: linear-gradient(
+    90deg,
     hsl(239, 36%, 51%) 0%,
     rgb(93, 57, 134) 100%
   );
@@ -33,7 +35,7 @@
 @media screen and (max-width: 767px) {
   :root {
     --app-padding-main: 3rem;
-    --app-padding-border: .5rem;
+    --app-padding-border: 0.5rem;
   }
 }
 @media screen and (max-width: 567px) {

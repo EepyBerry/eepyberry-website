@@ -10,7 +10,11 @@
       </li>
       <li class="scpfoundation">
         <div>
-          <iconify-icon icon="simple-icons:scpfoundation" height="2.5rem" aria-hidden="true" />
+          <iconify-icon
+            icon="simple-icons:scpfoundation"
+            height="2.5rem"
+            aria-hidden="true"
+          />
         </div>
         <span>SCP Foundation!</span>
       </li>
@@ -22,13 +26,21 @@
       </li>
       <li class="videogames">
         <div>
-          <iconify-icon icon="noto:video-game" height="2.5rem" aria-hidden="true" />
+          <iconify-icon
+            icon="noto:video-game"
+            height="2.5rem"
+            aria-hidden="true"
+          />
         </div>
         <span>Video Games!</span>
       </li>
       <li class="videogames">
         <div>
-          <iconify-icon icon="noto:bicycle" height="2.5rem" aria-hidden="true" />
+          <iconify-icon
+            icon="noto:bicycle"
+            height="2.5rem"
+            aria-hidden="true"
+          />
         </div>
         <span>Bicycling!</span>
       </li>
@@ -74,18 +86,18 @@
       font-weight: 500;
       line-height: 1rem;
 
-      &>div {
+      & > div {
         width: 2.5rem;
         height: 2.5rem;
       }
-      &>span {
+      & > span {
         text-wrap: wrap;
       }
     }
   }
 }
 iconify-icon {
-  filter: drop-shadow(0 1px 1px var(--eepy-color-primary))
+  filter: drop-shadow(0 1px 1px var(--eepy-color-primary));
 }
 
 @media screen and (max-width: 767px) {

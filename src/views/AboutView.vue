@@ -5,7 +5,12 @@
       <AboutInfoSection />
       <AboutInterestsSection />
       <div class="avatar-wrapper">
-        <img class="avatar" src="/avatar.webp" alt="Avatar" aria-label="avatar">
+        <img
+          class="avatar"
+          src="/avatar.webp"
+          alt="Avatar"
+          aria-label="avatar"
+        />
       </div>
       <!-- 
         <div class="chip-list">
@@ -22,7 +27,7 @@
         </div>
       -->
     </div>
-    <hr>
+    <hr />
     <div class="misc-grid">
       <AboutTechsSection />
       <AboutToolsSection />
@@ -32,15 +37,21 @@
 
 <!------------------------------------------------------------>
 <script setup lang="ts">
-import AboutInfoSection from '@/components/sections/AboutInfoSection.vue';
-import AboutInterestsSection from '@/components/sections/AboutInterestsSection.vue';
-import AboutTechsSection from '@/components/sections/AboutTechsSection.vue';
-import AboutToolsSection from '@/components/sections/AboutToolsSection.vue';
-import TitleSection from '@/components/sections/TitleSection.vue';
-import { useHead } from '@unhead/vue';
-useHead({ meta: [
-  { name: 'description', content: 'Who am I? What do I like to do? Why strawberries? It\'s all in here!' }
-]})
+import AboutInfoSection from "@/components/sections/AboutInfoSection.vue";
+import AboutInterestsSection from "@/components/sections/AboutInterestsSection.vue";
+import AboutTechsSection from "@/components/sections/AboutTechsSection.vue";
+import AboutToolsSection from "@/components/sections/AboutToolsSection.vue";
+import TitleSection from "@/components/sections/TitleSection.vue";
+import { useHead } from "@unhead/vue";
+useHead({
+  meta: [
+    {
+      name: "description",
+      content:
+        "Who am I? What do I like to do? Why strawberries? It's all in here!",
+    },
+  ],
+});
 </script>
 
 <!------------------------------------------------------------>
@@ -68,7 +79,7 @@ useHead({ meta: [
     margin: 0 auto;
     gap: 1.5rem 4rem;
     width: 100%;
-    
+
     #section-about-info {
       grid-area: info;
       align-self: center;
@@ -100,13 +111,13 @@ useHead({ meta: [
 }
 
 .chip-list {
-  margin-top: .5rem;
+  margin-top: 0.5rem;
   display: inline-flex;
   justify-content: flex-start;
   flex-wrap: wrap;
   flex: 0 1 0;
   //grid-template-columns: 1fr 1fr 1fr;
-  gap: .5rem;
+  gap: 0.5rem;
 }
 
 @media screen and (max-width: 1199px) {
@@ -169,5 +180,4 @@ useHead({ meta: [
     }
   }
 }
-
 </style>

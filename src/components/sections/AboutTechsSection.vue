@@ -7,24 +7,42 @@
           <iconify-icon mode="svg" icon="cib:amazon-aws" height="1.5rem" />
         </div>
         <span>AWS</span>
-        <iconify-icon icon="noto:glowing-star" class="star" height="1.25rem" aria-hidden="true" />
+        <iconify-icon
+          icon="noto:glowing-star"
+          class="star"
+          height="1.25rem"
+          aria-hidden="true"
+        />
       </li>
       <li class="java">
         <div>
           <iconify-icon icon="cib:java" height="1.5rem" aria-hidden="true" />
         </div>
         <span>Java</span>
-        <iconify-icon icon="noto:glowing-star" class="star" height="1.25rem" aria-hidden="true" />
+        <iconify-icon
+          icon="noto:glowing-star"
+          class="star"
+          height="1.25rem"
+          aria-hidden="true"
+        />
       </li>
       <li class="vuejs">
         <div>
-          <iconify-icon mode="svg" icon="simple-icons:vuedotjs" height="1.5rem" />
+          <iconify-icon
+            mode="svg"
+            icon="simple-icons:vuedotjs"
+            height="1.5rem"
+          />
         </div>
         <span>Vue.js</span>
       </li>
       <li class="kubernetes">
         <div>
-          <iconify-icon mode="svg" icon="simple-icons:kubernetes" height="1.5rem" />
+          <iconify-icon
+            mode="svg"
+            icon="simple-icons:kubernetes"
+            height="1.5rem"
+          />
         </div>
         <span>Kubernetes</span>
       </li>
@@ -36,21 +54,39 @@
       </li>
       <li class="spring">
         <div>
-          <iconify-icon icon="simple-icons:springboot" height="1.5rem" aria-hidden="true" />
+          <iconify-icon
+            icon="simple-icons:springboot"
+            height="1.5rem"
+            aria-hidden="true"
+          />
         </div>
         <span>Spring Boot</span>
-        <iconify-icon icon="noto:glowing-star" class="star" height="1.25rem" aria-hidden="true" />
+        <iconify-icon
+          icon="noto:glowing-star"
+          class="star"
+          height="1.25rem"
+          aria-hidden="true"
+        />
       </li>
       <li class="git">
         <div>
           <iconify-icon mode="svg" icon="simple-icons:git" height="1.5rem" />
         </div>
         <span>Git</span>
-        <iconify-icon icon="noto:glowing-star" class="star" height="1.25rem" aria-hidden="true" />
+        <iconify-icon
+          icon="noto:glowing-star"
+          class="star"
+          height="1.25rem"
+          aria-hidden="true"
+        />
       </li>
       <li class="angular">
         <div>
-          <iconify-icon mode="svg" icon="simple-icons:angular" height="1.5rem" />
+          <iconify-icon
+            mode="svg"
+            icon="simple-icons:angular"
+            height="1.5rem"
+          />
         </div>
         <span>Angular</span>
       </li>
@@ -87,23 +123,23 @@
       font-weight: 500;
       line-height: 1rem;
 
-      &>span {
+      & > span {
         padding: 1rem;
         color: var(--white);
       }
-      &>div {
+      & > div {
         padding: 0.75rem;
         width: 3rem;
         height: 3rem;
         color: var(--white);
       }
-      &>.star {
+      & > .star {
         z-index: 1;
         position: absolute;
         top: -0.25rem;
         right: -0.25rem;
         transform: rotateZ(36deg);
-        filter: drop-shadow(0 0 2px #000)
+        filter: drop-shadow(0 0 2px #000);
       }
 
       // Tech overrides
@@ -133,7 +169,7 @@
   }
 }
 iconify-icon {
-  filter: drop-shadow(0 1px 1px var(--eepy-color-primary))
+  filter: drop-shadow(0 1px 1px var(--eepy-color-primary));
 }
 
 @media screen and (max-width: 1023px) {

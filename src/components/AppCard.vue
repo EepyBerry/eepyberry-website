@@ -17,7 +17,7 @@
 
 <!------------------------------------------------------------>
 <script setup lang="ts">
-import IconEepyBerry from '@/components/svg/icons/IconEepyBerry.vue';
+import IconEepyBerry from "@/components/svg/icons/IconEepyBerry.vue";
 </script>
 
 <!------------------------------------------------------------>
@@ -33,7 +33,7 @@ import IconEepyBerry from '@/components/svg/icons/IconEepyBerry.vue';
 
   &-header {
     width: 100%;
-    padding: .75rem .75rem 0;
+    padding: 0.75rem 0.75rem 0;
     font-family: Dosis;
     font-size: 1.75rem;
     font-weight: 700;
@@ -44,7 +44,7 @@ import IconEepyBerry from '@/components/svg/icons/IconEepyBerry.vue';
   &-content {
     flex: 1;
     width: 100%;
-    padding: 0 .75rem;
+    padding: 0 0.75rem;
     position: relative;
 
     display: flex;
@@ -55,7 +55,7 @@ import IconEepyBerry from '@/components/svg/icons/IconEepyBerry.vue';
   &-footer {
     z-index: 1;
     width: 100%;
-    padding: 0 .75rem .5rem;
+    padding: 0 0.75rem 0.5rem;
   }
 }
 .eepy-card.placeholder {
@@ -65,9 +65,13 @@ import IconEepyBerry from '@/components/svg/icons/IconEepyBerry.vue';
   border: 2px dashed var(--eepy-color-accent);
   color: var(--eepy-color-accent);
   opacity: 0.5;
-  
-  &-header { display: none }
-  &-footer { display: none }
+
+  &-header {
+    display: none;
+  }
+  &-footer {
+    display: none;
+  }
   &-content {
     display: flex;
     align-items: center;

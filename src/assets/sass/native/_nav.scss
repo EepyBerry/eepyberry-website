@@ -1,6 +1,10 @@
 // Native
-a { display: inline-flex; gap: 4px; }
-a:not(.button-link, .card-link)[disabled], a:not(.button-link, .card-link)[disabled]:visited {
+a {
+  display: inline-flex;
+  gap: 4px;
+}
+a:not(.button-link, .card-link)[disabled],
+a:not(.button-link, .card-link)[disabled]:visited {
   cursor: not-allowed;
   color: var(--eepy-color-disabled);
 }
@@ -14,10 +18,12 @@ a.card-link:not([disabled]) {
 }
 
 // Other links
-a:not(.button-link, .card-link), a:not(.button-link, .card-link):visited {
+a:not(.button-link, .card-link),
+a:not(.button-link, .card-link):visited {
   color: var(--eepy-color-text);
 }
-a.button-link, a.card-link {
+a.button-link,
+a.card-link {
   text-decoration: none;
   color: var(--eepy-color-text);
 }
@@ -27,7 +33,7 @@ a.button-link, a.card-link {
   a:not(.button-link, .card-link, [disabled]):hover {
     filter: brightness(80%);
   }
-} 
+}
 [data-theme="light"] {
   a:not(.button-link, .card-link, [disabled]):hover {
     filter: brightness(250%);

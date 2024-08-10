@@ -1,7 +1,8 @@
 <template>
-  <AppScatter :visible="themeHelper.themeRef.value === 'dark'"
-            :size="themeHelper.themeRef.value === 'dark' ? 5 : 16"
-            :density="themeHelper.themeRef.value === 'dark' ? 8 : 6"
+  <AppScatter
+    :visible="themeHelper.themeRef.value === 'dark'"
+    :size="themeHelper.themeRef.value === 'dark' ? 5 : 16"
+    :density="themeHelper.themeRef.value === 'dark' ? 8 : 6"
   />
   <aside>
     <AppNavigation />
@@ -18,41 +19,53 @@
 </template>
 
 <script setup lang="ts">
-import { defineAsyncComponent, inject, onMounted, onUnmounted, provide, ref, Transition, watch, type Ref } from 'vue';
-import type { ThemeHelper } from '@/utils/theme.helper';
-import AppNavigation from "@/components/main/AppNavigation.vue"
-import AppFooter from './components/main/AppFooter.vue';
-import AppHeader from './components/main/AppHeader.vue';
+import {
+  defineAsyncComponent,
+  inject,
+  onMounted,
+  onUnmounted,
+  provide,
+  ref,
+  Transition,
+  watch,
+  type Ref,
+} from "vue";
+import type { ThemeHelper } from "@/utils/theme.helper";
+import AppNavigation from "@/components/main/AppNavigation.vue";
+import AppFooter from "./components/main/AppFooter.vue";
+import AppHeader from "./components/main/AppHeader.vue";
 
-const AppScatter = defineAsyncComponent(() => import('./components/AppScatter.vue'))
+const AppScatter = defineAsyncComponent(
+  () => import("./components/AppScatter.vue"),
+);
 const themeHelper: ThemeHelper = inject("ThemeHelper") as ThemeHelper;
 
-const displayMenuButton: Ref<boolean> = ref(false)
-const menuOpen: Ref<boolean> = ref(false)
-const showRightBlob: Ref<boolean> = ref(false)
+const displayMenuButton: Ref<boolean> = ref(false);
+const menuOpen: Ref<boolean> = ref(false);
+const showRightBlob: Ref<boolean> = ref(false);
 
 onMounted(() => {
-  themeHelper.loadCurrentTheme()
-  window.addEventListener('resize', handleResize)
-  handleResize()
-})
+  themeHelper.loadCurrentTheme();
+  window.addEventListener("resize", handleResize);
+  handleResize();
+});
 onUnmounted(() => {
-  window.removeEventListener('resize', handleResize)
-})
+  window.removeEventListener("resize", handleResize);
+});
 
 function handleResize() {
-  menuOpen.value = window.innerWidth >= 1024
-  displayMenuButton.value = window.innerWidth < 1024
-  showRightBlob.value = window.innerWidth < 768
+  menuOpen.value = window.innerWidth >= 1024;
+  displayMenuButton.value = window.innerWidth < 1024;
+  showRightBlob.value = window.innerWidth < 768;
 }
 
-provide('$theme', themeHelper.themeRef)
+provide("$theme", themeHelper.themeRef);
 </script>
 
 <style lang="scss">
 main {
   flex-grow: 1;
-  max-width: 1800px;
+  max-width: 1700px;
   width: 100%;
   padding: 0 var(--app-padding-main);
   margin: 0 auto;
@@ -74,8 +87,12 @@ aside {
   justify-content: flex-start;
   z-index: 1;
 
-  &.expanded { transform: translateX(0); }
-  &.collapsed { transform: translateX(-8rem); }
+  &.expanded {
+    transform: translateX(0);
+  }
+  &.collapsed {
+    transform: translateX(-8rem);
+  }
 }
 
 .fade-enter-active,
@@ -96,7 +113,6 @@ aside {
     gap: 2rem;
   }
 }
-
 
 @media screen and (prefers-reduced-motion) {
   .fade-enter-active,

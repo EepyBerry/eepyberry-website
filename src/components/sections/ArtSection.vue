@@ -1,32 +1,43 @@
-
 <template>
   <section id="section-art">
     <h2 class="section-title">art corner!</h2>
     <div class="section-content">
       <ul class="gallery">
-        <li class="image-wrapper" style="width: 36rem;">
-          <a href="#/artwork/2024-08-03_1000-LC.jpg"><img src="/artwork/2024-08-03_1000-LC.jpg"></a>
+        <li class="image-wrapper" style="width: 36rem">
+          <a href="#/artwork/2024-08-03_1000-LC.jpg"
+            ><img src="/artwork/2024-08-03_1000-LC.jpg"
+          /></a>
         </li>
-        <li class="image-wrapper" style="width: 20rem;">
-          <a href="#/artwork/2023-01-09_Heart_of_the_Mountain.jpg"><img src="/artwork/2023-01-09_Heart_of_the_Mountain.jpg" style="scale: 120%"></a>
+        <li class="image-wrapper" style="width: 20rem">
+          <a href="#/artwork/2023-01-09_Heart_of_the_Mountain.jpg"
+            ><img
+              src="/artwork/2023-01-09_Heart_of_the_Mountain.jpg"
+              style="scale: 120%"
+          /></a>
         </li>
-        <li class="image-wrapper" style="width: 20rem;">
-          <a href="#/artwork/2022-12-11_Niko_Holding_the_Sun.jpg"><img src="/artwork/2022-12-11_Niko_Holding_the_Sun.jpg" style="scale: 120%"></a>
+        <li class="image-wrapper" style="width: 20rem">
+          <a href="#/artwork/2022-12-11_Niko_Holding_the_Sun.jpg"
+            ><img
+              src="/artwork/2022-12-11_Niko_Holding_the_Sun.jpg"
+              style="scale: 120%"
+          /></a>
         </li>
-        <li class="image-wrapper" style="width: 20rem;">
-          <a href="#/artwork/2022-02-12_Strange_Reflection.jpg"><img src="/artwork/2022-02-12_Strange_Reflection.jpg"></a>
+        <li class="image-wrapper" style="width: 20rem">
+          <a href="#/artwork/2022-02-12_Strange_Reflection.jpg"
+            ><img src="/artwork/2022-02-12_Strange_Reflection.jpg"
+          /></a>
         </li>
         <!-- placeholders -->
-        <li class="image-wrapper placeholder" style="width: 20rem;">
+        <li class="image-wrapper placeholder" style="width: 20rem">
           <IconEepyBerry class="placeholder-icon" />
         </li>
-        <li class="image-wrapper placeholder" style="width: 20rem;">
+        <li class="image-wrapper placeholder" style="width: 20rem">
           <IconEepyBerry class="placeholder-icon" />
         </li>
-        <li class="image-wrapper placeholder" style="width: 36rem;">
+        <li class="image-wrapper placeholder" style="width: 36rem">
           <IconEepyBerry class="placeholder-icon" />
         </li>
-        <li class="image-wrapper placeholder" style="width: 20rem;">
+        <li class="image-wrapper placeholder" style="width: 20rem">
           <IconEepyBerry class="placeholder-icon" />
         </li>
       </ul>
@@ -35,7 +46,7 @@
 </template>
 
 <script setup lang="ts">
-import IconEepyBerry from '../svg/icons/IconEepyBerry.vue';
+import IconEepyBerry from "../svg/icons/IconEepyBerry.vue";
 </script>
 
 <!------------------------------------------------------------>
@@ -66,7 +77,7 @@ import IconEepyBerry from '../svg/icons/IconEepyBerry.vue';
   .image-wrapper {
     flex-grow: 1;
     flex-shrink: 1;
-    
+
     border-radius: 8px;
     max-width: 100%;
     width: 100%;
@@ -80,7 +91,7 @@ import IconEepyBerry from '../svg/icons/IconEepyBerry.vue';
       align-items: center;
       justify-content: center;
       opacity: 0.5;
-      
+
       svg {
         color: var(--eepy-color-accent);
         object-position: center;
@@ -97,7 +108,8 @@ import IconEepyBerry from '../svg/icons/IconEepyBerry.vue';
     a {
       flex: 1;
     }
-    a:hover, a:visited:hover {
+    a:hover,
+    a:visited:hover {
       filter: brightness(100%);
       width: 100%;
     }

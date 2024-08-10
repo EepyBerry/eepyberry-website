@@ -6,12 +6,14 @@
 </template>
 
 <script setup lang="ts">
-import SvgNotFound from '@/components/svg/SvgNotFound.vue';
-import { useHead } from '@unhead/vue';
-useHead({ meta: [
-  { name: 'robots', content: 'noindex' },
-  { name: 'description', content: 'Page not found' }
-]})
+import SvgNotFound from "@/components/svg/SvgNotFound.vue";
+import { useHead } from "@unhead/vue";
+useHead({
+  meta: [
+    { name: "robots", content: "noindex" },
+    { name: "description", content: "Page not found" },
+  ],
+});
 </script>
 
 <style scoped lang="scss">

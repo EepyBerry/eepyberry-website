@@ -1,21 +1,24 @@
 <template>
   <section id="section-title">
     <div class="title">
-      <SvgEepyBerryLogo id="avatar" :dark="$theme === 'dark'" aria-label="Sleeping strawberry with the text 'eepy berry'" />
-      <hr>
+      <SvgEepyBerryLogo
+        id="avatar"
+        :dark="$theme === 'dark'"
+        aria-label="Sleeping strawberry with the text 'eepy berry'"
+      />
+      <hr />
       <p id="intro">developer&nbsp;& illustrator&nbsp;:></p>
     </div>
     <AppLinks />
   </section>
 </template>
 
-
 <!------------------------------------------------------------>
 <script setup lang="ts">
-import AppLinks from '../main/AppLinks.vue';
-import SvgEepyBerryLogo from '@/components/svg/SvgEepyBerryLogo.vue';
-import { inject } from 'vue';
-const $theme = inject('$theme')
+import AppLinks from "../main/AppLinks.vue";
+import SvgEepyBerryLogo from "@/components/svg/SvgEepyBerryLogo.vue";
+import { inject } from "vue";
+const $theme = inject("$theme");
 </script>
 
 <!------------------------------------------------------------>

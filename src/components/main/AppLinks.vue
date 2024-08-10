@@ -5,10 +5,20 @@
       <SvgKofi width="2.75rem" />
       <span class="coming-soon" aria-hidden="true">soon!</span>
     </a>
-    <a href="https://github.com/EepyBerry" target="_blank" rel="external nofollow noopener" aria-label="GitHub">
+    <a
+      href="https://github.com/EepyBerry"
+      target="_blank"
+      rel="external nofollow noopener"
+      aria-label="GitHub"
+    >
       <SvgGithub width="2.75rem" />
     </a>
-    <a href="https://bsky.app/profile/eepyberry.bsky.social" target="_blank" rel="external nofollow noopener" aria-label="Bluesky">
+    <a
+      href="https://bsky.app/profile/eepyberry.bsky.social"
+      target="_blank"
+      rel="external nofollow noopener"
+      aria-label="Bluesky"
+    >
       <SvgBluesky width="2.75rem" />
     </a>
     <span class="bracket">]</span>
@@ -17,9 +27,9 @@
 
 <!------------------------------------------------------------>
 <script setup lang="ts">
-import SvgBluesky from '../svg/icons/SvgBluesky.vue';
-import SvgGithub from '../svg/icons/SvgGithub.vue';
-import SvgKofi from '../svg/icons/SvgKofi.vue';
+import SvgBluesky from "../svg/icons/SvgBluesky.vue";
+import SvgGithub from "../svg/icons/SvgGithub.vue";
+import SvgKofi from "../svg/icons/SvgKofi.vue";
 </script>
 
 <!------------------------------------------------------------>

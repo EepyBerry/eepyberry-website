@@ -17,5 +17,7 @@ article.eepy-article {
     margin-bottom: 1rem;
   }
 }
-p { text-wrap: wrap; }
+p {
+  text-wrap: wrap;
+}
 </style>

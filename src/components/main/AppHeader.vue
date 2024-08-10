@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import AppThemeSelect from './AppThemeSelect.vue';
+import AppThemeSelect from "./AppThemeSelect.vue";
 </script>
 
 <template>
@@ -7,7 +7,6 @@ import AppThemeSelect from './AppThemeSelect.vue';
     <AppThemeSelect />
   </header>
 </template>
-
 
 <style lang="scss">
 header {
