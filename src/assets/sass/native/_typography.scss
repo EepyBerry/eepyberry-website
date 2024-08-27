@@ -10,7 +10,8 @@ h1 {
 h2 {
   font-family: Dosis;
   font-size: clamp(2rem, 3.75vw, 2.375rem);
-  font-weight: 700;
+  font-weight: 600;
+  padding-bottom: 0.5rem;
 }
 h3 {
   font-family: Dosis;
@@ -21,17 +22,32 @@ h3 {
 // ------------------------------------------------------------------------------------------------------------------
 // custom tx-* classes
 
-.tx-title {
-  font-size: clamp(2.25rem, 5vw, 5rem);
-}
-.tx-subtitle {
-  margin-top: 0.5rem;
-  font-family: Dosis;
-  font-size: clamp(1.5rem, 3vw, 2.5rem);
-  font-weight: 700;
-  opacity: 0.75;
-  max-width: 95vw;
-  line-height: 1;
+.section-title {
+  width: 100%;
+  font-size: clamp(1.75rem, 5vw, 2.5rem);
+  align-self: center;
+  padding: 2rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-wrap: nowrap;
+
+  hr.title-divider {
+    border: 1px solid var(--eepy-color-accent);
+    width: 100%;
+  }
+  .title-icon {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--eepy-color-accent);
+    padding: 0 1rem;
+  }
+  .title-bracket {
+    font-size: 3rem;
+    font-weight: 200;
+  }
 }
 
 .tx-nowrap {

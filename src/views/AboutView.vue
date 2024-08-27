@@ -1,6 +1,5 @@
 <template>
   <div class="page-container">
-    <TitleSection />
     <div class="main-grid">
       <AboutInfoSection />
       <AboutInterestsSection />
@@ -60,6 +59,7 @@ useHead({
   display: flex;
   flex-direction: column;
   gap: 3rem;
+  margin-top: 3rem;
 
   hr {
     width: 75%;

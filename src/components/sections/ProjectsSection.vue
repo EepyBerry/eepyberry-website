@@ -1,6 +1,14 @@
 <template>
   <section id="section-projects">
-    <h2 class="section-title">dev projects!</h2>
+    <h2 class="section-title" aria-label="Projects">
+      <hr class="title-divider">
+      <span class="title-icon">
+        <span class="title-bracket" aria-hidden="true">[</span>
+        <iconify-icon icon="mingcute:terminal-line" width="1.5em" aria-hidden="true" />
+        <span class="title-bracket" aria-hidden="true">]</span>
+      </span>
+      <hr class="title-divider">
+    </h2>
     <div class="section-content">
       <a
         class="card-link"
@@ -62,12 +70,6 @@ import SvgLagrangeLogo from "../svg/SvgLagrangeLogo.vue";
   align-items: center;
   justify-content: center;
 
-  .section-title {
-    align-self: flex-start;
-    .eepy-divider {
-      flex: 1;
-    }
-  }
   .section-content {
     width: 100%;
     display: grid;
@@ -123,9 +125,6 @@ import SvgLagrangeLogo from "../svg/SvgLagrangeLogo.vue";
 @media screen and (max-width: 767px) {
   #section-projects {
     margin-top: 3rem;
-    .section-title {
-      align-self: center;
-    }
     .section-content {
       gap: 1rem;
     }

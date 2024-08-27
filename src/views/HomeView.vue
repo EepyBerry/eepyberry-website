@@ -2,7 +2,6 @@
   <div class="page-container">
     <TitleSection />
     <ProjectsSection />
-    <hr />
     <ArtSection />
     <dialog
       ref="dialogRef"
