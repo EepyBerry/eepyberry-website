@@ -39,7 +39,6 @@ import SvgKofi from "../svg/icons/SvgKofi.vue";
   align-items: center;
   gap: 1.75rem;
   backdrop-filter: blur(4px);
-  padding: 1rem;
 
   & > .bracket {
     font-family: Dosis;

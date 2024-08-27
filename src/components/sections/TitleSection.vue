@@ -1,6 +1,10 @@
 <template>
   <section id="section-title">
     <div class="title">
+      <span class="deco tl" />
+      <span class="deco tr" />
+      <span class="deco bl" />
+      <span class="deco br" />
       <SvgEepyBerryLogo
         id="avatar"
         :dark="$theme === 'dark'"
@@ -9,7 +13,7 @@
       <hr />
       <p id="intro">developer&nbsp;& illustrator&nbsp;</p>
     </div>
-    <AppLinks />
+    <AppLinks class="title-links" />
     <iconify-icon class="scroll-indicator" icon="mingcute:arrow-down-line" width="3rem" aria-hidden="true" />
   </section>
 </template>
@@ -27,8 +31,6 @@ const $theme = inject("$theme");
 #section-title {
   position: relative;
   height: 100dvh;
-  //background: var(--eepy-color-inverted);
-  //border: 1px dashed var(--eepy-color-accent-half);
   border-radius: 8px;
 
   display: flex;
@@ -36,8 +38,9 @@ const $theme = inject("$theme");
   align-items: center;
   justify-content: center;
 
-
   .title {
+    position: relative;
+    z-index: 1;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -67,10 +70,49 @@ const $theme = inject("$theme");
       border: 1px solid var(--eepy-color-accent);
     }
   }
+  .title-links {
+    margin-top: 2.375rem;
+  }
   .scroll-indicator {
     color: var(--eepy-color-accent);
     position: absolute;
     bottom: 2rem;
+  }
+  .deco {
+    position: absolute;
+    $pos: clamp(-4rem, -5vw, 0rem);
+    $size: clamp(1.5rem, 3.75vw, 2rem);
+    $stroke: clamp(3px, 0.5vw, 4px);
+    $color: var(--eepy-color-accent-half);
+
+    width: $size;
+    height: $size;
+    border-radius: 4px;
+
+    &.tl {
+      top: $pos;
+      left: $pos;
+      border-top: $stroke solid $color;
+      border-left: $stroke solid $color;
+    }
+    &.tr {
+      top: $pos;
+      right: $pos;
+      border-top: $stroke solid $color;
+      border-right: $stroke solid $color;
+    }
+    &.bl {
+      bottom: $pos;
+      left: $pos;
+      border-bottom: $stroke solid $color;
+      border-left: $stroke solid $color;
+    }
+    &.br {
+      bottom: $pos;
+      right: $pos;
+      border-bottom: $stroke solid $color;
+      border-right: $stroke solid $color;
+    }
   }
 }
 
@@ -95,6 +137,24 @@ const $theme = inject("$theme");
         height: 0;
         width: 4rem;
       }
+    }
+    .title-links {
+      margin-top: 1rem;
+    }
+    .deco {
+      display: none;
+    }
+  }
+}
+
+@media screen and (max-height: 567px) {
+  #section-title {
+    height: 110dvh;
+    .title-links {
+      margin-top: 1rem;
+    }
+    .scroll-indicator {
+      display: none;
     }
   }
 }

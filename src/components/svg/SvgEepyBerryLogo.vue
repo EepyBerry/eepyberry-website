@@ -246,7 +246,7 @@ defineProps<{ dark: boolean }>();
 .dark {
   .cls-1 {
     fill: none;
-    stroke: #ffeeef;
+    stroke: var(--eepy-color-text);
     stroke-miterlimit: 10;
     stroke-width: 4px;
   }
@@ -254,7 +254,7 @@ defineProps<{ dark: boolean }>();
     fill: #875d7b;
   }
   .cls-3 {
-    fill: #ffeeef;
+    fill: var(--eepy-color-text);
   }
   .cls-4 {
     fill: #6c8055;
@@ -271,7 +271,7 @@ defineProps<{ dark: boolean }>();
 }
 .light {
   .cls-1 {
-    fill: #0f0b0f;
+    fill: var(--eepy-color-text);
   }
   .cls-2 {
     fill: #aed27a;

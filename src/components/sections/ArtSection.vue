@@ -1,14 +1,15 @@
 <template>
   <section id="section-art">
-    <h2 class="section-title" aria-label="Drawings">
+    <div class="section-title" aria-label="Drawings">
       <hr class="title-divider">
       <span class="title-icon">
         <span class="title-bracket" aria-hidden="true">[</span>
         <iconify-icon icon="mingcute:paint-brush-line" width="1.5em" aria-hidden="true" />
         <span class="title-bracket" aria-hidden="true">]</span>
+        <h2 style="color: var(--eepy-color-text)">&nbsp;drawings</h2>
       </span>
       <hr class="title-divider">
-    </h2>
+    </div>
     <div class="section-content">
       <ul class="gallery">
         <li class="image-wrapper" style="width: 36rem">

@@ -1,14 +1,15 @@
 <template>
   <section id="section-projects">
-    <h2 class="section-title" aria-label="Projects">
+    <div class="section-title" aria-label="Projects">
       <hr class="title-divider">
       <span class="title-icon">
         <span class="title-bracket" aria-hidden="true">[</span>
         <iconify-icon icon="mingcute:terminal-line" width="1.5em" aria-hidden="true" />
         <span class="title-bracket" aria-hidden="true">]</span>
+        <h2 style="color: var(--eepy-color-text);">&nbsp;projects</h2>
       </span>
       <hr class="title-divider">
-    </h2>
+    </div>
     <div class="section-content">
       <a
         class="card-link"
