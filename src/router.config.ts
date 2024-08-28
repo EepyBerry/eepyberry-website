@@ -8,16 +8,25 @@ const router = createRouter({
       path: "/",
       name: "Home",
       component: () => import("./views/HomeView.vue"),
+      meta: { attached: true }
     },
     {
       path: "/about",
       name: "About",
       component: () => import("./views/AboutView.vue"),
+      meta: { attached: true }
     },
     {
       path: "/page-not-found",
       name: "Not Found",
       component: () => import("./views/NotFoundView.vue"),
+      meta: { attached: true }
+    },
+    {
+      path: "/null",
+      name: "null",
+      component: () => import("./views/NullPage.vue"),
+      meta: { attached: false }
     },
     {
       path: "/:pathMatch(.*)*",

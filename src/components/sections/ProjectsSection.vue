@@ -34,14 +34,14 @@
         </EepyCard>
       </a>
       <a
-        class="card-link disabled"
-        href="null"
+        class="card-link"
+        :href="checkConditions() ? '/null' : undefined"
         target="_blank"
         rel="external nofollow noopener"
         aria-label="Under construction"
-        @click.prevent
+        @click="checkConditions() ? undefined : $event.preventDefault()"
       >
-        <EepyCard id="project-redacted">
+        <EepyCard id="project-redacted" :class="{ 'huh': counter >= 10 }">
           <template v-slot:links>
             <iconify-icon mode="svg" icon="noto:construction" height="2rem" />
           </template>
@@ -60,7 +60,24 @@
 
 <!------------------------------------------------------------>
 <script setup lang="ts">
+import type { ThemeHelper } from "@/utils/theme.helper";
 import SvgLagrangeLogo from "../svg/SvgLagrangeLogo.vue";
+import { inject, ref, watch, type Ref } from "vue";
+const themeHelper: ThemeHelper = inject("ThemeHelper") as ThemeHelper;
+const counter: Ref<number> = ref(0)
+
+watch(() => themeHelper.themeRef.value, (v) => {
+  if (v === 'light') return
+  incrementCounter()
+})
+
+function incrementCounter() {
+  counter.value++
+}
+
+function checkConditions() {
+  return (counter.value >= 10 && themeHelper.themeRef.value === 'dark')
+}
 </script>
 
 <!------------------------------------------------------------>
@@ -99,6 +116,7 @@ import SvgLagrangeLogo from "../svg/SvgLagrangeLogo.vue";
     background-position: top;
     background-size: cover;
     color: var(--white);
+    cursor: not-allowed;
     .logo {
       text-align: center;
       text-wrap: nowrap;
@@ -112,6 +130,12 @@ import SvgLagrangeLogo from "../svg/SvgLagrangeLogo.vue";
       text-align: center;
       text-wrap: nowrap;
     }
+  }
+}
+[data-theme='dark'] #section-projects {
+  #project-redacted.huh {
+    cursor: pointer;
+    filter: sepia(1) hue-rotate(320deg) saturate(10) brightness(0.875);
   }
 }
 

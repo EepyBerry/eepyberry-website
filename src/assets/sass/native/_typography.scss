@@ -42,11 +42,15 @@ h3 {
     gap: 0.5rem;
     color: var(--eepy-color-accent);
     padding: 0 1rem;
+    iconify-icon {
+      width: 1.5em;
+      height: 1.5em;
+    }
   }
   .title-bracket {
     font-size: 3rem;
     font-weight: 200;
-    transform: translateY(-0.375rem);
+    transform: translateY(-0.5rem);
   }
   h2 {
     transform: translateY(-0.375rem);
