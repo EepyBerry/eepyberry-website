@@ -49,7 +49,7 @@ const $theme = inject("$theme");
     justify-content: center;
 
     #avatar {
-      width: clamp(200px, 25vw, 300px);
+      width: clamp(200px, 15vw, 300px);
       filter: drop-shadow(0 4px 1px var(--eepy-color-title-shadow));
       animation: bounce 4s ease-in-out infinite;
     }
@@ -58,17 +58,17 @@ const $theme = inject("$theme");
       display: flex;
       flex-direction: column;
       gap: 1rem;
-      width: clamp(200px, 25vw, 300px);
+      width: clamp(200px, 15vw, 300px);
 
       font-family: Dosis;
-      font-size: clamp(2.5rem, 5vw, 3.5rem);
+      font-size: clamp(2.5rem, 3vw, 3.5rem);
       font-weight: 500;
       line-height: 1;
     }
     & > hr {
       margin-left: 1.75rem;
       margin-right: 1.75rem;
-      height: 10rem;
+      height: clamp(7rem, 7.5vw, 10rem);
       border: 1px solid var(--eepy-color-accent);
     }
   }

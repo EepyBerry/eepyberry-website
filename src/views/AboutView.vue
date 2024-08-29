@@ -12,20 +12,6 @@
           aria-label="avatar"
         />
       </div>
-      <!-- 
-        <div class="chip-list">
-          <EepyChip>🍓 Celeste</EepyChip>
-          <EepyChip>😶 Hollow Knight</EepyChip>
-          <EepyChip>💡 OMORI</EepyChip>
-          <EepyChip>🎩 A Hat in Time</EepyChip>
-          <EepyChip>🔥 ULTRAKILL</EepyChip>
-          <EepyChip>💤 Yume Nikki / 2kki</EepyChip>
-          <EepyChip>🍸 VA-11 Hall-A</EepyChip>
-          <EepyChip>🧩 The Talos Principle 1/2</EepyChip>
-          <EepyChip>⚙️ Submachine</EepyChip>
-          <EepyChip>💎 GemCraft Series</EepyChip>
-        </div>
-      -->
     </div>
     <hr />
     <div class="misc-grid">
@@ -64,7 +50,7 @@ useHead({
   margin-top: 3rem;
 
   hr {
-    width: 75%;
+    width: 100%;
     align-self: center;
     border: 1px solid var(--eepy-color-accent-half);
     border-radius: 2px;
