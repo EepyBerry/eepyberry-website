@@ -5,6 +5,10 @@
       <AboutInfoSection />
       <AboutInterestsSection />
       <div class="avatar-wrapper">
+        <span class="deco tl" />
+        <span class="deco tr" />
+        <span class="deco bl" />
+        <span class="deco br" />
         <img
           class="avatar"
           src="/avatar.webp"
@@ -77,6 +81,7 @@ useHead({
       align-self: flex-start;
     }
     .avatar-wrapper {
+      position: relative;
       grid-area: avatar;
       align-self: flex-end;
       width: 100%;

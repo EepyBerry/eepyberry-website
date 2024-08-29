@@ -17,13 +17,13 @@
           <iconify-icon mode="svg" icon="noto:books" height="2.5rem" />
           <span class="bite-mark"></span>
         </div>
-        <span>Full-Stack Software Engineer!</span>
+        <span>Software Engineer!</span>
       </li>
       <li>
         <div>
           <iconify-icon mode="svg" icon="noto:artist-palette" height="2.5rem" />
         </div>
-        <span>Does pixel, digital & vector&nbsp;art!</span>
+        <span>Does pixel, digital & vector art!</span>
       </li>
       <li>
         <div>
