@@ -1,5 +1,6 @@
 <template>
   <div class="page-container">
+    <TitleSectionSmall />
     <div class="main-grid">
       <AboutInfoSection />
       <AboutInterestsSection />
@@ -41,6 +42,7 @@ import AboutInterestsSection from "@/components/sections/AboutInterestsSection.v
 import AboutTechsSection from "@/components/sections/AboutTechsSection.vue";
 import AboutToolsSection from "@/components/sections/AboutToolsSection.vue";
 import TitleSection from "@/components/sections/TitleSection.vue";
+import TitleSectionSmall from "@/components/sections/TitleSectionSmall.vue";
 import { useHead } from "@unhead/vue";
 useHead({
   meta: [

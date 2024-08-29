@@ -116,7 +116,6 @@ function checkConditions() {
       width: 16rem;
       inset: 0;
       margin: auto;
-      transform: translateY(0.25rem);
     }
   }
 

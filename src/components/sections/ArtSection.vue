@@ -12,23 +12,32 @@
     <div class="section-content">
       <ul class="gallery">
         <li class="image-wrapper" style="width: 36rem">
-          <a href="#/artwork/2024-08-03_1000-LC.jpg"
-            ><img src="/artwork/2024-08-03_1000-LC.jpg" aria-label="1000-LC"
+          <a href="#/artwork/2024-08-03_1000-LC_Carrier.jpg"
+            ><img src="/artwork/2024-08-03_1000-LC_Carrier.jpg" aria-label="1000-LC" alt="1000-LC Carrier"
           /></a>
+          <div class="drawing-title">
+            <span>"1000-LC 'CARRIER'"</span>
+          </div>
         </li>
         <li class="image-wrapper" style="width: 20rem">
           <a href="#/artwork/2023-01-09_Heart_of_the_Mountain.jpg"
             ><img
-              src="/artwork/2023-01-09_Heart_of_the_Mountain.jpg" aria-label="Heart of the Mountain"
+              src="/artwork/2023-01-09_Heart_of_the_Mountain.jpg" aria-label="Heart of the Mountain" alt="Heart of the Mountain"
               style="scale: 120%"
           /></a>
+          <div class="drawing-title">
+            <span>"Heart of the Mountain"</span>
+          </div>
         </li>
         <li class="image-wrapper" style="width: 20rem">
           <a href="#/artwork/2022-12-11_Niko_Holding_the_Sun.jpg"
             ><img
-              src="/artwork/2022-12-11_Niko_Holding_the_Sun.jpg" aria-label="Niko Holding the Sun"
+              src="/artwork/2022-12-11_Niko_Holding_the_Sun.jpg" aria-label="Niko Holding the Sun" alt="Niko Holding the Sun"
               style="scale: 120%"
           /></a>
+          <div class="drawing-title">
+            <span>"Niko Holding the Sun"</span>
+          </div>
         </li>
         <!-- placeholders -->
         <li class="image-wrapper placeholder" style="width: 20rem">
@@ -79,6 +88,7 @@ import IconEepyBerry from "../svg/icons/IconEepyBerry.vue";
     flex-grow: 1;
     flex-shrink: 1;
 
+    position: relative;
     border-radius: 8px;
     max-width: 100%;
     width: 100%;
@@ -104,6 +114,21 @@ import IconEepyBerry from "../svg/icons/IconEepyBerry.vue";
       object-position: center;
       object-fit: cover;
       width: 100%;
+    }
+    .drawing-title {
+      z-index: 1;
+      position: absolute;
+      inset: auto 0 0;
+      color: white;
+      text-align: center;
+
+      span {
+        background: black;
+        padding: 0.25rem 0.5rem;
+        border: 2px solid #fffafa;
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
+      }
     }
 
     a {
