@@ -1,12 +1,11 @@
 <template>
   <section id="section-projects">
-    <div class="section-title" aria-label="Projects">
+    <div class="section-title" role="heading" aria-label="Projects">
       <hr class="title-divider">
       <span class="title-icon">
         <span class="title-bracket" aria-hidden="true">[</span>
         <iconify-icon icon="mingcute:terminal-line" width="1.5em" aria-hidden="true" />
         <span class="title-bracket" aria-hidden="true">]</span>
-        <h2 style="color: var(--eepy-color-text);">&nbsp;projects</h2>
       </span>
       <hr class="title-divider">
     </div>
@@ -41,7 +40,7 @@
         aria-label="Under construction"
         @click="checkConditions() ? undefined : $event.preventDefault()"
       >
-        <EepyCard id="project-redacted" :class="{ 'huh': counter >= 10 }">
+        <EepyCard id="project-redacted" :class="{ 'huh': checkConditions() }">
           <template v-slot:links>
             <iconify-icon mode="svg" icon="noto:construction" height="2rem" />
           </template>
@@ -76,22 +75,32 @@ function incrementCounter() {
 }
 
 function checkConditions() {
-  return (counter.value >= 10 && themeHelper.themeRef.value === 'dark')
+  return (counter.value >= 3 && themeHelper.themeRef.value === 'dark')
 }
 </script>
 
 <!------------------------------------------------------------>
 <style lang="scss">
 #section-projects {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 
   .section-content {
+    padding: 2rem 0;
     width: 100%;
+
+    background-color: var(--eepy-color-background);
+    background-image: url('/svg/hero_circuits.svg');
+    background-repeat: repeat;
+    background-position: 50%;
+    background-size: 16rem;
+    box-shadow: inset 0 0 4rem 2rem var(--eepy-color-background);
+
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(22rem, auto));
+    grid-template-columns: repeat(auto-fill, minmax(24rem, auto));
     gap: 2rem;
     & .eepy-card {
       width: 100%;
@@ -117,6 +126,11 @@ function checkConditions() {
     background-size: cover;
     color: var(--white);
     cursor: not-allowed;
+
+    &.huh {
+      cursor: pointer;
+      filter: sepia(1) hue-rotate(320deg) saturate(10) brightness(0.875);
+    }
     .logo {
       text-align: center;
       text-wrap: nowrap;
@@ -133,9 +147,8 @@ function checkConditions() {
   }
 }
 [data-theme='dark'] #section-projects {
-  #project-redacted.huh {
-    cursor: pointer;
-    filter: sepia(1) hue-rotate(320deg) saturate(10) brightness(0.875);
+  .section-content {
+    background-image: url('/svg/hero_circuits_dark.svg');
   }
 }
 

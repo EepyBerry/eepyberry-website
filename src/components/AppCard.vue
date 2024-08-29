@@ -32,7 +32,9 @@ import IconEepyBerry from "@/components/svg/icons/IconEepyBerry.vue";
   overflow: hidden;
 
   &-header {
+    position: relative;
     width: 100%;
+    height: 2rem;
     padding: 0.75rem 0.75rem 0;
     font-family: Dosis;
     font-size: 1.75rem;
@@ -54,6 +56,7 @@ import IconEepyBerry from "@/components/svg/icons/IconEepyBerry.vue";
   }
   &-footer {
     z-index: 1;
+    height: 2rem;
     width: 100%;
     padding: 0 0.75rem 0.5rem;
   }

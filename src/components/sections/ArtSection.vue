@@ -1,12 +1,11 @@
 <template>
   <section id="section-art">
-    <div class="section-title" aria-label="Drawings">
+    <div class="section-title" role="heading" aria-label="Drawings">
       <hr class="title-divider">
       <span class="title-icon">
         <span class="title-bracket" aria-hidden="true">[</span>
         <iconify-icon icon="mingcute:paint-brush-line" width="1.5em" aria-hidden="true" />
         <span class="title-bracket" aria-hidden="true">]</span>
-        <h2 style="color: var(--eepy-color-text)">&nbsp;drawings</h2>
       </span>
       <hr class="title-divider">
     </div>
@@ -31,11 +30,6 @@
               style="scale: 120%"
           /></a>
         </li>
-        <li class="image-wrapper" style="width: 20rem">
-          <a href="#/artwork/2022-02-12_Strange_Reflection.jpg"
-            ><img src="/artwork/2022-02-12_Strange_Reflection.jpg" aria-label="Strange Reflection"
-          /></a>
-        </li>
         <!-- placeholders -->
         <li class="image-wrapper placeholder" style="width: 20rem">
           <IconEepyBerry class="placeholder-icon" />
@@ -44,9 +38,6 @@
           <IconEepyBerry class="placeholder-icon" />
         </li>
         <li class="image-wrapper placeholder" style="width: 36rem">
-          <IconEepyBerry class="placeholder-icon" />
-        </li>
-        <li class="image-wrapper placeholder" style="width: 20rem">
           <IconEepyBerry class="placeholder-icon" />
         </li>
       </ul>
@@ -70,6 +61,7 @@ import IconEepyBerry from "../svg/icons/IconEepyBerry.vue";
     align-self: center;
   }
   .section-content {
+    padding-top: 2rem;
     display: flex;
     flex-direction: column;
     max-width: 100%;

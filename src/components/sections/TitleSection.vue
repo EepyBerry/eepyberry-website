@@ -41,6 +41,8 @@ const $theme = inject("$theme");
   .title {
     position: relative;
     z-index: 1;
+    padding: clamp(0rem, 5vw, 4rem);
+
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -70,17 +72,20 @@ const $theme = inject("$theme");
       border: 1px solid var(--eepy-color-accent);
     }
   }
+
   .title-links {
-    margin-top: 2.375rem;
+    margin-top: 0;
+    transform: translateY(-1.5rem);
   }
+
   .scroll-indicator {
     color: var(--eepy-color-accent);
     position: absolute;
     bottom: 2rem;
   }
+
   .deco {
     position: absolute;
-    $pos: clamp(-4rem, -5vw, 0rem);
     $size: clamp(1.5rem, 3.75vw, 2rem);
     $stroke: clamp(3px, 0.5vw, 4px);
     $color: var(--eepy-color-accent-half);
@@ -90,26 +95,22 @@ const $theme = inject("$theme");
     border-radius: 4px;
 
     &.tl {
-      top: $pos;
-      left: $pos;
+      inset: 0 auto auto 0;
       border-top: $stroke solid $color;
       border-left: $stroke solid $color;
     }
     &.tr {
-      top: $pos;
-      right: $pos;
+      inset: 0 0 auto auto;
       border-top: $stroke solid $color;
       border-right: $stroke solid $color;
     }
     &.bl {
-      bottom: $pos;
-      left: $pos;
+      inset: auto auto 0 0;
       border-bottom: $stroke solid $color;
       border-left: $stroke solid $color;
     }
     &.br {
-      bottom: $pos;
-      right: $pos;
+      inset: auto 0 0 auto;
       border-bottom: $stroke solid $color;
       border-right: $stroke solid $color;
     }
@@ -138,9 +139,6 @@ const $theme = inject("$theme");
         width: 4rem;
       }
     }
-    .title-links {
-      margin-top: 1rem;
-    }
     .deco {
       display: none;
     }
@@ -150,9 +148,6 @@ const $theme = inject("$theme");
 @media screen and (max-height: 567px) {
   #section-title {
     height: 110dvh;
-    .title-links {
-      margin-top: 1rem;
-    }
     .scroll-indicator {
       display: none;
     }

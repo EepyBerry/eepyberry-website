@@ -116,7 +116,7 @@ function resetHash() {
 .page-container {
   display: flex;
   flex-direction: column;
-  gap: 3rem;
+  gap: 6rem;
 
   hr {
     width: 75%;
