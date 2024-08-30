@@ -59,7 +59,7 @@ nav {
 }
 .nav-link[disabled] {
   cursor: not-allowed;
-  color: var(--eepy-color-disabled);
+  color: var(--eepy-theme-disabled);
   transition: none;
 }
 </style>

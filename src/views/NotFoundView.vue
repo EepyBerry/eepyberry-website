@@ -34,6 +34,6 @@ useHead({
 }
 #not-found-svg {
   width: clamp(260px, 40vw, 360px);
-  fill: var(--eepy-color-text);
+  fill: var(--eepy-theme-text);
 }
 </style>

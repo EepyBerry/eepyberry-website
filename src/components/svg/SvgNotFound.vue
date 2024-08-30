@@ -59,6 +59,6 @@
 <style scoped lang="scss">
 #not-found-svg {
   width: min(80vw, 400px);
-  fill: var(--eepy-color-text);
+  fill: var(--eepy-theme-text);
 }
 </style>

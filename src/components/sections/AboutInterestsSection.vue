@@ -39,8 +39,8 @@
       max-width: 100%;
       height: 5rem;
       padding: 1rem;
-      background: var(--eepy-color-monochrome);
-      border: 1px solid var(--eepy-color-accent-half);
+      background: var(--eepy-theme-monochrome);
+      border: 1px solid var(--eepy-theme-accent-half);
       border-radius: 8px;
 
       display: flex;

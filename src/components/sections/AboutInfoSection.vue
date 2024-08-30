@@ -99,8 +99,8 @@ const selectedContent: Ref<ListInfo[]> = ref([
         position: relative;
         width: 100%;
         height: 5rem;
-        background: var(--eepy-color-monochrome);
-        border: 1px solid var(--eepy-color-accent-half);
+        background: var(--eepy-theme-monochrome);
+        border: 1px solid var(--eepy-theme-accent-half);
         border-radius: 8px;
 
         display: flex;
@@ -121,8 +121,8 @@ const selectedContent: Ref<ListInfo[]> = ref([
     border-radius: 8px;
     min-height: 8rem;
     padding: 1rem;
-    background: var(--eepy-color-monochrome);
-    border: 2px solid var(--eepy-color-accent-half);
+    background: var(--eepy-theme-monochrome);
+    border: 2px solid var(--eepy-theme-accent-half);
     
     display: flex;
     flex-direction: column;
@@ -132,7 +132,7 @@ const selectedContent: Ref<ListInfo[]> = ref([
 
     &.empty {
       background: transparent;
-      border: 2px dotted var(--eepy-color-accent-half);
+      border: 2px dotted var(--eepy-theme-accent-half);
     }
 
     .no-selection {

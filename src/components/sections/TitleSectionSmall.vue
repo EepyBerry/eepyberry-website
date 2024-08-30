@@ -31,7 +31,7 @@ const $theme = inject("$theme");
 
   #avatar {
     width: clamp(120px, 25vw, 160px);
-    filter: drop-shadow(0 4px 1px var(--eepy-color-title-shadow));
+    filter: drop-shadow(0 4px 1px var(--eepy-theme-title-shadow));
     animation: bounce 4s ease-in-out infinite;
   }
   #intro {
@@ -50,7 +50,7 @@ const $theme = inject("$theme");
     margin-left: 1rem;
     margin-right: 1rem;
     height: clamp(4rem, 15vw, 6rem);
-    border: 1px solid var(--eepy-color-accent);
+    border: 1px solid var(--eepy-theme-accent);
   }
 }
 

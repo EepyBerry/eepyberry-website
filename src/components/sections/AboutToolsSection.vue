@@ -114,13 +114,13 @@
 
       & > span {
         padding: 1rem;
-        color: var(--eepy-color-monochrome);
+        color: var(--eepy-color-white);
       }
       & > div {
         padding: 0.75rem;
         width: 3rem;
         height: 3rem;
-        color: var(--eepy-color-monochrome);
+        color: var(--eepy-color-white);
       }
       & > .star {
         z-index: 1;
@@ -133,21 +133,21 @@
 
       // Tool overrides
       &.illustrator {
-        background-color: var(--eepy-color-illustrator);
+        background-color: var(--eepy-theme-illustrator);
       }
       &.krita {
-        background: var(--eepy-color-krita);
+        background: var(--eepy-theme-krita);
       }
       &.blender {
-        background: var(--eepy-color-blender);
+        background: var(--eepy-theme-blender);
       }
       &.godot {
-        background: var(--eepy-color-godot);
+        background: var(--eepy-theme-godot);
       }
       &.idea,
       &.vscode,
       &.aseprite {
-        background-color: var(--eepy-color-darktech);
+        background-color: var(--eepy-theme-darktech);
       }
     }
   }

@@ -2,8 +2,8 @@
 
 @use "sass:math";
 
-$primaryColor: var(--eepy-color-text);
-$secondaryColor: var(--eepy-color-card);
+$primaryColor: var(--eepy-theme-text);
+$secondaryColor: var(--eepy-theme-card);
 $steps: 20;
 
 .tx-glitch {

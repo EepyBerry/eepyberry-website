@@ -124,13 +124,13 @@
 
       & > span {
         padding: 1rem;
-        color: var(--eepy-color-monochrome);
+        color: var(--eepy-color-white);
       }
       & > div {
         padding: 0.75rem;
         width: 3rem;
         height: 3rem;
-        color: var(--eepy-color-monochrome);
+        color: var(--eepy-color-white);
       }
       & > .star {
         z-index: 1;
@@ -143,26 +143,26 @@
 
       // Tech overrides
       &.spring {
-        background: var(--eepy-color-spring);
+        background: var(--eepy-theme-spring);
       }
       &.vuejs {
-        background: var(--eepy-color-vuejs);
+        background: var(--eepy-theme-vuejs);
       }
       &.angular {
-        background: var(--eepy-color-angular);
+        background: var(--eepy-theme-angular);
       }
       &.docker {
-        background-color: var(--eepy-color-docker);
+        background-color: var(--eepy-theme-docker);
       }
       &.kubernetes {
-        background-color: var(--eepy-color-kubernetes);
+        background-color: var(--eepy-theme-kubernetes);
       }
       &.git {
-        background-color: var(--eepy-color-git);
+        background-color: var(--eepy-theme-git);
       }
       &.java,
       &.aws {
-        background-color: var(--eepy-color-darktech);
+        background-color: var(--eepy-theme-darktech);
       }
     }
   }

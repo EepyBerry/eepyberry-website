@@ -98,13 +98,13 @@ import IconEepyBerry from "../svg/icons/IconEepyBerry.vue";
     display: flex;
 
     &.placeholder {
-      border: 2px dashed var(--eepy-color-accent);
+      border: 2px dashed var(--eepy-theme-accent);
       align-items: center;
       justify-content: center;
       opacity: 0.5;
 
       svg {
-        color: var(--eepy-color-accent);
+        color: var(--eepy-theme-accent);
         object-position: center;
         height: 3.5rem;
       }

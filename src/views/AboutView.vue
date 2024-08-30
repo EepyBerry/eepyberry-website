@@ -55,7 +55,7 @@ useHead({
   hr {
     width: 100%;
     align-self: center;
-    border: 1px solid var(--eepy-color-accent-half);
+    border: 1px solid var(--eepy-theme-accent-half);
     border-radius: 2px;
     margin-top: 1.5rem;
   }

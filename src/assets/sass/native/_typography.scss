@@ -32,14 +32,14 @@ h3 {
   text-wrap: nowrap;
 
   hr.title-divider {
-    border: 1px solid var(--eepy-color-accent);
+    border: 1px solid var(--eepy-theme-accent);
     width: 100%;
   }
   .title-icon {
     display: flex;
     align-items: center;
     gap: 0.5rem;
-    color: var(--eepy-color-accent);
+    color: var(--eepy-theme-accent);
     padding: 0 1rem;
     iconify-icon {
       width: 2.5rem;

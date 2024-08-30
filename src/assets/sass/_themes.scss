@@ -1,42 +1,44 @@
 :root {
-  --eepy-color-monochrome: #fff;
+  --eepy-color-white: #fcfcfc;
 
-  --eepy-color-primary: #221a1a;
-  --eepy-color-accent: #be99a0;
-  --eepy-color-accent-half: #be99a080;
-  --eepy-color-background: #fffafa;
+  --eepy-theme-monochrome: #fff;
 
-  --eepy-color-title-shadow: var(--eepy-color-accent-half);
-  --eepy-color-text: #221a1a;
-  --eepy-color-lagrange: #354852;
+  --eepy-theme-primary: #221a1a;
+  --eepy-theme-accent: #be99a0;
+  --eepy-theme-accent-half: #be99a080;
+  --eepy-theme-background: #fffafa;
 
-  --eepy-color-card: #fff;
-  --eepy-color-card-shadow: #dabcbc;
-  --eepy-color-card-shadow-light: #f3d1d1;
-  --eepy-color-cardlet: #915375;
-  --eepy-color-panel: #1f161b;
+  --eepy-theme-title-shadow: var(--eepy-theme-accent-half);
+  --eepy-theme-text: #221a1a;
+  --eepy-theme-lagrange: #354852;
 
-  --eepy-color-disabled: #a3a3a3;
-  --eepy-color-alert: #da3923;
+  --eepy-theme-card: #fff;
+  --eepy-theme-card-shadow: #dabcbc;
+  --eepy-theme-card-shadow-light: #f3d1d1;
+  --eepy-theme-cardlet: #915375;
+  --eepy-theme-panel: #1f161b;
+
+  --eepy-theme-disabled: #a3a3a3;
+  --eepy-theme-alert: #da3923;
 }
 
 :root[data-theme="dark"] {
-  --eepy-color-monochrome: #000;
+  --eepy-theme-monochrome: #000;
 
-  --eepy-color-primary: #fcfcfc;
-  --eepy-color-accent: #7d6e8f;
-  --eepy-color-accent-half: #2e2738;
-  --eepy-color-background: #050407;
+  --eepy-theme-primary: #fcfcfc;
+  --eepy-theme-accent: #7d6e8f;
+  --eepy-theme-accent-half: #2e2738;
+  --eepy-theme-background: #050407;
 
-  --eepy-color-title-shadow: #fcfcfc;
-  --eepy-color-text: #fcfcfc;
+  --eepy-theme-title-shadow: #fcfcfc;
+  --eepy-theme-text: #fcfcfc;
 
-  --eepy-color-card: #1f1a27;
-  --eepy-color-card-shadow: #373544;
-  --eepy-color-card-shadow-light: #514e5f;
-  --eepy-color-cardlet: #243a3f;
-  --eepy-color-panel: #20182e;
+  --eepy-theme-card: #1f1a27;
+  --eepy-theme-card-shadow: #373544;
+  --eepy-theme-card-shadow-light: #514e5f;
+  --eepy-theme-cardlet: #243a3f;
+  --eepy-theme-panel: #20182e;
 
-  --eepy-color-disabled: #535068;
-  --eepy-color-alert: #ff745c;
+  --eepy-theme-disabled: #535068;
+  --eepy-theme-alert: #ff745c;
 }

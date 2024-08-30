@@ -246,15 +246,15 @@ defineProps<{ dark: boolean }>();
 .dark {
   .cls-1 {
     fill: none;
-    stroke: var(--eepy-color-text);
+    stroke: var(--eepy-theme-text);
     stroke-width: 4px;
   }
   .cls-2 {
     fill: #a95190;
   }
   .cls-3 {
-    fill: var(--eepy-color-text);
-    stroke: var(--eepy-color-text);
+    fill: var(--eepy-theme-text);
+    stroke: var(--eepy-theme-text);
     stroke-width: 1px;
   }
   .cls-4 {
@@ -266,7 +266,7 @@ defineProps<{ dark: boolean }>();
 }
 .light {
   .cls-1 {
-    fill: var(--eepy-color-text);
+    fill: var(--eepy-theme-text);
   }
   .cls-2 {
     fill: #aed27a;

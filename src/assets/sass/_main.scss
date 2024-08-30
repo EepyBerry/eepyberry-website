@@ -6,7 +6,7 @@
 }
 
 html {
-  background: var(--eepy-color-background);
+  background: var(--eepy-theme-background);
   scroll-behavior: smooth;
 
   display: flex;
@@ -16,10 +16,10 @@ html {
 
 body {
   flex: 1;
-  //border: var(--app-padding-border) solid var(--eepy-color-accent-half);
+  //border: var(--app-padding-border) solid var(--eepy-theme-accent-half);
 
   border-radius: 2px;
-  color: var(--eepy-color-text);
+  color: var(--eepy-theme-text);
 
   font-family:
     Inter,

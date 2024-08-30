@@ -22,7 +22,7 @@
             <iconify-icon
               mode="svg"
               icon="mingcute:external-link-line"
-              style="color: var(--eepy-color-monochrome)"
+              style="color: var(--eepy-color-white)"
               height="2rem"
             />
           </template>
@@ -92,12 +92,12 @@ function checkConditions() {
     padding: 2rem 0;
     width: 100%;
 
-    background-color: var(--eepy-color-background);
+    background-color: var(--eepy-theme-background);
     background-image: url('/svg/hero_circuits.svg');
     background-repeat: repeat;
     background-position: 50%;
     background-size: 16rem;
-    box-shadow: inset 0 0 4rem 2rem var(--eepy-color-background);
+    box-shadow: inset 0 0 4rem 2rem var(--eepy-theme-background);
 
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(24rem, auto));
@@ -110,7 +110,7 @@ function checkConditions() {
 
   #project-lagrange {
     background-image: url("/projects/project-lagrange.webp");
-    color: var(--eepy-color-monochrome);
+    color: var(--eepy-color-white);
     .logo {
       position: absolute;
       width: 16rem;
@@ -123,7 +123,7 @@ function checkConditions() {
     background-image: url("/projects/project-redacted.webp");
     background-position: top;
     background-size: cover;
-    color: var(--eepy-color-monochrome);
+    color: var(--eepy-color-white);
     cursor: not-allowed;
 
     &.huh {
@@ -138,7 +138,7 @@ function checkConditions() {
     .tx-glitch,
     .tx-glitch::before,
     .tx-glitch::after {
-      color: var(--eepy-color-monochrome);
+      color: var(--eepy-color-white);
       background: transparent;
       text-align: center;
       text-wrap: nowrap;

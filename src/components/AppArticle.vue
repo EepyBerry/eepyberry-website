@@ -10,7 +10,7 @@ article.eepy-article {
   border-radius: 8px;
   padding: 1.5rem 0;
   backdrop-filter: blur(4px);
-  //background-color: var(--eepy-color-card);
+  //background-color: var(--eepy-theme-card);
 
   .eepy-article-title {
     line-height: 1;

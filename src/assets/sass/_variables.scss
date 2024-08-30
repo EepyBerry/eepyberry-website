@@ -3,28 +3,28 @@
   --app-padding-border: 0.5rem;
 
   // about
-  --eepy-color-vuejs: #34495e;
-  --eepy-color-angular: linear-gradient(
+  --eepy-theme-vuejs: #34495e;
+  --eepy-theme-angular: linear-gradient(
     90deg,
     hsl(356, 83%, 43%) 0%,
     hsl(308, 75%, 40%) 50%,
     hsl(286, 82%, 38%) 100%
   );
-  --eepy-color-java: #f4f2ed;
-  --eepy-color-spring: #469420;
-  --eepy-color-docker: #0e7ab9;
-  --eepy-color-kubernetes: #326ce5;
-  --eepy-color-git: #c7402b;
-  --eepy-color-godot: #313b60;
-  --eepy-color-illustrator: #300;
-  --eepy-color-krita: linear-gradient(
+  --eepy-theme-java: #f4f2ed;
+  --eepy-theme-spring: #469420;
+  --eepy-theme-docker: #0e7ab9;
+  --eepy-theme-kubernetes: #326ce5;
+  --eepy-theme-git: #c7402b;
+  --eepy-theme-godot: #313b60;
+  --eepy-theme-illustrator: #300;
+  --eepy-theme-krita: linear-gradient(
     90deg,
     hsl(239, 36%, 51%) 0%,
     rgb(93, 57, 134) 100%
   );
-  --eepy-color-blender: #285684;
-  --eepy-color-darktech: #242938;
-  --eepy-color-interests: #6b4566;
+  --eepy-theme-blender: #285684;
+  --eepy-theme-darktech: #242938;
+  --eepy-theme-interests: #6b4566;
 }
 
 /* @media screen and (max-width: 1023px) {

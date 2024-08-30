@@ -6,7 +6,7 @@ a {
 a:not(.button-link, .card-link)[disabled],
 a:not(.button-link, .card-link)[disabled]:visited {
   cursor: not-allowed;
-  color: var(--eepy-color-disabled);
+  color: var(--eepy-theme-disabled);
 }
 
 // Card-link
@@ -20,12 +20,12 @@ a.card-link:not([disabled]) {
 // Other links
 a:not(.button-link, .card-link),
 a:not(.button-link, .card-link):visited {
-  color: var(--eepy-color-text);
+  color: var(--eepy-theme-text);
 }
 a.button-link,
 a.card-link {
   text-decoration: none;
-  color: var(--eepy-color-text);
+  color: var(--eepy-theme-text);
 }
 
 // Theme-based selectors

@@ -50,7 +50,7 @@ const $theme = inject("$theme");
 
     #avatar {
       width: clamp(200px, 15vw, 300px);
-      filter: drop-shadow(0 4px 1px var(--eepy-color-title-shadow));
+      filter: drop-shadow(0 4px 1px var(--eepy-theme-title-shadow));
       animation: bounce 4s ease-in-out infinite;
     }
     #intro {
@@ -69,7 +69,7 @@ const $theme = inject("$theme");
       margin-left: 1.75rem;
       margin-right: 1.75rem;
       height: clamp(7rem, 7.5vw, 10rem);
-      border: 1px solid var(--eepy-color-accent);
+      border: 1px solid var(--eepy-theme-accent);
     }
   }
 
@@ -79,7 +79,7 @@ const $theme = inject("$theme");
   }
 
   .scroll-indicator {
-    color: var(--eepy-color-accent);
+    color: var(--eepy-theme-accent);
     position: absolute;
     bottom: 2rem;
   }

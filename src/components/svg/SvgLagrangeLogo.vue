@@ -145,16 +145,16 @@
 
 #subtitle > .cls-2 {
   stroke-width: 1px;
-  stroke: var(--eepy-color-monochrome);
+  stroke: var(--eepy-color-white);
 }
 
 .cls-2 {
-  fill: var(--eepy-color-monochrome);
+  fill: var(--eepy-color-white);
 }
 
 .cls-1,
 .cls-3 {
-  fill: var(--eepy-color-lagrange);
+  fill: var(--eepy-theme-lagrange);
 }
 
 .cls-3,
@@ -164,7 +164,7 @@
 
 .cls-4 {
   fill: none;
-  stroke: var(--eepy-color-lagrange);
+  stroke: var(--eepy-theme-lagrange);
   stroke-miterlimit: 10;
   stroke-width: 2px;
 }
