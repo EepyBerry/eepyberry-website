@@ -119,10 +119,11 @@ useHead({
       margin-top: 1.5rem;
     }
     .main-grid {
-      grid-template-columns: min-content 1fr;
+      grid-template-columns: 1fr 2fr;
       grid-template-areas:
         "avatar info"
-        "avatar interests";
+        "interests interests";
+      gap: 2rem;
       #section-about-info {
         align-self: center;
       }

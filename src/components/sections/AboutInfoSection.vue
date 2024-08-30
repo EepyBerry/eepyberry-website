@@ -62,9 +62,14 @@ type ListInfo = { title: string, content: string }
 
 const selectedIdx: Ref<number> = ref(-1)
 const selectedContent: Ref<ListInfo[]> = ref([
-  { title: 'Transfem & Proud! 🌈', content: 'Seeing myself in the mirror always felt... wrong, at least until I finally discovered who I truly am.' },
-  { title: 'Software Engineer!', content: 'Computers are pretty awesome! I started with C, slowly becoming a full-stack developer!' },
-  { title: 'Pastime Illustrator!', content: 'Drawing has been a hobby of mine since my chilhood days. I am now able to do pixel art, digital painting & vector graphics!' }
+  { title: 'transfem & proud! 🌈', content: 'seeing myself in the mirror always felt... wrong, at least until i finally discovered who i truly am!' },
+  { title: 'software engineer!', content: 'computers are pretty awesome! i started with Java, slowly becoming a full-stack developer!' },
+  { title: 'pastime illustrator!', content: 'drawing has been a hobby of mine since my chilhood. i am now able to do pixel art, digital painting & vector graphics!' },
+  { title: 'very smol :3', content: 'no need to explain, i\'m smol :>' },
+  { title: 'curious!', content: 'many things fascinate me, even if i don\'t entirely understand them!' },
+  { title: 'eepy...', content: 'zzz...' },
+  { title: 'favourite fruit!', content: 'strawberries! why? tasty! :>' },
+  { title: 'favourite desserts!', content: 'waffles & crepes! especially with maple syrup :3' }
 ])
 
 </script>
@@ -102,9 +107,6 @@ const selectedContent: Ref<ListInfo[]> = ref([
         flex-direction: row;
         align-items: center;
         justify-content: center;
-      }
-      button:hover {
-
       }
 
       iconify-icon {
