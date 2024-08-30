@@ -1,5 +1,5 @@
 :root {
-  --app-padding-main: 5rem;
+  --app-padding-main: 8rem;
   --app-padding-border: 0.5rem;
 
   // about
@@ -27,11 +27,11 @@
   --eepy-theme-interests: #6b4566;
 }
 
-/* @media screen and (max-width: 1023px) {
+@media screen and (max-width: 1199px) {
   :root {
-    --app-padding-main: 2rem;
+    --app-padding-main: 5rem;
   }
-} */
+}
 @media screen and (max-width: 767px) {
   :root {
     --app-padding-main: 3rem;

@@ -1,6 +1,15 @@
 <template>
   <div class="page-container">
     <TitleSectionSmall />
+    <div class="section-title" role="heading" aria-label="Drawings">
+      <hr class="title-divider">
+      <span class="title-icon">
+        <span class="title-bracket" aria-hidden="true">[</span>
+        <iconify-icon icon="mingcute:happy-line" width="2.5rem" aria-hidden="true" />
+        <span class="title-bracket" aria-hidden="true">]</span>
+      </span>
+      <hr class="title-divider">
+    </div>
     <div class="main-grid">
       <AboutInfoSection />
       <AboutInterestsSection />
@@ -63,9 +72,9 @@ useHead({
   .main-grid {
     display: grid;
     grid-template-areas:
-      "info avatar interests"
-      "info avatar interests";
-    grid-template-columns: 1fr 1fr 1fr;
+      "avatar info"
+      "interests interests";
+    grid-template-columns: 1fr 2fr;
     align-items: center;
     margin: 0 auto;
     gap: 1.5rem 4rem;
