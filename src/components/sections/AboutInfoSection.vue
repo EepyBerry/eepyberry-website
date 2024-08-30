@@ -1,165 +1,141 @@
 <template>
   <section id="section-about-info">
-    <h2>byte-sized info!</h2>
-    <ul class="info-list">
-      <li>
-        <div>
-          <iconify-icon
-            mode="svg"
-            icon="noto:transgender-flag"
-            height="2.5rem"
-          />
-        </div>
-        <span>Transfem and proud!</span>
-      </li>
-      <li>
-        <div>
-          <iconify-icon mode="svg" icon="noto:books" height="2.5rem" />
-          <span class="bite-mark"></span>
-        </div>
-        <span>Software Engineer!</span>
-      </li>
-      <li>
-        <div>
-          <iconify-icon mode="svg" icon="noto:artist-palette" height="2.5rem" />
-        </div>
-        <span>Does pixel, digital & vector art!</span>
-      </li>
-      <li>
-        <div>
-          <iconify-icon
-            mode="svg"
-            icon="noto:woman-raising-hand"
-            height="2.5rem"
-          />
-        </div>
-        <span>Very, very smol :></span>
-      </li>
-      <li>
-        <div>
-          <iconify-icon
-            mode="svg"
-            icon="noto:exclamation-question-mark"
-            height="2.5rem"
-          />
-          <span class="bite-mark-alt"></span>
-        </div>
-        <span>Often curious :3</span>
-      </li>
-      <li>
-        <div>
-          <iconify-icon mode="svg" icon="noto:zzz" height="2.5rem" />
-        </div>
-        <span>Sleepy half the time...</span>
-      </li>
-      <li>
-        <div>
-          <iconify-icon mode="svg" icon="noto:strawberry" height="2.5rem" />
-          <span class="bite-mark-alt"></span>
-        </div>
-        <span>Fav. fruit: strawberries!</span>
-      </li>
-      <li>
-        <div>
-          <iconify-icon mode="svg" icon="noto:waffle" height="2.5rem" />
-          <span class="bite-mark"></span>
-        </div>
-        <span>Fav. dessert: waffles!</span>
-      </li>
-    </ul>
+    <div>
+      <h2>byte-sized info!</h2>
+      <ul class="info-list">
+        <li>
+          <button class="info-button" @click="selectedIdx = 0">
+            <iconify-icon mode="svg" icon="noto:transgender-flag" height="2.5rem" />
+          </button>
+        </li>
+        <li>
+          <button class="info-button" @click="selectedIdx = 1">
+            <iconify-icon mode="svg" icon="noto:books" height="2.5rem" />
+          </button>
+        </li>
+        <li>
+          <button class="info-button" @click="selectedIdx = 2">
+            <iconify-icon mode="svg" icon="noto:artist-palette" height="2.5rem" />
+          </button>
+        </li>
+        <li>
+          <button class="info-button" @click="selectedIdx = 3">
+            <iconify-icon mode="svg" icon="noto:woman-raising-hand" height="2.5rem" />
+          </button>
+        </li>
+        <li>
+          <button class="info-button" @click="selectedIdx = 4">
+            <iconify-icon mode="svg" icon="noto:exclamation-question-mark" height="2.5rem" />
+          </button>
+        </li>
+        <li>
+          <button class="info-button" @click="selectedIdx = 5">
+            <iconify-icon mode="svg" icon="noto:zzz" height="2.5rem" />
+          </button>
+        </li>
+        <li>
+          <button class="info-button" @click="selectedIdx = 6">
+            <iconify-icon mode="svg" icon="noto:strawberry" height="2.5rem" />
+          </button>
+        </li>
+        <li>
+          <button class="info-button" @click="selectedIdx = 7">
+            <iconify-icon mode="svg" icon="noto:waffle" height="2.5rem" />
+          </button>
+        </li>
+      </ul>
+    </div>
+    <div class="info-box" :class="{ 'empty': !selectedContent[selectedIdx] }">
+      <span class="no-selection" v-if="!selectedContent[selectedIdx]">Select a box above to know more!</span>
+      <template v-else>
+        <h3>{{ selectedContent[selectedIdx].title }}</h3>
+        <p>{{ selectedContent[selectedIdx].content }}</p>
+      </template>
+    </div>
   </section>
 </template>
 
+<script setup lang="ts">
+import { ref, type Ref } from 'vue';
+
+type ListInfo = { title: string, content: string }
+
+const selectedIdx: Ref<number> = ref(-1)
+const selectedContent: Ref<ListInfo[]> = ref([
+  { title: 'Transfem & Proud! 🌈', content: 'Seeing myself in the mirror always felt... wrong, at least until I finally discovered who I truly am.' },
+  { title: 'Software Engineer!', content: 'Computers are pretty awesome! I started with C, slowly becoming a full-stack developer!' },
+  { title: 'Pastime Illustrator!', content: 'Drawing has been a hobby of mine since my chilhood days. I am now able to do pixel art, digital painting & vector graphics!' }
+])
+
+</script>
+
 <style scoped lang="scss">
 #section-about-info {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 2rem;
+
+  h2 {
+    text-align: center;
+  }
+
   .info-list {
     list-style-type: none;
     max-width: 100%;
 
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(5rem, 1fr));
     gap: 1rem;
 
     li {
-      position: relative;
-      flex-grow: 1;
-      flex-shrink: 1;
-      max-width: 100%;
-      min-height: 5rem;
-      height: 5rem;
-      padding: 1rem;
-      background: var(--eepy-color-accent-semi);
-      border: 1px solid var(--eepy-color-accent-half);
-      border-radius: 8px;
+      button {
+        position: relative;
+        width: 100%;
+        height: 5rem;
+        background: var(--eepy-color-monochrome);
+        border: 1px solid var(--eepy-color-accent-half);
+        border-radius: 8px;
 
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      justify-content: center;
-      gap: 0.5rem;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+      }
+      button:hover {
 
-      font-family: Dosis;
-      font-size: 1.125rem;
-      font-weight: 500;
-      line-height: 1rem;
+      }
 
-      & > div {
+      iconify-icon {
         height: 2.5rem;
         width: 2.5rem;
-      }
-      & > span {
-        text-wrap: wrap;
+        filter: drop-shadow(0 1px 1px #000);
       }
     }
   }
-}
-.bite-mark {
-  position: absolute;
-  top: -1px;
-  right: -1px;
-  width: 1.25rem;
-  height: 1rem;
-  background: var(--eepy-color-background);
-  border-bottom-left-radius: 1rem;
-  border-bottom: 1px solid var(--eepy-color-accent-half);
-  border-left: 1px solid var(--eepy-color-accent-half);
-}
-.bite-mark-alt {
-  position: absolute;
-  left: -1px;
-  bottom: -1px;
-  width: 1.25rem;
-  height: 1rem;
-  background: var(--eepy-color-background);
-  border-top-right-radius: 1rem;
-  border-top: 1px solid var(--eepy-color-accent-half);
-  border-right: 1px solid var(--eepy-color-accent-half);
-}
-iconify-icon {
-  filter: drop-shadow(0 1px 1px #000);
-}
+  .info-box {
+    flex: 1;
+    border-radius: 8px;
+    min-height: 8rem;
+    padding: 1rem;
+    background: var(--eepy-color-monochrome);
+    border: 2px solid var(--eepy-color-accent-half);
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 
-@media screen and (max-width: 1199px) {
-  #section-about-info {
-    .info-list {
-      grid-template-columns: repeat(auto-fill, minmax(13rem, 1fr));
+    &.empty {
+      background: transparent;
+      border: 2px dotted var(--eepy-color-accent-half);
     }
-  }
-}
-@media screen and (max-width: 1023px) {
-  #section-about-info {
-    .info-list {
-      grid-template-columns: repeat(auto-fill, minmax(11rem, 1fr));
-    }
-  }
-}
-@media screen and (max-width: 895px) {
-  #section-about-info {
-    .info-list {
-      grid-template-columns: repeat(auto-fill, minmax(12rem, 1fr));
-    }
-    h2 {
-      text-align: center;
+
+    .no-selection {
+      font-family: Dosis;
+      font-size: 1.125rem;
     }
   }
 }

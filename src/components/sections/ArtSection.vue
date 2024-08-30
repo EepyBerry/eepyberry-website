@@ -4,7 +4,7 @@
       <hr class="title-divider">
       <span class="title-icon">
         <span class="title-bracket" aria-hidden="true">[</span>
-        <iconify-icon icon="mingcute:paint-brush-line" width="1.5em" aria-hidden="true" />
+        <iconify-icon icon="mingcute:paint-brush-line" width="2.5rem" aria-hidden="true" />
         <span class="title-bracket" aria-hidden="true">]</span>
       </span>
       <hr class="title-divider">

@@ -101,7 +101,6 @@
       min-width: 10rem;
       max-width: 100%;
       height: 3rem;
-      background: var(--eepy-color-accent-semi);
       border-radius: 8px;
 
       display: flex;
@@ -115,13 +114,13 @@
 
       & > span {
         padding: 1rem;
-        color: var(--white);
+        color: var(--eepy-color-monochrome);
       }
       & > div {
         padding: 0.75rem;
         width: 3rem;
         height: 3rem;
-        color: var(--white);
+        color: var(--eepy-color-monochrome);
       }
       & > .star {
         z-index: 1;

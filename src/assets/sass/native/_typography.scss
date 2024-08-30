@@ -14,7 +14,7 @@ h2 {
 }
 h3 {
   font-family: Dosis;
-  font-size: clamp(1rem, 3.75vw, 1.5rem);
+  font-size: clamp(1.125rem, 3.75vw, 1.5rem);
   font-weight: 700;
 }
 
@@ -42,12 +42,12 @@ h3 {
     color: var(--eepy-color-accent);
     padding: 0 1rem;
     iconify-icon {
-      width: 1.5em;
-      height: 1.5em;
+      width: 2.5rem;
+      height: 2.5rem;
     }
   }
   .title-bracket {
-    font-size: 3rem;
+    font-size: 2.5rem;
     font-weight: 200;
     transform: translateY(-0.5rem);
   }

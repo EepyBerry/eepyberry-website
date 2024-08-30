@@ -2,7 +2,7 @@
   <div class="links">
     <span class="bracket">[</span>
     <a href="#" disabled @click="$event.preventDefault()" aria-label="Ko-fi">
-      <SvgKofi width="2.75rem" />
+      <SvgKofi width="2.5rem" />
       <span class="coming-soon" aria-hidden="true">soon!</span>
     </a>
     <a
@@ -11,7 +11,7 @@
       rel="external nofollow noopener"
       aria-label="GitHub"
     >
-      <SvgGithub width="2.75rem" />
+      <SvgGithub width="2.5rem" />
     </a>
     <a
       href="https://bsky.app/profile/eepyberry.bsky.social"
@@ -19,7 +19,7 @@
       rel="external nofollow noopener"
       aria-label="Bluesky"
     >
-      <SvgBluesky width="2.75rem" />
+      <SvgBluesky width="2.5rem" />
     </a>
     <span class="bracket">]</span>
   </div>
@@ -42,7 +42,7 @@ import SvgKofi from "../svg/icons/SvgKofi.vue";
 
   & > .bracket {
     font-family: Dosis;
-    font-size: 3rem;
+    font-size: 2.5rem;
     font-weight: 100;
     line-height: 1;
   }

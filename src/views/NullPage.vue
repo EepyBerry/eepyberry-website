@@ -4,6 +4,17 @@
     <p>Turn back.</p>
   </div>
 </template>
+
+<script lang="ts">
+import { useHead } from "@unhead/vue";
+useHead({
+  meta: [
+    { name: "robots", content: "noindex, nofollow" },
+    { name: "description", content: "null" },
+  ],
+});
+</script>
+
 <style scoped lang="scss">
 div {
   z-index: 1000;

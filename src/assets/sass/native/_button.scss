@@ -16,3 +16,13 @@ button[icon-button] {
 button:hover {
   cursor: pointer;
 }
+
+button.info-button {
+  transition: transform 100ms ease-out;
+}
+button.info-button:hover {
+  transform: scale(105%);
+}
+button.info-button:active {
+  transform: scale(95%);
+}

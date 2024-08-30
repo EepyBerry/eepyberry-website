@@ -10,7 +10,7 @@ import SvgNotFound from "@/components/svg/SvgNotFound.vue";
 import { useHead } from "@unhead/vue";
 useHead({
   meta: [
-    { name: "robots", content: "noindex" },
+    { name: "robots", content: "noindex, nofollow" },
     { name: "description", content: "Page not found" },
   ],
 });

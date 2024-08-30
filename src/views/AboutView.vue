@@ -31,7 +31,6 @@ import AboutInfoSection from "@/components/sections/AboutInfoSection.vue";
 import AboutInterestsSection from "@/components/sections/AboutInterestsSection.vue";
 import AboutTechsSection from "@/components/sections/AboutTechsSection.vue";
 import AboutToolsSection from "@/components/sections/AboutToolsSection.vue";
-import TitleSection from "@/components/sections/TitleSection.vue";
 import TitleSectionSmall from "@/components/sections/TitleSectionSmall.vue";
 import { useHead } from "@unhead/vue";
 useHead({
@@ -39,7 +38,7 @@ useHead({
     {
       name: "description",
       content:
-        "Who am I? What do I like to do? Why strawberries? It's all in here!",
+        "Who am I? What do I like to do? Why a berry? It's all in here!",
     },
   ],
 });
@@ -64,9 +63,9 @@ useHead({
   .main-grid {
     display: grid;
     grid-template-areas:
-      "info        info        avatar"
-      "interests   interests   avatar";
-    grid-template-columns: 1fr 1fr min-content;
+      "info avatar interests"
+      "info avatar interests";
+    grid-template-columns: 1fr 1fr 1fr;
     align-items: center;
     margin: 0 auto;
     gap: 1.5rem 4rem;
@@ -74,7 +73,7 @@ useHead({
 
     #section-about-info {
       grid-area: info;
-      align-self: center;
+      align-self: flex-start;
     }
     #section-about-interests {
       grid-area: interests;
@@ -92,7 +91,7 @@ useHead({
       justify-content: center;
 
       .avatar {
-        width: clamp(160px, 33vw, 360px);
+        width: clamp(160px, 25vw, 300px);
       }
     }
   }
@@ -120,10 +119,10 @@ useHead({
       margin-top: 1.5rem;
     }
     .main-grid {
-      grid-template-columns: 1fr min-content;
+      grid-template-columns: min-content 1fr;
       grid-template-areas:
-        "info      avatar"
-        "interests interests";
+        "avatar info"
+        "avatar interests";
       #section-about-info {
         align-self: center;
       }

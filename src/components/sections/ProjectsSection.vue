@@ -4,7 +4,7 @@
       <hr class="title-divider">
       <span class="title-icon">
         <span class="title-bracket" aria-hidden="true">[</span>
-        <iconify-icon icon="mingcute:terminal-line" width="1.5em" aria-hidden="true" />
+        <iconify-icon icon="mingcute:terminal-line" width="2.5rem" aria-hidden="true" />
         <span class="title-bracket" aria-hidden="true">]</span>
       </span>
       <hr class="title-divider">
@@ -22,7 +22,7 @@
             <iconify-icon
               mode="svg"
               icon="mingcute:external-link-line"
-              style="color: var(--white)"
+              style="color: var(--eepy-color-monochrome)"
               height="2rem"
             />
           </template>
@@ -75,7 +75,7 @@ function incrementCounter() {
 }
 
 function checkConditions() {
-  return (counter.value >= 3 && themeHelper.themeRef.value === 'dark')
+  return (counter.value >= 5 && themeHelper.themeRef.value === 'dark')
 }
 </script>
 
@@ -110,7 +110,7 @@ function checkConditions() {
 
   #project-lagrange {
     background-image: url("/projects/project-lagrange.webp");
-    color: var(--white);
+    color: var(--eepy-color-monochrome);
     .logo {
       position: absolute;
       width: 16rem;
@@ -123,7 +123,7 @@ function checkConditions() {
     background-image: url("/projects/project-redacted.webp");
     background-position: top;
     background-size: cover;
-    color: var(--white);
+    color: var(--eepy-color-monochrome);
     cursor: not-allowed;
 
     &.huh {
@@ -138,7 +138,7 @@ function checkConditions() {
     .tx-glitch,
     .tx-glitch::before,
     .tx-glitch::after {
-      color: var(--white);
+      color: var(--eepy-color-monochrome);
       background: transparent;
       text-align: center;
       text-wrap: nowrap;

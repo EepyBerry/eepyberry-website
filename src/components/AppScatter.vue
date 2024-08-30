@@ -58,7 +58,7 @@ async function init(): Promise<void> {
   width: 4px;
   aspect-ratio: 1/1;
   border-radius: 4px;
-  background-color: var(--white);
+  background-color: var(--eepy-color-monochrome);
 
   animation: blink 6s infinite both ease;
   &.delay-1 {

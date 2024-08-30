@@ -145,11 +145,11 @@
 
 #subtitle > .cls-2 {
   stroke-width: 1px;
-  stroke: var(--white);
+  stroke: var(--eepy-color-monochrome);
 }
 
 .cls-2 {
-  fill: var(--white);
+  fill: var(--eepy-color-monochrome);
 }
 
 .cls-1,
