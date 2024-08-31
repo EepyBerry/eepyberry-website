@@ -28,7 +28,7 @@ import IconEepyBerry from "@/components/svg/icons/IconEepyBerry.vue";
   justify-content: space-between;
   background-color: var(--eepy-theme-card);
   border: 1px solid var(--eepy-theme-accent-half);
-  border-radius: 8px;
+  border-radius: 6px;
   overflow: hidden;
 
   &-header {

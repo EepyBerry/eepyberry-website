@@ -10,11 +10,10 @@
     </router-link>
     <router-link
       class="nav-link button-link"
-      to=""
-      aria-label="Contact page link"
-      disabled
+      to="miscellaneous"
+      aria-label="Miscellaneous page link"
     >
-      <iconify-icon mode="svg" icon="mingcute:mail-line" height="2.25rem" />
+      <iconify-icon mode="svg" icon="mingcute:star-line" height="2.25rem" />
     </router-link>
   </nav>
 </template>

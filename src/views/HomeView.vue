@@ -37,6 +37,7 @@ import { onMounted, onUnmounted, onUpdated, ref, watch, type Ref } from "vue";
 import { useRoute, useRouter } from "vue-router";
 
 useHead({
+  title: "Home · EepyBerry",
   meta: [
     {
       name: "description",
@@ -136,7 +137,7 @@ function resetHash() {
     opacity: 1;
   }
   .dialog-container {
-    border-radius: 8px;
+    border-radius: 6px;
     background: transparent;
     width: 100%;
     height: 100%;
@@ -164,7 +165,7 @@ function resetHash() {
   #hash-image {
     padding: 0;
     margin: auto;
-    border-radius: 8px;
+    border-radius: 6px;
     overflow: hidden;
     max-width: calc(100% - 2rem);
     max-height: calc(100% - 2rem);

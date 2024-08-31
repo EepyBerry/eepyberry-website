@@ -21,41 +21,6 @@ h3 {
 // ------------------------------------------------------------------------------------------------------------------
 // custom tx-* classes
 
-.section-title {
-  width: 100%;
-  font-size: clamp(1.75rem, 5vw, 2.25rem);
-  align-self: center;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-wrap: nowrap;
-
-  hr.title-divider {
-    border: 1px solid var(--eepy-theme-accent);
-    width: 100%;
-  }
-  .title-icon {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    color: var(--eepy-theme-accent);
-    padding: 0 1rem;
-    iconify-icon {
-      width: 2.5rem;
-      height: 2.5rem;
-    }
-  }
-  .title-bracket {
-    font-size: 2.5rem;
-    font-weight: 200;
-    transform: translateY(-0.5rem);
-  }
-  h2 {
-    transform: translateY(-0.375rem);
-  }
-}
-
 .tx-nowrap {
   text-wrap: nowrap;
   word-break: keep-all;

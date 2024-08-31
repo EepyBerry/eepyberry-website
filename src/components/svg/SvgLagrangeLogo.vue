@@ -154,7 +154,7 @@
 
 .cls-1,
 .cls-3 {
-  fill: var(--eepy-theme-lagrange);
+  fill: var(--eepy-color-lagrange);
 }
 
 .cls-3,
@@ -164,7 +164,7 @@
 
 .cls-4 {
   fill: none;
-  stroke: var(--eepy-theme-lagrange);
+  stroke: var(--eepy-color-lagrange);
   stroke-miterlimit: 10;
   stroke-width: 2px;
 }

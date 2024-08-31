@@ -1,19 +1,17 @@
 <template>
   <div class="page-container">
     <TitleSectionSmall />
-    <AboutInfoSection />
-    <AboutToolsSection />
+    <MiscNerdSection />
   </div>
 </template>
 
 <!------------------------------------------------------------>
 <script setup lang="ts">
-import AboutInfoSection from "@/components/sections/AboutInfoSection.vue";
-import AboutToolsSection from "@/components/sections/AboutToolsSection.vue";
+import MiscNerdSection from "@/components/sections/MiscNerdSection.vue";
 import TitleSectionSmall from "@/components/sections/TitleSectionSmall.vue";
 import { useHead } from "@unhead/vue";
 useHead({
-  title: "About · EepyBerry",
+  title: "Miscellaneous · EepyBerry",
   meta: [
     {
       name: "description",

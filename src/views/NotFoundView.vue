@@ -9,6 +9,7 @@
 import SvgNotFound from "@/components/svg/SvgNotFound.vue";
 import { useHead } from "@unhead/vue";
 useHead({
+  title: "Not found · EepyBerry",
   meta: [
     { name: "robots", content: "noindex, nofollow" },
     { name: "description", content: "Page not found" },

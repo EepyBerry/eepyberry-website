@@ -31,7 +31,7 @@ const $theme = inject("$theme");
 #section-title {
   position: relative;
   height: 100dvh;
-  border-radius: 8px;
+  border-radius: 6px;
 
   display: flex;
   flex-direction: column;

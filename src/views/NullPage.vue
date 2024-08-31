@@ -21,6 +21,7 @@ div {
   position: absolute;
   inset: 0;
   background-color: #000;
+  color: #fcfcfc;
   display: flex;
   flex-direction: column;
   align-items: center;

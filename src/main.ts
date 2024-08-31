@@ -9,6 +9,7 @@ import "iconify-icon";
 import AppCard from "./components/AppCard.vue";
 import { createHead } from "@unhead/vue";
 import AppArticle from "./components/AppArticle.vue";
+import AppGroup from "./components/AppGroup.vue";
 
 // Main application
 createApp(App)
@@ -17,5 +18,6 @@ createApp(App)
   .provide("ThemeHelper", new ThemeHelper())
   .component("EepyArticle", AppArticle)
   .component("EepyCard", AppCard)
+  .component("EepyGroup", AppGroup)
   .component("EepyChip", AppChip)
   .mount("#app");

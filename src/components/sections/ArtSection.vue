@@ -70,7 +70,7 @@ import IconEepyBerry from "../svg/icons/IconEepyBerry.vue";
     align-self: center;
   }
   .section-content {
-    padding-top: 2rem;
+    padding: 1.5rem 0;
     display: flex;
     flex-direction: column;
     max-width: 100%;
@@ -89,7 +89,7 @@ import IconEepyBerry from "../svg/icons/IconEepyBerry.vue";
     flex-shrink: 1;
 
     position: relative;
-    border-radius: 8px;
+    border-radius: 6px;
     max-width: 100%;
     width: 100%;
     height: 24rem;

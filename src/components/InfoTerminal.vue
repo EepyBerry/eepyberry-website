@@ -43,7 +43,7 @@ const interestList: Ref<Info[]> = ref([
   { title: 'video games!', content: 'too many to list here, but favs include "the talos principle 1/2", "celeste", "hades 1/2", "oneshot" & "omori" :3' },
   { title: 'bicycling!', content: 'because it\'s good for your health! very pleasant too ^w^' },
   { title: 'yoga!', content: '...at least when i\'m motivated enough to do some, which is not often enough sadly :c' },
-  { title: 'plushies :>', content: 'i have about 20 my collection, and it keeps growing :3' }
+  { title: 'plushies :>', content: 'i have about 20 in my collection, and it keeps growing :3' }
 ])
 
 const isTextVisible = ref(false)
@@ -61,7 +61,7 @@ function getData() {
 <style scoped lang="scss">
 .info-terminal {
   flex: 1;
-  border-radius: 8px;
+  border-radius: 6px;
   min-height: 18rem;
   padding: 1.5rem;
   background: var(--eepy-theme-terminal-background);

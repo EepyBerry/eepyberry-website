@@ -12,7 +12,7 @@
   gap: 4px;
 
   border: 1px solid var(--eepy-theme-accent);
-  border-radius: 8px;
+  border-radius: 6px;
   align-self: flex-start;
 }
 </style>

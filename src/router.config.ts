@@ -17,6 +17,12 @@ const router = createRouter({
       meta: { attached: true }
     },
     {
+      path: "/miscellaneous",
+      name: "Miscellaneous",
+      component: () => import("./views/MiscellaneousView.vue"),
+      meta: { attached: true }
+    },
+    {
       path: "/page-not-found",
       name: "Not Found",
       component: () => import("./views/NotFoundView.vue"),

@@ -161,7 +161,7 @@ function isSelected(type: string, idx: number) {
     grid-template-areas: "avatar info";
     grid-template-columns: 1fr 2fr;
     align-items: center;
-    padding: 2rem 0;
+    padding: 1.5rem 0;
     margin: 0 auto;
     gap: 3rem;
     width: 100%;
@@ -204,7 +204,7 @@ function isSelected(type: string, idx: number) {
         position: relative;
         width: 100%;
         height: 3rem;
-        border-radius: 8px;
+        border-radius: 6px;
 
         display: flex;
         flex-direction: row;
@@ -213,18 +213,11 @@ function isSelected(type: string, idx: number) {
 
         .selection-notch {
           position: absolute;
-          &.down {
-            inset: auto 0 0;
-            border-bottom: 4px solid var(--eepy-theme-accent-threequarter);
-            border-bottom-left-radius: 8px;
-            border-bottom-right-radius: 8px;
-          }
-          &.up {
-            inset: 0 0 auto;
-            border-top: 4px solid var(--eepy-theme-accent-threequarter);
-            border-top-left-radius: 8px;
-            border-top-right-radius: 8px;
-          }
+          height: 4px;
+          border: 2px solid var(--eepy-theme-button);
+          border-top-left-radius: 4px;
+          border-top-right-radius: 4px;
+          inset: auto 25% 0;
         }
       }
 

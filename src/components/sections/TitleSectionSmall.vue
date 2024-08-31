@@ -21,7 +21,7 @@ const $theme = inject("$theme");
 <style scoped lang="scss">
 #section-title-small {
   position: relative;
-  border-radius: 8px;
+  border-radius: 6px;
 
   display: flex;
   flex-direction: row;

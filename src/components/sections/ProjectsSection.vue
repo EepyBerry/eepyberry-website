@@ -89,7 +89,7 @@ function checkConditions() {
   justify-content: center;
 
   .section-content {
-    padding: 2rem 0;
+    padding: 1.5rem 0;
     width: 100%;
 
     background-color: var(--eepy-theme-background);
