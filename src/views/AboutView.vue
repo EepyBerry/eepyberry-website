@@ -11,8 +11,6 @@
       <hr class="title-divider">
     </div>
     <div class="main-grid">
-      <AboutInfoSection />
-      <AboutInterestsSection />
       <div class="avatar-wrapper">
         <span class="deco tl" />
         <span class="deco tr" />
@@ -25,8 +23,17 @@
           aria-label="avatar"
         />
       </div>
+      <AboutInfoSection />
     </div>
-    <hr />
+    <div class="section-title" role="heading" aria-label="Drawings">
+      <hr class="title-divider">
+      <span class="title-icon">
+        <span class="title-bracket" aria-hidden="true">[</span>
+        <iconify-icon icon="mingcute:tool-line" width="2.5rem" aria-hidden="true" />
+        <span class="title-bracket" aria-hidden="true">]</span>
+      </span>
+      <hr class="title-divider">
+    </div>
     <div class="misc-grid">
       <AboutTechsSection />
       <AboutToolsSection />
@@ -37,7 +44,6 @@
 <!------------------------------------------------------------>
 <script setup lang="ts">
 import AboutInfoSection from "@/components/sections/AboutInfoSection.vue";
-import AboutInterestsSection from "@/components/sections/AboutInterestsSection.vue";
 import AboutTechsSection from "@/components/sections/AboutTechsSection.vue";
 import AboutToolsSection from "@/components/sections/AboutToolsSection.vue";
 import TitleSectionSmall from "@/components/sections/TitleSectionSmall.vue";
@@ -61,31 +67,17 @@ useHead({
   gap: 3rem;
   margin-top: 3rem;
 
-  hr {
-    width: 100%;
-    align-self: center;
-    border: 1px solid var(--eepy-theme-accent-half);
-    border-radius: 2px;
-    margin-top: 1.5rem;
-  }
-
   .main-grid {
     display: grid;
-    grid-template-areas:
-      "avatar info"
-      "interests interests";
+    grid-template-areas: "avatar info";
     grid-template-columns: 1fr 2fr;
     align-items: center;
     margin: 0 auto;
-    gap: 1.5rem 4rem;
+    gap: 3rem;
     width: 100%;
 
     #section-about-info {
       grid-area: info;
-      align-self: flex-start;
-    }
-    #section-about-interests {
-      grid-area: interests;
       align-self: flex-start;
     }
     .avatar-wrapper {
@@ -124,14 +116,7 @@ useHead({
 @media screen and (max-width: 1199px) {
   .page-container {
     gap: 1.5rem;
-    hr {
-      margin-top: 1.5rem;
-    }
     .main-grid {
-      grid-template-columns: 1fr 2fr;
-      grid-template-areas:
-        "avatar info"
-        "interests interests";
       gap: 2rem;
       #section-about-info {
         align-self: center;
@@ -153,9 +138,7 @@ useHead({
 @media screen and (max-width: 895px) {
   .page-container {
     .main-grid {
-      grid-template-areas:
-        "info      info"
-        "interests interests";
+      grid-template-areas: "info";
       grid-template-columns: 1fr auto;
 
       #section-about-interests {

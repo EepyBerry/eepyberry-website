@@ -118,14 +118,6 @@ function resetHash() {
   flex-direction: column;
   gap: 6rem;
 
-  hr {
-    width: 75%;
-    align-self: center;
-    border: 1px solid var(--eepy-theme-accent-half);
-    border-radius: 2px;
-    margin-top: 3rem;
-  }
-
   .dialog {
     position: fixed;
     inset: 0;

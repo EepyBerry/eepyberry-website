@@ -49,7 +49,7 @@ const $theme = inject("$theme");
     justify-content: center;
 
     #avatar {
-      width: clamp(200px, 15vw, 300px);
+      width: clamp(200px, 12vw, 300px);
       filter: drop-shadow(0 4px 1px var(--eepy-theme-title-shadow));
       animation: bounce 4s ease-in-out infinite;
     }
@@ -58,10 +58,10 @@ const $theme = inject("$theme");
       display: flex;
       flex-direction: column;
       gap: 1rem;
-      width: clamp(200px, 15vw, 300px);
+      width: clamp(200px, 12vw, 300px);
 
       font-family: Dosis;
-      font-size: clamp(2.5rem, 3vw, 3.5rem);
+      font-size: clamp(2.5rem, 2.375vw, 3.5rem);
       font-weight: 500;
       line-height: 1;
     }
