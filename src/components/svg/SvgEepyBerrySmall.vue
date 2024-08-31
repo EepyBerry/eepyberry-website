@@ -97,6 +97,7 @@
       xmlns="http://www.w3.org/2000/svg"
       version="1.1"
       viewBox="0 0 640 640"
+      aria-label="EepyBerry small logo"
     >
       <path
         class="cls-2"

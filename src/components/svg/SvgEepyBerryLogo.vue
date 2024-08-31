@@ -149,6 +149,7 @@
       class="light"
       xmlns="http://www.w3.org/2000/svg"
       viewBox="80 20 660 600"
+      aria-label="EepyBerry logo"
     >
       <path
         class="cls-1 text"

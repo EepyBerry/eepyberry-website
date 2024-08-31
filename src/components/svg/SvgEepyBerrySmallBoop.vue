@@ -123,7 +123,7 @@ defineProps<{ dark: boolean }>();
 }
 .light {
   .cls-1 {
-    fill: #f1808b;
+    fill: #ee727e;
   }
   .cls-2 {
     fill: #0f0b0f;

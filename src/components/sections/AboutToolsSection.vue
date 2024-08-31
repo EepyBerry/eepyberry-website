@@ -1,91 +1,104 @@
 <template>
   <section id="section-about-tools">
-    <h2>my main tools!</h2>
-    <ul class="tool-list">
-      <li class="idea">
-        <div>
+    <div class="section-title" role="heading" aria-label="Tools & techs">
+      <hr class="title-divider">
+      <span class="title-icon">
+        <span class="title-bracket" aria-hidden="true">[</span>
+        <iconify-icon icon="mingcute:tool-line" width="2.5rem" aria-hidden="true" />
+        <span class="title-bracket" aria-hidden="true">]</span>
+      </span>
+      <hr class="title-divider">
+    </div>
+    <div class="section-content">
+      <ul class="tool-list">
+        <li class="idea">
+          <div>
+            <iconify-icon
+              icon="logos:intellij-idea"
+              height="1.5rem"
+              aria-hidden="true"
+            />
+          </div>
+          <span>Intellij IDEA</span>
           <iconify-icon
-            icon="logos:intellij-idea"
-            height="1.5rem"
+            icon="noto:glowing-star"
+            class="star"
+            height="1.25rem"
             aria-hidden="true"
           />
-        </div>
-        <span>Intellij IDEA</span>
-        <iconify-icon
-          icon="noto:glowing-star"
-          class="star"
-          height="1.25rem"
-          aria-hidden="true"
-        />
-      </li>
-      <li class="vscode">
-        <div>
-          <iconify-icon mode="svg" icon="devicon:vscode" height="1.5rem" />
-        </div>
-        <span>VS Code</span>
-      </li>
-      <li class="aseprite">
-        <div>
+        </li>
+        <li class="vscode">
+          <div>
+            <iconify-icon mode="svg" icon="devicon:vscode" height="1.5rem" />
+          </div>
+          <span>VS Code</span>
+        </li>
+        <li class="aseprite">
+          <div>
+            <iconify-icon
+              mode="svg"
+              icon="simple-icons:aseprite"
+              height="1.5rem"
+            />
+          </div>
+          <span>Aseprite</span>
           <iconify-icon
-            mode="svg"
-            icon="simple-icons:aseprite"
-            height="1.5rem"
-          />
-        </div>
-        <span>Aseprite</span>
-        <iconify-icon
-          icon="noto:glowing-star"
-          class="star"
-          height="1.25rem"
-          aria-hidden="true"
-        />
-      </li>
-      <li class="godot">
-        <div>
-          <iconify-icon mode="svg" icon="logos:godot-icon" height="1.5rem" />
-        </div>
-        <span>Godot</span>
-      </li>
-      <li class="blender">
-        <div>
-          <iconify-icon mode="svg" icon="logos:blender" height="1.5rem" />
-        </div>
-        <span>Blender</span>
-      </li>
-      <li class="krita">
-        <div>
-          <iconify-icon mode="svg" icon="simple-icons:krita" height="1.5rem" />
-        </div>
-        <span>Krita</span>
-        <iconify-icon
-          icon="noto:glowing-star"
-          class="star"
-          height="1.25rem"
-          aria-hidden="true"
-        />
-      </li>
-      <li class="illustrator">
-        <div>
-          <iconify-icon
-            icon="skill-icons:illustrator"
-            height="1.5rem"
+            icon="noto:glowing-star"
+            class="star"
+            height="1.25rem"
             aria-hidden="true"
           />
-        </div>
-        <span>Illustrator</span>
-        <iconify-icon
-          icon="noto:glowing-star"
-          class="star"
-          height="1.25rem"
-          aria-hidden="true"
-        />
-      </li>
-    </ul>
+        </li>
+        <li class="godot">
+          <div>
+            <iconify-icon mode="svg" icon="logos:godot-icon" height="1.5rem" />
+          </div>
+          <span>Godot</span>
+        </li>
+        <li class="blender">
+          <div>
+            <iconify-icon mode="svg" icon="logos:blender" height="1.5rem" />
+          </div>
+          <span>Blender</span>
+        </li>
+        <li class="krita">
+          <div>
+            <iconify-icon mode="svg" icon="simple-icons:krita" height="1.5rem" />
+          </div>
+          <span>Krita</span>
+          <iconify-icon
+            icon="noto:glowing-star"
+            class="star"
+            height="1.25rem"
+            aria-hidden="true"
+          />
+        </li>
+        <li class="illustrator">
+          <div>
+            <iconify-icon
+              icon="skill-icons:illustrator"
+              height="1.5rem"
+              aria-hidden="true"
+            />
+          </div>
+          <span>Illustrator</span>
+          <iconify-icon
+            icon="noto:glowing-star"
+            class="star"
+            height="1.25rem"
+            aria-hidden="true"
+          />
+        </li>
+      </ul>
+    </div>
   </section>
 </template>
 
 <style scoped lang="scss">
 #section-about-tools {
+  .section-content {
+    padding: 2rem 0;
+  }
   .tool-list {
     list-style-type: none;
     display: flex;
@@ -149,11 +162,12 @@
       &.aseprite {
         background-color: var(--eepy-theme-darktech);
       }
+
+      iconify-icon {
+        filter: drop-shadow(0 1px 1px #000);
+      }
     }
   }
-}
-iconify-icon {
-  filter: drop-shadow(0 1px 1px #000);
 }
 
 @media screen and (max-width: 1023px) {

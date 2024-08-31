@@ -62,11 +62,14 @@ function getData() {
 .info-terminal {
   flex: 1;
   border-radius: 8px;
-  min-height: 16rem;
+  min-height: 18rem;
   padding: 1.5rem;
   background: var(--eepy-theme-terminal-background);
+	background-size: 150% 150%;
   color: var(--eepy-theme-terminal-text);
   border: 1px solid var(--eepy-theme-accent-threequarter);
+	animation: gradient 10s linear infinite;
+
   font-family: monospace;
   
   display: flex;
@@ -88,4 +91,20 @@ function getData() {
     .tilde { color: var(--eepy-theme-terminal-text-tilde); }
   }
 }
+
+@media (prefers-reduced-motion) {
+  .info-terminal {
+    animation: none;
+  }
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 50% 0%;
+	}
+	100% {
+		background-position: 50% -100%;
+	}
+}
+
 </style>

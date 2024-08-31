@@ -3,7 +3,6 @@
     <SvgEepyBerryLogo
         id="avatar"
         :dark="$theme === 'dark'"
-        aria-label="Sleeping strawberry with the text 'eepy berry'"
       />
     <hr />
     <p id="intro">developer&nbsp;& illustrator&nbsp;</p>
