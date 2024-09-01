@@ -14,7 +14,12 @@
       <p id="intro">developer&nbsp;& illustrator&nbsp;</p>
     </div>
     <AppLinks class="title-links" />
-    <iconify-icon class="scroll-indicator" icon="mingcute:arrow-down-line" width="3rem" aria-hidden="true" />
+    <iconify-icon
+      class="scroll-indicator"
+      icon="mingcute:arrow-down-line"
+      width="3rem"
+      aria-hidden="true"
+    />
   </section>
 </template>
 

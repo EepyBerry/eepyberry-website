@@ -37,7 +37,7 @@ import AppFooter from "./components/main/AppFooter.vue";
 import AppHeader from "./components/main/AppHeader.vue";
 import { useRoute } from "vue-router";
 
-const route = useRoute()
+const route = useRoute();
 const AppScatter = defineAsyncComponent(
   () => import("./components/AppScatter.vue"),
 );

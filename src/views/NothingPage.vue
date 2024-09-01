@@ -5,12 +5,12 @@
   </div>
 </template>
 
-<script lang="ts">
+<script setup lang="ts">
 import { useHead } from "@unhead/vue";
 useHead({
   meta: [
-    { name: "robots", content: "noindex, nofollow" },
-    { name: "description", content: "null" },
+    { name: "robots", content: "noindex,nofollow" },
+    { name: "description", content: "nothing" },
   ],
 });
 </script>

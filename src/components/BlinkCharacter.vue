@@ -9,7 +9,12 @@ span {
 }
 
 @keyframes blink {
-  0%, 100% { color: white; }
-  50% { color: transparent; }
+  0%,
+  100% {
+    color: white;
+  }
+  50% {
+    color: transparent;
+  }
 }
 </style>

@@ -15,8 +15,7 @@ useHead({
   meta: [
     {
       name: "description",
-      content:
-        "Who am I? What do I like to do? Why a berry? It's all in here!",
+      content: "Who am I? What do I like to do? Why a berry? It's all in here!",
     },
   ],
 });

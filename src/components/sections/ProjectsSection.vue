@@ -1,13 +1,17 @@
 <template>
   <section id="section-projects">
     <div class="section-title" role="heading" aria-label="Projects">
-      <hr class="title-divider">
+      <hr class="title-divider" />
       <span class="title-icon">
         <span class="title-bracket" aria-hidden="true">[</span>
-        <iconify-icon icon="mingcute:terminal-line" width="2.5rem" aria-hidden="true" />
+        <iconify-icon
+          icon="mingcute:terminal-line"
+          width="2.5rem"
+          aria-hidden="true"
+        />
         <span class="title-bracket" aria-hidden="true">]</span>
       </span>
-      <hr class="title-divider">
+      <hr class="title-divider" />
     </div>
     <div class="section-content">
       <a
@@ -34,13 +38,13 @@
       </a>
       <a
         class="card-link"
-        :href="checkConditions() ? '/null' : undefined"
+        :href="checkConditions() ? '/nothing' : undefined"
         target="_blank"
         rel="external nofollow noopener"
         aria-label="Under construction"
         @click="checkConditions() ? undefined : $event.preventDefault()"
       >
-        <EepyCard id="project-redacted" :class="{ 'huh': checkConditions() }">
+        <EepyCard id="project-redacted" :class="{ huh: checkConditions() }">
           <template v-slot:links>
             <iconify-icon mode="svg" icon="noto:construction" height="2rem" />
           </template>
@@ -63,19 +67,22 @@ import type { ThemeHelper } from "@/utils/theme.helper";
 import SvgLagrangeLogo from "../svg/SvgLagrangeLogo.vue";
 import { inject, ref, watch, type Ref } from "vue";
 const themeHelper: ThemeHelper = inject("ThemeHelper") as ThemeHelper;
-const counter: Ref<number> = ref(0)
+const counter: Ref<number> = ref(0);
 
-watch(() => themeHelper.themeRef.value, (v) => {
-  if (v === 'light') return
-  incrementCounter()
-})
+watch(
+  () => themeHelper.themeRef.value,
+  (v) => {
+    if (v === "light") return;
+    incrementCounter();
+  },
+);
 
 function incrementCounter() {
-  counter.value++
+  counter.value++;
 }
 
 function checkConditions() {
-  return (counter.value >= 5 && themeHelper.themeRef.value === 'dark')
+  return counter.value >= 5 && themeHelper.themeRef.value === "dark";
 }
 </script>
 
@@ -93,7 +100,7 @@ function checkConditions() {
     width: 100%;
 
     background-color: var(--eepy-theme-background);
-    background-image: url('/svg/hero_circuits.svg');
+    background-image: url("/svg/hero_circuits.svg");
     background-repeat: repeat;
     background-position: 50%;
     background-size: 16rem;
@@ -145,9 +152,9 @@ function checkConditions() {
     }
   }
 }
-[data-theme='dark'] #section-projects {
+[data-theme="dark"] #section-projects {
   .section-content {
-    background-image: url('/svg/hero_circuits_dark.svg');
+    background-image: url("/svg/hero_circuits_dark.svg");
   }
 }
 

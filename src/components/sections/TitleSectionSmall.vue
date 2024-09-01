@@ -1,9 +1,6 @@
 <template>
   <section id="section-title-small">
-    <SvgEepyBerryLogo
-        id="avatar"
-        :dark="$theme === 'dark'"
-      />
+    <SvgEepyBerryLogo id="avatar" :dark="$theme === 'dark'" />
     <hr />
     <p id="intro">developer&nbsp;& illustrator&nbsp;</p>
   </section>

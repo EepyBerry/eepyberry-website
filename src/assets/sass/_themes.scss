@@ -1,9 +1,14 @@
 :root {
   --eepy-color-white: #fcfcfc;
   --eepy-color-lagrange: #354852;
-  
+
   --eepy-theme-terminal-background: #29091c;
-  --eepy-theme-terminal-background: repeating-linear-gradient(#29091c, #29091c 12px, #311124 12px, #311124 14px);
+  --eepy-theme-terminal-background: repeating-linear-gradient(
+    #29091c,
+    #29091c 12px,
+    #311124 12px,
+    #311124 14px
+  );
   --eepy-theme-terminal-background-static: #29091c;
   --eepy-theme-terminal-text: #ffffff;
   --eepy-theme-terminal-text-accent: #ff76a4;
@@ -31,11 +36,16 @@
 
 :root[data-theme="dark"] {
   --eepy-theme-terminal-background: #11020b;
-  --eepy-theme-terminal-background: repeating-linear-gradient(#070211, #070211 12px, #0d0518 12px, #0d0518 14px);
+  --eepy-theme-terminal-background: repeating-linear-gradient(
+    #070211,
+    #070211 12px,
+    #0d0518 12px,
+    #0d0518 14px
+  );
   --eepy-theme-terminal-background-static: #11020b;
   --eepy-theme-terminal-text-accent: #cba2ff;
   --eepy-theme-terminal-text-tilde: #ff76a4;
-  
+
   --eepy-theme-monochrome: #000;
 
   --eepy-theme-accent: #7d6e8f;
