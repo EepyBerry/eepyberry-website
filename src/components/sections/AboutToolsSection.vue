@@ -16,15 +16,15 @@
         </template>
         <template v-slot:items>
           <li>
-            <iconify-icon mode="svg" icon="logos:intellij-idea" height="2rem" aria-hidden="true" />
+            <iconify-icon mode="svg" icon="simple-icons:intellijidea" height="2rem" aria-hidden="true" />
             <span>Intell&ijlig;&nbsp;IDEA</span>
           </li>
           <li>
-            <iconify-icon mode="svg" icon="devicon:vscode" height="2rem" aria-hidden="true" />
+            <iconify-icon mode="svg" icon="devicon-plain:vscode" height="2rem" aria-hidden="true" />
             <span>VS&nbsp;Code</span>
           </li>
           <li>
-            <iconify-icon mode="svg" icon="devicon:godot" height="2rem" aria-hidden="true" />
+            <iconify-icon mode="svg" icon="simple-icons:godotengine" height="2rem" aria-hidden="true" />
             <span>Godot</span>
           </li>
         </template>

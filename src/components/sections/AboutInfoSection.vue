@@ -95,13 +95,13 @@
           </li>
           <li>
             <button class="info-button" @click="select('interest', 3)" aria-label="video games">
-              <iconify-icon mode="svg" icon="noto:video-game" height="1.75rem" aria-hidden="true" />
+              <iconify-icon mode="svg" icon="noto:game-die" height="1.75rem" aria-hidden="true" />
               <span class="selection-notch up" v-if="isSelected('interest', 3)"></span>
             </button>
           </li>
           <li>
             <button class="info-button" @click="select('interest', 4)" aria-label="board games">
-              <iconify-icon mode="svg" icon="noto:game-die" height="1.75rem" aria-hidden="true" />
+              <iconify-icon mode="svg" icon="noto:video-game" height="1.75rem" aria-hidden="true" />
               <span class="selection-notch up" v-if="isSelected('interest', 4)"></span>
             </button>
           </li>
