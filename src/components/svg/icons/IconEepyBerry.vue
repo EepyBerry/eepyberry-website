@@ -15,7 +15,7 @@
 
 <style scoped lang="scss">
 .path {
-  fill: var(--eepy-color-accent);
+  fill: var(--eepy-theme-accent);
   stroke-width: 0px;
 }
 </style>

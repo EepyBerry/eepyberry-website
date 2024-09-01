@@ -1,7 +1,7 @@
 button {
   font-family: Dosis;
   font-size: 1rem;
-  color: var(--eepy-color-text);
+  color: var(--eepy-theme-text);
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -15,4 +15,16 @@ button[icon-button] {
 }
 button:hover {
   cursor: pointer;
+}
+
+button.info-button {
+  background: var(--eepy-theme-monochrome);
+  border: 1px solid var(--eepy-theme-accent-threequarter);
+  transition: transform 75ms ease-out;
+}
+button.info-button:hover {
+  transform: translateY(-0.125rem);
+}
+button.info-button:active {
+  transform: scale(95%) translateY(0.125rem);
 }

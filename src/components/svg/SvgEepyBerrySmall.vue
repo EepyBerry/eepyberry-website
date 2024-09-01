@@ -97,6 +97,7 @@
       xmlns="http://www.w3.org/2000/svg"
       version="1.1"
       viewBox="0 0 640 640"
+      aria-label="EepyBerry small logo"
     >
       <path
         class="cls-2"
@@ -157,7 +158,7 @@ defineProps<{ dark: boolean }>();
 <style scoped lang="scss">
 .dark {
   .cls-1 {
-    fill: #875d7b;
+    fill: #a95190;
   }
   .cls-2 {
     fill: #ffeeef;
@@ -166,7 +167,7 @@ defineProps<{ dark: boolean }>();
     fill: #6c8055;
   }
   .cls-4 {
-    fill: #19081f;
+    fill: #100116;
   }
   .cls-1,
   .cls-2,
@@ -177,7 +178,7 @@ defineProps<{ dark: boolean }>();
 }
 .light {
   .cls-1 {
-    fill: #f1808b;
+    fill: #ee727e;
   }
   .cls-2 {
     fill: #0f0b0f;

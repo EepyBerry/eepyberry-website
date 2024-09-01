@@ -9,8 +9,9 @@
 import SvgNotFound from "@/components/svg/SvgNotFound.vue";
 import { useHead } from "@unhead/vue";
 useHead({
+  title: "Not found · EepyBerry",
   meta: [
-    { name: "robots", content: "noindex" },
+    { name: "robots", content: "noindex, nofollow" },
     { name: "description", content: "Page not found" },
   ],
 });
@@ -34,6 +35,6 @@ useHead({
 }
 #not-found-svg {
   width: clamp(260px, 40vw, 360px);
-  fill: var(--eepy-color-text);
+  fill: var(--eepy-theme-text);
 }
 </style>

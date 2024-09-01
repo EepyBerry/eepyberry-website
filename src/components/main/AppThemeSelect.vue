@@ -59,7 +59,7 @@ button {
       margin: 0 auto;
       width: 2px;
       height: 4rem;
-      border-left: 2px dotted var(--eepy-color-text);
+      border-left: 2px dotted var(--eepy-theme-text);
     }
     .eepy-icon {
       transform: rotateZ(180deg);

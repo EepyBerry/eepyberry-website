@@ -1,6 +1,18 @@
 <template>
   <section id="section-projects">
-    <h2 class="section-title">dev projects!</h2>
+    <div class="section-title" role="heading" aria-label="Projects">
+      <hr class="title-divider" />
+      <span class="title-icon">
+        <span class="title-bracket" aria-hidden="true">[</span>
+        <iconify-icon
+          icon="mingcute:terminal-line"
+          width="2.5rem"
+          aria-hidden="true"
+        />
+        <span class="title-bracket" aria-hidden="true">]</span>
+      </span>
+      <hr class="title-divider" />
+    </div>
     <div class="section-content">
       <a
         class="card-link"
@@ -14,7 +26,7 @@
             <iconify-icon
               mode="svg"
               icon="mingcute:external-link-line"
-              style="color: var(--white)"
+              style="color: var(--eepy-color-white)"
               height="2rem"
             />
           </template>
@@ -25,14 +37,14 @@
         </EepyCard>
       </a>
       <a
-        class="card-link disabled"
-        href="null"
+        class="card-link"
+        :href="checkConditions() ? '/nothing' : undefined"
         target="_blank"
         rel="external nofollow noopener"
         aria-label="Under construction"
-        @click.prevent
+        @click="checkConditions() ? undefined : $event.preventDefault()"
       >
-        <EepyCard id="project-redacted">
+        <EepyCard id="project-redacted" :class="{ huh: checkConditions() }">
           <template v-slot:links>
             <iconify-icon mode="svg" icon="noto:construction" height="2rem" />
           </template>
@@ -51,27 +63,51 @@
 
 <!------------------------------------------------------------>
 <script setup lang="ts">
+import type { ThemeHelper } from "@/utils/theme.helper";
 import SvgLagrangeLogo from "../svg/SvgLagrangeLogo.vue";
+import { inject, ref, watch, type Ref } from "vue";
+const themeHelper: ThemeHelper = inject("ThemeHelper") as ThemeHelper;
+const counter: Ref<number> = ref(0);
+
+watch(
+  () => themeHelper.themeRef.value,
+  (v) => {
+    if (v === "light") return;
+    incrementCounter();
+  },
+);
+
+function incrementCounter() {
+  counter.value++;
+}
+
+function checkConditions() {
+  return counter.value >= 5 && themeHelper.themeRef.value === "dark";
+}
 </script>
 
 <!------------------------------------------------------------>
 <style lang="scss">
 #section-projects {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 
-  .section-title {
-    align-self: flex-start;
-    .eepy-divider {
-      flex: 1;
-    }
-  }
   .section-content {
+    padding: 1.5rem 0;
     width: 100%;
+
+    background-color: var(--eepy-theme-background);
+    background-image: url("/svg/hero_circuits.svg");
+    background-repeat: repeat;
+    background-position: 50%;
+    background-size: 16rem;
+    box-shadow: inset 0 0 4rem 2rem var(--eepy-theme-background);
+
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(22rem, auto));
+    grid-template-columns: repeat(auto-fill, minmax(24rem, auto));
     gap: 2rem;
     & .eepy-card {
       width: 100%;
@@ -81,13 +117,12 @@ import SvgLagrangeLogo from "../svg/SvgLagrangeLogo.vue";
 
   #project-lagrange {
     background-image: url("/projects/project-lagrange.webp");
-    color: var(--white);
+    color: var(--eepy-color-white);
     .logo {
       position: absolute;
       width: 16rem;
       inset: 0;
       margin: auto;
-      transform: translateY(0.25rem);
     }
   }
 
@@ -95,7 +130,13 @@ import SvgLagrangeLogo from "../svg/SvgLagrangeLogo.vue";
     background-image: url("/projects/project-redacted.webp");
     background-position: top;
     background-size: cover;
-    color: var(--white);
+    color: var(--eepy-color-white);
+    cursor: not-allowed;
+
+    &.huh {
+      cursor: pointer;
+      filter: sepia(1) hue-rotate(320deg) saturate(10) brightness(0.875);
+    }
     .logo {
       text-align: center;
       text-wrap: nowrap;
@@ -104,11 +145,16 @@ import SvgLagrangeLogo from "../svg/SvgLagrangeLogo.vue";
     .tx-glitch,
     .tx-glitch::before,
     .tx-glitch::after {
-      color: var(--white);
+      color: var(--eepy-color-white);
       background: transparent;
       text-align: center;
       text-wrap: nowrap;
     }
+  }
+}
+[data-theme="dark"] #section-projects {
+  .section-content {
+    background-image: url("/svg/hero_circuits_dark.svg");
   }
 }
 
@@ -123,9 +169,6 @@ import SvgLagrangeLogo from "../svg/SvgLagrangeLogo.vue";
 @media screen and (max-width: 767px) {
   #section-projects {
     margin-top: 3rem;
-    .section-title {
-      align-self: center;
-    }
     .section-content {
       gap: 1rem;
     }

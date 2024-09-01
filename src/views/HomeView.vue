@@ -2,7 +2,6 @@
   <div class="page-container">
     <TitleSection />
     <ProjectsSection />
-    <hr />
     <ArtSection />
     <dialog
       ref="dialogRef"
@@ -38,6 +37,7 @@ import { onMounted, onUnmounted, onUpdated, ref, watch, type Ref } from "vue";
 import { useRoute, useRouter } from "vue-router";
 
 useHead({
+  title: "Home · EepyBerry",
   meta: [
     {
       name: "description",
@@ -117,15 +117,7 @@ function resetHash() {
 .page-container {
   display: flex;
   flex-direction: column;
-  gap: 3rem;
-
-  hr {
-    width: 75%;
-    align-self: center;
-    border: 1px solid var(--eepy-color-accent-half);
-    border-radius: 2px;
-    margin-top: 3rem;
-  }
+  gap: 6rem;
 
   .dialog {
     position: fixed;
@@ -145,7 +137,7 @@ function resetHash() {
     opacity: 1;
   }
   .dialog-container {
-    border-radius: 8px;
+    border-radius: 6px;
     background: transparent;
     width: 100%;
     height: 100%;
@@ -173,7 +165,7 @@ function resetHash() {
   #hash-image {
     padding: 0;
     margin: auto;
-    border-radius: 8px;
+    border-radius: 6px;
     overflow: hidden;
     max-width: calc(100% - 2rem);
     max-height: calc(100% - 2rem);

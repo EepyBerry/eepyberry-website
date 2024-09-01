@@ -1,15 +1,25 @@
 <template>
   <section id="section-title">
     <div class="title">
+      <span class="deco tl" />
+      <span class="deco tr" />
+      <span class="deco bl" />
+      <span class="deco br" />
       <SvgEepyBerryLogo
         id="avatar"
         :dark="$theme === 'dark'"
         aria-label="Sleeping strawberry with the text 'eepy berry'"
       />
       <hr />
-      <p id="intro">developer&nbsp;& illustrator&nbsp;:></p>
+      <p id="intro">developer&nbsp;& illustrator&nbsp;</p>
     </div>
-    <AppLinks />
+    <AppLinks class="title-links" />
+    <iconify-icon
+      class="scroll-indicator"
+      icon="mingcute:arrow-down-line"
+      width="3rem"
+      aria-hidden="true"
+    />
   </section>
 </template>
 
@@ -24,39 +34,59 @@ const $theme = inject("$theme");
 <!------------------------------------------------------------>
 <style scoped lang="scss">
 #section-title {
+  position: relative;
+  height: 100dvh;
+  border-radius: 6px;
+
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
 
   .title {
+    position: relative;
+    z-index: 1;
+    padding: clamp(0rem, 5vw, 4rem);
+
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    margin-top: 2rem;
 
     #avatar {
-      width: clamp(160px, 25vw, 200px);
-      filter: drop-shadow(0 4px 1px var(--eepy-color-accent));
+      width: clamp(200px, 12vw, 300px);
+      filter: drop-shadow(0 4px 1px var(--eepy-theme-title-shadow));
       animation: bounce 4s ease-in-out infinite;
     }
     #intro {
+      padding-left: 0.75rem;
       display: flex;
       flex-direction: column;
       gap: 1rem;
-      width: clamp(160px, 25vw, 200px);
+      width: clamp(200px, 12vw, 300px);
 
       font-family: Dosis;
-      font-size: clamp(1.75rem, 5vw, 2.25rem);
-      font-weight: 400;
+      font-size: clamp(2.5rem, 2.375vw, 3.5rem);
+      font-weight: 500;
       line-height: 1;
     }
     & > hr {
       margin-left: 1.75rem;
       margin-right: 1.75rem;
-      height: 6rem;
-      border: 1px solid var(--eepy-color-accent);
+      height: clamp(7rem, 7.5vw, 10rem);
+      border: 1px solid var(--eepy-theme-accent);
     }
+  }
+
+  .title-links {
+    margin-top: 0;
+    transform: translateY(-1.5rem);
+  }
+
+  .scroll-indicator {
+    color: var(--eepy-theme-accent);
+    position: absolute;
+    bottom: 2rem;
   }
 }
 
@@ -67,7 +97,11 @@ const $theme = inject("$theme");
     .title {
       flex-direction: column;
       text-align: center;
+      padding: 1.75rem 2rem;
 
+      #avatar {
+        width: 240px;
+      }
       #intro {
         width: fit-content;
       }
@@ -77,6 +111,18 @@ const $theme = inject("$theme");
         height: 0;
         width: 4rem;
       }
+    }
+    .deco {
+      display: none;
+    }
+  }
+}
+
+@media screen and (max-height: 567px) {
+  #section-title {
+    height: 110dvh;
+    .scroll-indicator {
+      display: none;
     }
   }
 }

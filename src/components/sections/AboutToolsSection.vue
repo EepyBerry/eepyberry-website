@@ -1,175 +1,128 @@
 <template>
   <section id="section-about-tools">
-    <h2>my main tools!</h2>
-    <ul class="tool-list">
-      <li class="idea">
-        <div>
-          <iconify-icon
-            icon="logos:intellij-idea"
-            height="1.5rem"
-            aria-hidden="true"
-          />
-        </div>
-        <span>Intellij IDEA</span>
+    <div class="section-title" role="heading" aria-label="Tools & techs">
+      <hr class="title-divider" />
+      <span class="title-icon">
+        <span class="title-bracket" aria-hidden="true">[</span>
         <iconify-icon
-          icon="noto:glowing-star"
-          class="star"
-          height="1.25rem"
+          icon="mingcute:tool-line"
+          width="2.5rem"
           aria-hidden="true"
         />
-      </li>
-      <li class="vscode">
-        <div>
-          <iconify-icon mode="svg" icon="devicon:vscode" height="1.5rem" />
-        </div>
-        <span>VS Code</span>
-      </li>
-      <li class="aseprite">
-        <div>
+        <span class="title-bracket" aria-hidden="true">]</span>
+      </span>
+      <hr class="title-divider" />
+    </div>
+    <div class="section-content">
+      <EepyGroup>
+        <template v-slot:icon>
           <iconify-icon
             mode="svg"
-            icon="simple-icons:aseprite"
-            height="1.5rem"
-          />
-        </div>
-        <span>Aseprite</span>
-        <iconify-icon
-          icon="noto:glowing-star"
-          class="star"
-          height="1.25rem"
-          aria-hidden="true"
-        />
-      </li>
-      <li class="godot">
-        <div>
-          <iconify-icon mode="svg" icon="logos:godot-icon" height="1.5rem" />
-        </div>
-        <span>Godot</span>
-      </li>
-      <li class="blender">
-        <div>
-          <iconify-icon mode="svg" icon="logos:blender" height="1.5rem" />
-        </div>
-        <span>Blender</span>
-      </li>
-      <li class="krita">
-        <div>
-          <iconify-icon mode="svg" icon="simple-icons:krita" height="1.5rem" />
-        </div>
-        <span>Krita</span>
-        <iconify-icon
-          icon="noto:glowing-star"
-          class="star"
-          height="1.25rem"
-          aria-hidden="true"
-        />
-      </li>
-      <li class="illustrator">
-        <div>
-          <iconify-icon
-            icon="skill-icons:illustrator"
-            height="1.5rem"
+            icon="carbon:executable-program"
+            height="2.5rem"
             aria-hidden="true"
           />
-        </div>
-        <span>Illustrator</span>
-        <iconify-icon
-          icon="noto:glowing-star"
-          class="star"
-          height="1.25rem"
-          aria-hidden="true"
-        />
-      </li>
-    </ul>
+        </template>
+        <template v-slot:items>
+          <li>
+            <iconify-icon
+              mode="svg"
+              icon="simple-icons:intellijidea"
+              height="2rem"
+              aria-hidden="true"
+            />
+            <span>Intell&ijlig;&nbsp;IDEA</span>
+          </li>
+          <li>
+            <iconify-icon
+              mode="svg"
+              icon="devicon-plain:vscode"
+              height="2rem"
+              aria-hidden="true"
+            />
+            <span>VS&nbsp;Code</span>
+          </li>
+          <li>
+            <iconify-icon
+              mode="svg"
+              icon="simple-icons:godotengine"
+              height="2rem"
+              aria-hidden="true"
+            />
+            <span>Godot</span>
+          </li>
+        </template>
+      </EepyGroup>
+      <EepyGroup :class="{ reverse: shouldReverse }">
+        <template v-slot:icon>
+          <iconify-icon
+            mode="svg"
+            icon="mingcute:paint-brush-line"
+            height="2.5rem"
+            aria-hidden="true"
+          />
+        </template>
+        <template v-slot:items>
+          <li>
+            <iconify-icon
+              mode="svg"
+              icon="simple-icons:aseprite"
+              height="2rem"
+              aria-hidden="true"
+            />
+            <span>Aseprite</span>
+          </li>
+          <li>
+            <iconify-icon
+              mode="svg"
+              icon="simple-icons:krita"
+              height="2rem"
+              aria-hidden="true"
+            />
+            <span>Krita</span>
+          </li>
+          <li>
+            <iconify-icon
+              mode="svg"
+              icon="simple-icons:adobeillustrator"
+              height="2rem"
+              aria-hidden="true"
+            />
+            <span>Illustrator</span>
+          </li>
+        </template>
+      </EepyGroup>
+    </div>
   </section>
 </template>
 
+<script setup lang="ts">
+import { onMounted, onUnmounted, ref, watch } from "vue";
+
+const shouldReverse = ref(true);
+
+onMounted(() => window.addEventListener("resize", checkReverse));
+onUnmounted(() => window.removeEventListener("resize", checkReverse));
+
+function checkReverse() {
+  shouldReverse.value = window.innerWidth > 1023;
+}
+</script>
+
 <style scoped lang="scss">
 #section-about-tools {
-  .tool-list {
-    list-style-type: none;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 1rem;
-    max-width: 100%;
-
-    li {
-      position: relative;
-      flex-grow: 1;
-      flex-shrink: 1;
-      min-width: 10rem;
-      max-width: 100%;
-      height: 3rem;
-      background: var(--eepy-color-accent-semi);
-      border-radius: 8px;
-
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-
-      font-family: Dosis;
-      font-size: 1.125rem;
-      font-weight: 500;
-      line-height: 1rem;
-
-      & > span {
-        padding: 1rem;
-        color: var(--white);
-      }
-      & > div {
-        padding: 0.75rem;
-        width: 3rem;
-        height: 3rem;
-        color: var(--white);
-      }
-      & > .star {
-        z-index: 1;
-        position: absolute;
-        top: -0.25rem;
-        right: -0.25rem;
-        transform: rotateZ(36deg);
-        filter: drop-shadow(0 0 2px #000);
-      }
-
-      // Tool overrides
-      &.illustrator {
-        background-color: var(--eepy-color-illustrator);
-      }
-      &.krita {
-        background: var(--eepy-color-krita);
-      }
-      &.blender {
-        background: var(--eepy-color-blender);
-      }
-      &.godot {
-        background: var(--eepy-color-godot);
-      }
-      &.idea,
-      &.vscode,
-      &.aseprite {
-        background-color: var(--eepy-color-darktech);
-      }
-    }
+  .section-content {
+    padding: 1.5rem 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
   }
-}
-iconify-icon {
-  filter: drop-shadow(0 1px 1px #000);
 }
 
 @media screen and (max-width: 1023px) {
   #section-about-tools {
-    .tool-list {
-      li {
-        min-width: 0;
-      }
-    }
-  }
-}
-@media screen and (max-width: 895px) {
-  #section-about-tools {
-    h2 {
-      text-align: center;
+    .section-content {
+      grid-template-columns: 1fr;
     }
   }
 }

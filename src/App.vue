@@ -1,21 +1,22 @@
 <template>
   <AppScatter
+    v-if="route.meta.attached"
     :visible="themeHelper.themeRef.value === 'dark'"
     :size="themeHelper.themeRef.value === 'dark' ? 5 : 16"
     :density="themeHelper.themeRef.value === 'dark' ? 8 : 6"
   />
-  <aside>
+  <aside v-if="route.meta.attached">
     <AppNavigation />
   </aside>
-  <AppHeader />
+  <AppHeader v-if="route.meta.attached" />
   <main>
     <RouterView v-slot="{ Component, route }">
-      <Transition name="fade" mode="out-in">
+      <Transition :name="route.meta.attached ? 'fade' : ''" mode="out-in">
         <component :key="route.path" :is="Component" />
       </Transition>
     </RouterView>
   </main>
-  <AppFooter />
+  <AppFooter v-if="route.meta.attached" />
 </template>
 
 <script setup lang="ts">
@@ -34,7 +35,9 @@ import type { ThemeHelper } from "@/utils/theme.helper";
 import AppNavigation from "@/components/main/AppNavigation.vue";
 import AppFooter from "./components/main/AppFooter.vue";
 import AppHeader from "./components/main/AppHeader.vue";
+import { useRoute } from "vue-router";
 
+const route = useRoute();
 const AppScatter = defineAsyncComponent(
   () => import("./components/AppScatter.vue"),
 );

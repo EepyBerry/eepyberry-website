@@ -1,7 +1,7 @@
 {
   "name": "eepyberry-website",
-  "version": "1.0.0",
-  "description": "EepyBerry's personal website's source code",
+  "version": "1.1.0",
+  "description": "EepyBerry's personal website",
   "main": "index.ts",
   "type": "module",
   "private": true,

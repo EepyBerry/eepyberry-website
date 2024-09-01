@@ -1,31 +1,54 @@
 <template>
   <section id="section-art">
-    <h2 class="section-title">art corner!</h2>
+    <div class="section-title" role="heading" aria-label="Drawings">
+      <hr class="title-divider" />
+      <span class="title-icon">
+        <span class="title-bracket" aria-hidden="true">[</span>
+        <iconify-icon
+          icon="mingcute:paint-brush-line"
+          width="2.5rem"
+          aria-hidden="true"
+        />
+        <span class="title-bracket" aria-hidden="true">]</span>
+      </span>
+      <hr class="title-divider" />
+    </div>
     <div class="section-content">
       <ul class="gallery">
         <li class="image-wrapper" style="width: 36rem">
-          <a href="#/artwork/2024-08-03_1000-LC.jpg"
-            ><img src="/artwork/2024-08-03_1000-LC.jpg"
+          <a href="#/artwork/2024-08-03_1000-LC_Carrier.jpg"
+            ><img
+              src="/artwork/2024-08-03_1000-LC_Carrier.jpg"
+              aria-label="1000-LC"
+              alt="1000-LC Carrier"
           /></a>
+          <div class="drawing-title">
+            <span>"1000-LC 'CARRIER'"</span>
+          </div>
         </li>
         <li class="image-wrapper" style="width: 20rem">
           <a href="#/artwork/2023-01-09_Heart_of_the_Mountain.jpg"
             ><img
               src="/artwork/2023-01-09_Heart_of_the_Mountain.jpg"
+              aria-label="Heart of the Mountain"
+              alt="Heart of the Mountain"
               style="scale: 120%"
           /></a>
+          <div class="drawing-title">
+            <span>"Heart of the Mountain"</span>
+          </div>
         </li>
         <li class="image-wrapper" style="width: 20rem">
           <a href="#/artwork/2022-12-11_Niko_Holding_the_Sun.jpg"
             ><img
               src="/artwork/2022-12-11_Niko_Holding_the_Sun.jpg"
+              aria-label="Niko Holding the Sun"
+              alt="Niko Holding the Sun"
               style="scale: 120%"
           /></a>
-        </li>
-        <li class="image-wrapper" style="width: 20rem">
-          <a href="#/artwork/2022-02-12_Strange_Reflection.jpg"
-            ><img src="/artwork/2022-02-12_Strange_Reflection.jpg"
-          /></a>
+          <div class="drawing-title">
+            <span>"Niko Holding the Sun"</span>
+          </div>
         </li>
         <!-- placeholders -->
         <li class="image-wrapper placeholder" style="width: 20rem">
@@ -35,9 +58,6 @@
           <IconEepyBerry class="placeholder-icon" />
         </li>
         <li class="image-wrapper placeholder" style="width: 36rem">
-          <IconEepyBerry class="placeholder-icon" />
-        </li>
-        <li class="image-wrapper placeholder" style="width: 20rem">
           <IconEepyBerry class="placeholder-icon" />
         </li>
       </ul>
@@ -58,9 +78,10 @@ import IconEepyBerry from "../svg/icons/IconEepyBerry.vue";
   justify-content: center;
 
   .section-title {
-    align-self: flex-start;
+    align-self: center;
   }
   .section-content {
+    padding: 1.5rem 0;
     display: flex;
     flex-direction: column;
     max-width: 100%;
@@ -78,7 +99,8 @@ import IconEepyBerry from "../svg/icons/IconEepyBerry.vue";
     flex-grow: 1;
     flex-shrink: 1;
 
-    border-radius: 8px;
+    position: relative;
+    border-radius: 6px;
     max-width: 100%;
     width: 100%;
     height: 24rem;
@@ -87,13 +109,13 @@ import IconEepyBerry from "../svg/icons/IconEepyBerry.vue";
     display: flex;
 
     &.placeholder {
-      border: 2px dashed var(--eepy-color-accent);
+      border: 2px dashed var(--eepy-theme-accent);
       align-items: center;
       justify-content: center;
       opacity: 0.5;
 
       svg {
-        color: var(--eepy-color-accent);
+        color: var(--eepy-theme-accent);
         object-position: center;
         height: 3.5rem;
       }
@@ -103,6 +125,21 @@ import IconEepyBerry from "../svg/icons/IconEepyBerry.vue";
       object-position: center;
       object-fit: cover;
       width: 100%;
+    }
+    .drawing-title {
+      z-index: 1;
+      position: absolute;
+      inset: auto 0 0;
+      color: white;
+      text-align: center;
+
+      span {
+        background: black;
+        padding: 0.25rem 0.5rem;
+        border: 2px solid #fffafa;
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
+      }
     }
 
     a {
@@ -122,9 +159,6 @@ import IconEepyBerry from "../svg/icons/IconEepyBerry.vue";
 @media screen and (max-width: 767px) {
   #section-art {
     margin-top: 3rem;
-    .section-title {
-      align-self: center;
-    }
     .section-content {
       gap: 1rem;
     }
