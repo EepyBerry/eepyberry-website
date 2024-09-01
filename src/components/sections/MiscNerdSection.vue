@@ -1,10 +1,10 @@
 <template>
   <section id="section-nerd">
-    <div class="section-title" role="heading" aria-label="Drawings">
+    <div class="section-title" role="heading" aria-label="Nerd stuff">
       <hr class="title-divider">
       <span class="title-icon">
         <span class="title-bracket" aria-hidden="true">[</span>
-        <iconify-icon icon="mingcute:star-line" width="2.5rem" aria-hidden="true" />
+        <iconify-icon icon="tabler:mood-nerd" width="2.5rem" aria-hidden="true" />
         <span class="title-bracket" aria-hidden="true">]</span>
       </span>
       <hr class="title-divider">
@@ -25,6 +25,11 @@
         <span class="info">unaffiliated, i just love the project!</span>
       </a>
       <img src="/misc/intersexprogressflag.png">
+      <img src="/misc/evilcatface_small.webp">
+    </div>
+    <div class="section-wip">
+      <p>(this page is random, i know, but i wanted a fun space for interesting links :3)</p>
+      <p>(more stuff to be added later... probably)</p>
     </div>
   </section>
 </template>
@@ -106,6 +111,17 @@
         color: #fff;
       }
     }
+  }
+  .section-wip {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: Dosis;
+    font-weight: 500;
+    font-size: 1.125rem;
+    color: var(--eepy-theme-accent);
   }
 }
 </style>

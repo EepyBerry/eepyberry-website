@@ -35,6 +35,7 @@ import SvgKofi from "../svg/icons/SvgKofi.vue";
 <!------------------------------------------------------------>
 <style scoped lang="scss">
 .links {
+  z-index: 1;
   display: flex;
   align-items: center;
   gap: 1.75rem;

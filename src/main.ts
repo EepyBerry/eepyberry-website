@@ -10,6 +10,7 @@ import AppCard from "./components/AppCard.vue";
 import { createHead } from "@unhead/vue";
 import AppArticle from "./components/AppArticle.vue";
 import AppGroup from "./components/AppGroup.vue";
+import AppTooltip from "./components/main/AppTooltip.vue";
 
 // Main application
 createApp(App)
@@ -20,4 +21,5 @@ createApp(App)
   .component("EepyCard", AppCard)
   .component("EepyGroup", AppGroup)
   .component("EepyChip", AppChip)
+  .component("EepyTooltip", AppTooltip)
   .mount("#app");
