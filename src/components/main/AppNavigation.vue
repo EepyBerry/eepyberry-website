@@ -1,8 +1,8 @@
 <template>
   <nav>
     <AppHomeButton ref="homeLink"
-      @mouseover="startHover(homeFloating?.$el)"
-      @mouseleave="stopHover(homeFloating?.$el)"
+      @mouseover="startHover(homeFloating)"
+      @mouseleave="stopHover(homeFloating)"
     />
     <router-link
       ref="aboutLink"
@@ -10,8 +10,8 @@
       to="about"
       title="About me"
       aria-label="About page link"
-      @mouseover="startHover(aboutFloating?.$el)"
-      @mouseleave="stopHover(aboutFloating?.$el)"
+      @mouseover="startHover(aboutFloating)"
+      @mouseleave="stopHover(aboutFloating)"
     >
       <iconify-icon mode="svg" icon="mingcute:happy-line" height="2.25rem" />
     </router-link>
@@ -21,8 +21,8 @@
       to="miscellaneous"
       title="Miscellaneous"
       aria-label="Miscellaneous page link"
-      @mouseover="startHover(miscFloating?.$el)"
-      @mouseleave="stopHover(miscFloating?.$el)"
+      @mouseover="startHover(miscFloating)"
+      @mouseleave="stopHover(miscFloating)"
     >
       <iconify-icon mode="svg" icon="mingcute:star-line" height="2.25rem" />
     </router-link>
@@ -86,11 +86,21 @@ const styles = {
   })
 }
 
-function startHover(elem: HTMLElement) {
-  elem.style.visibility = 'visible'
+function startHover(elem?: HTMLElement|null) {
+  // @ts-ignore
+  if (!elem || !elem.$el) {
+    return
+  }
+  // @ts-ignore
+  elem.$el.style.visibility = 'visible'
 }
-function stopHover(elem: HTMLElement) {
-  elem.style.visibility = 'hidden'
+function stopHover(elem?: HTMLElement|null) {
+  // @ts-ignore
+  if (!elem || !elem.$el) {
+    return
+  }
+  // @ts-ignore
+  elem.$el.style.visibility = 'hidden'
 }
 
 </script>
