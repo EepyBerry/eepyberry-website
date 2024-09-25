@@ -1,12 +1,14 @@
 button {
+  height: 2rem;
+  color: var(--eepy-theme-text);
+
   font-family: Dosis;
   font-size: 1rem;
-  color: var(--eepy-theme-text);
+
   display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
-  height: 2rem;
 }
 button[icon-button] {
   background: none;
@@ -18,13 +20,25 @@ button:hover {
 }
 
 button.info-button {
-  background: var(--eepy-theme-monochrome);
-  border: 1px solid var(--eepy-theme-accent-threequarter);
-  transition: transform 75ms ease-out;
+  background: var(--eepy-theme-button);
+  border: 1px solid var(--eepy-theme-accent-half);
+  box-shadow: 0 3px 0 var(--eepy-theme-accent-half);
+  transition: transform 50ms ease-out;
 }
 button.info-button:hover {
-  transform: translateY(-0.125rem);
+  background: var(--eepy-theme-button-hover);
+  transform: translateY(-0.1rem);
 }
 button.info-button:active {
+  background: var(--eepy-theme-button-selected);
   transform: scale(95%) translateY(0.125rem);
+  box-shadow: none;
+}
+button.info-button.selected {
+  background: var(--eepy-theme-button-selected);
+}
+
+[data-theme='dark'] button.info-button {
+  border: 1px solid var(--eepy-theme-accent-threequarter);
+  box-shadow: none;
 }

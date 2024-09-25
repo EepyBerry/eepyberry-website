@@ -1,6 +1,6 @@
 <template>
   <div class="info-terminal">
-    <div class="terminal-header" :style="{ visibility: isTextVisible ? 'visible' : 'hidden' }">
+    <div class="terminal-header">
       <span>eepy-os v1.2 --- info-terminal </span>
     </div>
     <div class="terminal-content" :style="{ visibility: isTextVisible ? 'visible' : 'hidden' }">
@@ -10,7 +10,7 @@
         </p>
         <br />
         <p>
-          <span>click on a box above (info) or below (interests) to know
+          <span>click on a button above (info) or below (interests) to know
             more!</span>
           <BlinkCharacter />
         </p>
@@ -125,16 +125,18 @@ function getData() {
 <style scoped lang="scss">
 .info-terminal {
   flex: 1;
-  border-radius: 6px;
   min-height: 18rem;
-  padding: 1.5rem;
+  overflow: hidden;
+
   background: var(--eepy-theme-terminal-background);
   background-size: 150% 150%;
   color: var(--eepy-theme-terminal-text);
   border: 1px solid var(--eepy-theme-accent-threequarter);
+  border-radius: 8px;
   animation: gradient 10s linear infinite;
 
   font-family: monospace;
+  font-size: 1rem;
 
   display: flex;
   flex-direction: column;
@@ -142,16 +144,22 @@ function getData() {
   justify-content: space-between;
   gap: 1rem;
 
-  font-size: 1rem;
-
   .terminal-header {
+    width: 100%;
+    padding: 0.5rem;
+
+    border-bottom: 1px solid var(--eepy-theme-terminal-header-border);
+    background: var(--eepy-theme-terminal-header);
+    color: var(--eepy-color-white);
+
+    font-size: 0.875rem;
     text-align: center;
-    color: var(--eepy-theme-terminal-text-accent);
   }
 
   .terminal-content {
     flex: 1;
     width: 100%;
+    padding: 0 1.5rem;
 
     .accent {
       color: var(--eepy-theme-terminal-text-accent);

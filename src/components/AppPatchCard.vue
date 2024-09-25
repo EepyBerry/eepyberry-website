@@ -12,7 +12,7 @@
   background: var(--eepy-theme-patch);
   border-radius: 16px;
   box-shadow: 3px 6px 4px var(--eepy-theme-accent-half);
-  transform: rotateZ(-1deg);
+  transform: rotateZ(-1.5deg);
   background-image: url('/misc/wooltexture.png');
   background-size: 128px;
 }
@@ -36,5 +36,9 @@
   justify-content: center;
   background-image: url('/svg/patch_dashes.svg');
   border-radius: 8px;
+}
+
+[data-theme='dark'] .eepy-patchcard {
+  background-image: url('/svg/patch_dashes_dark.svg');
 }
 </style>
