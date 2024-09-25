@@ -129,16 +129,18 @@ import IconEepyBerry from "../svg/icons/IconEepyBerry.vue";
     .drawing-title {
       z-index: 1;
       position: absolute;
-      inset: auto 0 0;
+      inset: auto auto 1rem 0.75rem;
       color: white;
       text-align: center;
+      font-size: 0.875rem;
 
       span {
         background: black;
         padding: 0.25rem 0.5rem;
-        border: 2px solid #fffafa;
+        border: 1px solid var(--eepy-theme-border);
         border-top-left-radius: 8px;
         border-top-right-radius: 8px;
+        border-radius: 8px;
       }
     }
 

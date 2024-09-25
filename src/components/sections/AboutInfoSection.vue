@@ -14,7 +14,15 @@
       <hr class="title-divider" />
     </div>
     <div class="section-content">
-      <div class="avatar-wrapper">
+      <EepyPatchCard class="avatar-wrapper">
+        <img
+          class="avatar"
+          src="/avatar.webp"
+          alt="Avatar"
+          aria-label="avatar"
+        />
+      </EepyPatchCard>
+      <!-- <div class="avatar-wrapper">
         <span class="deco tl" />
         <span class="deco tr" />
         <span class="deco bl" />
@@ -25,7 +33,7 @@
           alt="Avatar"
           aria-label="avatar"
         />
-      </div>
+      </div> -->
       <div class="info-wrapper">
         <ul class="info-list">
           <li>
@@ -361,6 +369,7 @@ function isSelected(type: string, idx: number) {
     gap: 3rem;
     width: 100%;
     .avatar-wrapper {
+      padding: 1rem;
       position: relative;
       grid-area: avatar;
       align-self: flex-end;
@@ -373,6 +382,7 @@ function isSelected(type: string, idx: number) {
 
       .avatar {
         width: clamp(160px, 25vw, 300px);
+        filter: drop-shadow(0 0 6px #0008)
       }
     }
     .info-wrapper {

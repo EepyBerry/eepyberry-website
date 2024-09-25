@@ -10,6 +10,7 @@ import AppCard from "./components/AppCard.vue";
 import { createHead } from "@unhead/vue";
 import AppGroup from "./components/AppGroup.vue";
 import AppTooltip from "./components/main/AppTooltip.vue";
+import AppPatchCard from "./components/AppPatchCard.vue";
 
 // Main application
 createApp(App)
@@ -17,6 +18,7 @@ createApp(App)
   .use(createHead())
   .provide("ThemeHelper", new ThemeHelper())
   .component("EepyCard", AppCard)
+  .component("EepyPatchCard", AppPatchCard)
   .component("EepyGroup", AppGroup)
   .component("EepyChip", AppChip)
   .component("EepyTooltip", AppTooltip)

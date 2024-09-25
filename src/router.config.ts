@@ -17,19 +17,19 @@ const router = createRouter({
     {
       path: "/about",
       name: "About",
-      component: () => AboutView,
+      component: AboutView,
       meta: { attached: true },
     },
     {
       path: "/miscellaneous",
       name: "Miscellaneous",
-      component: () => MiscellaneousView,
+      component: MiscellaneousView,
       meta: { attached: true },
     },
     {
       path: "/page-not-found",
       name: "Not Found",
-      component: () => NotFoundView,
+      component: NotFoundView,
       meta: { attached: true },
     },
     {
