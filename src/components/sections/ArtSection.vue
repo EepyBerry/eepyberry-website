@@ -52,13 +52,13 @@
         </li>
         <!-- placeholders -->
         <li class="image-wrapper placeholder" style="width: 20rem">
-          <IconEepyBerry class="placeholder-icon" />
+          <IconEepyBerry />
         </li>
         <li class="image-wrapper placeholder" style="width: 20rem">
-          <IconEepyBerry class="placeholder-icon" />
+          <IconEepyBerry />
         </li>
         <li class="image-wrapper placeholder" style="width: 36rem">
-          <IconEepyBerry class="placeholder-icon" />
+          <IconEepyBerry />
         </li>
       </ul>
     </div>
@@ -70,7 +70,7 @@ import IconEepyBerry from "../svg/icons/IconEepyBerry.vue";
 </script>
 
 <!------------------------------------------------------------>
-<style lang="scss">
+<style scoped lang="scss">
 #section-art {
   display: flex;
   flex-direction: column;

@@ -1,5 +1,9 @@
 import { createRouter, createWebHistory } from "vue-router";
 import { SITE_TITLE } from "./utils/constants";
+import HomeView from "./views/HomeView.vue";
+import AboutView from "./views/AboutView.vue";
+import MiscellaneousView from "./views/MiscellaneousView.vue";
+import NotFoundView from "./views/NotFoundView.vue";
 
 const router = createRouter({
   history: createWebHistory(),
@@ -7,25 +11,25 @@ const router = createRouter({
     {
       path: "/",
       name: "Home",
-      component: () => import("./views/HomeView.vue"),
+      component: HomeView,
       meta: { attached: true },
     },
     {
       path: "/about",
       name: "About",
-      component: () => import("./views/AboutView.vue"),
+      component: () => AboutView,
       meta: { attached: true },
     },
     {
       path: "/miscellaneous",
       name: "Miscellaneous",
-      component: () => import("./views/MiscellaneousView.vue"),
+      component: () => MiscellaneousView,
       meta: { attached: true },
     },
     {
       path: "/page-not-found",
       name: "Not Found",
-      component: () => import("./views/NotFoundView.vue"),
+      component: () => NotFoundView,
       meta: { attached: true },
     },
     {

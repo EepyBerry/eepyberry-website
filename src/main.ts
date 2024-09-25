@@ -8,7 +8,6 @@ import "./assets/sass/index.scss";
 import "iconify-icon";
 import AppCard from "./components/AppCard.vue";
 import { createHead } from "@unhead/vue";
-import AppArticle from "./components/AppArticle.vue";
 import AppGroup from "./components/AppGroup.vue";
 import AppTooltip from "./components/main/AppTooltip.vue";
 
@@ -17,7 +16,6 @@ createApp(App)
   .use(router)
   .use(createHead())
   .provide("ThemeHelper", new ThemeHelper())
-  .component("EepyArticle", AppArticle)
   .component("EepyCard", AppCard)
   .component("EepyGroup", AppGroup)
   .component("EepyChip", AppChip)
