@@ -106,7 +106,7 @@ const interestList: Ref<Info[]> = ref([
   },
   {
     title: "plushies :>",
-    content: ["i have about 20 in my collection, and it keeps growing :3", "check it out on the [miscellaneous] page OwO"],
+    content: ["i have about 25 in my collection, and it keeps growing :3", "check it out on the [miscellaneous] page OwO"],
   },
 ]);
 
