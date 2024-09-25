@@ -163,7 +163,7 @@ function isSelected(type: string, idx: number) {
     align-items: center;
     padding: 1.5rem 0;
     margin: 0 auto;
-    gap: 4rem;
+    gap: 5rem;
     width: 100%;
 
     .avatar-wrapper {
@@ -179,7 +179,7 @@ function isSelected(type: string, idx: number) {
       justify-content: center;
 
       .avatar {
-        width: clamp(160px, 25vw, 300px);
+        width: clamp(160px, 25vw, 260px);
         filter: drop-shadow(0 0 6px #0008)
       }
     }
@@ -208,7 +208,7 @@ function isSelected(type: string, idx: number) {
       button {
         position: relative;
         width: 100%;
-        height: 2.5rem;
+        height: 2.25rem;
         border-radius: 6px;
 
         display: flex;
@@ -236,10 +236,10 @@ function isSelected(type: string, idx: number) {
   }
 }
 
-@media screen and (max-width: 1199px) {
+@media screen and (max-width: 1377px) {
   #section-about-info {
-    .info-list {
-      grid-template-columns: repeat(4, 1fr);
+    .section-content {
+      gap: 3rem;
     }
   }
 }
@@ -252,21 +252,35 @@ function isSelected(type: string, idx: number) {
   }
 }
 
+@media screen and (max-width: 1023px) {
+  #section-about-info {
+    .info-list {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+}
+
 @media screen and (max-width: 895px) {
   #section-about-info {
     .section-content {
       grid-template-areas: "info";
       grid-template-columns: 1fr;
-
+      
       .avatar-wrapper {
         display: none;
       }
+    }
+    .info-list {
+      grid-template-columns: repeat(8, 1fr);
     }
   }
 }
 
 @media screen and (max-width: 767px) {
   #section-about-info {
+    .info-list {
+      grid-template-columns: repeat(4, 1fr);
+    }
     .section-content {
       grid-template-columns: 1fr;
       gap: 3rem;
