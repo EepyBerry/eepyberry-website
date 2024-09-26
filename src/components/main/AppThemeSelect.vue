@@ -34,7 +34,7 @@ function toggleTheme() {
 </script>
 
 <style scoped lang="scss">
-button {
+button.theme-select-button {
   width: 3.5rem;
   height: 3.5rem;
   padding: 0;
@@ -42,6 +42,7 @@ button {
   margin-top: 0.5rem;
   background: none;
   border: none;
+  box-shadow: none;
 
   display: flex;
   align-items: center;
@@ -71,11 +72,17 @@ button {
 }
 button:hover,
 button:focus-visible {
+  background: none;
+  border: none;
+  box-shadow: none;
   .lightbulb {
     transform: translateY(0.125rem);
   }
 }
 button:active {
+  background: none;
+  border: none;
+  box-shadow: none;
   .lightbulb {
     transform: translateY(0.5rem);
   }

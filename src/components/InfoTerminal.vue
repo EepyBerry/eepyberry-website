@@ -1,7 +1,12 @@
 <template>
   <div class="info-terminal">
     <div class="terminal-header">
-      <span>eepy-os v1.2 --- info-terminal </span>
+      <span>eepy-os v2.1 --- info-terminal </span>
+      <div class="terminal-header-decoration">
+        <span><iconify-icon icon="material-symbols:minimize-rounded" width="0.875rem" aria-hidden="true" /></span>
+        <span><iconify-icon icon="mdi:maximize" width="0.75rem" aria-hidden="true" /></span>
+        <span><iconify-icon icon="material-symbols:close-rounded" width="0.875rem" aria-hidden="true" /></span>
+      </div>
     </div>
     <div class="terminal-content" :style="{ visibility: isTextVisible ? 'visible' : 'hidden' }">
       <template v-if="!infoList[dataIndex]">
@@ -132,11 +137,11 @@ function getData() {
   background-size: 150% 150%;
   color: var(--eepy-theme-terminal-text);
   border: 1px solid var(--eepy-theme-accent-threequarter);
-  border-radius: 8px;
+  border-radius: 6px;
   animation: gradient 10s linear infinite;
 
-  font-family: monospace;
-  font-size: 1rem;
+  font-family: Jetbrains Mono, monospace;
+  font-size: 0.875rem;
 
   display: flex;
   flex-direction: column;
@@ -145,15 +150,39 @@ function getData() {
   gap: 1rem;
 
   .terminal-header {
+    position: relative;
     width: 100%;
-    padding: 0.5rem;
+    padding: 0.375rem;
 
     border-bottom: 1px solid var(--eepy-theme-terminal-header-border);
     background: var(--eepy-theme-terminal-header);
     color: var(--eepy-color-white);
 
-    font-size: 0.875rem;
+    font-size: 0.8125rem;
     text-align: center;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &-decoration {
+      position: absolute;
+      inset: auto 0.5rem auto auto;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      user-select: none;
+
+      span {
+        width: 1.25rem;
+        height: 1.25rem;
+        background: var(--eepy-theme-terminal-header-decoration);
+        border-radius: 4px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
   }
 
   .terminal-content {
