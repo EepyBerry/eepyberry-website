@@ -147,7 +147,6 @@ function getData() {
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  gap: 1rem;
 
   .terminal-header {
     position: relative;
@@ -188,7 +187,7 @@ function getData() {
   .terminal-content {
     flex: 1;
     width: 100%;
-    padding: 0 1.5rem;
+    padding: 1rem 1.25rem;
 
     .accent {
       color: var(--eepy-theme-terminal-text-accent);
