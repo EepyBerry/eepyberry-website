@@ -14,7 +14,7 @@
   box-shadow: 3px 6px 4px var(--eepy-theme-accent-half);
   transform: rotateZ(-1.5deg);
   background-image: url('/misc/wooltexture.png');
-  background-size: 128px;
+  background-size: 192px;
 }
 
 [data-theme='light'] .eepy-patchcard-wrapper {

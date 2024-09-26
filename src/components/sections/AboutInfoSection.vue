@@ -159,7 +159,7 @@ function isSelected(type: string, idx: number) {
   .section-content {
     display: grid;
     grid-template-areas: "avatar info";
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: 1fr 2.25fr;
     align-items: center;
     padding: 1.5rem 0;
     margin: 0 auto;

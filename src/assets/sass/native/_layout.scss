@@ -40,6 +40,7 @@ hr {
 
 .deco {
   position: absolute;
+  z-index: -1;
   $size: clamp(1.5rem, 3.75vw, 2rem);
   $stroke: clamp(3px, 0.5vw, 4px);
   $color: var(--eepy-theme-accent);
@@ -68,4 +69,15 @@ hr {
     border-bottom: $stroke solid $color;
     border-right: $stroke solid $color;
   }
+}
+.deco-star {
+  z-index: -2;
+  position: absolute;
+  color: var(--eepy-theme-star);
+
+  $size: clamp(1.5rem, 3.75vw, 2rem);
+  $stroke: clamp(3px, 0.5vw, 4px);
+  
+  width: $size;
+  height: $size;
 }
