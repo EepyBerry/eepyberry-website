@@ -110,7 +110,7 @@ const $theme = inject("$theme");
 
   opacity: 0.45;
   transform: rotateZ(45deg);
-  @include anims.animate-backandforth('star2bnf', 5s, 15deg, 45deg);
+  @include anims.animate-backandforth('star2bnf', 5s, -15deg, -45deg);
 }
 
 .star3 {
