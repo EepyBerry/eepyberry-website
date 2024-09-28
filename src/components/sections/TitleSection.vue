@@ -98,7 +98,7 @@ const $theme = inject("$theme");
 
   opacity: 0.45;
   transform: rotateZ(45deg);
-  @include anims.animate-backandforth('star1bnf', 7s, 45deg, 65deg);
+  @include anims.animate-backandforth('star1bnf', 9s, 45deg, 65deg);
 }
 
 .star2 {
@@ -110,7 +110,7 @@ const $theme = inject("$theme");
 
   opacity: 0.45;
   transform: rotateZ(45deg);
-  @include anims.animate-backandforth('star2bnf', 5s, -15deg, -45deg);
+  @include anims.animate-backandforth('star2bnf', 7s, -15deg, -45deg);
 }
 
 .star3 {
@@ -122,7 +122,7 @@ const $theme = inject("$theme");
 
   opacity: 0.45;
   transform: rotateZ(45deg);
-  @include anims.animate-backandforth('star3bnf', 6s, 35deg, 70deg);
+  @include anims.animate-backandforth('star3bnf', 10s, 35deg, 70deg);
 }
 
 @media screen and (max-width: 567px) {

@@ -5,7 +5,7 @@
       <div class="terminal-header-decoration">
         <span><iconify-icon icon="material-symbols:minimize-rounded" width="0.875rem" aria-hidden="true" /></span>
         <span><iconify-icon icon="mdi:maximize" width="0.75rem" aria-hidden="true" /></span>
-        <span><iconify-icon icon="material-symbols:close-rounded" width="0.875rem" aria-hidden="true" /></span>
+        <span><iconify-icon icon="material-symbols:transgender" width="0.875rem" aria-hidden="true" /></span>
       </div>
     </div>
     <div class="terminal-content" :style="{ visibility: isTextVisible ? 'visible' : 'hidden' }">
@@ -78,7 +78,7 @@ const infoList: Ref<Info[]> = ref([
 ]);
 const interestList: Ref<Info[]> = ref([
   {
-    title: "programming! </>",
+    title: "programming!",
     content: ["not only my job, but a passion as well! :>", "check out my projects if you're interested!"],
   },
   {

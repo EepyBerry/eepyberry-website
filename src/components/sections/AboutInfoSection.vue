@@ -13,18 +13,6 @@
       <EepyPatchCard class="avatar-wrapper">
         <img class="avatar" src="/avatar.webp" alt="Avatar" aria-label="avatar" />
       </EepyPatchCard>
-      <!-- <div class="avatar-wrapper">
-        <span class="deco tl" />
-        <span class="deco tr" />
-        <span class="deco bl" />
-        <span class="deco br" />
-        <img
-          class="avatar"
-          src="/avatar.webp"
-          alt="Avatar"
-          aria-label="avatar"
-        />
-      </div> -->
       <div class="info-wrapper">
         <ul class="info-list">
           <li>

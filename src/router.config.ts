@@ -1,5 +1,4 @@
 import { createRouter, createWebHistory } from "vue-router";
-import { SITE_TITLE } from "./utils/constants";
 import HomeView from "./views/HomeView.vue";
 import AboutView from "./views/AboutView.vue";
 import MiscellaneousView from "./views/MiscellaneousView.vue";
@@ -43,9 +42,6 @@ const router = createRouter({
       redirect: "/page-not-found",
     },
   ],
-});
-router.afterEach((to) => {
-  document.title = (to.name ? `${String(to.name)} · ` : "") + SITE_TITLE;
 });
 
 export default router;
