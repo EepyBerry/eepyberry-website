@@ -34,7 +34,7 @@
           </EepyCard>
         </li>
         <li>
-          <EepyCard id="tool-vscode" class="center">
+          <EepyCard id="tool-godot" class="center">
             <template v-slot:title>
               <iconify-icon inline mode="svg" icon="logos:godot-icon" height="2rem" aria-hidden="true" />
               <span>godot engine</span>
@@ -105,7 +105,7 @@
 
     #tool-godot {
       height: 100%;
-      background-image: url("/tools/tool-vscode.webp");
+      background-image: url("/tools/tool-godot.webp");
       background-position: top;
       background-size: cover;
 

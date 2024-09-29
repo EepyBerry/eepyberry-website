@@ -15,27 +15,27 @@
           <EepyPatchCard id="tool-aseprite" class="avatar-wrapper" style="transform: rotateZ(1deg);">
             <div>
               <img src="/svg/aseprite-icon.svg" :style="{ width: '2rem', height: '2.125rem' }" aria-label="Aseprite logo">
-              <span>aseprite</span>
+              <span>Aseprite</span>
             </div>
-            <p>pixel art</p>
+            <p>Pixel art</p>
           </EepyPatchCard>
         </li>
         <li>
           <EepyPatchCard id="tool-krita" class="avatar-wrapper" style="transform: rotateZ(-1deg);">
             <div>
               <img src="/svg/krita-icon.svg" :style="{ width: '2rem', height: '2rem' }" aria-label="Krita logo">
-              <span>krita</span>
+              <span>Krita</span>
             </div>
-            <p>digital painting</p>
+            <p>Digital painting</p>
           </EepyPatchCard>
         </li>
         <li>
           <EepyPatchCard id="tool-illustrator" class="avatar-wrapper" style="transform: rotateZ(0.5deg);">
             <div>
               <iconify-icon inline mode="svg" icon="logos:adobe-illustrator" height="2rem" aria-hidden="true" />
-              <span>illustrator</span>
+              <span>Illustrator</span>
             </div>
-            <p>vector graphics</p>
+            <p>Vector graphics</p>
           </EepyPatchCard>
         </li>
       </ul>
