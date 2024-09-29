@@ -17,9 +17,7 @@
               <iconify-icon inline mode="svg" icon="logos:intellij-idea" height="2rem" aria-hidden="true" />
               <span>intell&ijlig;&nbsp;idea</span>
             </template>
-            <template v-slot:footer>
-              Primary IDE
-            </template>
+            <template v-slot:footer> Primary IDE </template>
           </EepyCard>
         </li>
         <li>
@@ -28,9 +26,7 @@
               <iconify-icon inline mode="svg" icon="devicon:vscode" height="2rem" aria-hidden="true" />
               <span>visual studio code</span>
             </template>
-            <template v-slot:footer>
-              Secondary IDE
-            </template>
+            <template v-slot:footer> Secondary IDE </template>
           </EepyCard>
         </li>
         <li>
@@ -39,9 +35,7 @@
               <iconify-icon inline mode="svg" icon="logos:godot-icon" height="2rem" aria-hidden="true" />
               <span>godot engine</span>
             </template>
-            <template v-slot:footer>
-              Game development
-            </template>
+            <template v-slot:footer> Game development </template>
           </EepyCard>
         </li>
       </ul>
@@ -83,7 +77,7 @@
 
     #tool-intellij {
       height: 100%;
-      background-image: url("/tools/tool-intellij.webp");
+      background-image: url('/tools/tool-intellij.webp');
       background-position: top;
       background-size: cover;
 
@@ -94,7 +88,7 @@
 
     #tool-vscode {
       height: 100%;
-      background-image: url("/tools/tool-vscode.webp");
+      background-image: url('/tools/tool-vscode.webp');
       background-position: top;
       background-size: cover;
 
@@ -105,7 +99,7 @@
 
     #tool-godot {
       height: 100%;
-      background-image: url("/tools/tool-godot.webp");
+      background-image: url('/tools/tool-godot.webp');
       background-position: top;
       background-size: cover;
 

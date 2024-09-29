@@ -12,25 +12,29 @@
     <div class="section-content">
       <ul class="tool-list">
         <li>
-          <EepyPatchCard id="tool-aseprite" class="avatar-wrapper" style="transform: rotateZ(1deg);">
+          <EepyPatchCard id="tool-aseprite" class="avatar-wrapper" style="transform: rotateZ(1deg)">
             <div>
-              <img src="/svg/aseprite-icon.svg" :style="{ width: '2rem', height: '2.125rem' }" aria-label="Aseprite logo">
+              <img
+                src="/svg/aseprite-icon.svg"
+                :style="{ width: '2rem', height: '2.125rem' }"
+                aria-label="Aseprite logo"
+              />
               <span>Aseprite</span>
             </div>
             <p>Pixel art</p>
           </EepyPatchCard>
         </li>
         <li>
-          <EepyPatchCard id="tool-krita" class="avatar-wrapper" style="transform: rotateZ(-1deg);">
+          <EepyPatchCard id="tool-krita" class="avatar-wrapper" style="transform: rotateZ(-1deg)">
             <div>
-              <img src="/svg/krita-icon.svg" :style="{ width: '2rem', height: '2rem' }" aria-label="Krita logo">
+              <img src="/svg/krita-icon.svg" :style="{ width: '2rem', height: '2rem' }" aria-label="Krita logo" />
               <span>Krita</span>
             </div>
             <p>Digital painting</p>
           </EepyPatchCard>
         </li>
         <li>
-          <EepyPatchCard id="tool-illustrator" class="avatar-wrapper" style="transform: rotateZ(0.5deg);">
+          <EepyPatchCard id="tool-illustrator" class="avatar-wrapper" style="transform: rotateZ(0.5deg)">
             <div>
               <iconify-icon inline mode="svg" icon="logos:adobe-illustrator" height="2rem" aria-hidden="true" />
               <span>Illustrator</span>
@@ -75,12 +79,14 @@
       }
     }
 
-    #tool-aseprite, #tool-krita, #tool-illustrator {
+    #tool-aseprite,
+    #tool-krita,
+    #tool-illustrator {
       height: 100%;
 
       :deep(.eepy-patchcard) {
         flex-direction: column;
-      }      
+      }
       div {
         display: flex;
         align-items: center;

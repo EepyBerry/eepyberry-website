@@ -19,7 +19,6 @@
 
 [data-theme='light'] .eepy-patchcard-wrapper {
   background-blend-mode: multiply;
-
 }
 
 [data-theme='dark'] .eepy-patchcard-wrapper {

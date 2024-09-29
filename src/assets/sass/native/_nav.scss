@@ -29,12 +29,12 @@ a.card-link {
 }
 
 // Theme-based selectors
-[data-theme="dark"] {
+[data-theme='dark'] {
   a:not(.button-link, .card-link, [disabled]):hover {
     filter: brightness(80%);
   }
 }
-[data-theme="light"] {
+[data-theme='light'] {
   a:not(.button-link, .card-link, [disabled]):hover {
     filter: brightness(250%);
   }

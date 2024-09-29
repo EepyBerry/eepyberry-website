@@ -4,11 +4,7 @@
       <hr class="title-divider" />
       <span class="title-icon">
         <span class="title-bracket" aria-hidden="true">[</span>
-        <iconify-icon
-          icon="tabler:mood-nerd"
-          width="2.5rem"
-          aria-hidden="true"
-        />
+        <iconify-icon icon="tabler:mood-nerd" width="2.5rem" aria-hidden="true" />
         <span class="title-bracket" aria-hidden="true">]</span>
       </span>
       <hr class="title-divider" />
@@ -50,10 +46,7 @@
       <img src="/misc/evilcatface_small.webp" />
     </div>
     <div class="section-wip">
-      <p>
-        (this page is random, i know, but i wanted a fun space for interesting
-        links :3)
-      </p>
+      <p>(this page is random, i know, but i wanted a fun space for interesting links :3)</p>
       <p>(more stuff to be added later... probably)</p>
     </div>
   </section>

@@ -4,11 +4,7 @@
       <hr class="title-divider" />
       <span class="title-icon">
         <span class="title-bracket" aria-hidden="true">[</span>
-        <iconify-icon
-          icon="mingcute:paint-brush-line"
-          width="2.5rem"
-          aria-hidden="true"
-        />
+        <iconify-icon icon="mingcute:paint-brush-line" width="2.5rem" aria-hidden="true" />
         <span class="title-bracket" aria-hidden="true">]</span>
       </span>
       <hr class="title-divider" />
@@ -17,10 +13,7 @@
       <ul class="gallery">
         <li class="image-wrapper" style="width: 36rem">
           <a href="#/artwork/2024-08-03_1000-LC_Carrier.jpg"
-            ><img
-              src="/artwork/2024-08-03_1000-LC_Carrier.jpg"
-              aria-label="1000-LC"
-              alt="1000-LC Carrier"
+            ><img src="/artwork/2024-08-03_1000-LC_Carrier.jpg" aria-label="1000-LC" alt="1000-LC Carrier"
           /></a>
           <div class="drawing-title">
             <span>"1000-LC 'CARRIER'"</span>
@@ -66,7 +59,7 @@
 </template>
 
 <script setup lang="ts">
-import IconEepyBerry from "../svg/icons/IconEepyBerry.vue";
+import IconEepyBerry from '../svg/icons/IconEepyBerry.vue'
 </script>
 
 <!------------------------------------------------------------>

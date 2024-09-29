@@ -8,8 +8,11 @@
       <span class="deco tr" />
       <span class="deco bl" />
       <span class="deco br" />
-      <SvgEepyBerryLogo id="avatar" :dark="$theme === 'dark'"
-        aria-label="Sleeping strawberry with the text 'eepy berry'" />
+      <SvgEepyBerryLogo
+        id="avatar"
+        :dark="$theme === 'dark'"
+        aria-label="Sleeping strawberry with the text 'eepy berry'"
+      />
       <hr />
       <p id="intro">developer&nbsp;& illustrator&nbsp;</p>
     </div>
@@ -20,15 +23,15 @@
 
 <!------------------------------------------------------------>
 <script setup lang="ts">
-import AppLinks from "../main/AppLinks.vue";
-import SvgEepyBerryLogo from "@/components/svg/SvgEepyBerryLogo.vue";
-import { inject } from "vue";
-const $theme = inject("$theme");
+import AppLinks from '../main/AppLinks.vue'
+import SvgEepyBerryLogo from '@/components/svg/SvgEepyBerryLogo.vue'
+import { inject } from 'vue'
+const $theme = inject('$theme')
 </script>
 
 <!------------------------------------------------------------>
 <style scoped lang="scss">
-@use "/src/assets/sass/animations" as anims;
+@use '/src/assets/sass/animations' as anims;
 
 #section-title {
   position: relative;
@@ -69,7 +72,7 @@ const $theme = inject("$theme");
       line-height: 1;
     }
 
-    &>hr {
+    & > hr {
       margin-left: 1.75rem;
       margin-right: 1.75rem;
       height: clamp(7rem, 7.5vw, 10rem);
@@ -142,7 +145,7 @@ const $theme = inject("$theme");
         width: fit-content;
       }
 
-      &>hr {
+      & > hr {
         margin-top: 0.5rem;
         margin-bottom: 0.75rem;
         height: 0;
@@ -182,7 +185,7 @@ const $theme = inject("$theme");
 }
 
 @media (prefers-reduced-motion) {
-  #section-title>.title>#avatar {
+  #section-title > .title > #avatar {
     animation: none;
   }
 }

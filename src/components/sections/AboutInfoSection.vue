@@ -16,50 +16,82 @@
       <div class="info-wrapper">
         <ul class="info-list">
           <li>
-            <button class="info-button" @click="select('info', 0)" :class="{ selected: isSelected('info', 0) }"
-              aria-label="transfem">
+            <button
+              class="info-button"
+              @click="select('info', 0)"
+              :class="{ selected: isSelected('info', 0) }"
+              aria-label="transfem"
+            >
               <iconify-icon mode="svg" icon="noto:transgender-flag" height="1.5rem" aria-hidden="true" />
             </button>
           </li>
           <li>
-            <button class="info-button" @click="select('info', 1)" :class="{ selected: isSelected('info', 1) }"
-              aria-label="education & job">
+            <button
+              class="info-button"
+              @click="select('info', 1)"
+              :class="{ selected: isSelected('info', 1) }"
+              aria-label="education & job"
+            >
               <iconify-icon mode="svg" icon="noto:books" height="1.5rem" aria-hidden="true" />
             </button>
           </li>
           <li>
-            <button class="info-button" @click="select('info', 2)" :class="{ selected: isSelected('info', 2) }"
-              aria-label="drawing">
+            <button
+              class="info-button"
+              @click="select('info', 2)"
+              :class="{ selected: isSelected('info', 2) }"
+              aria-label="drawing"
+            >
               <iconify-icon mode="svg" icon="noto:artist-palette" height="1.5rem" aria-hidden="true" />
             </button>
           </li>
           <li>
-            <button class="info-button" @click="select('info', 3)" :class="{ selected: isSelected('info', 3) }"
-              aria-label="height">
+            <button
+              class="info-button"
+              @click="select('info', 3)"
+              :class="{ selected: isSelected('info', 3) }"
+              aria-label="height"
+            >
               <iconify-icon mode="svg" icon="noto:woman-raising-hand" height="1.5rem" aria-hidden="true" />
             </button>
           </li>
           <li>
-            <button class="info-button" @click="select('info', 4)" :class="{ selected: isSelected('info', 4) }"
-              aria-label="curiosity">
+            <button
+              class="info-button"
+              @click="select('info', 4)"
+              :class="{ selected: isSelected('info', 4) }"
+              aria-label="curiosity"
+            >
               <iconify-icon mode="svg" icon="noto:exclamation-question-mark" height="1.5rem" aria-hidden="true" />
             </button>
           </li>
           <li>
-            <button class="info-button" @click="select('info', 5)" :class="{ selected: isSelected('info', 5) }"
-              aria-label="sleep">
+            <button
+              class="info-button"
+              @click="select('info', 5)"
+              :class="{ selected: isSelected('info', 5) }"
+              aria-label="sleep"
+            >
               <iconify-icon mode="svg" icon="noto:zzz" height="1.5rem" aria-hidden="true" />
             </button>
           </li>
           <li>
-            <button class="info-button" @click="select('info', 6)" :class="{ selected: isSelected('info', 6) }"
-              aria-label="fruit">
+            <button
+              class="info-button"
+              @click="select('info', 6)"
+              :class="{ selected: isSelected('info', 6) }"
+              aria-label="fruit"
+            >
               <iconify-icon mode="svg" icon="noto:strawberry" height="1.5rem" aria-hidden="true" />
             </button>
           </li>
           <li>
-            <button class="info-button" @click="select('info', 7)" :class="{ selected: isSelected('info', 7) }"
-              aria-label="dessert">
+            <button
+              class="info-button"
+              @click="select('info', 7)"
+              :class="{ selected: isSelected('info', 7) }"
+              aria-label="dessert"
+            >
               <iconify-icon mode="svg" icon="noto:waffle" height="1.5rem" aria-hidden="true" />
             </button>
           </li>
@@ -67,50 +99,82 @@
         <InfoTerminal :data-type="selectedType" :data-index="selectedIdx" />
         <ul class="info-list">
           <li>
-            <button class="info-button" @click="select('interest', 0)" :class="{ selected: isSelected('interest', 0) }"
-              aria-label="programming">
+            <button
+              class="info-button"
+              @click="select('interest', 0)"
+              :class="{ selected: isSelected('interest', 0) }"
+              aria-label="programming"
+            >
               <iconify-icon mode="svg" icon="noto:woman-technologist" height="1.5rem" aria-hidden="true" />
             </button>
           </li>
           <li>
-            <button class="info-button" @click="select('interest', 1)" :class="{ selected: isSelected('interest', 1) }"
-              aria-label="planet & space">
+            <button
+              class="info-button"
+              @click="select('interest', 1)"
+              :class="{ selected: isSelected('interest', 1) }"
+              aria-label="planet & space"
+            >
               <iconify-icon mode="svg" icon="noto:ringed-planet" height="1.5rem" aria-hidden="true" />
             </button>
           </li>
           <li>
-            <button class="info-button" @click="select('interest', 2)" :class="{ selected: isSelected('interest', 2) }"
-              aria-label="scp foundation">
+            <button
+              class="info-button"
+              @click="select('interest', 2)"
+              :class="{ selected: isSelected('interest', 2) }"
+              aria-label="scp foundation"
+            >
               <iconify-icon mode="svg" icon="simple-icons:scpfoundation" height="1.5rem" aria-hidden="true" />
             </button>
           </li>
           <li>
-            <button class="info-button" @click="select('interest', 3)" :class="{ selected: isSelected('interest', 3) }"
-              aria-label="video games">
+            <button
+              class="info-button"
+              @click="select('interest', 3)"
+              :class="{ selected: isSelected('interest', 3) }"
+              aria-label="video games"
+            >
               <iconify-icon mode="svg" icon="noto:game-die" height="1.5rem" aria-hidden="true" />
             </button>
           </li>
           <li>
-            <button class="info-button" @click="select('interest', 4)" :class="{ selected: isSelected('interest', 4) }"
-              aria-label="board games">
+            <button
+              class="info-button"
+              @click="select('interest', 4)"
+              :class="{ selected: isSelected('interest', 4) }"
+              aria-label="board games"
+            >
               <iconify-icon mode="svg" icon="noto:video-game" height="1.5rem" aria-hidden="true" />
             </button>
           </li>
           <li>
-            <button class="info-button" @click="select('interest', 5)" :class="{ selected: isSelected('interest', 5) }"
-              aria-label="bicycle">
+            <button
+              class="info-button"
+              @click="select('interest', 5)"
+              :class="{ selected: isSelected('interest', 5) }"
+              aria-label="bicycle"
+            >
               <iconify-icon mode="svg" icon="noto:bicycle" height="1.5rem" aria-hidden="true" />
             </button>
           </li>
           <li>
-            <button class="info-button" @click="select('interest', 6)" :class="{ selected: isSelected('interest', 6) }"
-              aria-label="yoga">
+            <button
+              class="info-button"
+              @click="select('interest', 6)"
+              :class="{ selected: isSelected('interest', 6) }"
+              aria-label="yoga"
+            >
               <iconify-icon mode="svg" icon="noto:lotus" height="1.5rem" aria-hidden="true" />
             </button>
           </li>
           <li>
-            <button class="info-button" @click="select('interest', 7)" :class="{ selected: isSelected('interest', 7) }"
-              aria-label="plushies">
+            <button
+              class="info-button"
+              @click="select('interest', 7)"
+              :class="{ selected: isSelected('interest', 7) }"
+              aria-label="plushies"
+            >
               <iconify-icon mode="svg" icon="noto:teddy-bear" height="1.5rem" aria-hidden="true" />
             </button>
           </li>
@@ -121,19 +185,19 @@
 </template>
 
 <script setup lang="ts">
-import { ref, type Ref } from "vue";
-import InfoTerminal from "../InfoTerminal.vue";
+import { ref, type Ref } from 'vue'
+import InfoTerminal from '../InfoTerminal.vue'
 
-const selectedIdx: Ref<number> = ref(-1);
-const selectedType: Ref<string> = ref("info");
+const selectedIdx: Ref<number> = ref(-1)
+const selectedType: Ref<string> = ref('info')
 
 function select(type: string, idx: number) {
-  selectedType.value = type;
-  selectedIdx.value = idx;
+  selectedType.value = type
+  selectedIdx.value = idx
 }
 
 function isSelected(type: string, idx: number) {
-  return selectedType.value === type && selectedIdx.value === idx;
+  return selectedType.value === type && selectedIdx.value === idx
 }
 </script>
 
@@ -146,7 +210,7 @@ function isSelected(type: string, idx: number) {
 
   .section-content {
     display: grid;
-    grid-template-areas: "avatar info";
+    grid-template-areas: 'avatar info';
     grid-template-columns: 1fr 2.25fr;
     align-items: center;
     padding: 1.5rem 0;
@@ -168,7 +232,7 @@ function isSelected(type: string, idx: number) {
 
       .avatar {
         width: clamp(160px, 25vw, 260px);
-        filter: drop-shadow(0 0 6px #0008)
+        filter: drop-shadow(0 0 6px #0008);
       }
     }
 
@@ -211,7 +275,7 @@ function isSelected(type: string, idx: number) {
           border-top-left-radius: 4px;
           border-top-right-radius: 4px;
           inset: auto 25% 0;
-          transform: translateY(1px)
+          transform: translateY(1px);
         }
       }
 
@@ -251,9 +315,9 @@ function isSelected(type: string, idx: number) {
 @media screen and (max-width: 895px) {
   #section-about-info {
     .section-content {
-      grid-template-areas: "info";
+      grid-template-areas: 'info';
       grid-template-columns: 1fr;
-      
+
       .avatar-wrapper {
         display: none;
       }

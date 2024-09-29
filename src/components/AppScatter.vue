@@ -18,29 +18,24 @@
 </template>
 
 <script setup lang="ts">
-import { random } from "@/utils/functions";
-import { onMounted, ref, type Ref } from "vue";
+import { random } from '@/utils/functions'
+import { onMounted, ref, type Ref } from 'vue'
 
-defineProps<{ size: number; density: number; visible: boolean }>();
+defineProps<{ size: number; density: number; visible: boolean }>()
 
-const vmax =
-  window.innerWidth > window.innerHeight
-    ? window.innerWidth
-    : window.innerHeight;
-const starContainer: Ref<HTMLElement | null> = ref(null);
-const stars: { el$: HTMLElement; left: number; top: number }[] = [];
+const vmax = window.innerWidth > window.innerHeight ? window.innerWidth : window.innerHeight
+const starContainer: Ref<HTMLElement | null> = ref(null)
+const stars: { el$: HTMLElement; left: number; top: number }[] = []
 
-onMounted(() => init());
+onMounted(() => init())
 
 async function init(): Promise<void> {
-  stars.splice(0);
+  stars.splice(0)
   for (let i = 0; i < starContainer.value!.children!.length; i++) {
-    const child: HTMLElement = starContainer.value!.children.item(
-      i,
-    ) as HTMLElement;
-    const top = (Number(child.style.top.replace("vmax", "")) / 100) * vmax;
-    const left = (Number(child.style.left.replace("vmax", "")) / 100) * vmax;
-    stars.push({ el$: child, left: left, top: top });
+    const child: HTMLElement = starContainer.value!.children.item(i) as HTMLElement
+    const top = (Number(child.style.top.replace('vmax', '')) / 100) * vmax
+    const left = (Number(child.style.left.replace('vmax', '')) / 100) * vmax
+    stars.push({ el$: child, left: left, top: top })
   }
 }
 </script>
