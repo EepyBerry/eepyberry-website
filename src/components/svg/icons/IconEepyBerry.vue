@@ -1,9 +1,5 @@
 <template>
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    viewBox="0 0 309.99 448.26"
-    aria-label="Undisclosed project icon"
-  >
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 309.99 448.26" aria-label="Undisclosed project icon">
     <g>
       <path
         class="path"

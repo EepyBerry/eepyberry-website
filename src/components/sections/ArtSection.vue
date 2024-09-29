@@ -4,11 +4,7 @@
       <hr class="title-divider" />
       <span class="title-icon">
         <span class="title-bracket" aria-hidden="true">[</span>
-        <iconify-icon
-          icon="mingcute:paint-brush-line"
-          width="2.5rem"
-          aria-hidden="true"
-        />
+        <iconify-icon icon="mingcute:paint-brush-line" width="2.5rem" aria-hidden="true" />
         <span class="title-bracket" aria-hidden="true">]</span>
       </span>
       <hr class="title-divider" />
@@ -17,10 +13,7 @@
       <ul class="gallery">
         <li class="image-wrapper" style="width: 36rem">
           <a href="#/artwork/2024-08-03_1000-LC_Carrier.jpg"
-            ><img
-              src="/artwork/2024-08-03_1000-LC_Carrier.jpg"
-              aria-label="1000-LC"
-              alt="1000-LC Carrier"
+            ><img src="/artwork/2024-08-03_1000-LC_Carrier.jpg" aria-label="1000-LC" alt="1000-LC Carrier"
           /></a>
           <div class="drawing-title">
             <span>"1000-LC 'CARRIER'"</span>
@@ -52,13 +45,13 @@
         </li>
         <!-- placeholders -->
         <li class="image-wrapper placeholder" style="width: 20rem">
-          <IconEepyBerry class="placeholder-icon" />
+          <IconEepyBerry />
         </li>
         <li class="image-wrapper placeholder" style="width: 20rem">
-          <IconEepyBerry class="placeholder-icon" />
+          <IconEepyBerry />
         </li>
         <li class="image-wrapper placeholder" style="width: 36rem">
-          <IconEepyBerry class="placeholder-icon" />
+          <IconEepyBerry />
         </li>
       </ul>
     </div>
@@ -66,11 +59,11 @@
 </template>
 
 <script setup lang="ts">
-import IconEepyBerry from "../svg/icons/IconEepyBerry.vue";
+import IconEepyBerry from '../svg/icons/IconEepyBerry.vue'
 </script>
 
 <!------------------------------------------------------------>
-<style lang="scss">
+<style scoped lang="scss">
 #section-art {
   display: flex;
   flex-direction: column;
@@ -129,16 +122,18 @@ import IconEepyBerry from "../svg/icons/IconEepyBerry.vue";
     .drawing-title {
       z-index: 1;
       position: absolute;
-      inset: auto 0 0;
+      inset: auto auto 1rem 0.75rem;
       color: white;
       text-align: center;
+      font-size: 0.875rem;
 
       span {
         background: black;
         padding: 0.25rem 0.5rem;
-        border: 2px solid #fffafa;
+        border: 1px solid var(--eepy-theme-border);
         border-top-left-radius: 8px;
         border-top-right-radius: 8px;
+        border-radius: 8px;
       }
     }
 

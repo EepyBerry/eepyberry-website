@@ -5,10 +5,7 @@
       <p>© {{ new Date().getFullYear() }}, EepyBerry</p>
       <p>
         All original content under
-        <a
-          href="https://creativecommons.org/licenses/by-nc-sa/4.0/"
-          target="_blank"
-          rel="external nofollow noopener"
+        <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="external nofollow noopener"
           >CC BY-NC-SA 4.0</a
         >
       </p>
@@ -17,29 +14,19 @@
       <p>made with 🌈&nbsp;&&nbsp;❤️</p>
       <p>
         powered by
-        <a
-          href="https://vuejs.org"
-          target="_blank"
-          rel="external nofollow noopener"
-          >VueJS</a
-        >
+        <a href="https://vuejs.org" target="_blank" rel="external nofollow noopener">VueJS</a>
         &
-        <a
-          href="https://vitejs.dev"
-          target="_blank"
-          rel="external nofollow noopener"
-          >Vite</a
-        >
+        <a href="https://vitejs.dev" target="_blank" rel="external nofollow noopener">Vite</a>
       </p>
     </div>
   </footer>
 </template>
 
 <script setup lang="ts">
-import AppLinks from "../main/AppLinks.vue";
-import SvgBluesky from "../svg/icons/SvgBluesky.vue";
-import SvgGithub from "../svg/icons/SvgGithub.vue";
-import SvgKofi from "../svg/icons/SvgKofi.vue";
+import AppLinks from '../main/AppLinks.vue'
+import SvgBluesky from '../svg/icons/SvgBluesky.vue'
+import SvgGithub from '../svg/icons/SvgGithub.vue'
+import SvgKofi from '../svg/icons/SvgKofi.vue'
 </script>
 
 <style scoped lang="scss">

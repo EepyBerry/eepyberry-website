@@ -1,10 +1,6 @@
 <template>
   <nav>
-    <AppHomeButton
-      ref="homeLink"
-      @mouseover="startHover(homeFloating)"
-      @mouseleave="stopHover(homeFloating)"
-    />
+    <AppHomeButton ref="homeLink" @mouseover="startHover(homeFloating)" @mouseleave="stopHover(homeFloating)" />
     <router-link
       ref="aboutLink"
       class="nav-link button-link"
@@ -14,7 +10,7 @@
       @mouseover="startHover(aboutFloating)"
       @mouseleave="stopHover(aboutFloating)"
     >
-      <iconify-icon mode="svg" icon="mingcute:happy-line" height="2.25rem" />
+      <iconify-icon mode="svg" icon="mingcute:happy-line" height="2.25rem" aria-hidden="true" />
     </router-link>
     <router-link
       ref="miscLink"
@@ -25,7 +21,7 @@
       @mouseover="startHover(miscFloating)"
       @mouseleave="stopHover(miscFloating)"
     >
-      <iconify-icon mode="svg" icon="mingcute:star-line" height="2.25rem" />
+      <iconify-icon mode="svg" icon="mingcute:star-line" height="2.25rem" aria-hidden="true" />
     </router-link>
 
     <!-- floating elements -->
@@ -66,60 +62,54 @@
 </template>
 
 <script setup lang="ts">
-import { ref, type Ref } from "vue";
-import AppHomeButton from "./AppHomeButton.vue";
-import {
-  arrow,
-  autoUpdate,
-  offset,
-  shift,
-  useFloating,
-} from "@floating-ui/vue";
+import { ref, type Ref } from 'vue'
+import AppHomeButton from './AppHomeButton.vue'
+import { arrow, autoUpdate, offset, shift, useFloating } from '@floating-ui/vue'
 
-const homeLink: Ref<HTMLElement | null> = ref(null);
-const aboutLink: Ref<HTMLElement | null> = ref(null);
-const miscLink: Ref<HTMLElement | null> = ref(null);
+const homeLink: Ref<HTMLElement | null> = ref(null)
+const aboutLink: Ref<HTMLElement | null> = ref(null)
+const miscLink: Ref<HTMLElement | null> = ref(null)
 
-const homeArrow: Ref<HTMLElement | null> = ref(null);
-const homeFloating: Ref<HTMLElement | null> = ref(null);
-const aboutArrow: Ref<HTMLElement | null> = ref(null);
-const aboutFloating: Ref<HTMLElement | null> = ref(null);
-const miscArrow: Ref<HTMLElement | null> = ref(null);
-const miscFloating: Ref<HTMLElement | null> = ref(null);
+const homeArrow: Ref<HTMLElement | null> = ref(null)
+const homeFloating: Ref<HTMLElement | null> = ref(null)
+const aboutArrow: Ref<HTMLElement | null> = ref(null)
+const aboutFloating: Ref<HTMLElement | null> = ref(null)
+const miscArrow: Ref<HTMLElement | null> = ref(null)
+const miscFloating: Ref<HTMLElement | null> = ref(null)
 
 const styles = {
   home: useFloating(homeLink, homeFloating, {
-    placement: "right",
+    placement: 'right',
     middleware: [offset(5), shift(), arrow({ element: homeArrow })],
     whileElementsMounted: autoUpdate,
   }),
   about: useFloating(aboutLink, aboutFloating, {
-    placement: "right",
+    placement: 'right',
     middleware: [offset(5), shift(), arrow({ element: aboutArrow })],
     whileElementsMounted: autoUpdate,
   }),
   misc: useFloating(miscLink, miscFloating, {
-    placement: "right",
+    placement: 'right',
     middleware: [offset(5), shift(), arrow({ element: miscArrow })],
     whileElementsMounted: autoUpdate,
   }),
-};
+}
 
 function startHover(elem?: HTMLElement | null) {
   // @ts-ignore
   if (!elem || !elem.$el) {
-    return;
+    return
   }
   // @ts-ignore
-  elem.$el.style.visibility = "visible";
+  elem.$el.style.visibility = 'visible'
 }
 function stopHover(elem?: HTMLElement | null) {
   // @ts-ignore
   if (!elem || !elem.$el) {
-    return;
+    return
   }
   // @ts-ignore
-  elem.$el.style.visibility = "hidden";
+  elem.$el.style.visibility = 'hidden'
 }
 </script>
 

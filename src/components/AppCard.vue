@@ -1,7 +1,9 @@
 <template>
   <div class="eepy-card">
     <div class="eepy-card-header">
-      <slot name="title"><span></span></slot>
+      <slot name="title"></slot>
+    </div>
+    <div class="eepy-card-links">
       <slot name="links"></slot>
     </div>
     <div class="eepy-card-content">
@@ -17,12 +19,13 @@
 
 <!------------------------------------------------------------>
 <script setup lang="ts">
-import IconEepyBerry from "@/components/svg/icons/IconEepyBerry.vue";
+import IconEepyBerry from '@/components/svg/icons/IconEepyBerry.vue'
 </script>
 
 <!------------------------------------------------------------>
 <style scoped lang="scss">
 .eepy-card {
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -31,23 +34,32 @@ import IconEepyBerry from "@/components/svg/icons/IconEepyBerry.vue";
   border-radius: 6px;
   overflow: hidden;
 
+  &-links {
+    position: absolute;
+    top: 0.75rem;
+    right: 0.75rem;
+  }
   &-header {
-    position: relative;
+    position: absolute;
+    inset: 0 0 auto;
+
     width: 100%;
-    height: 2rem;
+    min-height: 2rem;
     padding: 0.75rem 0.75rem 0;
+
     font-family: Dosis;
-    font-size: 1.75rem;
+    font-size: 1.5rem;
     font-weight: 700;
+    line-height: 1;
 
     display: flex;
-    justify-content: space-between;
+    align-items: center;
+    gap: 0.5rem;
+    filter: drop-shadow(0 0 4px #0008);
   }
   &-content {
     flex: 1;
     width: 100%;
-    padding: 0 0.75rem;
-    position: relative;
 
     display: flex;
     flex-direction: column;
@@ -55,10 +67,19 @@ import IconEepyBerry from "@/components/svg/icons/IconEepyBerry.vue";
     justify-content: center;
   }
   &-footer {
+    position: absolute;
+    inset: auto 0 0;
     z-index: 1;
-    height: 2rem;
+
     width: 100%;
+    min-height: 2rem;
     padding: 0 0.75rem 0.5rem;
+  }
+}
+.eepy-card.center {
+  text-align: center;
+  .eepy-card-header {
+    justify-content: center;
   }
 }
 .eepy-card.placeholder {
@@ -69,13 +90,13 @@ import IconEepyBerry from "@/components/svg/icons/IconEepyBerry.vue";
   color: var(--eepy-theme-accent);
   opacity: 0.5;
 
-  &-header {
+  .eepy-card-header {
     display: none;
   }
-  &-footer {
+  .eepy-card-footer {
     display: none;
   }
-  &-content {
+  .eepy-card-content {
     display: flex;
     align-items: center;
     justify-content: center;

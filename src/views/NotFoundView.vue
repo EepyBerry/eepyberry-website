@@ -6,15 +6,15 @@
 </template>
 
 <script setup lang="ts">
-import SvgNotFound from "@/components/svg/SvgNotFound.vue";
-import { useHead } from "@unhead/vue";
+import SvgNotFound from '@/components/svg/SvgNotFound.vue'
+import { useHead } from '@unhead/vue'
 useHead({
-  title: "Not found · EepyBerry",
+  title: 'Not found · EepyBerry',
   meta: [
-    { name: "robots", content: "noindex, nofollow" },
-    { name: "description", content: "Page not found" },
+    { name: 'robots', content: 'noindex, nofollow' },
+    { name: 'description', content: 'Page not found' },
   ],
-});
+})
 </script>
 
 <style scoped lang="scss">

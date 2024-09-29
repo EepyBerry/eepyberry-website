@@ -6,13 +6,13 @@
 </template>
 
 <script setup lang="ts">
-import { useHead } from "@unhead/vue";
+import { useHead } from '@unhead/vue'
 useHead({
   meta: [
-    { name: "robots", content: "noindex,nofollow" },
-    { name: "description", content: "nothing" },
+    { name: 'robots', content: 'noindex,nofollow' },
+    { name: 'description', content: 'nothing' },
   ],
-});
+})
 </script>
 
 <style scoped lang="scss">

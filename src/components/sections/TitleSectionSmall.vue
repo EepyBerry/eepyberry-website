@@ -8,10 +8,10 @@
 
 <!------------------------------------------------------------>
 <script setup lang="ts">
-import AppLinks from "../main/AppLinks.vue";
-import SvgEepyBerryLogo from "@/components/svg/SvgEepyBerryLogo.vue";
-import { inject } from "vue";
-const $theme = inject("$theme");
+import AppLinks from '../main/AppLinks.vue'
+import SvgEepyBerryLogo from '@/components/svg/SvgEepyBerryLogo.vue'
+import { inject } from 'vue'
+const $theme = inject('$theme')
 </script>
 
 <!------------------------------------------------------------>
