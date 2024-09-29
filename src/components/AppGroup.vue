@@ -41,29 +41,15 @@
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
-    gap: 1rem;
+    gap: 2rem;
 
     li {
       flex: 1;
       position: relative;
 
-      height: 3rem;
-      padding: 0.5rem 0.75rem;
-
-      background: var(--eepy-theme-item);
-      //border: 1px solid var(--eepy-theme-accent-threequarter);
+      min-height: 3rem;
       border-radius: 6px;
       color: var(--eepy-color-white);
-
-      font-family: Dosis;
-      font-size: 1.125rem;
-      font-weight: 500;
-      line-height: 1rem;
-
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 0.5rem;
 
       iconify-icon {
         color: var(--eepy-color-white);

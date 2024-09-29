@@ -14,7 +14,7 @@
       @mouseover="startHover(aboutFloating)"
       @mouseleave="stopHover(aboutFloating)"
     >
-      <iconify-icon mode="svg" icon="mingcute:happy-line" height="2.25rem" />
+      <iconify-icon mode="svg" icon="mingcute:happy-line" height="2.25rem" aria-hidden="true" />
     </router-link>
     <router-link
       ref="miscLink"
@@ -25,7 +25,7 @@
       @mouseover="startHover(miscFloating)"
       @mouseleave="stopHover(miscFloating)"
     >
-      <iconify-icon mode="svg" icon="mingcute:star-line" height="2.25rem" />
+      <iconify-icon mode="svg" icon="mingcute:star-line" height="2.25rem" aria-hidden="true" />
     </router-link>
 
     <!-- floating elements -->

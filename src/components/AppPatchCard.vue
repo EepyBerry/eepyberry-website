@@ -8,7 +8,7 @@
 
 <style scoped lang="scss">
 .eepy-patchcard-wrapper {
-  padding: 1rem;
+  padding: 0.75rem;
   background: var(--eepy-theme-patch);
   border-radius: 16px;
   box-shadow: 3px 6px 4px var(--eepy-theme-accent-half);
@@ -28,14 +28,20 @@
 
 .eepy-patchcard {
   padding: 1rem;
-  color: var(--eepy-color-white);
   width: 100%;
   height: 100%;
+
+  background-image: url('/svg/patch_dashes.svg');
+  color: var(--eepy-color-white);
+  border-radius: 8px;
+
+  font-family: Dosis;
+  font-size: 1.75rem;
+  font-weight: 600;
+
   display: flex;
   align-items: center;
   justify-content: center;
-  background-image: url('/svg/patch_dashes.svg');
-  border-radius: 8px;
 }
 
 [data-theme='dark'] .eepy-patchcard {

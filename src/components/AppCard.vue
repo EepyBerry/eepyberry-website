@@ -34,14 +34,16 @@ import IconEepyBerry from "@/components/svg/icons/IconEepyBerry.vue";
   &-header {
     position: relative;
     width: 100%;
-    height: 2rem;
     padding: 0.75rem 0.75rem 0;
     font-family: Dosis;
-    font-size: 1.75rem;
+    font-size: 1.5rem;
     font-weight: 700;
+    line-height: 1;
 
     display: flex;
-    justify-content: space-between;
+    align-items: center;
+    gap: 0.5rem;
+    filter: drop-shadow(0 0 4px #0008);
   }
   &-content {
     flex: 1;
@@ -61,6 +63,12 @@ import IconEepyBerry from "@/components/svg/icons/IconEepyBerry.vue";
     padding: 0 0.75rem 0.5rem;
   }
 }
+.eepy-card.center {
+  text-align: center;
+  .eepy-card-header {
+    justify-content: center;
+  }
+}
 .eepy-card.placeholder {
   align-items: center;
   justify-content: center;
@@ -69,13 +77,13 @@ import IconEepyBerry from "@/components/svg/icons/IconEepyBerry.vue";
   color: var(--eepy-theme-accent);
   opacity: 0.5;
 
-  &-header {
+  .eepy-card-header {
     display: none;
   }
-  &-footer {
+  .eepy-card-footer {
     display: none;
   }
-  &-content {
+  .eepy-card-content {
     display: flex;
     align-items: center;
     justify-content: center;

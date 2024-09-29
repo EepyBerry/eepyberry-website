@@ -1,6 +1,9 @@
 :root {
   --eepy-color-white: #fcfcfc;
   --eepy-color-lagrange: #354852;
+  --eepy-color-aseprite: #657681;
+  --eepy-color-krita: #3f6669;
+  --eepy-color-illustrator: #643827;
 
   --eepy-theme-monochrome: #fff;
   --eepy-theme-star: #ebbd68;
@@ -39,6 +42,10 @@
 }
 
 :root[data-theme='dark'] {
+  --eepy-color-aseprite: #1e2327;
+  --eepy-color-krita: #1d3031;
+  --eepy-color-illustrator: #2b1810;
+  
   --eepy-theme-monochrome: #000;
   --eepy-theme-star: #8d7b5a;
 
