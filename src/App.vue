@@ -56,13 +56,14 @@ provide('$theme', themeHelper.themeRef)
 <style lang="scss">
 main {
   flex-grow: 1;
-  max-width: 1700px;
+  //max-width: 1700px;
   width: 100%;
-  padding: 0 var(--app-padding-main);
-  margin: 0 auto;
+  //padding: 0 var(--app-padding-main);
+  //margin: 0 auto;
 
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 4rem;
 }
 aside {

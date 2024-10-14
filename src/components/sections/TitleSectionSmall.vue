@@ -1,5 +1,5 @@
 <template>
-  <section id="section-title-small">
+  <section id="section-title-small" class="adapt-size">
     <SvgEepyBerryLogo id="avatar" :dark="$theme === 'dark'" />
     <hr />
     <p id="intro">developer&nbsp;& illustrator&nbsp;</p>
@@ -8,7 +8,6 @@
 
 <!------------------------------------------------------------>
 <script setup lang="ts">
-import AppLinks from '../main/AppLinks.vue'
 import SvgEepyBerryLogo from '@/components/svg/SvgEepyBerryLogo.vue'
 import { inject } from 'vue'
 const $theme = inject('$theme')
@@ -30,6 +29,7 @@ const $theme = inject('$theme')
     filter: drop-shadow(0 4px 1px var(--eepy-theme-title-shadow));
     animation: bounce 4s ease-in-out infinite;
   }
+
   #intro {
     padding-left: 0.75rem;
     display: flex;
@@ -42,6 +42,7 @@ const $theme = inject('$theme')
     font-weight: 500;
     line-height: 1;
   }
+
   hr {
     margin-left: 1rem;
     margin-right: 1rem;
@@ -53,11 +54,13 @@ const $theme = inject('$theme')
 @media screen and (max-width: 567px) {
   #section-title-small {
     flex-direction: column;
+
     #intro {
       width: unset;
       margin-top: 0.5rem;
       margin-bottom: 2rem;
     }
+
     hr {
       display: none;
     }
@@ -65,7 +68,7 @@ const $theme = inject('$theme')
 }
 
 @media (prefers-reduced-motion) {
-  #section-title-small > #avatar {
+  #section-title-small>#avatar {
     animation: none;
   }
 }

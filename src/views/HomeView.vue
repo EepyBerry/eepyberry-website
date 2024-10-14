@@ -102,8 +102,12 @@ function resetHash() {
 <!------------------------------------------------------------>
 <style scoped lang="scss">
 .page-container {
+  width: 100%;
+  
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
   gap: 6rem;
 
   .dialog {
@@ -120,9 +124,11 @@ function resetHash() {
       opacity 400ms ease-in-out,
       background-color 400ms ease-in-out;
   }
+
   .dialog.animate {
     opacity: 1;
   }
+
   .dialog-container {
     border-radius: 6px;
     background: transparent;
@@ -141,10 +147,12 @@ function resetHash() {
       height: 4rem;
       color: white;
     }
-    button:hover > iconify-icon {
+
+    button:hover>iconify-icon {
       transform: scale(110%);
     }
   }
+
   .dialog::backdrop {
     background-color: #0009;
   }
@@ -159,6 +167,7 @@ function resetHash() {
     display: flex;
     align-items: center;
     justify-content: center;
+
     img {
       object-fit: contain;
     }
@@ -166,13 +175,16 @@ function resetHash() {
 
   // orientation
   .dialog.landscape {
+
     #hash-image,
     .hash-image-content,
     img {
       height: 100%;
     }
   }
+
   .dialog.portrait {
+
     #hash-image,
     .hash-image-content,
     img {
@@ -184,12 +196,15 @@ function resetHash() {
 @media screen and (max-width: 1199px) {
   .page-container {
     gap: 1.5rem;
+
     hr {
       margin-top: 1.5rem;
     }
+
     #section-art {
       margin-top: 0;
     }
+
     .dialog-container {
       button {
         position: absolute;
@@ -202,15 +217,19 @@ function resetHash() {
     }
   }
 }
+
 @media screen and (max-width: 767px) {
   .page-container {
     gap: 1.5rem;
+
     hr {
       margin-top: 1.5rem;
     }
+
     #section-art {
       margin-top: 0;
     }
+
     .dialog-container {
       button {
         position: absolute;

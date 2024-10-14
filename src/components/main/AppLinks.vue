@@ -33,7 +33,8 @@ import SvgKofi from '../svg/icons/SvgKofi.vue'
   z-index: 1;
   display: flex;
   align-items: center;
-  gap: 1.75rem;
+  justify-content: center;
+  gap: 1rem;
   backdrop-filter: blur(4px);
 
   & > .bracket {
@@ -50,9 +51,12 @@ import SvgKofi from '../svg/icons/SvgKofi.vue'
 
     .coming-soon {
       position: absolute;
-      bottom: -0.75rem;
+      bottom: -0.5rem;
+
       text-align: center;
       line-height: 1.1;
+      font-size: 0.875rem;
+
       pointer-events: none;
       backdrop-filter: blur(4px);
     }

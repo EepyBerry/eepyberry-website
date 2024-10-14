@@ -24,10 +24,14 @@ useHead({
 <!------------------------------------------------------------>
 <style scoped lang="scss">
 .page-container {
-  display: flex;
-  flex-direction: column;
   gap: 3rem;
   margin-top: 3rem;
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 @media screen and (max-width: 1199px) {

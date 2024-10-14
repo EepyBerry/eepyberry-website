@@ -1,5 +1,5 @@
 <template>
-  <section id="section-nerd">
+  <section id="section-nerd" class="adapt-size">
     <div class="section-title" role="heading" aria-label="Nerd stuff">
       <hr class="title-divider" />
       <span class="title-icon">

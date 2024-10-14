@@ -1,5 +1,5 @@
 <template>
-  <section id="section-art">
+  <section id="section-art" class="adapt-size">
     <div class="section-title" role="heading" aria-label="Drawings">
       <hr class="title-divider" />
       <span class="title-icon">
@@ -50,9 +50,6 @@
         <li class="image-wrapper placeholder" style="width: 20rem">
           <IconEepyBerry />
         </li>
-        <li class="image-wrapper placeholder" style="width: 36rem">
-          <IconEepyBerry />
-        </li>
       </ul>
     </div>
   </section>
@@ -74,7 +71,7 @@ import IconEepyBerry from '../svg/icons/IconEepyBerry.vue'
     align-self: center;
   }
   .section-content {
-    padding: 1.5rem 0;
+    padding-top: 1.5rem;
     display: flex;
     flex-direction: column;
     max-width: 100%;

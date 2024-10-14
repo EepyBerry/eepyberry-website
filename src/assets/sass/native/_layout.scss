@@ -2,6 +2,12 @@ hr {
   border-radius: 2px;
 }
 
+.adapt-size {
+  max-width: 1700px;
+  width: 100%;
+  padding: 0 var(--app-padding-main);
+}
+
 .section-title {
   width: 100%;
   font-size: clamp(1.75rem, 5vw, 2.25rem);
@@ -47,7 +53,7 @@ hr {
 
   width: $size;
   height: $size;
-  border-radius: 6px;
+  border-radius: 4px;
 
   &.tl {
     inset: 0 auto auto 0;

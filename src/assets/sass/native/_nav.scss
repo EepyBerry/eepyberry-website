@@ -23,7 +23,8 @@ a:not(.button-link, .card-link):visited {
   color: var(--eepy-theme-text);
 }
 a.button-link,
-a.card-link {
+a.card-link,
+a.footer-link {
   text-decoration: none;
   color: var(--eepy-theme-text);
 }
@@ -36,6 +37,6 @@ a.card-link {
 }
 [data-theme='light'] {
   a:not(.button-link, .card-link, [disabled]):hover {
-    filter: brightness(250%);
+    filter: brightness(200%);
   }
 }

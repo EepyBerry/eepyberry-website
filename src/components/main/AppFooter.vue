@@ -1,54 +1,122 @@
 <template>
   <footer role="contentinfo">
-    <AppLinks />
-    <div id="copyright-notice">
-      <p>© {{ new Date().getFullYear() }}, EepyBerry</p>
-      <p>
-        All original content under
-        <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="external nofollow noopener"
-          >CC BY-NC-SA 4.0</a
-        >
-      </p>
-    </div>
-    <div id="app-info">
-      <p>made with 🌈&nbsp;&&nbsp;❤️</p>
-      <p>
-        powered by
-        <a href="https://vuejs.org" target="_blank" rel="external nofollow noopener">VueJS</a>
-        &
-        <a href="https://vitejs.dev" target="_blank" rel="external nofollow noopener">Vite</a>
-      </p>
+    <div class="footer-container adapt-size">
+      <div id="app-info">
+        <p>made with 🌈&nbsp;&&nbsp;❤️</p>
+        <p>
+          powered by
+          <a href="https://vuejs.org" target="_blank" rel="external nofollow noopener">VueJS</a>
+          &
+          <a href="https://vitejs.dev" target="_blank" rel="external nofollow noopener">Vite</a>
+        </p>
+      </div>
+      <AppLinks />
+      <div id="copyright-notice">
+        <p class="copyright-info">
+          <span class="cc-supertext">all original content under</span>
+          <a id="cc-deed-link" class="footer-link" href="https://creativecommons.org/licenses/by-nc-sa/4.0/"
+            target="_blank" rel="external nofollow noopener" title="CC-BY-NC-SA 4.0 deed (opens in new tab)">
+            <span class="cc-version">4.0</span>
+            <SvgCCLogo />
+            <SvgCCBYLogo />
+            <SvgCCNCLogo />
+            <SvgCCSALogo />
+          </a>
+        </p>
+        <p class="copyright-author">© {{ new Date().getFullYear() }}, EepyBerry</p>
+      </div>
     </div>
   </footer>
 </template>
 
 <script setup lang="ts">
 import AppLinks from '../main/AppLinks.vue'
-import SvgBluesky from '../svg/icons/SvgBluesky.vue'
-import SvgGithub from '../svg/icons/SvgGithub.vue'
-import SvgKofi from '../svg/icons/SvgKofi.vue'
+import SvgCCBYLogo from '../svg/creativecommons/SvgCCBYLogo.vue';
+import SvgCCLogo from '../svg/creativecommons/SvgCCLogo.vue';
+import SvgCCNCLogo from '../svg/creativecommons/SvgCCNCLogo.vue';
+import SvgCCSALogo from '../svg/creativecommons/SvgCCSALogo.vue';
 </script>
 
 <style scoped lang="scss">
 footer {
-  background-position: 50% 0;
-  background-size: cover;
-  margin: 4rem 0;
+  width: 100%;
+
+  backdrop-filter: blur(4px);
   font-family: Dosis;
 
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  gap: 1rem;
-  text-align: center;
-  font-weight: 500;
+
+  .footer-container {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    font-weight: 600;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+  }
 
   #copyright-notice {
-    font-size: clamp(1rem, 5vw, 1.25rem);
+    grid-column: 3;
+    text-align: end;
+    font-size: 1.225rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+
+    .copyright-info {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+    }
+
+    .copyright-author {
+      width: 100%;
+    }
+
+    .cc-supertext {
+      font-size: 0.9rem;
+    }
+
+    .cc-version {
+      transform: rotateZ(-90deg) translateY(0.25rem);
+      font-family: Inter, sans-serif;
+      font-weight: 700;
+      font-size: 0.875rem;
+    }
+
+    #cc-deed-link {
+      width: fit-content;
+      text-align: end;
+      text-decoration: none;
+
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+    }
   }
+
   #app-info {
-    font-weight: 200;
+    grid-column: 1;
+    font-weight: 500;
+    text-align: start;
+  }
+}
+
+@media screen and (max-width: 895px) {
+  footer {
+    grid-template-columns: auto 1fr;
+
+    :deep(.links) {
+      display: none;
+    }
   }
 }
 </style>

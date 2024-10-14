@@ -1,5 +1,5 @@
 <template>
-  <section id="section-about-drawingtools">
+  <section id="section-about-drawingtools" class="adapt-size">
     <div class="section-title" role="heading" aria-label="Tools & techs">
       <hr class="title-divider" />
       <span class="title-icon">

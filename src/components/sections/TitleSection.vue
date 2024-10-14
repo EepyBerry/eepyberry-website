@@ -1,5 +1,5 @@
 <template>
-  <section id="section-title">
+  <section id="section-title" class="adapt-size">
     <div class="title">
       <iconify-icon icon="mingcute:star-fill" class="deco-star star1" width="100%" />
       <iconify-icon icon="mingcute:star-fill" class="deco-star star2" width="100%" />

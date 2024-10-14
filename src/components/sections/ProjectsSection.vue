@@ -1,5 +1,5 @@
 <template>
-  <section id="section-projects">
+  <section id="section-projects" class="adapt-size">
     <div class="section-title" role="heading" aria-label="Projects">
       <hr class="title-divider" />
       <span class="title-icon">
@@ -164,6 +164,7 @@ function checkConditions() {
   #section-projects {
     margin-top: 3rem;
     .section-content {
+      grid-template-columns: repeat(auto-fill, minmax(20rem, auto));
       gap: 1rem;
     }
   }

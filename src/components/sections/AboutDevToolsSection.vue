@@ -1,5 +1,5 @@
 <template>
-  <section id="section-about-devtools">
+  <section id="section-about-devtools" class="adapt-size">
     <div class="section-title" role="heading" aria-label="Tools & techs">
       <hr class="title-divider" />
       <span class="title-icon">
