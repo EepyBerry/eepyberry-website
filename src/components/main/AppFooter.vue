@@ -1,6 +1,6 @@
 <template>
   <footer role="contentinfo">
-    <div class="footer-container adapt-size">
+    <div class="footer-container">
       <div id="app-info">
         <p>made with 🌈&nbsp;&&nbsp;❤️</p>
         <p>
@@ -14,8 +14,14 @@
       <div id="copyright-notice">
         <p class="copyright-info">
           <span class="cc-supertext">all original content under</span>
-          <a id="cc-deed-link" class="footer-link" href="https://creativecommons.org/licenses/by-nc-sa/4.0/"
-            target="_blank" rel="external nofollow noopener" title="CC-BY-NC-SA 4.0 deed (opens in new tab)">
+          <a
+            id="cc-deed-link"
+            class="footer-link"
+            href="https://creativecommons.org/licenses/by-nc-sa/4.0/"
+            target="_blank"
+            rel="external nofollow noopener"
+            title="CC-BY-NC-SA 4.0 deed (opens in new tab)"
+          >
             <span class="cc-version">4.0</span>
             <SvgCCLogo />
             <SvgCCBYLogo />
@@ -31,15 +37,17 @@
 
 <script setup lang="ts">
 import AppLinks from '../main/AppLinks.vue'
-import SvgCCBYLogo from '../svg/creativecommons/SvgCCBYLogo.vue';
-import SvgCCLogo from '../svg/creativecommons/SvgCCLogo.vue';
-import SvgCCNCLogo from '../svg/creativecommons/SvgCCNCLogo.vue';
-import SvgCCSALogo from '../svg/creativecommons/SvgCCSALogo.vue';
+import SvgCCBYLogo from '../svg/creativecommons/SvgCCBYLogo.vue'
+import SvgCCLogo from '../svg/creativecommons/SvgCCLogo.vue'
+import SvgCCNCLogo from '../svg/creativecommons/SvgCCNCLogo.vue'
+import SvgCCSALogo from '../svg/creativecommons/SvgCCSALogo.vue'
 </script>
 
 <style scoped lang="scss">
 footer {
   width: 100%;
+  grid-column: 2;
+  grid-row: 2;
 
   backdrop-filter: blur(4px);
   font-family: Dosis;
@@ -49,8 +57,9 @@ footer {
   align-items: center;
 
   .footer-container {
-    padding-top: 3rem;
-    padding-bottom: 3rem;
+    width: 100%;
+    max-width: 1400px;
+    padding: 2rem 0;
     font-weight: 600;
 
     display: grid;
@@ -64,7 +73,6 @@ footer {
   #copyright-notice {
     grid-column: 3;
     text-align: end;
-    font-size: 1.225rem;
 
     display: flex;
     flex-direction: column;
@@ -79,6 +87,7 @@ footer {
 
     .copyright-author {
       width: 100%;
+      font-size: 1.2rem;
     }
 
     .cc-supertext {
@@ -114,8 +123,11 @@ footer {
   footer {
     grid-template-columns: auto 1fr;
 
-    :deep(.links) {
-      display: none;
+    .footer-container {
+      align-items: flex-end;
+      :deep(.links) {
+        display: none;
+      }
     }
   }
 }

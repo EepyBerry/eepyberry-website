@@ -3,17 +3,16 @@ import AppThemeSelect from './AppThemeSelect.vue'
 </script>
 
 <template>
-  <header>
+  <aside>
     <AppThemeSelect />
-  </header>
+  </aside>
 </template>
 
 <style lang="scss">
-header {
-  position: fixed;
-  right: var(--app-padding-border);
-  top: var(--app-padding-border);
-  padding: 0.25rem;
+aside {
+  position: sticky;
+  top: 0;
+  padding: 0.75rem;
   text-align: end;
   z-index: 1;
 
@@ -23,8 +22,10 @@ header {
 }
 
 @media screen and (max-width: 767px) {
-  header {
+  aside {
     position: absolute;
+    top: 0;
+    right: 0;
   }
 }
 </style>

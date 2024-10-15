@@ -1,5 +1,5 @@
 <template>
-  <section id="section-nerd" class="adapt-size">
+  <section id="section-nerd">
     <div class="section-title" role="heading" aria-label="Nerd stuff">
       <hr class="title-divider" />
       <span class="title-icon">
@@ -137,6 +137,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    text-align: center;
     font-family: Dosis;
     font-weight: 500;
     font-size: 1.125rem;

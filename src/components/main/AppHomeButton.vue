@@ -29,7 +29,6 @@ const active: Ref<boolean> = ref(false)
     width: 3.5rem;
     user-select: none;
     -webkit-user-drag: none;
-    transform: scale(105%);
   }
 }
 .home-link:hover,

@@ -1,5 +1,5 @@
 <template>
-  <section id="section-projects" class="adapt-size">
+  <section id="section-projects">
     <div class="section-title" role="heading" aria-label="Projects">
       <hr class="title-divider" />
       <span class="title-icon">

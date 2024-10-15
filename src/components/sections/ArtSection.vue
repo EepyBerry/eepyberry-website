@@ -1,5 +1,5 @@
 <template>
-  <section id="section-art" class="adapt-size">
+  <section id="section-art">
     <div class="section-title" role="heading" aria-label="Drawings">
       <hr class="title-divider" />
       <span class="title-icon">
@@ -74,7 +74,6 @@ import IconEepyBerry from '../svg/icons/IconEepyBerry.vue'
     padding-top: 1.5rem;
     display: flex;
     flex-direction: column;
-    max-width: 100%;
   }
 }
 

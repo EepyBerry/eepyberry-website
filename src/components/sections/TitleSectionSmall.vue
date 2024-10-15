@@ -1,5 +1,5 @@
 <template>
-  <section id="section-title-small" class="adapt-size">
+  <section id="section-title-small">
     <SvgEepyBerryLogo id="avatar" :dark="$theme === 'dark'" />
     <hr />
     <p id="intro">developer&nbsp;& illustrator&nbsp;</p>
@@ -17,6 +17,7 @@ const $theme = inject('$theme')
 <style scoped lang="scss">
 #section-title-small {
   position: relative;
+  padding-top: 2rem;
   border-radius: 6px;
 
   display: flex;
@@ -68,7 +69,7 @@ const $theme = inject('$theme')
 }
 
 @media (prefers-reduced-motion) {
-  #section-title-small>#avatar {
+  #section-title-small > #avatar {
     animation: none;
   }
 }
