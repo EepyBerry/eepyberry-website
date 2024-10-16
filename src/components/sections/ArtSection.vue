@@ -66,15 +66,6 @@ import IconEepyBerry from '../svg/icons/IconEepyBerry.vue'
   flex-direction: column;
   align-items: center;
   justify-content: center;
-
-  .section-title {
-    align-self: center;
-  }
-  .section-content {
-    padding-top: 1.5rem;
-    display: flex;
-    flex-direction: column;
-  }
 }
 
 .gallery {

@@ -6,7 +6,7 @@
   --eepy-color-illustrator: #644031;
 
   --eepy-theme-monochrome: #fff;
-  --eepy-theme-star: #ebbd68;
+  --eepy-theme-star: #ffd17b;
 
   --eepy-theme-accent: #be99a0;
   --eepy-theme-accent-threequarter: #c5a7ad;
@@ -15,7 +15,7 @@
   --eepy-theme-patch: #7a5467;
   --eepy-theme-border: #755e69;
 
-  --eepy-theme-gradient: linear-gradient(to bottom, #c46fa7 0%, #ad6eab 50%, #8e6cad 100%);
+  --eepy-theme-gradient: linear-gradient(to bottom, #ffcdd6 0%, #ffd4f2 100%);
 
   --eepy-theme-title-shadow: var(--eepy-theme-accent-half);
   --eepy-theme-text: #221a1a;
@@ -49,7 +49,9 @@
   --eepy-color-illustrator: #20130d;
 
   --eepy-theme-monochrome: #000;
-  --eepy-theme-star: #8d7b5a;
+  //--eepy-theme-star: #8d7b5a;
+  --eepy-theme-star: #ffd17b;
+  --eepy-theme-star-glow: #ffd17baa;
 
   --eepy-theme-accent: #7d6e8f;
   --eepy-theme-accent-threequarter: #564b63;
@@ -57,6 +59,8 @@
   --eepy-theme-background: #050407;
   --eepy-theme-patch: #191620;
   --eepy-theme-border: #665e75;
+  
+  --eepy-theme-gradient: linear-gradient(to top, #271826 0%, #110b14 100%);
 
   --eepy-theme-title-shadow: #fcfcfc;
   --eepy-theme-text: #fcfcfc;

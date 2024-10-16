@@ -63,7 +63,7 @@ footer {
     font-weight: 600;
 
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr auto 1fr;
     grid-template-rows: 1fr;
     align-items: center;
     justify-content: center;
@@ -124,10 +124,15 @@ footer {
     grid-template-columns: auto 1fr;
 
     .footer-container {
+      grid-template-columns: 1fr 1fr;
       align-items: flex-end;
       :deep(.links) {
         display: none;
       }
+    }
+
+    #copyright-notice {
+      grid-column: 2;
     }
   }
 }

@@ -83,21 +83,14 @@ function checkConditions() {
 <!------------------------------------------------------------>
 <style lang="scss">
 #section-projects {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-
   .section-content {
-    padding: 1.5rem 0;
     width: 100%;
 
     background-color: var(--eepy-theme-background);
-    background-image: url('/svg/hero_circuits.svg');
-    background-repeat: repeat;
-    background-position: 50%;
-    background-size: 16rem;
+    //background-image: url('/svg/hero_circuits.svg');
+    //background-repeat: repeat;
+    //background-position: 50%;
+    //background-size: 16rem;
     box-shadow: inset 0 0 4rem 2rem var(--eepy-theme-background);
 
     display: grid;

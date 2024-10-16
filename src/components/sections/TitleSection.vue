@@ -4,10 +4,10 @@
       <iconify-icon icon="mingcute:star-fill" class="deco-star star1" width="100%" />
       <iconify-icon icon="mingcute:star-fill" class="deco-star star2" width="100%" />
       <iconify-icon icon="mingcute:star-fill" class="deco-star star3" width="100%" />
-      <span class="deco tl" />
+      <!-- <span class="deco tl" />
       <span class="deco tr" />
       <span class="deco bl" />
-      <span class="deco br" />
+      <span class="deco br" /> -->
       <SvgEepyBerryLogo
         id="avatar"
         :dark="$theme === 'dark'"
@@ -33,20 +33,34 @@ const $theme = inject('$theme')
 <style scoped lang="scss">
 @use '/src/assets/sass/animations' as anims;
 
+#section-title:before {
+  display: none;
+}
 #section-title {
   position: relative;
   height: 100dvh;
   border-radius: 6px;
+  background: transparent;
 
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 
+  .title:before {
+    z-index: -5;
+    content: '';
+    position: absolute;
+    inset: -6px;
+    border: 2px solid var(--eepy-theme-background);
+    border-radius: 12px;
+  }
   .title {
     position: relative;
     z-index: 1;
     padding: clamp(0rem, 5vw, 4rem);
+    background: var(--eepy-theme-background);
+    border-radius: 8px;
 
     display: flex;
     flex-direction: row;
@@ -99,7 +113,6 @@ const $theme = inject('$theme')
   width: $size;
   height: $size;
 
-  opacity: 0.45;
   transform: rotateZ(45deg);
   @include anims.animate-backandforth('star1bnf', 9s, 45deg, 65deg);
 }
@@ -111,7 +124,6 @@ const $theme = inject('$theme')
   width: $size;
   height: $size;
 
-  opacity: 0.45;
   transform: rotateZ(45deg);
   @include anims.animate-backandforth('star2bnf', 7s, -15deg, -45deg);
 }
@@ -123,7 +135,6 @@ const $theme = inject('$theme')
   width: $size;
   height: $size;
 
-  opacity: 0.45;
   transform: rotateZ(45deg);
   @include anims.animate-backandforth('star3bnf', 10s, 35deg, 70deg);
 }

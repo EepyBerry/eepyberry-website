@@ -15,10 +15,16 @@ const $theme = inject('$theme')
 
 <!------------------------------------------------------------>
 <style scoped lang="scss">
+#section-title-small:before {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
 #section-title-small {
   position: relative;
   padding-top: 2rem;
   border-radius: 6px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
 
   display: flex;
   flex-direction: row;

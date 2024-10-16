@@ -29,13 +29,24 @@ import SvgKofi from '../svg/icons/SvgKofi.vue'
 
 <!------------------------------------------------------------>
 <style scoped lang="scss">
+.links:before {
+  z-index: -5;
+  content: '';
+  position: absolute;
+  inset: -6px;
+  border: 2px solid var(--eepy-theme-background);
+  border-radius: 12px;
+}
 .links {
+  position: relative;
   z-index: 1;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 1rem;
-  backdrop-filter: blur(4px);
+  background: var(--eepy-theme-background);
+  border-radius: 8px;
+  padding: 0.5rem 0.675rem;
 
   & > .bracket {
     font-family: Dosis;

@@ -7,9 +7,19 @@ hr {
   border-radius: 2px;
 }
 
+section[id^='section-']:before {
+  z-index: -5;
+  content: '';
+  position: absolute;
+  inset: -6px;
+  border: 2px solid var(--eepy-theme-background);
+  border-radius: 12px;
+}
 section {
+  position: relative;
   width: 100%;
-  //background-color: #305052; // TODO: remove this bg color
+  padding: 1rem;
+  background: var(--eepy-theme-background);
   border-radius: 8px;
 
   display: flex;
@@ -95,10 +105,14 @@ section {
   z-index: -2;
   position: absolute;
   color: var(--eepy-theme-star);
+  filter: drop-shadow(0 0 4px var(--eepy-theme-background));
 
   $size: clamp(1.5rem, 3.75vw, 2rem);
   $stroke: clamp(3px, 0.5vw, 4px);
 
   width: $size;
   height: $size;
+}
+[data-theme='dark'] .deco-star {
+  filter: drop-shadow(0 0 8px var(--eepy-theme-star-glow));
 }
