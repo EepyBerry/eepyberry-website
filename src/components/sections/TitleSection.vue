@@ -11,8 +11,8 @@
       />
       <hr />
       <p id="intro">developer&nbsp;& illustrator&nbsp;</p>
+      <AppLinks class="title-links" />
     </div>
-    <AppLinks class="title-links" />
     <iconify-icon class="scroll-indicator" icon="mingcute:arrow-down-line" width="3rem" aria-hidden="true" />
   </section>
 </template>
@@ -64,12 +64,14 @@ const $theme = inject('$theme')
     justify-content: center;
 
     #avatar {
+      z-index: 1;
       width: clamp(200px, 12vw, 300px);
       filter: drop-shadow(0 4px 1px var(--eepy-theme-title-shadow));
       animation: bounce 4s ease-in-out infinite;
     }
 
     #intro {
+      z-index: 1;
       padding-left: 0.75rem;
       display: flex;
       flex-direction: column;
@@ -91,6 +93,9 @@ const $theme = inject('$theme')
   }
 
   .title-links {
+    z-index: 0;
+    position: absolute;
+    bottom: -3.5rem;
     margin-top: 0;
     transform: translateY(-1.5rem);
   }
