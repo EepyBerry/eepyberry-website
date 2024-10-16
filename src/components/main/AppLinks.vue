@@ -1,6 +1,5 @@
 <template>
   <div class="links">
-    <span class="bracket">[</span>
     <a href="#" disabled @click="$event.preventDefault()" aria-label="Ko-fi">
       <SvgKofi width="2.5rem" />
       <span class="coming-soon" aria-hidden="true">soon!</span>
@@ -16,7 +15,6 @@
     >
       <SvgBluesky width="2.5rem" />
     </a>
-    <span class="bracket">]</span>
   </div>
 </template>
 
@@ -46,14 +44,8 @@ import SvgKofi from '../svg/icons/SvgKofi.vue'
   gap: 1rem;
   background: var(--eepy-theme-background);
   border-radius: 8px;
-  padding: 0.5rem 0.675rem;
-
-  & > .bracket {
-    font-family: Dosis;
-    font-size: 2.5rem;
-    font-weight: 100;
-    line-height: 1;
-  }
+  padding: 0.75rem 1rem;
+  
   & > a {
     position: relative;
     display: flex;
@@ -62,11 +54,11 @@ import SvgKofi from '../svg/icons/SvgKofi.vue'
 
     .coming-soon {
       position: absolute;
-      bottom: -0.5rem;
+      bottom: -0.25rem;
 
       text-align: center;
-      line-height: 1.1;
-      font-size: 0.875rem;
+      line-height: 1;
+      font-size: 0.75rem;
 
       pointer-events: none;
       backdrop-filter: blur(4px);

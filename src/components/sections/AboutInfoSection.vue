@@ -1,13 +1,7 @@
 <template>
   <section id="section-about-info">
     <div class="section-title" role="heading" aria-label="About me">
-      <hr class="title-divider" />
-      <span class="title-icon">
-        <span class="title-bracket" aria-hidden="true">[</span>
-        <iconify-icon icon="mingcute:happy-line" width="2.5rem" aria-hidden="true" />
-        <span class="title-bracket" aria-hidden="true">]</span>
-      </span>
-      <hr class="title-divider" />
+      <iconify-icon icon="mingcute:happy-line" width="2.5rem" aria-hidden="true" />
     </div>
     <div class="section-content">
       <EepyPatchCard class="avatar-wrapper">
@@ -213,7 +207,6 @@ function isSelected(type: string, idx: number) {
     grid-template-areas: 'avatar info';
     grid-template-columns: 1fr 2.25fr;
     align-items: center;
-    padding: 1.5rem 0;
     margin: 0 auto;
     gap: 5rem;
     width: 100%;

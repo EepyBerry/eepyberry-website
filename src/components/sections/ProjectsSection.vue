@@ -1,13 +1,7 @@
 <template>
   <section id="section-projects">
     <div class="section-title" role="heading" aria-label="Projects">
-      <hr class="title-divider" />
-      <span class="title-icon">
-        <span class="title-bracket" aria-hidden="true">[</span>
-        <iconify-icon icon="mingcute:terminal-line" width="2.5rem" aria-hidden="true" />
-        <span class="title-bracket" aria-hidden="true">]</span>
-      </span>
-      <hr class="title-divider" />
+      <iconify-icon icon="mingcute:terminal-line" width="2.5rem" aria-hidden="true" />
     </div>
     <div class="section-content">
       <a

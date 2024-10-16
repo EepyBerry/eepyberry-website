@@ -18,7 +18,8 @@ section[id^='section-']:before {
 section {
   position: relative;
   width: 100%;
-  padding: 1rem;
+  max-width: 1400px;
+  padding: 2rem;
   background: var(--eepy-theme-background);
   border-radius: 8px;
 
@@ -27,40 +28,38 @@ section {
   align-items: center;
   justify-content: center;
 
+  .section-title:before {
+    z-index: -5;
+    content: '';
+    position: absolute;
+    inset: -6px;
+    border: 2px solid var(--eepy-theme-background);
+    border-radius: 12px;
+    /* border-bottom: 0;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0; */
+  }
   .section-title {
-    width: 100%;
-    max-width: 1400px;
+    position: absolute;
+    top: -2rem;
+    left: 0;
+    padding: 0.5rem 0.75rem;
+    
+    border-radius: 8px;
+    background: var(--eepy-theme-background);
     font-size: clamp(1.75rem, 5vw, 2.25rem);
-    align-self: center;
+    color: var(--eepy-theme-accent);
 
     display: flex;
     align-items: center;
     justify-content: center;
+    gap: 0.5rem;
     text-wrap: nowrap;
     user-select: none;
 
-    hr.title-divider {
-      border: 1px solid var(--eepy-theme-accent);
-      width: 100%;
-    }
-    .title-icon {
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-      color: var(--eepy-theme-accent);
-      padding: 0 1rem;
-      iconify-icon {
-        width: 2.5rem;
-        height: 2.5rem;
-      }
-    }
-    .title-bracket {
-      font-size: 2.5rem;
-      font-weight: 200;
-      transform: translateY(-0.375rem);
-    }
-    h2 {
-      transform: translateY(-0.375rem);
+    iconify-icon {
+      width: 2.5rem;
+      height: 2.5rem;
     }
   }
   .section-content {
@@ -69,50 +68,15 @@ section {
   }
 }
 
-.deco {
-  position: absolute;
-  z-index: -1;
-  $size: clamp(1.5rem, 3.75vw, 2rem);
-  $stroke: clamp(3px, 0.5vw, 4px);
-  $color: var(--eepy-theme-accent);
-
-  width: $size;
-  height: $size;
-  border-radius: 4px;
-
-  &.tl {
-    inset: 0 auto auto 0;
-    border-top: $stroke solid $color;
-    border-left: $stroke solid $color;
-  }
-  &.tr {
-    inset: 0 0 auto auto;
-    border-top: $stroke solid $color;
-    border-right: $stroke solid $color;
-  }
-  &.bl {
-    inset: auto auto 0 0;
-    border-bottom: $stroke solid $color;
-    border-left: $stroke solid $color;
-  }
-  &.br {
-    inset: auto 0 0 auto;
-    border-bottom: $stroke solid $color;
-    border-right: $stroke solid $color;
-  }
-}
 .deco-star {
   z-index: -2;
   position: absolute;
   color: var(--eepy-theme-star);
-  filter: drop-shadow(0 0 4px var(--eepy-theme-background));
+  filter: drop-shadow(0 0 8px var(--eepy-theme-star-glow));
 
   $size: clamp(1.5rem, 3.75vw, 2rem);
   $stroke: clamp(3px, 0.5vw, 4px);
 
   width: $size;
   height: $size;
-}
-[data-theme='dark'] .deco-star {
-  filter: drop-shadow(0 0 8px var(--eepy-theme-star-glow));
 }

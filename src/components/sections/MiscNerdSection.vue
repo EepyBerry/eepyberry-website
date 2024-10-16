@@ -1,13 +1,7 @@
 <template>
   <section id="section-nerd">
     <div class="section-title" role="heading" aria-label="Nerd stuff">
-      <hr class="title-divider" />
-      <span class="title-icon">
-        <span class="title-bracket" aria-hidden="true">[</span>
-        <iconify-icon icon="tabler:mood-nerd" width="2.5rem" aria-hidden="true" />
-        <span class="title-bracket" aria-hidden="true">]</span>
-      </span>
-      <hr class="title-divider" />
+      <iconify-icon icon="tabler:mood-nerd" width="2.5rem" aria-hidden="true" />
     </div>
     <div class="section-content">
       <a

@@ -129,6 +129,7 @@ function resetHash() {
   justify-content: center;
 
   button {
+    background: none;
     position: absolute;
     top: 24px;
     right: 24px;

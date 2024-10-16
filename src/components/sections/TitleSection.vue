@@ -4,10 +4,6 @@
       <iconify-icon icon="mingcute:star-fill" class="deco-star star1" width="100%" />
       <iconify-icon icon="mingcute:star-fill" class="deco-star star2" width="100%" />
       <iconify-icon icon="mingcute:star-fill" class="deco-star star3" width="100%" />
-      <!-- <span class="deco tl" />
-      <span class="deco tr" />
-      <span class="deco bl" />
-      <span class="deco br" /> -->
       <SvgEepyBerryLogo
         id="avatar"
         :dark="$theme === 'dark'"

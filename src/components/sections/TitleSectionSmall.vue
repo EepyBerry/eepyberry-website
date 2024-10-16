@@ -1,8 +1,10 @@
 <template>
   <section id="section-title-small">
-    <SvgEepyBerryLogo id="avatar" :dark="$theme === 'dark'" />
-    <hr />
-    <p id="intro">developer&nbsp;& illustrator&nbsp;</p>
+    <div class="title-small">
+      <SvgEepyBerryLogo id="avatar" :dark="$theme === 'dark'" />
+      <hr />
+      <p id="intro">developer&nbsp;& illustrator&nbsp;</p>
+    </div>
   </section>
 </template>
 
@@ -16,56 +18,70 @@ const $theme = inject('$theme')
 <!------------------------------------------------------------>
 <style scoped lang="scss">
 #section-title-small:before {
-  border-top-left-radius: 0;
-  border-top-right-radius: 0;
+  display: none;
 }
 #section-title-small {
   position: relative;
   padding-top: 2rem;
-  border-radius: 6px;
-  border-top-left-radius: 0;
-  border-top-right-radius: 0;
+  background: none;
 
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-
-  #avatar {
-    width: clamp(120px, 25vw, 160px);
-    filter: drop-shadow(0 4px 1px var(--eepy-theme-title-shadow));
-    animation: bounce 4s ease-in-out infinite;
+  .title-small:before {
+    z-index: -5;
+    content: '';
+    position: absolute;
+    inset: -6px;
+    border: 2px solid var(--eepy-theme-background);
+    border-radius: 12px;
   }
+  .title-small {
+    position: relative;
+    padding: 0.5rem 1rem;
+    background: var(--eepy-theme-background);
+    border-radius: 8px;
 
-  #intro {
-    padding-left: 0.75rem;
     display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    width: clamp(120px, 25vw, 160px);
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
 
-    font-family: Dosis;
-    font-size: clamp(1.5rem, 5vw, 2rem);
-    font-weight: 500;
-    line-height: 1;
-  }
+    #avatar {
+      width: clamp(120px, 25vw, 160px);
+      filter: drop-shadow(0 4px 1px var(--eepy-theme-title-shadow));
+      animation: bounce 4s ease-in-out infinite;
+    }
 
-  hr {
-    margin-left: 1rem;
-    margin-right: 1rem;
-    height: clamp(4rem, 15vw, 6rem);
-    border: 1px solid var(--eepy-theme-accent);
+    #intro {
+      padding-left: 0.75rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      width: clamp(120px, 25vw, 160px);
+
+      font-family: Dosis;
+      font-size: clamp(1.5rem, 5vw, 2rem);
+      font-weight: 500;
+      line-height: 1;
+    }
+
+    hr {
+      margin-left: 1rem;
+      margin-right: 1rem;
+      height: clamp(4rem, 15vw, 6rem);
+      border: 1px solid var(--eepy-theme-accent);
+    }
   }
 }
 
 @media screen and (max-width: 567px) {
-  #section-title-small {
+  #section-title-small .title-small {
     flex-direction: column;
+    padding: 0.5rem;
 
     #intro {
       width: unset;
       margin-top: 0.5rem;
-      margin-bottom: 2rem;
+      margin-bottom: 1rem;
+      text-align: center;
     }
 
     hr {
@@ -75,7 +91,7 @@ const $theme = inject('$theme')
 }
 
 @media (prefers-reduced-motion) {
-  #section-title-small > #avatar {
+  #section-title-small .title-small > #avatar {
     animation: none;
   }
 }
