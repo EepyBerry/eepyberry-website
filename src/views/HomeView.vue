@@ -25,12 +25,6 @@ import { useRoute, useRouter } from 'vue-router'
 
 useHead({
   title: "Home · EepyBerry's Website 🍓",
-  meta: [
-    {
-      name: 'description',
-      content: 'A small website about myself, my dev projects, and my drawings. Welcome! 🍓',
-    },
-  ],
 })
 const route = useRoute()
 const router = useRouter()

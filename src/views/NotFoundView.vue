@@ -12,7 +12,7 @@ useHead({
   title: "Not found · EepyBerry's Website 🍓",
   meta: [
     { name: 'robots', content: 'noindex, nofollow' },
-    { name: 'description', content: 'Page not found' },
+    { name: 'description', content: 'Page not found ;_;' },
   ],
 })
 </script>
