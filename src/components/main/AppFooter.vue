@@ -66,6 +66,7 @@ footer {
     border-radius: 12px;
   }
   .footer-container {
+    position: relative;
     width: 100%;
     max-width: 1400px;
     padding: 1rem 2rem;

@@ -6,8 +6,8 @@ button {
   font-size: 1rem;
 
   background: var(--eepy-theme-button);
-  border: 1px solid var(--eepy-theme-accent-half);
-  box-shadow: 0 3px 0 var(--eepy-theme-accent-half);
+  border: 1px solid var(--eepy-theme-border);
+  box-shadow: 0 3px 0 var(--eepy-theme-border);
 
   display: inline-flex;
   align-items: center;
@@ -55,9 +55,6 @@ button.info-button.selected {
   cursor: default;
 }
 
-[data-theme='dark'] button.info-button {
-  border: 1px solid var(--eepy-theme-accent-threequarter);
-}
 [data-theme='dark'] button.icon-button:hover {
   filter: brightness(80%);
 }

@@ -20,6 +20,7 @@ const $theme = inject('$theme')
 #section-title-small:before {
   display: none;
 }
+
 #section-title-small {
   position: relative;
   background: none;
@@ -32,9 +33,10 @@ const $theme = inject('$theme')
     border: 2px solid var(--eepy-theme-background);
     border-radius: 12px;
   }
+
   .title-small {
     position: relative;
-    padding: 0.5rem 1rem;
+    padding: 1rem 1.25rem;
     background: var(--eepy-theme-background);
     border-radius: 8px;
 
@@ -45,7 +47,7 @@ const $theme = inject('$theme')
 
     #avatar {
       width: clamp(120px, 25vw, 160px);
-      filter: drop-shadow(0 4px 1px var(--eepy-theme-title-shadow));
+      filter: drop-shadow(0 4px 0 var(--eepy-theme-title-shadow));
       animation: bounce 4s ease-in-out infinite;
     }
 
@@ -66,7 +68,7 @@ const $theme = inject('$theme')
       margin-left: 1rem;
       margin-right: 1rem;
       height: clamp(4rem, 15vw, 6rem);
-      border: 1px solid var(--eepy-theme-accent);
+      border: 1px solid var(--eepy-theme-primary);
     }
   }
 }
@@ -90,7 +92,7 @@ const $theme = inject('$theme')
 }
 
 @media (prefers-reduced-motion) {
-  #section-title-small .title-small > #avatar {
+  #section-title-small .title-small>#avatar {
     animation: none;
   }
 }

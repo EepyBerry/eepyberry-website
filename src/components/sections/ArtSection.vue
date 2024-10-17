@@ -6,33 +6,24 @@
     <div class="section-content">
       <ul class="gallery">
         <li class="image-wrapper" style="width: 36rem">
-          <a href="#/artwork/2024-08-03_1000-LC_Carrier.jpg"
-            ><img src="/artwork/2024-08-03_1000-LC_Carrier.jpg" aria-label="1000-LC" alt="1000-LC Carrier"
-          /></a>
+          <a href="#/artwork/2024-08-03_1000-LC_Carrier.jpg"><img src="/artwork/2024-08-03_1000-LC_Carrier.jpg"
+              aria-label="1000-LC" alt="1000-LC Carrier" /></a>
           <div class="drawing-title">
             <span>"1000-LC 'CARRIER'"</span>
           </div>
         </li>
         <li class="image-wrapper" style="width: 20rem">
-          <a href="#/artwork/2023-01-09_Heart_of_the_Mountain.jpg"
-            ><img
-              src="/artwork/2023-01-09_Heart_of_the_Mountain.jpg"
-              aria-label="Heart of the Mountain"
-              alt="Heart of the Mountain"
-              style="scale: 120%"
-          /></a>
+          <a href="#/artwork/2023-01-09_Heart_of_the_Mountain.jpg"><img
+              src="/artwork/2023-01-09_Heart_of_the_Mountain.jpg" aria-label="Heart of the Mountain"
+              alt="Heart of the Mountain" style="scale: 120%" /></a>
           <div class="drawing-title">
             <span>"Heart of the Mountain"</span>
           </div>
         </li>
         <li class="image-wrapper" style="width: 20rem">
-          <a href="#/artwork/2022-12-11_Niko_Holding_the_Sun.jpg"
-            ><img
-              src="/artwork/2022-12-11_Niko_Holding_the_Sun.jpg"
-              aria-label="Niko Holding the Sun"
-              alt="Niko Holding the Sun"
-              style="scale: 120%"
-          /></a>
+          <a href="#/artwork/2022-12-11_Niko_Holding_the_Sun.jpg"><img
+              src="/artwork/2022-12-11_Niko_Holding_the_Sun.jpg" aria-label="Niko Holding the Sun"
+              alt="Niko Holding the Sun" style="scale: 120%" /></a>
           <div class="drawing-title">
             <span>"Niko Holding the Sun"</span>
           </div>
@@ -70,36 +61,40 @@ import IconEepyBerry from '../svg/icons/IconEepyBerry.vue'
   gap: 2rem;
 
   .image-wrapper {
+    position: relative;
     flex-grow: 1;
     flex-shrink: 1;
-
-    position: relative;
-    border-radius: 6px;
     max-width: 100%;
     width: 100%;
     height: 24rem;
     overflow: hidden;
+
+    border: 1px solid var(--eepy-theme-border);
+    border-radius: 6px;
+
     transition: transform 150ms ease;
     display: flex;
 
     &.placeholder {
-      border: 2px dashed var(--eepy-theme-accent);
+      border: 2px dashed var(--eepy-theme-primary);
       align-items: center;
       justify-content: center;
       opacity: 0.5;
 
       svg {
-        color: var(--eepy-theme-accent);
+        color: var(--eepy-theme-primary);
         object-position: center;
         height: 3.5rem;
       }
     }
+
     img {
       flex-grow: 1;
       object-position: center;
       object-fit: cover;
       width: 100%;
     }
+
     .drawing-title {
       z-index: 1;
       position: absolute;
@@ -121,12 +116,14 @@ import IconEepyBerry from '../svg/icons/IconEepyBerry.vue'
     a {
       flex: 1;
     }
+
     a:hover,
     a:visited:hover {
       filter: brightness(100%);
       width: 100%;
     }
   }
+
   .image-wrapper:not(.placeholder):hover {
     transform: scale(101.5%);
   }
@@ -135,6 +132,7 @@ import IconEepyBerry from '../svg/icons/IconEepyBerry.vue'
 @media screen and (max-width: 767px) {
   #section-art {
     margin-top: 3rem;
+
     .section-content {
       gap: 1rem;
     }

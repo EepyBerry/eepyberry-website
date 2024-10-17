@@ -10,8 +10,8 @@
 .eepy-patchcard-wrapper {
   padding: 0.75rem;
   background: var(--eepy-theme-patch);
+  border: 1px solid var(--eepy-theme-border);
   border-radius: 16px;
-  box-shadow: 3px 6px 4px var(--eepy-theme-accent-half);
   transform: rotateZ(-1.5deg);
   background-image: url('/misc/wooltexture.png');
   background-size: 192px;
@@ -31,6 +31,7 @@
   height: 100%;
 
   background-image: url('/svg/patch_dashes.svg');
+  filter: drop-shadow(2px 2px 2px var(--eepy-theme-patch-shadow));
   color: var(--eepy-color-white);
   border-radius: 8px;
 

@@ -4,11 +4,8 @@
       <iconify-icon icon="mingcute:star-fill" class="deco-star star1" width="100%" />
       <iconify-icon icon="mingcute:star-fill" class="deco-star star2" width="100%" />
       <iconify-icon icon="mingcute:star-fill" class="deco-star star3" width="100%" />
-      <SvgEepyBerryLogo
-        id="avatar"
-        :dark="$theme === 'dark'"
-        aria-label="Sleeping strawberry with the text 'eepy berry'"
-      />
+      <SvgEepyBerryLogo id="avatar" :dark="$theme === 'dark'"
+        aria-label="Sleeping strawberry with the text 'eepy berry'" />
       <hr />
       <p id="intro">developer&nbsp;& illustrator&nbsp;</p>
       <AppLinks class="title-links" />
@@ -39,6 +36,7 @@ function scrollToProjects() {
 #section-title:before {
   display: none;
 }
+
 #section-title {
   position: relative;
   height: 100dvh;
@@ -58,6 +56,7 @@ function scrollToProjects() {
     border: 2px solid var(--eepy-theme-background);
     border-radius: 12px;
   }
+
   .title {
     position: relative;
     z-index: 1;
@@ -73,7 +72,7 @@ function scrollToProjects() {
     #avatar {
       z-index: 1;
       width: clamp(200px, 12vw, 300px);
-      filter: drop-shadow(0 4px 1px var(--eepy-theme-title-shadow));
+      filter: drop-shadow(0 4px 0 var(--eepy-theme-title-shadow));
       animation: bounce 4s ease-in-out infinite;
     }
 
@@ -91,11 +90,11 @@ function scrollToProjects() {
       line-height: 1;
     }
 
-    & > hr {
+    &>hr {
       margin-left: 1.75rem;
       margin-right: 1.75rem;
       height: clamp(7rem, 7.5vw, 10rem);
-      border: 1px solid var(--eepy-theme-accent);
+      border: 1px solid var(--eepy-theme-primary);
     }
   }
 
@@ -108,7 +107,7 @@ function scrollToProjects() {
   }
 
   .scroll-indicator {
-    color: var(--eepy-theme-accent);
+    color: var(--eepy-theme-primary);
     position: absolute;
     bottom: 2rem;
   }
@@ -164,7 +163,7 @@ function scrollToProjects() {
         width: fit-content;
       }
 
-      & > hr {
+      &>hr {
         margin-top: 0.5rem;
         margin-bottom: 0.75rem;
         height: 0;
@@ -204,7 +203,7 @@ function scrollToProjects() {
 }
 
 @media (prefers-reduced-motion) {
-  #section-title > .title > #avatar {
+  #section-title>.title>#avatar {
     animation: none;
   }
 }

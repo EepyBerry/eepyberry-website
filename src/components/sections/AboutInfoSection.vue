@@ -208,7 +208,7 @@ function isSelected(type: string, idx: number) {
     grid-template-columns: 1fr 2.25fr;
     align-items: center;
     margin: 0 auto;
-    gap: 5rem;
+    gap: 3rem;
     width: 100%;
 
     .avatar-wrapper {
@@ -260,16 +260,6 @@ function isSelected(type: string, idx: number) {
         flex-direction: row;
         align-items: center;
         justify-content: center;
-
-        .selection-notch {
-          position: absolute;
-          height: 3px;
-          border: 2px solid var(--eepy-theme-button-notch);
-          border-top-left-radius: 4px;
-          border-top-right-radius: 4px;
-          inset: auto 25% 0;
-          transform: translateY(1px);
-        }
       }
 
       iconify-icon {

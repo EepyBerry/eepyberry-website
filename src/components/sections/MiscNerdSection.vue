@@ -4,32 +4,18 @@
       <iconify-icon icon="tabler:mood-nerd" width="2.5rem" aria-hidden="true" />
     </div>
     <div class="section-content">
-      <a
-        class="button-link"
-        href="https://www.nerdtests.com/ft_nq.php"
-        target="_blank"
-        rel="external nofollow noopener"
-      >
-        <img
-          src="https://www.nerdtests.com/images/ft/nq/3da57b0395.gif"
-          alt="I am nerdier than 93% of all people. Are you a nerd? Click here to take the Nerd Test, get nerdy images and jokes, and write on the nerd forum!"
-        />
+      <a class="button-link" href="https://www.nerdtests.com/ft_nq.php" target="_blank"
+        rel="external nofollow noopener">
+        <img src="https://www.nerdtests.com/images/ft/nq/3da57b0395.gif"
+          alt="I am nerdier than 93% of all people. Are you a nerd? Click here to take the Nerd Test, get nerdy images and jokes, and write on the nerd forum!" />
       </a>
-      <a
-        class="button-link custom-88x31 e2v2"
-        href="https://alyx.sh/posts/hrt-geocities-buttons/"
-        target="_blank"
-        rel="external nofollow noopener"
-      >
+      <a class="button-link custom-88x31 e2v2" href="https://alyx.sh/posts/hrt-geocities-buttons/" target="_blank"
+        rel="external nofollow noopener">
         <img class="e2v2" src="/misc/e2v2.gif" alt="Powered by estrogen" />
         <span class="info">based on gif from Alyx Wijers</span>
       </a>
-      <a
-        class="button-link custom-88x31 scpf"
-        href="https://scp-wiki.wikidot.com"
-        target="_blank"
-        rel="external nofollow noopener"
-      >
+      <a class="button-link custom-88x31 scpf" href="https://scp-wiki.wikidot.com" target="_blank"
+        rel="external nofollow noopener">
         <div class="inner">
           <iconify-icon icon="simple-icons:scpfoundation" height="4rem" />
           <span>SCP<br />Foundation</span>
@@ -56,10 +42,10 @@
     flex-wrap: wrap;
     gap: 1rem;
 
-    & > a,
-    & > img {
+    &>a,
+    &>img {
       height: 105px;
-      border: 1px solid var(--eepy-theme-accent);
+      border: 1px solid var(--eepy-theme-primary);
       border-radius: 6px;
       overflow: hidden;
     }
@@ -67,7 +53,7 @@
     .custom-88x31 {
       position: relative;
       background: #c7c9c6;
-      border: 1px solid var(--eepy-theme-accent);
+      border: 1px solid var(--eepy-theme-primary);
       border-radius: 6px;
 
       color: #000;
@@ -85,12 +71,13 @@
         span {
           transform: translateY(-4px);
         }
+
         iconify-icon {
           filter: drop-shadow(2px 2px 1px #585a58);
         }
       }
 
-      & > span.info {
+      &>span.info {
         position: absolute;
         bottom: 4px;
         left: 4px;
@@ -102,12 +89,14 @@
         font-weight: 500;
       }
     }
+
     .custom-88x31.e2v2 {
-      & > span.info {
+      &>span.info {
         right: 4px;
         color: #000;
       }
     }
+
     .custom-88x31.scpf {
       background: linear-gradient(to bottom, #000 0%, #823f3f 100%);
       text-shadow: none;
@@ -120,11 +109,13 @@
           filter: none;
         }
       }
-      & > span.info {
+
+      &>span.info {
         color: #fff;
       }
     }
   }
+
   .section-wip {
     padding: 1rem;
     display: flex;
@@ -135,7 +126,7 @@
     font-family: Dosis;
     font-weight: 500;
     font-size: 1.125rem;
-    color: var(--eepy-theme-accent);
+    color: var(--eepy-theme-primary);
   }
 }
 </style>

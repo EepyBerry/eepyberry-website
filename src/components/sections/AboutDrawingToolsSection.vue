@@ -94,17 +94,14 @@
 
     #tool-aseprite {
       background-color: var(--eepy-color-aseprite);
-      box-shadow: 3px 6px 8px var(--eepy-color-aseprite);
     }
 
     #tool-krita {
       background-color: var(--eepy-color-krita);
-      box-shadow: 3px 6px 8px var(--eepy-color-krita);
     }
 
     #tool-illustrator {
       background-color: var(--eepy-color-illustrator);
-      box-shadow: 3px 6px 8px var(--eepy-color-illustrator);
     }
   }
 }
