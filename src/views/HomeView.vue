@@ -4,7 +4,7 @@
   <ArtSection />
   <dialog ref="dialogRef" class="dialog" :class="hashDialogMode" @abort="resetHash" @keydown.esc="resetHash">
     <div class="dialog-container">
-      <button icon-button class="dialog-close" @click="closeDialog" tabindex="0">
+      <button class="dialog-close icon-button" @click="closeDialog" tabindex="0">
         <iconify-icon icon="mingcute:close-line" width="3rem" />
       </button>
       <div id="hash-image">
@@ -24,7 +24,7 @@ import { onMounted, onUnmounted, onUpdated, ref, watch, type Ref } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
 
 useHead({
-  title: 'Home · EepyBerry',
+  title: "Home · EepyBerry's Website 🍓",
   meta: [
     {
       name: 'description',

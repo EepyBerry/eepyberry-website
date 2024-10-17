@@ -22,7 +22,6 @@ const $theme = inject('$theme')
 }
 #section-title-small {
   position: relative;
-  padding-top: 2rem;
   background: none;
 
   .title-small:before {

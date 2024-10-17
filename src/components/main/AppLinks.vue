@@ -45,7 +45,7 @@ import SvgKofi from '../svg/icons/SvgKofi.vue'
   background: var(--eepy-theme-background);
   border-radius: 8px;
   padding: 0.75rem 1rem;
-  
+
   & > a {
     position: relative;
     display: flex;

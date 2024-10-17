@@ -13,7 +13,9 @@
       <p id="intro">developer&nbsp;& illustrator&nbsp;</p>
       <AppLinks class="title-links" />
     </div>
-    <iconify-icon class="scroll-indicator" icon="mingcute:arrow-down-line" width="3rem" aria-hidden="true" />
+    <button class="scroll-indicator icon-button" v-on:click="scrollToProjects()" aria-label="Scroll to projects">
+      <iconify-icon icon="mingcute:arrow-down-line" width="3rem" aria-hidden="true" />
+    </button>
   </section>
 </template>
 
@@ -23,6 +25,11 @@ import AppLinks from '../main/AppLinks.vue'
 import SvgEepyBerryLogo from '@/components/svg/SvgEepyBerryLogo.vue'
 import { inject } from 'vue'
 const $theme = inject('$theme')
+
+function scrollToProjects() {
+  const projectsRect = document.querySelector('#section-projects > .section-title')!.getBoundingClientRect()
+  window.scrollTo({ behavior: 'smooth', top: projectsRect.top - projectsRect.height })
+}
 </script>
 
 <!------------------------------------------------------------>

@@ -14,6 +14,7 @@ section[id^='section-']:before {
   inset: -6px;
   border: 2px solid var(--eepy-theme-background);
   border-radius: 12px;
+  border-top-left-radius: 0;
 }
 section {
   position: relative;
@@ -34,17 +35,18 @@ section {
     position: absolute;
     inset: -6px;
     border: 2px solid var(--eepy-theme-background);
+    background: linear-gradient(to right, var(--eepy-theme-gradient-static) 0%, transparent 25%, transparent 100%);
     border-radius: 12px;
-    /* border-bottom: 0;
+    border-bottom: 0;
     border-bottom-left-radius: 0;
-    border-bottom-right-radius: 0; */
+    border-bottom-right-radius: 0;
   }
   .section-title {
     position: absolute;
     top: -2rem;
     left: 0;
     padding: 0.5rem 0.75rem;
-    
+
     border-radius: 8px;
     background: var(--eepy-theme-background);
     font-size: clamp(1.75rem, 5vw, 2.25rem);

@@ -9,7 +9,7 @@ import MiscNerdSection from '@/components/sections/MiscNerdSection.vue'
 import TitleSectionSmall from '@/components/sections/TitleSectionSmall.vue'
 import { useHead } from '@unhead/vue'
 useHead({
-  title: 'Miscellaneous · EepyBerry',
+  title: "Miscellaneous · EepyBerry's Website 🍓",
   meta: [
     {
       name: 'description',

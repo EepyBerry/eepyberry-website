@@ -48,6 +48,7 @@ footer {
   width: 100%;
   grid-column: 2;
   grid-row: 2;
+  margin-bottom: 2rem;
 
   backdrop-filter: blur(4px);
   font-family: Dosis;
@@ -56,10 +57,20 @@ footer {
   flex-direction: column;
   align-items: center;
 
+  .footer-container:before {
+    z-index: -5;
+    content: '';
+    position: absolute;
+    inset: -6px;
+    border: 2px solid var(--eepy-theme-background);
+    border-radius: 12px;
+  }
   .footer-container {
     width: 100%;
     max-width: 1400px;
-    padding: 2rem 0;
+    padding: 1rem 2rem;
+    background: var(--eepy-theme-background);
+    border-radius: 8px;
     font-weight: 600;
 
     display: grid;

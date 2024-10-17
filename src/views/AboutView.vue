@@ -13,7 +13,7 @@ import AboutDrawingToolsSection from '@/components/sections/AboutDrawingToolsSec
 import TitleSectionSmall from '@/components/sections/TitleSectionSmall.vue'
 import { useHead } from '@unhead/vue'
 useHead({
-  title: 'About · EepyBerry',
+  title: "About · EepyBerry's Website 🍓",
   meta: [
     {
       name: 'description',
