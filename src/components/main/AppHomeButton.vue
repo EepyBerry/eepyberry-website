@@ -1,13 +1,6 @@
 <template>
-  <RouterLink
-    class="home-link button-link"
-    to="/"
-    title="About me"
-    aria-label="Back to landing page"
-    @mousedown="active = true"
-    @mouseup="active = false"
-    @mouseleave="active = false"
-  >
+  <RouterLink class="home-link button-link" to="/" title="About me" aria-label="Back to landing page"
+    @mousedown="active = true" @mouseup="active = false" @mouseleave="active = false">
     <SvgEepyBerrySmall v-show="!active" :dark="$theme === 'dark'" class="home-symbol" />
     <SvgEepyBerrySmallBoop v-show="active" :dark="$theme === 'dark'" class="home-symbol" />
   </RouterLink>
@@ -24,17 +17,20 @@ const active: Ref<boolean> = ref(false)
 
 <style scoped lang="scss">
 .home-link {
-  transition: transform 100ms ease;
+  transition: transform 125ms ease;
+
   .home-symbol {
     width: 3.5rem;
     user-select: none;
     -webkit-user-drag: none;
   }
 }
+
 .home-link:hover,
 .home-link:focus-visible {
   transform: scale(110%);
 }
+
 .home-link:active {
   transform: scale(97.5%);
 }

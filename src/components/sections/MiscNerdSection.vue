@@ -17,13 +17,13 @@
       <a class="button-link custom-88x31 scpf" href="https://scp-wiki.wikidot.com" target="_blank"
         rel="external nofollow noopener">
         <div class="inner">
-          <iconify-icon icon="simple-icons:scpfoundation" height="4rem" />
+          <iconify-icon icon="simple-icons:scpfoundation" height="4rem" aria-hidden="true" />
           <span>SCP<br />Foundation</span>
         </div>
         <span class="info">unaffiliated, i just love the project!</span>
       </a>
-      <img src="/misc/intersexprogressflag.png" />
-      <img src="/misc/evilcatface_small.webp" />
+      <img src="/misc/intersexprogressflag.png" aria-label="Progress & Pride flag" />
+      <img src="/misc/evilcatface_small.webp" aria-label="Evil cat face emoticon" />
     </div>
     <div class="section-wip">
       <p>(this page is random, i know, but i wanted a fun space for interesting links :3)</p>

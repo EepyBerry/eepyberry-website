@@ -47,7 +47,7 @@ import SvgMail from '../svg/icons/SvgMail.vue'
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: transform 100ms ease;
+    transition: transform 125ms ease;
 
     &:hover {
       transform: scale(105%) rotateZ(-5deg);

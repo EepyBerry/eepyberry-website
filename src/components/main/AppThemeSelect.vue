@@ -3,13 +3,9 @@
   <button class="theme-select-button" aria-label="Open site theme selector" @click="toggleTheme">
     <div class="lightbulb">
       <span class="cord"></span>
-      <iconify-icon
-        mode="svg"
-        class="eepy-icon"
+      <iconify-icon mode="svg" class="eepy-icon"
         :icon="themeHelper.themeRef.value === 'light' ? 'clarity:lightbulb-solid' : 'clarity:lightbulb-line'"
-        height="2.25rem"
-        aria-hidden="true"
-      />
+        height="2.25rem" aria-hidden="true" />
     </div>
   </button>
 </template>
@@ -42,7 +38,7 @@ button.theme-select-button {
   cursor: pointer;
 
   .lightbulb {
-    transition: transform 100ms ease;
+    transition: transform 125ms ease;
     position: relative;
 
     .cord {
@@ -54,27 +50,32 @@ button.theme-select-button {
       height: 4rem;
       border-left: 2px dotted var(--eepy-theme-text);
     }
+
     .eepy-icon {
       transform: rotateZ(180deg);
-      transition: transform 100ms ease;
+      transition: transform 125ms ease;
       user-select: none;
       pointer-events: none;
     }
   }
 }
+
 button:hover,
 button:focus-visible {
   background: none;
   border: none;
   box-shadow: none;
+
   .lightbulb {
     transform: translateY(0.125rem);
   }
 }
+
 button:active {
   background: none;
   border: none;
   box-shadow: none;
+
   .lightbulb {
     transform: translateY(0.5rem);
   }

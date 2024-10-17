@@ -23,10 +23,10 @@
             title="CC-BY-NC-SA 4.0 deed (opens in new tab)"
           >
             <span class="cc-version">4.0</span>
-            <SvgCCLogo />
-            <SvgCCBYLogo />
-            <SvgCCNCLogo />
-            <SvgCCSALogo />
+            <SvgCCLogo aria-label="Creative Commons logo" />
+            <SvgCCBYLogo aria-label="Creative Commons attribution logo" />
+            <SvgCCNCLogo aria-label="Creative Commons noncommercial-use logo" />
+            <SvgCCSALogo aria-label="Creative Commons share-alike logo" />
           </a>
         </p>
         <p class="copyright-author">© {{ new Date().getFullYear() }}, EepyBerry</p>
