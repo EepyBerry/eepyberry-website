@@ -10,7 +10,7 @@
           <a href="https://vitejs.dev" target="_blank" rel="external nofollow noopener">Vite</a>
         </p>
       </div>
-      <AppLinks />
+      <AppLinks class="links-bare" />
       <div id="copyright-notice">
         <p class="copyright-info">
           <span class="cc-supertext">all original content under</span>
@@ -128,6 +128,13 @@ footer {
     grid-column: 1;
     font-weight: 500;
     text-align: start;
+  }
+
+  .links-bare::before {
+    display: none;
+  }
+  .links-bare {
+    background: none;
   }
 }
 
