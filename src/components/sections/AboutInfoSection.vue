@@ -225,7 +225,6 @@ function isSelected(type: string, idx: number) {
 
       .avatar {
         width: clamp(160px, 25vw, 260px);
-        filter: drop-shadow(0 0 6px #0008);
       }
     }
 

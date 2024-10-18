@@ -31,7 +31,7 @@
   height: 100%;
 
   background-image: url('/svg/patch_dashes.svg');
-  filter: drop-shadow(2px 2px 2px var(--eepy-theme-patch-shadow));
+  filter: drop-shadow(2px 2px 4px var(--eepy-theme-patch-shadow));
   color: var(--eepy-color-white);
   border-radius: 8px;
 

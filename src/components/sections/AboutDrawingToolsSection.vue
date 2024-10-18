@@ -84,7 +84,6 @@
         display: flex;
         align-items: center;
         gap: 0.5rem;
-        filter: drop-shadow(0 2px 4px #000);
       }
       p {
         font-size: 1.125rem;
