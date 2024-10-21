@@ -11,7 +11,7 @@
   flex-direction: row;
   gap: 4px;
 
-  border: 1px solid var(--eepy-theme-accent);
+  border: 1px solid var(--eepy-theme-primary);
   border-radius: 6px;
   align-self: flex-start;
 }

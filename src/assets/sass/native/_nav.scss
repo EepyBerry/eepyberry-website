@@ -14,7 +14,7 @@ a.card-link:not([disabled]):hover {
   transform: scale(101.5%);
 }
 a.card-link:not([disabled]) {
-  transition: transform 100ms ease-out;
+  transition: transform 125ms ease-out;
 }
 
 // Other links
@@ -23,7 +23,8 @@ a:not(.button-link, .card-link):visited {
   color: var(--eepy-theme-text);
 }
 a.button-link,
-a.card-link {
+a.card-link,
+a.footer-link {
   text-decoration: none;
   color: var(--eepy-theme-text);
 }
@@ -36,6 +37,6 @@ a.card-link {
 }
 [data-theme='light'] {
   a:not(.button-link, .card-link, [disabled]):hover {
-    filter: brightness(250%);
+    filter: brightness(200%);
   }
 }

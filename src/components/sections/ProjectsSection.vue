@@ -1,13 +1,7 @@
 <template>
   <section id="section-projects">
     <div class="section-title" role="heading" aria-label="Projects">
-      <hr class="title-divider" />
-      <span class="title-icon">
-        <span class="title-bracket" aria-hidden="true">[</span>
-        <iconify-icon icon="mingcute:terminal-line" width="2.5rem" aria-hidden="true" />
-        <span class="title-bracket" aria-hidden="true">]</span>
-      </span>
-      <hr class="title-divider" />
+      <iconify-icon icon="mingcute:terminal-line" width="2.5rem" aria-hidden="true" />
     </div>
     <div class="section-content">
       <a
@@ -28,7 +22,7 @@
           </template>
           <SvgLagrangeLogo class="logo" />
           <template v-slot:footer>
-            <p>A fully procedural planet-building app 🪐</p>
+            <p>A fully procedural planet-building app&nbsp;🪐</p>
           </template>
         </EepyCard>
       </a>
@@ -83,26 +77,20 @@ function checkConditions() {
 <!------------------------------------------------------------>
 <style lang="scss">
 #section-projects {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-
   .section-content {
-    padding: 1.5rem 0;
     width: 100%;
 
     background-color: var(--eepy-theme-background);
-    background-image: url('/svg/hero_circuits.svg');
-    background-repeat: repeat;
-    background-position: 50%;
-    background-size: 16rem;
+    //background-image: url('/svg/hero_circuits.svg');
+    //background-repeat: repeat;
+    //background-position: 50%;
+    //background-size: 16rem;
     box-shadow: inset 0 0 4rem 2rem var(--eepy-theme-background);
 
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(24rem, auto));
     gap: 2rem;
+
     & .eepy-card {
       width: 100%;
       height: 14rem;
@@ -112,6 +100,7 @@ function checkConditions() {
   #project-lagrange {
     background-image: url('/projects/project-lagrange.webp');
     color: var(--eepy-color-white);
+
     .logo {
       position: absolute;
       width: 16rem;
@@ -131,11 +120,13 @@ function checkConditions() {
       cursor: pointer;
       filter: sepia(1) hue-rotate(320deg) saturate(10) brightness(0.875);
     }
+
     .logo {
       text-align: center;
       text-wrap: nowrap;
       font-size: 1.125rem;
     }
+
     .tx-glitch,
     .tx-glitch::before,
     .tx-glitch::after {
@@ -146,6 +137,7 @@ function checkConditions() {
     }
   }
 }
+
 [data-theme='dark'] #section-projects {
   .section-content {
     background-image: url('/svg/hero_circuits_dark.svg');
@@ -163,7 +155,20 @@ function checkConditions() {
 @media screen and (max-width: 767px) {
   #section-projects {
     margin-top: 3rem;
+
     .section-content {
+      grid-template-columns: repeat(auto-fill, minmax(18rem, auto));
+      gap: 1rem;
+    }
+  }
+}
+
+@media screen and (max-width: 567px) {
+  #section-projects {
+    margin-top: 3rem;
+
+    .section-content {
+      grid-template-columns: repeat(auto-fill, minmax(15rem, auto));
       gap: 1rem;
     }
   }

@@ -4,10 +4,6 @@
       <iconify-icon icon="mingcute:star-fill" class="deco-star star1" width="100%" />
       <iconify-icon icon="mingcute:star-fill" class="deco-star star2" width="100%" />
       <iconify-icon icon="mingcute:star-fill" class="deco-star star3" width="100%" />
-      <span class="deco tl" />
-      <span class="deco tr" />
-      <span class="deco bl" />
-      <span class="deco br" />
       <SvgEepyBerryLogo
         id="avatar"
         :dark="$theme === 'dark'"
@@ -15,9 +11,11 @@
       />
       <hr />
       <p id="intro">developer&nbsp;& illustrator&nbsp;</p>
+      <AppLinks class="title-links" />
     </div>
-    <AppLinks class="title-links" />
-    <iconify-icon class="scroll-indicator" icon="mingcute:arrow-down-line" width="3rem" aria-hidden="true" />
+    <button class="scroll-indicator icon-button" v-on:click="scrollToProjects()" aria-label="Scroll to projects">
+      <iconify-icon icon="mingcute:arrow-down-line" width="3rem" aria-hidden="true" />
+    </button>
   </section>
 </template>
 
@@ -27,26 +25,47 @@ import AppLinks from '../main/AppLinks.vue'
 import SvgEepyBerryLogo from '@/components/svg/SvgEepyBerryLogo.vue'
 import { inject } from 'vue'
 const $theme = inject('$theme')
+
+function scrollToProjects() {
+  const projectsRect = document.querySelector('#section-projects > .section-title')!.getBoundingClientRect()
+  window.scrollTo({ behavior: 'smooth', top: projectsRect.top - projectsRect.height })
+}
 </script>
 
 <!------------------------------------------------------------>
 <style scoped lang="scss">
 @use '/src/assets/sass/animations' as anims;
 
+#section-title:before {
+  display: none;
+}
+
 #section-title {
   position: relative;
   height: 100dvh;
   border-radius: 6px;
+  background: transparent;
 
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 
+  .title:before {
+    z-index: -5;
+    content: '';
+    position: absolute;
+    inset: -6px;
+    border: 2px solid var(--eepy-theme-background);
+    border-radius: 12px;
+  }
+
   .title {
     position: relative;
     z-index: 1;
     padding: clamp(0rem, 5vw, 4rem);
+    background: var(--eepy-theme-background);
+    border-radius: 8px;
 
     display: flex;
     flex-direction: row;
@@ -54,12 +73,14 @@ const $theme = inject('$theme')
     justify-content: center;
 
     #avatar {
+      z-index: 1;
       width: clamp(200px, 12vw, 300px);
-      filter: drop-shadow(0 4px 1px var(--eepy-theme-title-shadow));
+      filter: drop-shadow(0 4px 0 var(--eepy-theme-title-shadow));
       animation: bounce 4s ease-in-out infinite;
     }
 
     #intro {
+      z-index: 1;
       padding-left: 0.75rem;
       display: flex;
       flex-direction: column;
@@ -76,17 +97,20 @@ const $theme = inject('$theme')
       margin-left: 1.75rem;
       margin-right: 1.75rem;
       height: clamp(7rem, 7.5vw, 10rem);
-      border: 1px solid var(--eepy-theme-accent);
+      border: 1px solid var(--eepy-theme-primary);
     }
   }
 
   .title-links {
+    z-index: 0;
+    position: absolute;
+    bottom: -3.5rem;
     margin-top: 0;
     transform: translateY(-1.5rem);
   }
 
   .scroll-indicator {
-    color: var(--eepy-theme-accent);
+    color: var(--eepy-theme-primary);
     position: absolute;
     bottom: 2rem;
   }
@@ -99,7 +123,6 @@ const $theme = inject('$theme')
   width: $size;
   height: $size;
 
-  opacity: 0.45;
   transform: rotateZ(45deg);
   @include anims.animate-backandforth('star1bnf', 9s, 45deg, 65deg);
 }
@@ -111,7 +134,6 @@ const $theme = inject('$theme')
   width: $size;
   height: $size;
 
-  opacity: 0.45;
   transform: rotateZ(45deg);
   @include anims.animate-backandforth('star2bnf', 7s, -15deg, -45deg);
 }
@@ -123,7 +145,6 @@ const $theme = inject('$theme')
   width: $size;
   height: $size;
 
-  opacity: 0.45;
   transform: rotateZ(45deg);
   @include anims.animate-backandforth('star3bnf', 10s, 35deg, 70deg);
 }

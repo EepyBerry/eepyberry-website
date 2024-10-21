@@ -24,18 +24,20 @@ const active: Ref<boolean> = ref(false)
 
 <style scoped lang="scss">
 .home-link {
-  transition: transform 100ms ease;
+  transition: transform 125ms ease;
+
   .home-symbol {
     width: 3.5rem;
     user-select: none;
     -webkit-user-drag: none;
-    transform: scale(105%);
   }
 }
+
 .home-link:hover,
 .home-link:focus-visible {
   transform: scale(110%);
 }
+
 .home-link:active {
   transform: scale(97.5%);
 }

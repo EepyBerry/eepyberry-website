@@ -1,8 +1,6 @@
 <template>
-  <div class="page-container">
-    <TitleSectionSmall />
-    <MiscNerdSection />
-  </div>
+  <TitleSectionSmall />
+  <MiscNerdSection />
 </template>
 
 <!------------------------------------------------------------>
@@ -11,28 +9,12 @@ import MiscNerdSection from '@/components/sections/MiscNerdSection.vue'
 import TitleSectionSmall from '@/components/sections/TitleSectionSmall.vue'
 import { useHead } from '@unhead/vue'
 useHead({
-  title: 'Miscellaneous · EepyBerry',
+  title: "Miscellaneous · EepyBerry's Website 🍓",
   meta: [
     {
       name: 'description',
-      content: "Who am I? What do I like to do? Why a berry? It's all in here!",
+      content: "Who am I? What do I like to do? Why a berry? It's all in here! :3",
     },
   ],
 })
 </script>
-
-<!------------------------------------------------------------>
-<style scoped lang="scss">
-.page-container {
-  display: flex;
-  flex-direction: column;
-  gap: 3rem;
-  margin-top: 3rem;
-}
-
-@media screen and (max-width: 1199px) {
-  .page-container {
-    gap: 1.5rem;
-  }
-}
-</style>

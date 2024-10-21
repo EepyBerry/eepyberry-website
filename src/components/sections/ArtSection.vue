@@ -1,13 +1,7 @@
 <template>
   <section id="section-art">
     <div class="section-title" role="heading" aria-label="Drawings">
-      <hr class="title-divider" />
-      <span class="title-icon">
-        <span class="title-bracket" aria-hidden="true">[</span>
-        <iconify-icon icon="mingcute:paint-brush-line" width="2.5rem" aria-hidden="true" />
-        <span class="title-bracket" aria-hidden="true">]</span>
-      </span>
-      <hr class="title-divider" />
+      <iconify-icon icon="mingcute:paint-brush-line" width="2.5rem" aria-hidden="true" />
     </div>
     <div class="section-content">
       <ul class="gallery">
@@ -50,9 +44,6 @@
         <li class="image-wrapper placeholder" style="width: 20rem">
           <IconEepyBerry />
         </li>
-        <li class="image-wrapper placeholder" style="width: 36rem">
-          <IconEepyBerry />
-        </li>
       </ul>
     </div>
   </section>
@@ -69,16 +60,6 @@ import IconEepyBerry from '../svg/icons/IconEepyBerry.vue'
   flex-direction: column;
   align-items: center;
   justify-content: center;
-
-  .section-title {
-    align-self: center;
-  }
-  .section-content {
-    padding: 1.5rem 0;
-    display: flex;
-    flex-direction: column;
-    max-width: 100%;
-  }
 }
 
 .gallery {
@@ -89,36 +70,40 @@ import IconEepyBerry from '../svg/icons/IconEepyBerry.vue'
   gap: 2rem;
 
   .image-wrapper {
+    position: relative;
     flex-grow: 1;
     flex-shrink: 1;
-
-    position: relative;
-    border-radius: 6px;
     max-width: 100%;
     width: 100%;
     height: 24rem;
     overflow: hidden;
+
+    border: 1px solid var(--eepy-theme-border);
+    border-radius: 6px;
+
     transition: transform 150ms ease;
     display: flex;
 
     &.placeholder {
-      border: 2px dashed var(--eepy-theme-accent);
+      border: 2px dashed var(--eepy-theme-primary);
       align-items: center;
       justify-content: center;
       opacity: 0.5;
 
       svg {
-        color: var(--eepy-theme-accent);
+        color: var(--eepy-theme-primary);
         object-position: center;
         height: 3.5rem;
       }
     }
+
     img {
       flex-grow: 1;
       object-position: center;
       object-fit: cover;
       width: 100%;
     }
+
     .drawing-title {
       z-index: 1;
       position: absolute;
@@ -140,12 +125,14 @@ import IconEepyBerry from '../svg/icons/IconEepyBerry.vue'
     a {
       flex: 1;
     }
+
     a:hover,
     a:visited:hover {
       filter: brightness(100%);
       width: 100%;
     }
   }
+
   .image-wrapper:not(.placeholder):hover {
     transform: scale(101.5%);
   }
@@ -154,6 +141,7 @@ import IconEepyBerry from '../svg/icons/IconEepyBerry.vue'
 @media screen and (max-width: 767px) {
   #section-art {
     margin-top: 3rem;
+
     .section-content {
       gap: 1rem;
     }

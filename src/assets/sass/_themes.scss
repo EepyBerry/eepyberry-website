@@ -1,22 +1,23 @@
 :root {
   --eepy-color-white: #fcfcfc;
-  --eepy-color-lagrange: #354852;
   --eepy-color-aseprite: #657681;
   --eepy-color-krita: #466769;
   --eepy-color-illustrator: #644031;
 
-  --eepy-theme-monochrome: #fff;
-  --eepy-theme-star: #ebbd68;
+  --eepy-theme-star: #ffc74f;
+  --eepy-theme-star-glow: #fff2d4;
 
-  --eepy-theme-accent: #be99a0;
-  --eepy-theme-accent-threequarter: #c5a7ad;
-  --eepy-theme-accent-half: #d8c3c7;
+  --eepy-theme-primary: #bb7e8f;
+  --eepy-theme-border: #caa4af;
   --eepy-theme-background: #fffafa;
-  --eepy-theme-patch: #7a5467;
-  --eepy-theme-border: #755e69;
+  --eepy-theme-patch: #9e6d86;
+  --eepy-theme-patch-shadow: #523746;
 
-  --eepy-theme-title-shadow: var(--eepy-theme-accent-half);
-  --eepy-theme-text: #221a1a;
+  --eepy-theme-gradient: linear-gradient(to bottom, #f5d9d4 0%, #d8bbe4 100%);
+  --eepy-theme-gradient-static: #ffcde0;
+
+  --eepy-theme-title-shadow: #d6adb9;
+  --eepy-theme-text: #100c11;
 
   --eepy-theme-card: #fff;
   --eepy-theme-card-shadow: #dabcbc;
@@ -24,11 +25,9 @@
   --eepy-theme-button: #ffffff;
   --eepy-theme-button-hover: #fcfafa;
   --eepy-theme-button-selected: #f5f0f0;
-  --eepy-theme-button-notch: var(--eepy-theme-accent-half);
-  --eepy-theme-item: #79425c;
+  --eepy-theme-tooltip: #79425c;
 
   --eepy-theme-disabled: #a3a3a3;
-  --eepy-theme-alert: #da3923;
 
   --eepy-theme-terminal-header: #202020;
   --eepy-theme-terminal-header-decoration: #3b3b3b;
@@ -42,19 +41,21 @@
 }
 
 :root[data-theme='dark'] {
-  --eepy-color-aseprite: #1e2225;
-  --eepy-color-krita: #152324;
-  --eepy-color-illustrator: #20130d;
+  --eepy-color-aseprite: #2e3438;
+  --eepy-color-krita: #1c2e30;
+  --eepy-color-illustrator: #312018;
 
-  --eepy-theme-monochrome: #000;
-  --eepy-theme-star: #8d7b5a;
+  --eepy-theme-star: #ffd17b;
+  --eepy-theme-star-glow: #ffd17baa;
 
-  --eepy-theme-accent: #7d6e8f;
-  --eepy-theme-accent-threequarter: #564b63;
-  --eepy-theme-accent-half: #2e2738;
-  --eepy-theme-background: #050407;
-  --eepy-theme-patch: #191620;
-  --eepy-theme-border: #665e75;
+  --eepy-theme-primary: #917fa7;
+  --eepy-theme-background: #1e1a25;
+  --eepy-theme-patch: #2e2235;
+  --eepy-theme-patch-shadow: #130e16;
+  --eepy-theme-border: #534c5f;
+
+  --eepy-theme-gradient: linear-gradient(to bottom, #08070f 0%, #0d070e 100%);
+  --eepy-theme-gradient-static: #0b070e;
 
   --eepy-theme-title-shadow: #fcfcfc;
   --eepy-theme-text: #fcfcfc;
@@ -65,15 +66,13 @@
   --eepy-theme-button: #070211;
   --eepy-theme-button-hover: #110c1d;
   --eepy-theme-button-selected: #20192c;
-  --eepy-theme-button-notch: var(--eepy-theme-accent-threequarter);
-  --eepy-theme-item: #271b36;
+  --eepy-theme-tooltip: #373050;
 
   --eepy-theme-disabled: #535068;
-  --eepy-theme-alert: #ff745c;
 
-  --eepy-theme-terminal-header: #141414;
-  --eepy-theme-terminal-header-decoration: #292929;
-  --eepy-theme-terminal-header-border: var(--eepy-theme-accent-threequarter);
+  --eepy-theme-terminal-header: #07050c;
+  --eepy-theme-terminal-header-decoration: #262230;
+  --eepy-theme-terminal-header-border: var(--eepy-theme-border);
   --eepy-theme-terminal-background: #070211;
   --eepy-theme-terminal-background: repeating-linear-gradient(#070211, #070211 12px, #0d0518 12px, #0d0518 14px);
   --eepy-theme-terminal-background-static: #070211;

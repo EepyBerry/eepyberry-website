@@ -12,7 +12,7 @@
   left: 0;
   padding: 2px 8px;
   border-radius: 6px;
-  background: var(--eepy-theme-item);
+  background: var(--eepy-theme-tooltip);
   color: var(--eepy-color-white);
   font-family: Dosis;
   font-weight: 500;
@@ -20,7 +20,7 @@
   .tooltip-arrow {
     z-index: -1;
     position: absolute;
-    background: var(--eepy-theme-item);
+    background: var(--eepy-theme-tooltip);
     width: 16px;
     height: 16px;
     transform: rotate(45deg);

@@ -29,8 +29,7 @@ import IconEepyBerry from '@/components/svg/icons/IconEepyBerry.vue'
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  background-color: var(--eepy-theme-card);
-  border: 1px solid var(--eepy-theme-accent-half);
+  border: 1px solid var(--eepy-theme-border);
   border-radius: 6px;
   overflow: hidden;
 
@@ -39,6 +38,7 @@ import IconEepyBerry from '@/components/svg/icons/IconEepyBerry.vue'
     top: 0.75rem;
     right: 0.75rem;
   }
+
   &-header {
     position: absolute;
     inset: 0 0 auto;
@@ -57,6 +57,7 @@ import IconEepyBerry from '@/components/svg/icons/IconEepyBerry.vue'
     gap: 0.5rem;
     filter: drop-shadow(0 0 4px #0008);
   }
+
   &-content {
     flex: 1;
     width: 100%;
@@ -66,6 +67,7 @@ import IconEepyBerry from '@/components/svg/icons/IconEepyBerry.vue'
     align-items: center;
     justify-content: center;
   }
+
   &-footer {
     position: absolute;
     inset: auto 0 0;
@@ -76,26 +78,31 @@ import IconEepyBerry from '@/components/svg/icons/IconEepyBerry.vue'
     padding: 0 0.75rem 0.5rem;
   }
 }
+
 .eepy-card.center {
   text-align: center;
+
   .eepy-card-header {
     justify-content: center;
   }
 }
+
 .eepy-card.placeholder {
   align-items: center;
   justify-content: center;
   background-color: var(--eepy-theme-background);
-  border: 2px dashed var(--eepy-theme-accent);
-  color: var(--eepy-theme-accent);
+  border: 2px dashed var(--eepy-theme-primary);
+  color: var(--eepy-theme-primary);
   opacity: 0.5;
 
   .eepy-card-header {
     display: none;
   }
+
   .eepy-card-footer {
     display: none;
   }
+
   .eepy-card-content {
     display: flex;
     align-items: center;

@@ -1,13 +1,7 @@
 <template>
   <section id="section-about-drawingtools">
     <div class="section-title" role="heading" aria-label="Tools & techs">
-      <hr class="title-divider" />
-      <span class="title-icon">
-        <span class="title-bracket" aria-hidden="true">[</span>
-        <iconify-icon icon="mingcute:paint-brush-line" width="2.5rem" aria-hidden="true" />
-        <span class="title-bracket" aria-hidden="true">]</span>
-      </span>
-      <hr class="title-divider" />
+      <iconify-icon icon="mingcute:paint-brush-line" width="2.5rem" aria-hidden="true" />
     </div>
     <div class="section-content">
       <ul class="tool-list">
@@ -50,7 +44,6 @@
 <style scoped lang="scss">
 #section-about-drawingtools {
   .section-content {
-    padding: 1.5rem 0;
     display: grid;
     grid-template-columns: 1fr;
     gap: 3rem;
@@ -91,7 +84,6 @@
         display: flex;
         align-items: center;
         gap: 0.5rem;
-        filter: drop-shadow(0 2px 4px #000);
       }
       p {
         font-size: 1.125rem;
@@ -101,17 +93,14 @@
 
     #tool-aseprite {
       background-color: var(--eepy-color-aseprite);
-      box-shadow: 3px 6px 8px var(--eepy-color-aseprite);
     }
 
     #tool-krita {
       background-color: var(--eepy-color-krita);
-      box-shadow: 3px 6px 8px var(--eepy-color-krita);
     }
 
     #tool-illustrator {
       background-color: var(--eepy-color-illustrator);
-      box-shadow: 3px 6px 8px var(--eepy-color-illustrator);
     }
   }
 }

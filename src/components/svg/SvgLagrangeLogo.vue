@@ -149,7 +149,7 @@
 
 .cls-1,
 .cls-3 {
-  fill: var(--eepy-color-lagrange);
+  fill: #354852;
 }
 
 .cls-3,
@@ -159,7 +159,7 @@
 
 .cls-4 {
   fill: none;
-  stroke: var(--eepy-color-lagrange);
+  stroke: #354852;
   stroke-miterlimit: 10;
   stroke-width: 2px;
 }

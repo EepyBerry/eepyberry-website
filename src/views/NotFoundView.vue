@@ -9,10 +9,10 @@
 import SvgNotFound from '@/components/svg/SvgNotFound.vue'
 import { useHead } from '@unhead/vue'
 useHead({
-  title: 'Not found · EepyBerry',
+  title: "Not found · EepyBerry's Website 🍓",
   meta: [
     { name: 'robots', content: 'noindex, nofollow' },
-    { name: 'description', content: 'Page not found' },
+    { name: 'description', content: 'Page not found ;_;' },
   ],
 })
 </script>

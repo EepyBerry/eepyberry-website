@@ -116,6 +116,11 @@ function stopHover(elem?: HTMLElement | null) {
 <!------------------------------------------------------------>
 <style lang="scss">
 nav {
+  z-index: 1;
+  position: sticky;
+  top: 0;
+  padding: 0.75rem;
+  border-radius: 0 1rem 1rem 0;
   text-decoration: none;
 
   display: flex;
@@ -123,6 +128,7 @@ nav {
   align-items: center;
   gap: 1rem;
 }
+
 .nav-link {
   width: 2.75rem;
   height: 2.75rem;
@@ -131,7 +137,7 @@ nav {
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: transform 100ms ease;
+  transition: transform 125ms ease;
 
   & > iconify-icon {
     transform: rotateZ(5deg);
@@ -139,17 +145,28 @@ nav {
     pointer-events: none;
   }
 }
+
 .nav-link:not([disabled]):hover,
 .nav-link:not([disabled]):focus-visible {
   transform: scale(110%) rotateZ(-10deg);
 }
+
 .nav-link:not([disabled]):active {
   cursor: pointer;
   transform: scale(97.5%);
 }
+
 .nav-link[disabled] {
   cursor: not-allowed;
   color: var(--eepy-theme-disabled);
   transition: none;
+}
+
+@media screen and (max-width: 767px) {
+  nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
 }
 </style>

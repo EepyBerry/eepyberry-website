@@ -15,7 +15,7 @@
   min-height: 3rem;
 
   background: var(--eepy-theme-background);
-  border: 1px solid var(--eepy-theme-accent-threequarter);
+  border: 1px solid var(--eepy-theme-border);
   border-radius: 6px;
 
   display: flex;
@@ -24,7 +24,7 @@
   gap: 1rem;
 
   iconify-icon {
-    color: var(--eepy-theme-accent);
+    color: var(--eepy-theme-primary);
     width: 2.5rem;
     height: 2.5rem;
 
@@ -58,6 +58,7 @@
     }
   }
 }
+
 .eepy-group.reverse {
   flex-direction: row-reverse;
 }

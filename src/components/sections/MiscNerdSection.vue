@@ -1,13 +1,7 @@
 <template>
   <section id="section-nerd">
     <div class="section-title" role="heading" aria-label="Nerd stuff">
-      <hr class="title-divider" />
-      <span class="title-icon">
-        <span class="title-bracket" aria-hidden="true">[</span>
-        <iconify-icon icon="tabler:mood-nerd" width="2.5rem" aria-hidden="true" />
-        <span class="title-bracket" aria-hidden="true">]</span>
-      </span>
-      <hr class="title-divider" />
+      <iconify-icon icon="tabler:mood-nerd" width="2.5rem" aria-hidden="true" />
     </div>
     <div class="section-content">
       <a
@@ -37,17 +31,17 @@
         rel="external nofollow noopener"
       >
         <div class="inner">
-          <iconify-icon icon="simple-icons:scpfoundation" height="4rem" />
+          <iconify-icon icon="simple-icons:scpfoundation" height="4rem" aria-hidden="true" />
           <span>SCP<br />Foundation</span>
         </div>
         <span class="info">unaffiliated, i just love the project!</span>
       </a>
-      <img src="/misc/intersexprogressflag.png" />
-      <img src="/misc/evilcatface_small.webp" />
+      <img src="/misc/intersexprogressflag.png" aria-label="Progress & Pride flag" />
+      <img src="/misc/evilcatface_small.webp" aria-label="Evil cat face emoticon" />
     </div>
     <div class="section-wip">
-      <p>(this page is random, i know, but i wanted a fun space for interesting links :3)</p>
-      <p>(more stuff to be added later... probably)</p>
+      <p>(this section is random, i know, but i wanted a fun space for interesting links :3)</p>
+      <p>(more stuff to be added later :>)</p>
     </div>
   </section>
 </template>
@@ -55,8 +49,6 @@
 <style scoped lang="scss">
 #section-nerd {
   .section-content {
-    padding: 1.5rem 0;
-
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -65,7 +57,7 @@
     & > a,
     & > img {
       height: 105px;
-      border: 1px solid var(--eepy-theme-accent);
+      border: 1px solid var(--eepy-theme-primary);
       border-radius: 6px;
       overflow: hidden;
     }
@@ -73,7 +65,7 @@
     .custom-88x31 {
       position: relative;
       background: #c7c9c6;
-      border: 1px solid var(--eepy-theme-accent);
+      border: 1px solid var(--eepy-theme-primary);
       border-radius: 6px;
 
       color: #000;
@@ -91,6 +83,7 @@
         span {
           transform: translateY(-4px);
         }
+
         iconify-icon {
           filter: drop-shadow(2px 2px 1px #585a58);
         }
@@ -108,12 +101,14 @@
         font-weight: 500;
       }
     }
+
     .custom-88x31.e2v2 {
       & > span.info {
         right: 4px;
         color: #000;
       }
     }
+
     .custom-88x31.scpf {
       background: linear-gradient(to bottom, #000 0%, #823f3f 100%);
       text-shadow: none;
@@ -126,21 +121,24 @@
           filter: none;
         }
       }
+
       & > span.info {
         color: #fff;
       }
     }
   }
+
   .section-wip {
     padding: 1rem;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    text-align: center;
     font-family: Dosis;
     font-weight: 500;
     font-size: 1.125rem;
-    color: var(--eepy-theme-accent);
+    color: var(--eepy-theme-primary);
   }
 }
 </style>

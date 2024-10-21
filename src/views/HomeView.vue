@@ -1,19 +1,17 @@
 <template>
-  <div class="page-container">
-    <TitleSection />
-    <ProjectsSection />
-    <ArtSection />
-    <dialog ref="dialogRef" class="dialog" :class="hashDialogMode" @abort="resetHash" @keydown.esc="resetHash">
-      <div class="dialog-container">
-        <button icon-button class="dialog-close" @click="closeDialog" tabindex="0">
-          <iconify-icon icon="mingcute:close-line" width="3rem" />
-        </button>
-        <div id="hash-image">
-          <img :src="hashImgSrc" />
-        </div>
+  <TitleSection />
+  <ProjectsSection />
+  <ArtSection />
+  <dialog ref="dialogRef" class="dialog" :class="hashDialogMode" @abort="resetHash" @keydown.esc="resetHash">
+    <div class="dialog-container">
+      <button class="dialog-close icon-button" @click="closeDialog" tabindex="0">
+        <iconify-icon icon="mingcute:close-line" width="3rem" />
+      </button>
+      <div id="hash-image">
+        <img :src="hashImgSrc" />
       </div>
-    </dialog>
-  </div>
+    </div>
+  </dialog>
 </template>
 
 <!------------------------------------------------------------>
@@ -26,13 +24,7 @@ import { onMounted, onUnmounted, onUpdated, ref, watch, type Ref } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
 
 useHead({
-  title: 'Home · EepyBerry',
-  meta: [
-    {
-      name: 'description',
-      content: 'A small website about myself, my dev projects, and my drawings. Welcome! 🍓',
-    },
-  ],
+  title: "Home · EepyBerry's Website 🍓",
 })
 const route = useRoute()
 const router = useRouter()
@@ -101,134 +93,132 @@ function resetHash() {
 
 <!------------------------------------------------------------>
 <style scoped lang="scss">
-.page-container {
+.dialog {
+  position: fixed;
+  inset: 0;
+  padding: 0;
+  margin: auto;
+  border: none;
+  background: transparent;
+  width: 100lvw;
+  height: 100lvh;
+  opacity: 0;
+  transition:
+    opacity 400ms ease-in-out,
+    background-color 400ms ease-in-out;
+}
+
+.dialog.animate {
+  opacity: 1;
+}
+
+.dialog-container {
+  border-radius: 6px;
+  background: transparent;
+  width: 100%;
+  height: 100%;
+
   display: flex;
-  flex-direction: column;
-  gap: 6rem;
+  align-items: center;
+  justify-content: center;
 
-  .dialog {
-    position: fixed;
-    inset: 0;
-    padding: 0;
-    margin: auto;
-    border: none;
-    background: transparent;
-    width: 100lvw;
-    height: 100lvh;
-    opacity: 0;
-    transition:
-      opacity 400ms ease-in-out,
-      background-color 400ms ease-in-out;
+  button {
+    background: none;
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    width: 4rem;
+    height: 4rem;
+    color: white;
   }
-  .dialog.animate {
-    opacity: 1;
+
+  button:hover > iconify-icon {
+    transform: scale(110%);
   }
-  .dialog-container {
-    border-radius: 6px;
-    background: transparent;
-    width: 100%;
+}
+
+.dialog::backdrop {
+  background-color: #0009;
+}
+
+#hash-image {
+  padding: 0;
+  margin: auto;
+  border-radius: 6px;
+  overflow: hidden;
+  max-width: calc(100% - 2rem);
+  max-height: calc(100% - 2rem);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  img {
+    object-fit: contain;
+  }
+}
+
+// orientation
+.dialog.landscape {
+  #hash-image,
+  .hash-image-content,
+  img {
     height: 100%;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    button {
-      position: absolute;
-      top: 24px;
-      right: 24px;
-      width: 4rem;
-      height: 4rem;
-      color: white;
-    }
-    button:hover > iconify-icon {
-      transform: scale(110%);
-    }
   }
-  .dialog::backdrop {
-    background-color: #0009;
-  }
+}
 
-  #hash-image {
-    padding: 0;
-    margin: auto;
-    border-radius: 6px;
-    overflow: hidden;
-    max-width: calc(100% - 2rem);
-    max-height: calc(100% - 2rem);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    img {
-      object-fit: contain;
-    }
-  }
-
-  // orientation
-  .dialog.landscape {
-    #hash-image,
-    .hash-image-content,
-    img {
-      height: 100%;
-    }
-  }
-  .dialog.portrait {
-    #hash-image,
-    .hash-image-content,
-    img {
-      width: 100%;
-    }
+.dialog.portrait {
+  #hash-image,
+  .hash-image-content,
+  img {
+    width: 100%;
   }
 }
 
 @media screen and (max-width: 1199px) {
-  .page-container {
-    gap: 1.5rem;
-    hr {
-      margin-top: 1.5rem;
-    }
-    #section-art {
-      margin-top: 0;
-    }
-    .dialog-container {
-      button {
-        position: absolute;
-        top: 8px;
-        right: 8px;
-        width: 4rem;
-        height: 4rem;
-        color: white;
-      }
+  hr {
+    margin-top: 1.5rem;
+  }
+
+  #section-art {
+    margin-top: 0;
+  }
+
+  .dialog-container {
+    button {
+      position: absolute;
+      top: 8px;
+      right: 8px;
+      width: 4rem;
+      height: 4rem;
+      color: white;
     }
   }
 }
+
 @media screen and (max-width: 767px) {
-  .page-container {
-    gap: 1.5rem;
-    hr {
-      margin-top: 1.5rem;
-    }
-    #section-art {
-      margin-top: 0;
-    }
-    .dialog-container {
-      button {
-        position: absolute;
-        top: 0;
-        right: 0;
-        width: 4rem;
-        height: 4rem;
-        color: white;
-      }
+  hr {
+    margin-top: 1.5rem;
+  }
+
+  #section-art {
+    margin-top: 0;
+  }
+
+  .dialog-container {
+    button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 4rem;
+      height: 4rem;
+      color: white;
     }
   }
 }
 
 @media screen and (prefers-reduced-motion) {
-  .page-container {
-    .dialog {
-      transition: none;
-    }
+  .dialog {
+    transition: none;
   }
 }
 </style>

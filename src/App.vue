@@ -5,14 +5,14 @@
     :size="themeHelper.themeRef.value === 'dark' ? 5 : 16"
     :density="themeHelper.themeRef.value === 'dark' ? 8 : 6"
   />
-  <aside v-if="route.meta.attached">
-    <AppNavigation />
-  </aside>
-  <AppHeader v-if="route.meta.attached" />
+  <AppNavigation v-if="route.meta.attached" />
+  <AppAside v-if="route.meta.attached" />
   <main>
     <RouterView v-slot="{ Component, route }">
       <Transition :name="route.meta.attached ? 'fade' : ''" mode="out-in">
-        <component :key="route.path" :is="Component" />
+        <div class="transition-container" :key="route.path">
+          <component :is="Component" />
+        </div>
       </Transition>
     </RouterView>
   </main>
@@ -24,7 +24,7 @@ import { defineAsyncComponent, inject, onMounted, onUnmounted, provide, ref, Tra
 import type { ThemeHelper } from '@/utils/theme.helper'
 import AppNavigation from '@/components/main/AppNavigation.vue'
 import AppFooter from './components/main/AppFooter.vue'
-import AppHeader from './components/main/AppHeader.vue'
+import AppAside from './components/main/AppAside.vue'
 import { useRoute } from 'vue-router'
 
 const route = useRoute()
@@ -55,34 +55,23 @@ provide('$theme', themeHelper.themeRef)
 
 <style lang="scss">
 main {
-  flex-grow: 1;
-  max-width: 1700px;
+  min-width: 0;
+  min-height: 0;
+  grid-column: 2;
+  grid-row: 1;
   width: 100%;
-  padding: 0 var(--app-padding-main);
-  margin: 0 auto;
 
-  display: flex;
-  flex-direction: column;
-  gap: 4rem;
-}
-aside {
-  position: fixed;
-  top: var(--app-padding-border);
-  padding: 0.25rem;
-  left: var(--app-padding-border);
-  border-radius: 0 1rem 1rem 0;
-  width: fit-content;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-start;
-  z-index: 1;
+  gap: 2rem;
 
-  &.expanded {
-    transform: translateX(0);
-  }
-  &.collapsed {
-    transform: translateX(-8rem);
+  .transition-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4rem;
   }
 }
 
@@ -94,15 +83,6 @@ aside {
 .fade-enter-from,
 .fade-leave-to {
   opacity: 0;
-}
-
-@media screen and (max-width: 767px) {
-  aside {
-    position: absolute;
-  }
-  main {
-    gap: 2rem;
-  }
 }
 
 @media screen and (prefers-reduced-motion) {

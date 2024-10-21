@@ -1,10 +1,8 @@
 <template>
-  <div class="page-container">
-    <TitleSectionSmall />
-    <AboutInfoSection />
-    <AboutDevToolsSection />
-    <AboutDrawingToolsSection />
-  </div>
+  <TitleSectionSmall />
+  <AboutInfoSection />
+  <AboutDevToolsSection />
+  <AboutDrawingToolsSection />
 </template>
 
 <!------------------------------------------------------------>
@@ -15,7 +13,7 @@ import AboutDrawingToolsSection from '@/components/sections/AboutDrawingToolsSec
 import TitleSectionSmall from '@/components/sections/TitleSectionSmall.vue'
 import { useHead } from '@unhead/vue'
 useHead({
-  title: 'About · EepyBerry',
+  title: "About · EepyBerry's Website 🍓",
   meta: [
     {
       name: 'description',
@@ -24,19 +22,3 @@ useHead({
   ],
 })
 </script>
-
-<!------------------------------------------------------------>
-<style scoped lang="scss">
-.page-container {
-  display: flex;
-  flex-direction: column;
-  gap: 3rem;
-  margin-top: 3rem;
-}
-
-@media screen and (max-width: 1199px) {
-  .page-container {
-    gap: 1.5rem;
-  }
-}
-</style>

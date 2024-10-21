@@ -1,13 +1,7 @@
 <template>
   <section id="section-about-info">
     <div class="section-title" role="heading" aria-label="About me">
-      <hr class="title-divider" />
-      <span class="title-icon">
-        <span class="title-bracket" aria-hidden="true">[</span>
-        <iconify-icon icon="mingcute:happy-line" width="2.5rem" aria-hidden="true" />
-        <span class="title-bracket" aria-hidden="true">]</span>
-      </span>
-      <hr class="title-divider" />
+      <iconify-icon icon="mingcute:happy-line" width="2.5rem" aria-hidden="true" />
     </div>
     <div class="section-content">
       <EepyPatchCard class="avatar-wrapper">
@@ -213,9 +207,8 @@ function isSelected(type: string, idx: number) {
     grid-template-areas: 'avatar info';
     grid-template-columns: 1fr 2.25fr;
     align-items: center;
-    padding: 1.5rem 0;
     margin: 0 auto;
-    gap: 5rem;
+    gap: 3rem;
     width: 100%;
 
     .avatar-wrapper {
@@ -232,7 +225,6 @@ function isSelected(type: string, idx: number) {
 
       .avatar {
         width: clamp(160px, 25vw, 260px);
-        filter: drop-shadow(0 0 6px #0008);
       }
     }
 
@@ -267,16 +259,6 @@ function isSelected(type: string, idx: number) {
         flex-direction: row;
         align-items: center;
         justify-content: center;
-
-        .selection-notch {
-          position: absolute;
-          height: 3px;
-          border: 2px solid var(--eepy-theme-button-notch);
-          border-top-left-radius: 4px;
-          border-top-right-radius: 4px;
-          inset: auto 25% 0;
-          transform: translateY(1px);
-        }
       }
 
       iconify-icon {
