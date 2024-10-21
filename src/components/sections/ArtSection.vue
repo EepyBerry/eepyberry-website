@@ -6,24 +6,33 @@
     <div class="section-content">
       <ul class="gallery">
         <li class="image-wrapper" style="width: 36rem">
-          <a href="#/artwork/2024-08-03_1000-LC_Carrier.jpg"><img src="/artwork/2024-08-03_1000-LC_Carrier.jpg"
-              aria-label="1000-LC" alt="1000-LC Carrier" /></a>
+          <a href="#/artwork/2024-08-03_1000-LC_Carrier.jpg"
+            ><img src="/artwork/2024-08-03_1000-LC_Carrier.jpg" aria-label="1000-LC" alt="1000-LC Carrier"
+          /></a>
           <div class="drawing-title">
             <span>"1000-LC 'CARRIER'"</span>
           </div>
         </li>
         <li class="image-wrapper" style="width: 20rem">
-          <a href="#/artwork/2023-01-09_Heart_of_the_Mountain.jpg"><img
-              src="/artwork/2023-01-09_Heart_of_the_Mountain.jpg" aria-label="Heart of the Mountain"
-              alt="Heart of the Mountain" style="scale: 120%" /></a>
+          <a href="#/artwork/2023-01-09_Heart_of_the_Mountain.jpg"
+            ><img
+              src="/artwork/2023-01-09_Heart_of_the_Mountain.jpg"
+              aria-label="Heart of the Mountain"
+              alt="Heart of the Mountain"
+              style="scale: 120%"
+          /></a>
           <div class="drawing-title">
             <span>"Heart of the Mountain"</span>
           </div>
         </li>
         <li class="image-wrapper" style="width: 20rem">
-          <a href="#/artwork/2022-12-11_Niko_Holding_the_Sun.jpg"><img
-              src="/artwork/2022-12-11_Niko_Holding_the_Sun.jpg" aria-label="Niko Holding the Sun"
-              alt="Niko Holding the Sun" style="scale: 120%" /></a>
+          <a href="#/artwork/2022-12-11_Niko_Holding_the_Sun.jpg"
+            ><img
+              src="/artwork/2022-12-11_Niko_Holding_the_Sun.jpg"
+              aria-label="Niko Holding the Sun"
+              alt="Niko Holding the Sun"
+              style="scale: 120%"
+          /></a>
           <div class="drawing-title">
             <span>"Niko Holding the Sun"</span>
           </div>

@@ -4,36 +4,22 @@
       <iconify-icon icon="mingcute:terminal-line" width="2.5rem" aria-hidden="true" />
     </div>
     <div class="section-content">
-      <a
-        class="card-link"
-        href="https://lagrange.eepyberry.me"
-        target="_blank"
-        rel="external nofollow noopener"
-        aria-label="GitHub"
-      >
+      <a class="card-link" href="https://lagrange.eepyberry.me" target="_blank" rel="external nofollow noopener"
+        aria-label="GitHub">
         <EepyCard id="project-lagrange">
           <template v-slot:links>
-            <iconify-icon
-              mode="svg"
-              icon="mingcute:external-link-line"
-              style="color: var(--eepy-color-white)"
-              height="2rem"
-            />
+            <iconify-icon mode="svg" icon="mingcute:external-link-line" style="color: var(--eepy-color-white)"
+              height="2rem" />
           </template>
           <SvgLagrangeLogo class="logo" />
           <template v-slot:footer>
-            <p>A fully procedural planet-building app 🪐</p>
+            <p>A fully procedural planet-building app&nbsp;🪐</p>
           </template>
         </EepyCard>
       </a>
-      <a
-        class="card-link"
-        :href="checkConditions() ? '/nothing' : undefined"
-        target="_blank"
-        rel="external nofollow noopener"
-        aria-label="Under construction"
-        @click="checkConditions() ? undefined : $event.preventDefault()"
-      >
+      <a class="card-link" :href="checkConditions() ? '/nothing' : undefined" target="_blank"
+        rel="external nofollow noopener" aria-label="Under construction"
+        @click="checkConditions() ? undefined : $event.preventDefault()">
         <EepyCard id="project-redacted" :class="{ huh: checkConditions() }">
           <template v-slot:links>
             <iconify-icon mode="svg" icon="noto:construction" height="2rem" />
@@ -90,6 +76,7 @@ function checkConditions() {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(24rem, auto));
     gap: 2rem;
+
     & .eepy-card {
       width: 100%;
       height: 14rem;
@@ -99,6 +86,7 @@ function checkConditions() {
   #project-lagrange {
     background-image: url('/projects/project-lagrange.webp');
     color: var(--eepy-color-white);
+
     .logo {
       position: absolute;
       width: 16rem;
@@ -118,11 +106,13 @@ function checkConditions() {
       cursor: pointer;
       filter: sepia(1) hue-rotate(320deg) saturate(10) brightness(0.875);
     }
+
     .logo {
       text-align: center;
       text-wrap: nowrap;
       font-size: 1.125rem;
     }
+
     .tx-glitch,
     .tx-glitch::before,
     .tx-glitch::after {
@@ -133,6 +123,7 @@ function checkConditions() {
     }
   }
 }
+
 [data-theme='dark'] #section-projects {
   .section-content {
     background-image: url('/svg/hero_circuits_dark.svg');
@@ -150,8 +141,20 @@ function checkConditions() {
 @media screen and (max-width: 767px) {
   #section-projects {
     margin-top: 3rem;
+
     .section-content {
-      grid-template-columns: repeat(auto-fill, minmax(20rem, auto));
+      grid-template-columns: repeat(auto-fill, minmax(18rem, auto));
+      gap: 1rem;
+    }
+  }
+}
+
+@media screen and (max-width: 567px) {
+  #section-projects {
+    margin-top: 3rem;
+
+    .section-content {
+      grid-template-columns: repeat(auto-fill, minmax(15rem, auto));
       gap: 1rem;
     }
   }

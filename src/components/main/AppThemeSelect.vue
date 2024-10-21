@@ -3,9 +3,13 @@
   <button class="theme-select-button" aria-label="Open site theme selector" @click="toggleTheme">
     <div class="lightbulb">
       <span class="cord"></span>
-      <iconify-icon mode="svg" class="eepy-icon"
+      <iconify-icon
+        mode="svg"
+        class="eepy-icon"
         :icon="themeHelper.themeRef.value === 'light' ? 'clarity:lightbulb-solid' : 'clarity:lightbulb-line'"
-        height="2.25rem" aria-hidden="true" />
+        height="2.25rem"
+        aria-hidden="true"
+      />
     </div>
   </button>
 </template>

@@ -4,8 +4,11 @@
       <iconify-icon icon="mingcute:star-fill" class="deco-star star1" width="100%" />
       <iconify-icon icon="mingcute:star-fill" class="deco-star star2" width="100%" />
       <iconify-icon icon="mingcute:star-fill" class="deco-star star3" width="100%" />
-      <SvgEepyBerryLogo id="avatar" :dark="$theme === 'dark'"
-        aria-label="Sleeping strawberry with the text 'eepy berry'" />
+      <SvgEepyBerryLogo
+        id="avatar"
+        :dark="$theme === 'dark'"
+        aria-label="Sleeping strawberry with the text 'eepy berry'"
+      />
       <hr />
       <p id="intro">developer&nbsp;& illustrator&nbsp;</p>
       <AppLinks class="title-links" />
@@ -90,7 +93,7 @@ function scrollToProjects() {
       line-height: 1;
     }
 
-    &>hr {
+    & > hr {
       margin-left: 1.75rem;
       margin-right: 1.75rem;
       height: clamp(7rem, 7.5vw, 10rem);
@@ -163,7 +166,7 @@ function scrollToProjects() {
         width: fit-content;
       }
 
-      &>hr {
+      & > hr {
         margin-top: 0.5rem;
         margin-bottom: 0.75rem;
         height: 0;
@@ -203,7 +206,7 @@ function scrollToProjects() {
 }
 
 @media (prefers-reduced-motion) {
-  #section-title>.title>#avatar {
+  #section-title > .title > #avatar {
     animation: none;
   }
 }

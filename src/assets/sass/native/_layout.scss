@@ -82,3 +82,9 @@ section {
   width: $size;
   height: $size;
 }
+
+@media screen and (max-width: 767px) {
+  section {
+    padding: 1rem;
+  }
+}

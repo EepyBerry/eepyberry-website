@@ -92,7 +92,7 @@ const $theme = inject('$theme')
 }
 
 @media (prefers-reduced-motion) {
-  #section-title-small .title-small>#avatar {
+  #section-title-small .title-small > #avatar {
     animation: none;
   }
 }

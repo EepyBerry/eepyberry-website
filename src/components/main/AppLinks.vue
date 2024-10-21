@@ -3,8 +3,12 @@
     <a href="https://github.com/EepyBerry" target="_blank" rel="external nofollow noopener" aria-label="GitHub">
       <SvgGithub width="2.5rem" />
     </a>
-    <a href="https://bsky.app/profile/eepyberry.bsky.social" target="_blank" rel="external nofollow noopener"
-      aria-label="Bluesky">
+    <a
+      href="https://bsky.app/profile/eepyberry.bsky.social"
+      target="_blank"
+      rel="external nofollow noopener"
+      aria-label="Bluesky"
+    >
       <SvgBluesky width="2.5rem" />
     </a>
     <a href="mailto:contact@eepyberry.me" aria-label="Ko-fi">
@@ -42,7 +46,7 @@ import SvgMail from '../svg/icons/SvgMail.vue'
   border-radius: 8px;
   padding: 0.75rem 1rem;
 
-  &>a {
+  & > a {
     position: relative;
     display: flex;
     align-items: center;

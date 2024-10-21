@@ -99,7 +99,6 @@ footer {
 
     .copyright-author {
       width: 100%;
-      font-size: 1.2rem;
     }
 
     .cc-supertext {
@@ -126,6 +125,7 @@ footer {
 
   #app-info {
     grid-column: 1;
+    font-size: clamp(0.875rem, 2vw, 1rem);
     font-weight: 500;
     text-align: start;
   }
@@ -144,7 +144,6 @@ footer {
 
     .footer-container {
       grid-template-columns: 1fr 1fr;
-      align-items: flex-end;
       :deep(.links) {
         display: none;
       }
@@ -152,6 +151,13 @@ footer {
 
     #copyright-notice {
       grid-column: 2;
+    }
+  }
+}
+@media screen and (max-width: 767px) {
+  footer {
+    .footer-container {
+      padding: 1rem;
     }
   }
 }

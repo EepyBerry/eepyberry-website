@@ -1,6 +1,13 @@
 <template>
-  <RouterLink class="home-link button-link" to="/" title="About me" aria-label="Back to landing page"
-    @mousedown="active = true" @mouseup="active = false" @mouseleave="active = false">
+  <RouterLink
+    class="home-link button-link"
+    to="/"
+    title="About me"
+    aria-label="Back to landing page"
+    @mousedown="active = true"
+    @mouseup="active = false"
+    @mouseleave="active = false"
+  >
     <SvgEepyBerrySmall v-show="!active" :dark="$theme === 'dark'" class="home-symbol" />
     <SvgEepyBerrySmallBoop v-show="active" :dark="$theme === 'dark'" class="home-symbol" />
   </RouterLink>
