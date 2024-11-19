@@ -33,7 +33,6 @@ import InfoTerminal from '../InfoTerminal.vue'
     width: 100%;
 
     .avatar-wrapper {
-      padding: 1rem;
       position: relative;
       grid-area: avatar;
       align-self: flex-end;

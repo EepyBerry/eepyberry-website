@@ -6,7 +6,7 @@
     <div class="section-content">
       <ul class="tool-list">
         <li>
-          <EepyPatchCard id="tool-aseprite" class="avatar-wrapper" style="transform: rotateZ(1deg)">
+          <EepyPatchCard id="tool-aseprite" style="transform: rotateZ(1deg)">
             <div>
               <img
                 src="/svg/aseprite-icon.svg"
@@ -19,7 +19,7 @@
           </EepyPatchCard>
         </li>
         <li>
-          <EepyPatchCard id="tool-krita" class="avatar-wrapper" style="transform: rotateZ(-1deg)">
+          <EepyPatchCard id="tool-krita" style="transform: rotateZ(-1deg)">
             <div>
               <img src="/svg/krita-icon.svg" :style="{ width: '2rem', height: '2rem' }" aria-label="Krita logo" />
               <span>Krita</span>
@@ -28,7 +28,7 @@
           </EepyPatchCard>
         </li>
         <li>
-          <EepyPatchCard id="tool-illustrator" class="avatar-wrapper" style="transform: rotateZ(0.5deg)">
+          <EepyPatchCard id="tool-illustrator" style="transform: rotateZ(0.5deg)">
             <div>
               <iconify-icon inline mode="svg" icon="logos:adobe-illustrator" height="2rem" aria-hidden="true" />
               <span>Illustrator</span>
@@ -62,14 +62,6 @@
         flex: 1;
         min-width: 16rem;
       }
-
-      li.turn-l {
-        transform: rotateZ(-1.5deg);
-      }
-
-      li.turn-r {
-        transform: rotateZ(1.5deg);
-      }
     }
 
     #tool-aseprite,
@@ -90,15 +82,12 @@
         font-weight: 500;
       }
     }
-
     #tool-aseprite {
       background-color: var(--eepy-color-aseprite);
     }
-
     #tool-krita {
       background-color: var(--eepy-color-krita);
     }
-
     #tool-illustrator {
       background-color: var(--eepy-color-illustrator);
     }

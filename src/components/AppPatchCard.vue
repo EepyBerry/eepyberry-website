@@ -40,6 +40,7 @@
   font-weight: 600;
 
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
 }
