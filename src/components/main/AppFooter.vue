@@ -58,7 +58,6 @@ footer {
   align-items: center;
 
   .footer-container:before {
-    z-index: -5;
     content: '';
     position: absolute;
     inset: -6px;

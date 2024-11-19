@@ -26,7 +26,6 @@ const $theme = inject('$theme')
   background: none;
 
   .title-small:before {
-    z-index: -5;
     content: '';
     position: absolute;
     inset: -6px;

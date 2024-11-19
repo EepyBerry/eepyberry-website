@@ -45,7 +45,6 @@ async function init(): Promise<void> {
   overflow: hidden;
   position: fixed;
   inset: 0;
-  z-index: -5;
   opacity: 0.5;
 }
 .dot {

@@ -52,7 +52,6 @@ function scrollToProjects() {
   justify-content: center;
 
   .title:before {
-    z-index: -5;
     content: '';
     position: absolute;
     inset: -6px;

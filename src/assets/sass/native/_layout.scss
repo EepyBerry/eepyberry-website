@@ -8,7 +8,6 @@ hr {
 }
 
 section[id^='section-']:before {
-  z-index: -5;
   content: '';
   position: absolute;
   inset: -6px;
@@ -30,12 +29,10 @@ section {
   justify-content: center;
 
   .section-title:before {
-    z-index: -5;
     content: '';
     position: absolute;
     inset: -6px;
     border: 2px solid var(--eepy-theme-background);
-    background: linear-gradient(to right, var(--eepy-theme-gradient-static) 0%, transparent 25%, transparent 100%);
     border-radius: 12px;
     border-bottom: 0;
     border-bottom-left-radius: 0;

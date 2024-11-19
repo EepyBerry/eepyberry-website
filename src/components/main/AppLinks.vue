@@ -27,7 +27,6 @@ import SvgMail from '../svg/icons/SvgMail.vue'
 <!------------------------------------------------------------>
 <style scoped lang="scss">
 .links:before {
-  z-index: -5;
   content: '';
   position: absolute;
   inset: -6px;

@@ -6,13 +6,14 @@
 }
 
 html {
-  background: var(--eepy-theme-gradient);
+  background: var(--eepy-theme-gradient-static);
   scroll-behavior: smooth;
 
   display: flex;
   flex-direction: column;
-  min-height: 100%;
   width: 100%;
+  min-height: 100%;
+  overflow-x: hidden;
 }
 
 body {
@@ -20,6 +21,7 @@ body {
 
   width: 100%;
   border-radius: 2px;
+  background: var(--eepy-theme-gradient);
   color: var(--eepy-theme-text);
 
   font-family:
