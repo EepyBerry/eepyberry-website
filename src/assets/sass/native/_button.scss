@@ -6,8 +6,8 @@ button {
   font-size: 1rem;
 
   background: var(--eepy-theme-button);
-  border: 1px solid var(--eepy-theme-border);
-  box-shadow: 0 3px 0 var(--eepy-theme-border);
+  border: 1px solid var(--eepy-theme-button-border);
+  box-shadow: 0 3px 0 var(--eepy-theme-button-border);
 
   display: inline-flex;
   align-items: center;
@@ -44,12 +44,12 @@ button.info-button:hover {
   transform: translateY(-0.1rem);
 }
 button.info-button:active {
-  transform: scale(95%) translateY(0.125rem);
+  transform: translateY(0.125rem);
   box-shadow: none;
 }
 button.info-button.selected {
   background: var(--eepy-theme-button-selected);
-  transform: scale(95%) translateY(0.125rem);
+  transform: translateY(0.125rem);
   box-shadow: none;
   user-select: none;
   cursor: default;
