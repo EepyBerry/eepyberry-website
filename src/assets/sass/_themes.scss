@@ -1,9 +1,12 @@
 :root {
   --eepy-color-white: #fcfcfc;
+  --eepy-color-black: #111e;
   --eepy-color-aseprite: #657681;
   --eepy-color-krita: #466769;
   --eepy-color-illustrator: #644031;
-
+}
+  
+:root[data-theme='light'] {
   --eepy-theme-star: #ffc74f;
   --eepy-theme-star-glow: #fff2d4;
 
@@ -11,7 +14,7 @@
   --eepy-theme-border: #caa4af;
   --eepy-theme-background: #fffafa;
   --eepy-theme-patch: #9e6d86;
-  --eepy-theme-patch-shadow: #523746;
+  --eepy-theme-patch-shadow: #24121c;
 
   --eepy-theme-gradient: linear-gradient(to bottom, #f5d9d4 0%, #d8bbe4 100%);
   --eepy-theme-gradient-static: #d8bbe4;
@@ -52,7 +55,7 @@
   --eepy-theme-primary: #917fa7;
   --eepy-theme-background: #1e1a25;
   --eepy-theme-patch: #2e2235;
-  --eepy-theme-patch-shadow: #130e16;
+  --eepy-theme-patch-shadow: #0d0a13;
   --eepy-theme-border: #534c5f;
 
   --eepy-theme-gradient: linear-gradient(to bottom, #08070f 0%, #0d070e 100%);

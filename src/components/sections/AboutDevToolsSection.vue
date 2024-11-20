@@ -11,7 +11,7 @@
               <iconify-icon inline mode="svg" icon="logos:intellij-idea" height="2rem" aria-hidden="true" />
               <span>Intell&ijlig;&nbsp;IDEA</span>
             </div>
-            <p>Primary IDE</p>
+            <p>primary IDE</p>
           </EepyPatchCard>
         </li>
         <li>
@@ -20,7 +20,7 @@
               <iconify-icon inline mode="svg" icon="devicon:vscode" height="2rem" aria-hidden="true" />
               <span>Visual Studio Code</span>
             </div>
-            <p>Secondary IDE</p>
+            <p>secondary IDE</p>
           </EepyPatchCard>
         </li>
         <li>
@@ -29,7 +29,7 @@
               <iconify-icon inline mode="svg" icon="logos:godot-icon" height="2rem" aria-hidden="true" />
               <span>Godot Engine</span>
             </div>
-            <p>Game development</p>
+            <p>game development</p>
           </EepyPatchCard>
         </li>
       </ul>
@@ -56,7 +56,7 @@
       li {
         height: 10rem;
         flex: 1;
-        min-width: 16rem;
+        min-width: 18rem;
       }
     }
 
@@ -104,6 +104,14 @@
   #section-about-devtools .section-content {
     ul.tool-list {
       gap: 1rem;
+    }
+  }
+}
+
+@media screen and (max-width: 567px) {
+  #section-about-devtools .section-content {
+    ul.tool-list li {
+      min-width: 16rem;
     }
   }
 }

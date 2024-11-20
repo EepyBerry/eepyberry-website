@@ -15,7 +15,7 @@
               />
               <span>Aseprite</span>
             </div>
-            <p>Pixel art</p>
+            <p>pixel art</p>
           </EepyPatchCard>
         </li>
         <li>
@@ -24,7 +24,7 @@
               <img src="/svg/krita-icon.svg" :style="{ width: '2rem', height: '2rem' }" aria-label="Krita logo" />
               <span>Krita</span>
             </div>
-            <p>Digital painting</p>
+            <p>digital painting</p>
           </EepyPatchCard>
         </li>
         <li>
@@ -33,7 +33,7 @@
               <iconify-icon inline mode="svg" icon="logos:adobe-illustrator" height="2rem" aria-hidden="true" />
               <span>Illustrator</span>
             </div>
-            <p>Vector graphics</p>
+            <p>vector graphics</p>
           </EepyPatchCard>
         </li>
       </ul>
@@ -68,6 +68,9 @@
     #tool-krita,
     #tool-illustrator {
       height: 100%;
+      background-position: top;
+      background-size: cover;
+
 
       :deep(.eepy-patchcard) {
         flex-direction: column;
@@ -83,7 +86,7 @@
       }
     }
     #tool-aseprite {
-      background-color: var(--eepy-color-aseprite);
+      background-image: url('/tools/tool-aseprite.webp');
     }
     #tool-krita {
       background-color: var(--eepy-color-krita);

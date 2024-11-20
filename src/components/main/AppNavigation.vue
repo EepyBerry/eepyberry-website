@@ -119,6 +119,7 @@ nav {
   z-index: 1;
   position: sticky;
   top: 0;
+  left: 0;
   padding: 0.75rem;
   border-radius: 0 1rem 1rem 0;
   text-decoration: none;
@@ -162,7 +163,7 @@ nav {
   transition: none;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1023px) {
   nav {
     position: absolute;
     top: 0;

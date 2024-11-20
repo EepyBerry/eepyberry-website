@@ -39,7 +39,7 @@
       <button class="terminal-button" @click="select('info', 4)"><span>~4</span>&nbsp;Knwldg</button>
       <button class="terminal-button" @click="select('info', 5)"><span>~5</span>&nbsp;Slep</button>
       <button class="terminal-button" @click="select('info', 6)"><span>~6</span>&nbsp;Fruit</button>
-      <button class="terminal-button" @click="select('info', 7)"><span>~7</span>&nbsp;Food</button>
+      <button class="terminal-button" @click="select('info', 7)"><span>~7</span>&nbsp;Dssrts</button>
 
       <button class="terminal-button" @click="select('interest', 0)"><span>~8</span>&nbsp;Prgm</button>
       <button class="terminal-button" @click="select('interest', 1)"><span>~9</span>&nbsp;Space</button>
@@ -184,7 +184,7 @@ function getData() {
 
 <style scoped lang="scss">
 .info-terminal {
-  flex: 2.25;
+  flex: 1;
   min-height: 24rem;
   height: 100%;
   overflow: hidden;

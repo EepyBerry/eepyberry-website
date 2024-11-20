@@ -26,7 +26,7 @@ import InfoTerminal from '../InfoTerminal.vue'
   .section-content {
     display: grid;
     grid-template-areas: 'avatar info';
-    grid-template-columns: 1fr 2.25fr;
+    grid-template-columns: 1fr 2.5fr;
     align-items: center;
     margin: 0 auto;
     gap: 3rem;
@@ -48,6 +48,13 @@ import InfoTerminal from '../InfoTerminal.vue'
       }
     }
   }
+}
+[data-theme='light'] .avatar-wrapper {
+  background-blend-mode: multiply;
+}
+
+[data-theme='dark'] .avatar-wrapper {
+  background-blend-mode: overlay;
 }
 
 @media screen and (max-width: 1377px) {

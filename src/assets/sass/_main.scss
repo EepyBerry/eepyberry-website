@@ -48,16 +48,21 @@ body {
   grid-template-rows: 1fr min-content;
   gap: 6rem 0;
   align-items: flex-start;
-  overflow-x: hidden;
 }
 // SVG wrappers
 .svg-wrapper {
   display: flex;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1023px) {
   body {
     grid-template-columns: 1fr;
+    padding: 0 2rem;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  body {
     padding: 0 1rem;
   }
 }
