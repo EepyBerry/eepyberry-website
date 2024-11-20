@@ -112,6 +112,9 @@
   #section-about-drawingtools .section-content {
     ul.tool-list {
       gap: 1rem;
+      li {
+        min-width: unset;
+      }
     }
   }
 }

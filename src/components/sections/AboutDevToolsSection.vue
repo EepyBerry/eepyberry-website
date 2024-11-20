@@ -112,6 +112,9 @@
   #section-about-devtools .section-content {
     ul.tool-list li {
       min-width: 16rem;
+      li {
+        min-width: unset;
+      }
     }
   }
 }
