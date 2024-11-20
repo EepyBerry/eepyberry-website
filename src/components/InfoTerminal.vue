@@ -191,7 +191,7 @@ function getData() {
 
   background: var(--eepy-theme-terminal-background);
   background-size: 150% 150%;
-  color: var(--eepy-theme-terminal-text);
+  color: var(--eepy-color-terminal-text);
   border: 1px solid var(--eepy-theme-border);
   border-radius: 6px;
   animation: gradient 10s linear infinite;
@@ -284,13 +284,13 @@ button.terminal-button {
   box-shadow: none;
   font-family: JetBrains Mono;
   font-size: 0.875rem;
-  color: var(--eepy-theme-terminal-text);
+  color: var(--eepy-color-terminal-text);
 
   display: flex;
   justify-content: flex-start;
 
   & > span {
-    background: var(--eepy-theme-terminal-text);
+    background: var(--eepy-color-terminal-text);
     color: black;
     height: 100%;
     display: flex;
@@ -298,7 +298,7 @@ button.terminal-button {
   }
 
   &:hover {
-    background: var(--eepy-theme-terminal-text);
+    background: var(--eepy-color-terminal-text);
     color: black;
   }
   &:active {

@@ -81,10 +81,6 @@ function checkConditions() {
     width: 100%;
 
     background-color: var(--eepy-theme-background);
-    //background-image: url('/svg/hero_circuits.svg');
-    //background-repeat: repeat;
-    //background-position: 50%;
-    //background-size: 16rem;
     box-shadow: inset 0 0 4rem 2rem var(--eepy-theme-background);
 
     display: grid;

@@ -4,6 +4,7 @@
   --eepy-color-aseprite: #657681;
   --eepy-color-krita: #466769;
   --eepy-color-illustrator: #644031;
+  --eepy-color-terminal-text: #ffffff;
 }
   
 :root[data-theme='light'] {
@@ -39,7 +40,6 @@
   --eepy-theme-terminal-background: #29091c;
   --eepy-theme-terminal-background: repeating-linear-gradient(#29091c, #29091c 12px, #311124 12px, #311124 14px);
   --eepy-theme-terminal-background-static: #29091c;
-  --eepy-theme-terminal-text: #ffffff;
   --eepy-theme-terminal-text-accent: #ff76a4;
   --eepy-theme-terminal-text-tilde: #b188e6;
 }

@@ -57,6 +57,17 @@ function scrollToProjects() {
     inset: -6px;
     border: 2px solid var(--eepy-theme-background);
     border-radius: 12px;
+    --diff: calc(50% - 12.25rem);
+    clip-path: polygon(
+      0 0,
+      100% 0,
+      100% 100%,
+      calc(50% + 6rem + 1px) 100%,
+      calc(50% + 6rem + 1px) 95%,
+      calc(50% - 6rem - 1px) 95%,
+      calc(50% - 6rem - 1px) 100%,
+      0 100%
+    );
   }
 
   .title {
@@ -107,6 +118,9 @@ function scrollToProjects() {
     margin-top: 0;
     transform: translateY(-1.5rem);
   }
+  .title-links::before {
+    clip-path: polygon(0 2.625rem, 100% 2.625rem, 100% 100%, 0 100%);
+  }
 
   .scroll-indicator {
     color: var(--eepy-theme-primary);
@@ -139,7 +153,7 @@ function scrollToProjects() {
 
 .star3 {
   bottom: 2rem;
-  left: 60%;
+  left: 65%;
   $size: clamp(1.5rem, 12vw, 3rem);
   width: $size;
   height: $size;
@@ -189,8 +203,8 @@ function scrollToProjects() {
   }
 
   .star3 {
-    bottom: 20%;
-    left: 67.5%;
+    bottom: 25%;
+    left: 72.5%;
   }
 }
 

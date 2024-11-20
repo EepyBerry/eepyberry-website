@@ -39,10 +39,6 @@
       <img src="/misc/intersexprogressflag.png" aria-label="Progress & Pride flag" />
       <img src="/misc/evilcatface_small.webp" aria-label="Evil cat face emoticon" />
     </div>
-    <div class="section-wip">
-      <p>(this section is random, i know, but i wanted a fun space for interesting links :3)</p>
-      <p>(more stuff to be added later :>)</p>
-    </div>
   </section>
 </template>
 
