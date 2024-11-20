@@ -54,7 +54,7 @@
 </template>
 
 <script setup lang="ts">
-import { onMounted, ref, type Ref } from 'vue'
+import { onMounted, onUnmounted, ref, type Ref } from 'vue'
 import BlinkCharacter from './BlinkCharacter.vue'
 
 type Info = { title: string; content: string[] }
@@ -157,7 +157,20 @@ const isTextVisible = ref(false)
 const dataType = ref('')
 const dataIndex = ref(-1)
 
-onMounted(() => setTimeout(() => (isTextVisible.value = true), 500))
+onMounted(() => {
+  window.addEventListener('keydown', handleKeyboardInput)
+  setTimeout(() => (isTextVisible.value = true), 500)
+})
+onUnmounted(() => window.removeEventListener('keydown', handleKeyboardInput))
+
+function handleKeyboardInput(evt: KeyboardEvent) {
+  const validKeys = '0123456789ABCDEF'.split('')
+  if (!validKeys.includes(evt.key.toUpperCase())) {
+    return
+  }
+  const keyIndex = validKeys.indexOf(evt.key.toUpperCase())
+  select(keyIndex > 7 ? 'interest' : 'info', keyIndex > 7 ? keyIndex - 8 : keyIndex)
+}
 
 function select(type: string, idx: number) {
   dataType.value = type

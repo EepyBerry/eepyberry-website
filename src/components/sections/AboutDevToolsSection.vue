@@ -9,7 +9,7 @@
           <EepyPatchCard id="tool-intellij" style="transform: rotateZ(-1deg)">
             <div>
               <iconify-icon inline mode="svg" icon="logos:intellij-idea" height="2rem" aria-hidden="true" />
-              <span>intell&ijlig;&nbsp;idea</span>
+              <span>Intell&ijlig;&nbsp;IDEA</span>
             </div>
             <p>Primary IDE</p>
           </EepyPatchCard>
@@ -18,7 +18,7 @@
           <EepyPatchCard id="tool-vscode" style="transform: rotateZ(0.5deg)">
             <div>
               <iconify-icon inline mode="svg" icon="devicon:vscode" height="2rem" aria-hidden="true" />
-              <span>visual studio code</span>
+              <span>Visual Studio Code</span>
             </div>
             <p>Secondary IDE</p>
           </EepyPatchCard>
@@ -27,7 +27,7 @@
           <EepyPatchCard id="tool-godot" style="transform: rotateZ(-1.5deg)">
             <div>
               <iconify-icon inline mode="svg" icon="logos:godot-icon" height="2rem" aria-hidden="true" />
-              <span>godot engine</span>
+              <span>Godot Engine</span>
             </div>
             <p>Game development</p>
           </EepyPatchCard>
