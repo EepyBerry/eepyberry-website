@@ -13,6 +13,13 @@ const vuePluginConfig: Options = {
 
 export default defineConfig({
   plugins: [vue(vuePluginConfig), viteCompression()],
+  css: {
+    preprocessorOptions: {
+      scss: {
+        api: 'modern-compiler',
+      },
+    },
+  },
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url)),

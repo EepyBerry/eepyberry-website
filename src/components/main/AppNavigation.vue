@@ -4,7 +4,7 @@
     <router-link
       ref="aboutLink"
       class="nav-link button-link"
-      to="/about/"
+      to="/about"
       title="About me"
       aria-label="About page link"
       @mouseover="startHover(aboutFloating)"
@@ -15,7 +15,7 @@
     <router-link
       ref="miscLink"
       class="nav-link button-link"
-      to="/miscellaneous/"
+      to="/miscellaneous"
       title="Miscellaneous"
       aria-label="Miscellaneous page link"
       @mouseover="startHover(miscFloating)"

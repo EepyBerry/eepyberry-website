@@ -60,7 +60,7 @@
       li {
         height: 10rem;
         flex: 1;
-        min-width: 16rem;
+        min-width: 18rem;
       }
     }
 
@@ -111,6 +111,14 @@
   #section-about-drawingtools .section-content {
     ul.tool-list {
       gap: 1rem;
+    }
+  }
+}
+
+@media screen and (max-width: 567px) {
+  #section-about-drawingtools .section-content {
+    ul.tool-list li {
+      min-width: 16rem;
       li {
         min-width: unset;
       }
