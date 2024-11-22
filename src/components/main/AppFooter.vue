@@ -155,10 +155,10 @@ footer {
 }
 @media screen and (max-width: 767px) {
   footer {
+    margin-bottom: 1rem;
     .footer-container {
       padding: 1rem;
     }
-    margin-bottom: 1rem;
   }
 }
 </style>

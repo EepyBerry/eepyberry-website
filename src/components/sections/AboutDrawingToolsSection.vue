@@ -71,7 +71,6 @@
       background-position: top;
       background-size: cover;
 
-
       :deep(.eepy-patchcard) {
         flex-direction: column;
       }
@@ -89,10 +88,10 @@
       background-image: url('/tools/tool-aseprite.webp');
     }
     #tool-krita {
-      background-color: var(--eepy-color-krita);
+      background-image: url('/tools/tool-krita.webp');
     }
     #tool-illustrator {
-      background-color: var(--eepy-color-illustrator);
+      background-image: url('/tools/tool-illustrator.webp');
     }
   }
 }
