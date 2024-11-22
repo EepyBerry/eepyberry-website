@@ -22,6 +22,9 @@ body {
   width: 100%;
   border-radius: 2px;
   background: var(--eepy-theme-gradient);
+  background-image: url('/svg/polygons.svg');
+  background-position: start;
+  background-size: cover;
   color: var(--eepy-theme-text);
 
   font-family:
@@ -49,6 +52,10 @@ body {
   gap: 6rem 0;
   align-items: flex-start;
 }
+[data-theme='dark'] body {
+  background-image: url('/svg/polygons_dark.svg');
+}
+
 // SVG wrappers
 .svg-wrapper {
   display: flex;
