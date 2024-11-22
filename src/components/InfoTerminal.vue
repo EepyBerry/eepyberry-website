@@ -9,19 +9,15 @@
       </div>
     </div>
     <div class="terminal-content" :style="{ visibility: isTextVisible ? 'visible' : 'hidden' }">
-      <template v-if="!infoList[dataIndex]">
-        <p><span class="accent">user@infoterm</span>:<span class="tilde">~</span>$ help</p>
-        <br />
+      <p><span class="accent">infoterm@eepyberry.me</span>:<span class="tilde">~</span>$ showinfo</p>
+      <br />
+      <template v-if="dataIndex < 0">
         <p>
-          <span>click on a button above (info) or below (interests) to know more!</span>
+          <span>select an option (or press the corresponding key) to learn more!</span>
           <BlinkCharacter />
         </p>
       </template>
       <template v-else>
-        <p>
-          <span class="accent">user@infoterm</span>:<span class="tilde">~</span>$ show{{ dataType }} -i {{ dataIndex }}
-        </p>
-        <br />
         <p>{{ getData().title }}</p>
         <p>---</p>
         <p v-for="content of getData().content.slice(0, getData().content.length - 1)">{{ content }}</p>
