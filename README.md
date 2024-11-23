@@ -7,7 +7,7 @@
 
 My website's source code! :3
 
-Contributions are NOT welcome, except for reporting issues!
+Contributions are NOT welcome!
 
 ## 📓 Licensing
 
