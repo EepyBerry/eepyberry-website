@@ -1,7 +1,7 @@
 <template>
   <section id="section-nerd">
     <div class="section-title" role="heading" aria-label="Nerd stuff">
-      <iconify-icon icon="tabler:mood-nerd" width="2.5rem" aria-hidden="true" />
+      <iconify-icon icon="tabler:mood-nerd" style="width: 2.5rem; height: 2.5rem" width="2.5rem" aria-hidden="true" />
     </div>
     <div class="section-content">
       <a
@@ -38,10 +38,6 @@
       </a>
       <img src="/misc/intersexprogressflag.png" aria-label="Progress & Pride flag" />
       <img src="/misc/evilcatface_small.webp" aria-label="Evil cat face emoticon" />
-    </div>
-    <div class="section-wip">
-      <p>(this section is random, i know, but i wanted a fun space for interesting links :3)</p>
-      <p>(more stuff to be added later :>)</p>
     </div>
   </section>
 </template>

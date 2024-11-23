@@ -12,7 +12,7 @@
       </div>
       <AppLinks class="links-bare" />
       <div id="copyright-notice">
-        <p class="copyright-info">
+        <div class="copyright-info">
           <span class="cc-supertext">all original content under</span>
           <a
             id="cc-deed-link"
@@ -28,7 +28,7 @@
             <SvgCCNCLogo aria-label="Creative Commons noncommercial-use logo" />
             <SvgCCSALogo aria-label="Creative Commons share-alike logo" />
           </a>
-        </p>
+        </div>
         <p class="copyright-author">© {{ new Date().getFullYear() }}, EepyBerry</p>
       </div>
     </div>
@@ -36,11 +36,11 @@
 </template>
 
 <script setup lang="ts">
-import AppLinks from '../main/AppLinks.vue'
-import SvgCCBYLogo from '../svg/creativecommons/SvgCCBYLogo.vue'
-import SvgCCLogo from '../svg/creativecommons/SvgCCLogo.vue'
-import SvgCCNCLogo from '../svg/creativecommons/SvgCCNCLogo.vue'
-import SvgCCSALogo from '../svg/creativecommons/SvgCCSALogo.vue'
+import AppLinks from '../main/AppLinks.vue';
+import SvgCCBYLogo from '../svg/creativecommons/SvgCCBYLogo.vue';
+import SvgCCLogo from '../svg/creativecommons/SvgCCLogo.vue';
+import SvgCCNCLogo from '../svg/creativecommons/SvgCCNCLogo.vue';
+import SvgCCSALogo from '../svg/creativecommons/SvgCCSALogo.vue';
 </script>
 
 <style scoped lang="scss">
@@ -58,7 +58,6 @@ footer {
   align-items: center;
 
   .footer-container:before {
-    z-index: -5;
     content: '';
     position: absolute;
     inset: -6px;
@@ -83,6 +82,7 @@ footer {
   }
 
   #copyright-notice {
+    z-index: 1;
     grid-column: 3;
     text-align: end;
 
@@ -128,6 +128,7 @@ footer {
     font-size: clamp(0.875rem, 2vw, 1rem);
     font-weight: 500;
     text-align: start;
+    z-index: 1;
   }
 
   .links-bare::before {
@@ -135,6 +136,12 @@ footer {
   }
   .links-bare {
     background: none;
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  footer {
+    grid-column: 1;
   }
 }
 
@@ -156,6 +163,7 @@ footer {
 }
 @media screen and (max-width: 767px) {
   footer {
+    margin-bottom: 1rem;
     .footer-container {
       padding: 1rem;
     }

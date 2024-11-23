@@ -1,7 +1,12 @@
 <template>
   <section id="section-projects">
     <div class="section-title" role="heading" aria-label="Projects">
-      <iconify-icon icon="mingcute:terminal-line" width="2.5rem" aria-hidden="true" />
+      <iconify-icon
+        icon="mingcute:terminal-line"
+        style="width: 2.5rem; height: 2.5rem"
+        width="2.5rem"
+        aria-hidden="true"
+      />
     </div>
     <div class="section-content">
       <a
@@ -51,26 +56,26 @@
 
 <!------------------------------------------------------------>
 <script setup lang="ts">
-import type { ThemeHelper } from '@/utils/theme.helper'
-import SvgLagrangeLogo from '../svg/SvgLagrangeLogo.vue'
-import { inject, ref, watch, type Ref } from 'vue'
-const themeHelper: ThemeHelper = inject('ThemeHelper') as ThemeHelper
-const counter: Ref<number> = ref(0)
+import type { ThemeHelper } from '@/utils/theme.helper';
+import SvgLagrangeLogo from '../svg/SvgLagrangeLogo.vue';
+import { inject, ref, watch, type Ref } from 'vue';
+const themeHelper: ThemeHelper = inject('ThemeHelper') as ThemeHelper;
+const counter: Ref<number> = ref(0);
 
 watch(
   () => themeHelper.themeRef.value,
   (v) => {
-    if (v === 'light') return
-    incrementCounter()
+    if (v === 'light') return;
+    incrementCounter();
   },
-)
+);
 
 function incrementCounter() {
-  counter.value++
+  counter.value++;
 }
 
 function checkConditions() {
-  return counter.value >= 5 && themeHelper.themeRef.value === 'dark'
+  return counter.value >= 5 && themeHelper.themeRef.value === 'dark';
 }
 </script>
 
@@ -81,10 +86,6 @@ function checkConditions() {
     width: 100%;
 
     background-color: var(--eepy-theme-background);
-    //background-image: url('/svg/hero_circuits.svg');
-    //background-repeat: repeat;
-    //background-position: 50%;
-    //background-size: 16rem;
     box-shadow: inset 0 0 4rem 2rem var(--eepy-theme-background);
 
     display: grid;

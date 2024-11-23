@@ -6,14 +6,14 @@
 </template>
 
 <script setup lang="ts">
-import { useHead } from '@unhead/vue'
+import { useHead } from '@unhead/vue';
 useHead({
   title: "...huh? · EepyBerry's Website 🍓",
   meta: [
     { name: 'robots', content: 'noindex,nofollow' },
     { name: 'description', content: 'nothing' },
   ],
-})
+});
 </script>
 
 <style scoped lang="scss">

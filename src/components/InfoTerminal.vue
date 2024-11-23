@@ -1,7 +1,7 @@
 <template>
   <div class="info-terminal">
     <div class="terminal-header">
-      <span>eepy-os v2.1 --- info-terminal </span>
+      <span>eepy-os v2.3 --- info-terminal </span>
       <div class="terminal-header-decoration">
         <span><iconify-icon icon="material-symbols:minimize-rounded" width="0.875rem" aria-hidden="true" /></span>
         <span><iconify-icon icon="mdi:maximize" width="0.75rem" aria-hidden="true" /></span>
@@ -9,19 +9,15 @@
       </div>
     </div>
     <div class="terminal-content" :style="{ visibility: isTextVisible ? 'visible' : 'hidden' }">
-      <template v-if="!infoList[dataIndex]">
-        <p><span class="accent">user@infoterm</span>:<span class="tilde">~</span>$ help</p>
-        <br />
+      <p><span class="accent">infoterm@eepyberry.me</span>:<span class="tilde">~</span>$ showinfo</p>
+      <br />
+      <template v-if="dataIndex < 0">
         <p>
-          <span>click on a button above (info) or below (interests) to know more!</span>
+          <span>select an option (or press the corresponding key) to learn more!</span>
           <BlinkCharacter />
         </p>
       </template>
       <template v-else>
-        <p>
-          <span class="accent">user@infoterm</span>:<span class="tilde">~</span>$ show{{ dataType }} -i {{ dataIndex }}
-        </p>
-        <br />
         <p>{{ getData().title }}</p>
         <p>---</p>
         <p v-for="content of getData().content.slice(0, getData().content.length - 1)">{{ content }}</p>
@@ -31,14 +27,33 @@
         </p>
       </template>
     </div>
+    <div class="terminal-controls">
+      <button class="terminal-button" @click="select('info', 0)"><span>~0</span>&nbsp;Gender</button>
+      <button class="terminal-button" @click="select('info', 1)"><span>~1</span>&nbsp;Edu</button>
+      <button class="terminal-button" @click="select('info', 2)"><span>~2</span>&nbsp;Draw</button>
+      <button class="terminal-button" @click="select('info', 3)"><span>~3</span>&nbsp;Smol</button>
+      <button class="terminal-button" @click="select('info', 4)"><span>~4</span>&nbsp;Knwldg</button>
+      <button class="terminal-button" @click="select('info', 5)"><span>~5</span>&nbsp;Slep</button>
+      <button class="terminal-button" @click="select('info', 6)"><span>~6</span>&nbsp;Fruit</button>
+      <button class="terminal-button" @click="select('info', 7)"><span>~7</span>&nbsp;Dssrts</button>
+
+      <button class="terminal-button" @click="select('interest', 0)"><span>~8</span>&nbsp;Prgm</button>
+      <button class="terminal-button" @click="select('interest', 1)"><span>~9</span>&nbsp;Space</button>
+      <button class="terminal-button" @click="select('interest', 2)"><span>~A</span>&nbsp;SCPFn</button>
+      <button class="terminal-button" @click="select('interest', 3)"><span>~B</span>&nbsp;BrdGms</button>
+      <button class="terminal-button" @click="select('interest', 4)"><span>~C</span>&nbsp;VidGms</button>
+      <button class="terminal-button" @click="select('interest', 5)"><span>~D</span>&nbsp;Cyclng</button>
+      <button class="terminal-button" @click="select('interest', 6)"><span>~E</span>&nbsp;Yoga</button>
+      <button class="terminal-button" @click="select('interest', 7)"><span>~F</span>&nbsp;Plshs</button>
+    </div>
   </div>
 </template>
 
 <script setup lang="ts">
-import { onMounted, ref, type Ref } from 'vue'
-import BlinkCharacter from './BlinkCharacter.vue'
+import { onMounted, onUnmounted, ref, type Ref } from 'vue';
+import BlinkCharacter from './BlinkCharacter.vue';
 
-type Info = { title: string; content: string[] }
+type Info = { title: string; content: string[] };
 const infoList: Ref<Info[]> = ref([
   {
     title: 'transfem & proud! 🌈',
@@ -67,10 +82,10 @@ const infoList: Ref<Info[]> = ref([
     content: ["no need to explain, i'm smol :>"],
   },
   {
-    title: 'curious!',
+    title: 'always learning!',
     content: [
-      "many things fascinate me, even if i don't fully understand them!",
-      'some examples: our brains, consciousness and sentience, space, old computer malware, stuff around chemistry, ...',
+      'understanding how stuff works is a never-ending source of fascination for me :>',
+      'some examples: the human brain, space, 3d modeling, old computer malware, organic chemistry, ...',
     ],
   },
   {
@@ -85,7 +100,7 @@ const infoList: Ref<Info[]> = ref([
     title: 'favourite desserts!',
     content: ['waffles & crepes! especially with maple syrup :3'],
   },
-])
+]);
 const interestList: Ref<Info[]> = ref([
   {
     title: 'programming!',
@@ -114,7 +129,7 @@ const interestList: Ref<Info[]> = ref([
   {
     title: 'video games!',
     content: [
-      'too many to list here, but favs include "the talos principle 1/2", "celeste", "hades 1/2", "oneshot" & "omori" :3',
+      'too many to list here, but favs include "the talos principle 1/2", "ultrakill", "factorio", "hades 1/2", "celeste", "oneshot" & "omori" :3',
     ],
   },
   {
@@ -132,27 +147,47 @@ const interestList: Ref<Info[]> = ref([
       '(will probably show it later in [miscellaneous] OwO)',
     ],
   },
-])
+]);
 
-const isTextVisible = ref(false)
+const isTextVisible = ref(false);
+const dataType = ref('');
+const dataIndex = ref(-1);
 
-const $props = defineProps<{ dataType: string; dataIndex: number }>()
-onMounted(() => setTimeout(() => (isTextVisible.value = true), 500))
+onMounted(() => {
+  window.addEventListener('keydown', handleKeyboardInput);
+  setTimeout(() => (isTextVisible.value = true), 500);
+});
+onUnmounted(() => window.removeEventListener('keydown', handleKeyboardInput));
+
+function handleKeyboardInput(evt: KeyboardEvent) {
+  const validKeys = '0123456789ABCDEF'.split('');
+  if (!validKeys.includes(evt.key.toUpperCase())) {
+    return;
+  }
+  const keyIndex = validKeys.indexOf(evt.key.toUpperCase());
+  select(keyIndex > 7 ? 'interest' : 'info', keyIndex > 7 ? keyIndex - 8 : keyIndex);
+}
+
+function select(type: string, idx: number) {
+  dataType.value = type;
+  dataIndex.value = idx;
+}
 
 function getData() {
-  return $props.dataType === 'info' ? infoList.value[$props.dataIndex] : interestList.value[$props.dataIndex]
+  return (dataType.value === 'info' ? infoList.value : interestList.value)[dataIndex.value];
 }
 </script>
 
 <style scoped lang="scss">
 .info-terminal {
   flex: 1;
-  min-height: 18rem;
+  min-height: 24rem;
+  height: 100%;
   overflow: hidden;
 
   background: var(--eepy-theme-terminal-background);
   background-size: 150% 150%;
-  color: var(--eepy-theme-terminal-text);
+  color: var(--eepy-color-terminal-text);
   border: 1px solid var(--eepy-theme-border);
   border-radius: 6px;
   animation: gradient 10s linear infinite;
@@ -170,7 +205,7 @@ function getData() {
   .terminal-header {
     position: relative;
     width: 100%;
-    padding: 0.375rem;
+    padding: 0.375rem 2rem;
 
     border-bottom: 1px solid var(--eepy-theme-terminal-header-border);
     background: var(--eepy-theme-terminal-header);
@@ -205,6 +240,7 @@ function getData() {
 
   .terminal-content {
     flex: 1;
+    z-index: 1;
     width: 100%;
     padding: 1rem 1.25rem;
 
@@ -220,6 +256,66 @@ function getData() {
       padding: 0;
       margin: 0;
       max-width: 100%;
+    }
+  }
+
+  .terminal-controls {
+    width: 100%;
+    padding: 1rem 1.25rem;
+    z-index: 1;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(12ch, auto));
+    justify-items: start;
+    gap: 0.25rem;
+  }
+}
+
+button.terminal-button {
+  width: 100%;
+  height: 1.25rem;
+  padding: 0;
+  background: none;
+  border: none;
+  box-shadow: none;
+  font-family: JetBrains Mono;
+  font-size: 0.875rem;
+  color: var(--eepy-color-terminal-text);
+
+  display: flex;
+  justify-content: flex-start;
+
+  & > span {
+    background: var(--eepy-color-terminal-text);
+    color: black;
+    height: 100%;
+    display: flex;
+    align-items: center;
+  }
+
+  &:hover {
+    background: var(--eepy-color-terminal-text);
+    color: black;
+  }
+  &:active {
+    background: var(--eepy-theme-terminal-text-accent);
+    & > span {
+      background: var(--eepy-theme-terminal-text-accent);
+      color: black;
+      height: 100%;
+      display: flex;
+      align-items: center;
+    }
+  }
+}
+
+@media screen and (min-width: 895px) and (max-width: 1023px), screen and (max-width: 567px) {
+  .info-terminal {
+    .terminal-header > .terminal-header-decoration {
+      span:nth-child(1),
+      span:nth-child(2) {
+        display: none;
+      }
     }
   }
 }

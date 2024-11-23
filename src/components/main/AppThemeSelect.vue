@@ -6,6 +6,7 @@
       <iconify-icon
         mode="svg"
         class="eepy-icon"
+        style="width: 2.25rem; height: 2.25rem"
         :icon="themeHelper.themeRef.value === 'light' ? 'clarity:lightbulb-solid' : 'clarity:lightbulb-line'"
         height="2.25rem"
         aria-hidden="true"
@@ -15,13 +16,13 @@
 </template>
 
 <script setup lang="ts">
-import { inject } from 'vue'
-import type { ThemeHelper } from '@/utils/theme.helper'
+import { inject } from 'vue';
+import type { ThemeHelper } from '@/utils/theme.helper';
 
-const themeHelper: ThemeHelper = inject('ThemeHelper') as ThemeHelper
+const themeHelper: ThemeHelper = inject('ThemeHelper') as ThemeHelper;
 
 function toggleTheme() {
-  themeHelper.toggleSiteTheme()
+  themeHelper.toggleSiteTheme();
 }
 </script>
 

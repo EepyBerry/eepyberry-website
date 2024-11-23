@@ -19,15 +19,14 @@
 
 <!------------------------------------------------------------>
 <script setup lang="ts">
-import SvgBluesky from '../svg/icons/SvgBluesky.vue'
-import SvgGithub from '../svg/icons/SvgGithub.vue'
-import SvgMail from '../svg/icons/SvgMail.vue'
+import SvgBluesky from '../svg/icons/SvgBluesky.vue';
+import SvgGithub from '../svg/icons/SvgGithub.vue';
+import SvgMail from '../svg/icons/SvgMail.vue';
 </script>
 
 <!------------------------------------------------------------>
 <style scoped lang="scss">
 .links:before {
-  z-index: -5;
   content: '';
   position: absolute;
   inset: -6px;

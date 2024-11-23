@@ -10,9 +10,9 @@
 
 <!------------------------------------------------------------>
 <script setup lang="ts">
-import SvgEepyBerryLogo from '@/components/svg/SvgEepyBerryLogo.vue'
-import { inject } from 'vue'
-const $theme = inject('$theme')
+import SvgEepyBerryLogo from '@/components/svg/SvgEepyBerryLogo.vue';
+import { inject } from 'vue';
+const $theme = inject('$theme');
 </script>
 
 <!------------------------------------------------------------>
@@ -26,7 +26,6 @@ const $theme = inject('$theme')
   background: none;
 
   .title-small:before {
-    z-index: -5;
     content: '';
     position: absolute;
     inset: -6px;

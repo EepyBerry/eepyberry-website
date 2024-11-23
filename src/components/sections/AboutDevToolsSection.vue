@@ -1,36 +1,41 @@
 <template>
   <section id="section-about-devtools">
     <div class="section-title" role="heading" aria-label="Tools & techs">
-      <iconify-icon icon="carbon:executable-program" width="2.5rem" aria-hidden="true" />
+      <iconify-icon
+        icon="carbon:executable-program"
+        style="width: 2.5rem; height: 2.5rem"
+        width="2.5rem"
+        aria-hidden="true"
+      />
     </div>
     <div class="section-content">
       <ul class="tool-list">
         <li>
-          <EepyCard id="tool-intellij" class="center">
-            <template v-slot:title>
+          <EepyPatchCard id="tool-intellij" style="transform: rotateZ(-1deg)">
+            <div>
               <iconify-icon inline mode="svg" icon="logos:intellij-idea" height="2rem" aria-hidden="true" />
-              <span>intell&ijlig;&nbsp;idea</span>
-            </template>
-            <template v-slot:footer> Primary IDE </template>
-          </EepyCard>
+              <span>Intell&ijlig;&nbsp;IDEA</span>
+            </div>
+            <p>primary IDE</p>
+          </EepyPatchCard>
         </li>
         <li>
-          <EepyCard id="tool-vscode" class="center">
-            <template v-slot:title>
+          <EepyPatchCard id="tool-vscode" style="transform: rotateZ(0.5deg)">
+            <div>
               <iconify-icon inline mode="svg" icon="devicon:vscode" height="2rem" aria-hidden="true" />
-              <span>visual studio code</span>
-            </template>
-            <template v-slot:footer> Secondary IDE </template>
-          </EepyCard>
+              <span>Visual Studio Code</span>
+            </div>
+            <p>secondary IDE</p>
+          </EepyPatchCard>
         </li>
         <li>
-          <EepyCard id="tool-godot" class="center">
-            <template v-slot:title>
+          <EepyPatchCard id="tool-godot" style="transform: rotateZ(-1.5deg)">
+            <div>
               <iconify-icon inline mode="svg" icon="logos:godot-icon" height="2rem" aria-hidden="true" />
-              <span>godot engine</span>
-            </template>
-            <template v-slot:footer> Game development </template>
-          </EepyCard>
+              <span>Godot Engine</span>
+            </div>
+            <p>game development</p>
+          </EepyPatchCard>
         </li>
       </ul>
     </div>
@@ -56,49 +61,35 @@
       li {
         height: 10rem;
         flex: 1;
-        min-width: 16rem;
-      }
-
-      li.turn-l {
-        transform: rotateZ(-1.5deg);
-      }
-
-      li.turn-r {
-        transform: rotateZ(1.5deg);
+        min-width: 18rem;
       }
     }
 
-    #tool-intellij {
-      height: 100%;
-      background-image: url('/tools/tool-intellij.webp');
-      background-position: top;
-      background-size: cover;
-
-      :deep(.placeholder-icon) {
-        display: none;
-      }
-    }
-
-    #tool-vscode {
-      height: 100%;
-      background-image: url('/tools/tool-vscode.webp');
-      background-position: top;
-      background-size: cover;
-
-      :deep(.placeholder-icon) {
-        display: none;
-      }
-    }
-
+    #tool-intellij,
+    #tool-vscode,
     #tool-godot {
       height: 100%;
-      background-image: url('/tools/tool-godot.webp');
       background-position: top;
       background-size: cover;
 
-      :deep(.placeholder-icon) {
-        display: none;
+      div {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
       }
+      p {
+        font-size: 1.125rem;
+        font-weight: 500;
+      }
+    }
+    #tool-intellij {
+      background-image: url('/tools/tool-intellij.webp');
+    }
+    #tool-vscode {
+      background-image: url('/tools/tool-vscode.webp');
+    }
+    #tool-godot {
+      background-image: url('/tools/tool-godot.webp');
     }
   }
 }
@@ -118,6 +109,17 @@
   #section-about-devtools .section-content {
     ul.tool-list {
       gap: 1rem;
+    }
+  }
+}
+
+@media screen and (max-width: 567px) {
+  #section-about-devtools .section-content {
+    ul.tool-list li {
+      min-width: 16rem;
+      li {
+        min-width: unset;
+      }
     }
   }
 }

@@ -17,16 +17,16 @@
   background-size: 192px;
 }
 
-[data-theme='light'] .eepy-patchcard-wrapper {
+/* [data-theme='light'] .eepy-patchcard-wrapper {
   background-blend-mode: multiply;
 }
 
 [data-theme='dark'] .eepy-patchcard-wrapper {
   background-blend-mode: overlay;
-}
+} */
 
 .eepy-patchcard {
-  padding: 0.75rem;
+  padding: 0.5rem;
   width: 100%;
   height: 100%;
 
@@ -40,6 +40,7 @@
   font-weight: 600;
 
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
 }

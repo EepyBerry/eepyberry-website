@@ -2,8 +2,8 @@
   <RouterLink
     class="home-link button-link"
     to="/"
-    title="About me"
-    aria-label="Back to landing page"
+    title="Home"
+    aria-label="Home link"
     @mousedown="active = true"
     @mouseup="active = false"
     @mouseleave="active = false"
@@ -14,12 +14,12 @@
 </template>
 
 <script setup lang="ts">
-import { inject, ref, type Ref } from 'vue'
-import SvgEepyBerrySmall from '../svg/SvgEepyBerrySmall.vue'
-import SvgEepyBerrySmallBoop from '../svg/SvgEepyBerrySmallBoop.vue'
+import { inject, ref, type Ref } from 'vue';
+import SvgEepyBerrySmall from '../svg/SvgEepyBerrySmall.vue';
+import SvgEepyBerrySmallBoop from '../svg/SvgEepyBerrySmallBoop.vue';
 
-const $theme: string = inject('$theme') as string
-const active: Ref<boolean> = ref(false)
+const $theme: string = inject('$theme') as string;
+const active: Ref<boolean> = ref(false);
 </script>
 
 <style scoped lang="scss">

@@ -14,21 +14,21 @@
       <AppLinks class="title-links" />
     </div>
     <button class="scroll-indicator icon-button" v-on:click="scrollToProjects()" aria-label="Scroll to projects">
-      <iconify-icon icon="mingcute:arrow-down-line" width="3rem" aria-hidden="true" />
+      <iconify-icon icon="mingcute:arrow-down-line" style="width: 3rem; height: 3rem" width="3rem" aria-hidden="true" />
     </button>
   </section>
 </template>
 
 <!------------------------------------------------------------>
 <script setup lang="ts">
-import AppLinks from '../main/AppLinks.vue'
-import SvgEepyBerryLogo from '@/components/svg/SvgEepyBerryLogo.vue'
-import { inject } from 'vue'
-const $theme = inject('$theme')
+import AppLinks from '../main/AppLinks.vue';
+import SvgEepyBerryLogo from '@/components/svg/SvgEepyBerryLogo.vue';
+import { inject } from 'vue';
+const $theme = inject('$theme');
 
 function scrollToProjects() {
-  const projectsRect = document.querySelector('#section-projects > .section-title')!.getBoundingClientRect()
-  window.scrollTo({ behavior: 'smooth', top: projectsRect.top - projectsRect.height })
+  const projectsRect = document.querySelector('#section-projects > .section-title')!.getBoundingClientRect();
+  window.scrollTo({ behavior: 'smooth', top: projectsRect.top - projectsRect.height });
 }
 </script>
 
@@ -52,12 +52,22 @@ function scrollToProjects() {
   justify-content: center;
 
   .title:before {
-    z-index: -5;
     content: '';
     position: absolute;
     inset: -6px;
     border: 2px solid var(--eepy-theme-background);
     border-radius: 12px;
+    --diff: calc(50% - 12.25rem);
+    clip-path: polygon(
+      0 0,
+      100% 0,
+      100% 100%,
+      calc(50% + 6rem + 1px) 100%,
+      calc(50% + 6rem + 1px) 95%,
+      calc(50% - 6rem - 1px) 95%,
+      calc(50% - 6rem - 1px) 100%,
+      0 100%
+    );
   }
 
   .title {
@@ -108,11 +118,21 @@ function scrollToProjects() {
     margin-top: 0;
     transform: translateY(-1.5rem);
   }
+  .title-links::before {
+    clip-path: polygon(0 2.625rem, 100% 2.625rem, 100% 100%, 0 100%);
+  }
 
   .scroll-indicator {
-    color: var(--eepy-theme-primary);
+    color: var(--eepy-theme-text);
     position: absolute;
     bottom: 2rem;
+
+    &:hover {
+      transform: scale(105%);
+    }
+    &:active {
+      transform: scale(97.5%);
+    }
   }
 }
 
@@ -140,7 +160,7 @@ function scrollToProjects() {
 
 .star3 {
   bottom: 2rem;
-  left: 60%;
+  left: 65%;
   $size: clamp(1.5rem, 12vw, 3rem);
   width: $size;
   height: $size;
@@ -190,8 +210,8 @@ function scrollToProjects() {
   }
 
   .star3 {
-    bottom: 20%;
-    left: 67.5%;
+    bottom: 25%;
+    left: 72.5%;
   }
 }
 

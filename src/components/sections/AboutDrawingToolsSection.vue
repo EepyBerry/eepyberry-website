@@ -1,12 +1,17 @@
 <template>
   <section id="section-about-drawingtools">
     <div class="section-title" role="heading" aria-label="Tools & techs">
-      <iconify-icon icon="mingcute:paint-brush-line" width="2.5rem" aria-hidden="true" />
+      <iconify-icon
+        icon="mingcute:paint-brush-line"
+        style="width: 2.5rem; height: 2.5rem"
+        width="2.5rem"
+        aria-hidden="true"
+      />
     </div>
     <div class="section-content">
       <ul class="tool-list">
         <li>
-          <EepyPatchCard id="tool-aseprite" class="avatar-wrapper" style="transform: rotateZ(1deg)">
+          <EepyPatchCard id="tool-aseprite" style="transform: rotateZ(1deg)">
             <div>
               <img
                 src="/svg/aseprite-icon.svg"
@@ -15,25 +20,25 @@
               />
               <span>Aseprite</span>
             </div>
-            <p>Pixel art</p>
+            <p>pixel art</p>
           </EepyPatchCard>
         </li>
         <li>
-          <EepyPatchCard id="tool-krita" class="avatar-wrapper" style="transform: rotateZ(-1deg)">
+          <EepyPatchCard id="tool-krita" style="transform: rotateZ(-1deg)">
             <div>
               <img src="/svg/krita-icon.svg" :style="{ width: '2rem', height: '2rem' }" aria-label="Krita logo" />
               <span>Krita</span>
             </div>
-            <p>Digital painting</p>
+            <p>digital painting</p>
           </EepyPatchCard>
         </li>
         <li>
-          <EepyPatchCard id="tool-illustrator" class="avatar-wrapper" style="transform: rotateZ(0.5deg)">
+          <EepyPatchCard id="tool-illustrator" style="transform: rotateZ(0.5deg)">
             <div>
               <iconify-icon inline mode="svg" icon="logos:adobe-illustrator" height="2rem" aria-hidden="true" />
               <span>Illustrator</span>
             </div>
-            <p>Vector graphics</p>
+            <p>vector graphics</p>
           </EepyPatchCard>
         </li>
       </ul>
@@ -60,15 +65,7 @@
       li {
         height: 10rem;
         flex: 1;
-        min-width: 16rem;
-      }
-
-      li.turn-l {
-        transform: rotateZ(-1.5deg);
-      }
-
-      li.turn-r {
-        transform: rotateZ(1.5deg);
+        min-width: 18rem;
       }
     }
 
@@ -76,6 +73,8 @@
     #tool-krita,
     #tool-illustrator {
       height: 100%;
+      background-position: top;
+      background-size: cover;
 
       :deep(.eepy-patchcard) {
         flex-direction: column;
@@ -90,17 +89,14 @@
         font-weight: 500;
       }
     }
-
     #tool-aseprite {
-      background-color: var(--eepy-color-aseprite);
+      background-image: url('/tools/tool-aseprite.webp');
     }
-
     #tool-krita {
-      background-color: var(--eepy-color-krita);
+      background-image: url('/tools/tool-krita.webp');
     }
-
     #tool-illustrator {
-      background-color: var(--eepy-color-illustrator);
+      background-image: url('/tools/tool-illustrator.webp');
     }
   }
 }
@@ -120,6 +116,17 @@
   #section-about-drawingtools .section-content {
     ul.tool-list {
       gap: 1rem;
+    }
+  }
+}
+
+@media screen and (max-width: 567px) {
+  #section-about-drawingtools .section-content {
+    ul.tool-list li {
+      min-width: 16rem;
+      li {
+        min-width: unset;
+      }
     }
   }
 }
