@@ -36,11 +36,11 @@
 </template>
 
 <script setup lang="ts">
-import AppLinks from '../main/AppLinks.vue'
-import SvgCCBYLogo from '../svg/creativecommons/SvgCCBYLogo.vue'
-import SvgCCLogo from '../svg/creativecommons/SvgCCLogo.vue'
-import SvgCCNCLogo from '../svg/creativecommons/SvgCCNCLogo.vue'
-import SvgCCSALogo from '../svg/creativecommons/SvgCCSALogo.vue'
+import AppLinks from '../main/AppLinks.vue';
+import SvgCCBYLogo from '../svg/creativecommons/SvgCCBYLogo.vue';
+import SvgCCLogo from '../svg/creativecommons/SvgCCLogo.vue';
+import SvgCCNCLogo from '../svg/creativecommons/SvgCCNCLogo.vue';
+import SvgCCSALogo from '../svg/creativecommons/SvgCCSALogo.vue';
 </script>
 
 <style scoped lang="scss">
@@ -136,6 +136,12 @@ footer {
   }
   .links-bare {
     background: none;
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  footer {
+    grid-column: 1;
   }
 }
 

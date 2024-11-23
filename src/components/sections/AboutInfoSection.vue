@@ -13,7 +13,7 @@
 </template>
 
 <script setup lang="ts">
-import InfoTerminal from '../InfoTerminal.vue'
+import InfoTerminal from '../InfoTerminal.vue';
 </script>
 
 <style scoped lang="scss">

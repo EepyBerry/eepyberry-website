@@ -146,7 +146,7 @@
 </template>
 
 <script setup lang="ts">
-defineProps<{ dark: boolean }>()
+defineProps<{ dark: boolean }>();
 </script>
 
 <style scoped lang="scss">

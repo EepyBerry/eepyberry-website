@@ -16,7 +16,7 @@
 </template>
 
 <script setup lang="ts">
-defineProps<{ variant: string }>()
+defineProps<{ variant: string }>();
 </script>
 
 <style scoped lang="scss">

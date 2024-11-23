@@ -19,9 +19,9 @@
 
 <!------------------------------------------------------------>
 <script setup lang="ts">
-import SvgBluesky from '../svg/icons/SvgBluesky.vue'
-import SvgGithub from '../svg/icons/SvgGithub.vue'
-import SvgMail from '../svg/icons/SvgMail.vue'
+import SvgBluesky from '../svg/icons/SvgBluesky.vue';
+import SvgGithub from '../svg/icons/SvgGithub.vue';
+import SvgMail from '../svg/icons/SvgMail.vue';
 </script>
 
 <!------------------------------------------------------------>

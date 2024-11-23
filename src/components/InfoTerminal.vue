@@ -50,10 +50,10 @@
 </template>
 
 <script setup lang="ts">
-import { onMounted, onUnmounted, ref, type Ref } from 'vue'
-import BlinkCharacter from './BlinkCharacter.vue'
+import { onMounted, onUnmounted, ref, type Ref } from 'vue';
+import BlinkCharacter from './BlinkCharacter.vue';
 
-type Info = { title: string; content: string[] }
+type Info = { title: string; content: string[] };
 const infoList: Ref<Info[]> = ref([
   {
     title: 'transfem & proud! 🌈',
@@ -100,7 +100,7 @@ const infoList: Ref<Info[]> = ref([
     title: 'favourite desserts!',
     content: ['waffles & crepes! especially with maple syrup :3'],
   },
-])
+]);
 const interestList: Ref<Info[]> = ref([
   {
     title: 'programming!',
@@ -147,34 +147,34 @@ const interestList: Ref<Info[]> = ref([
       '(will probably show it later in [miscellaneous] OwO)',
     ],
   },
-])
+]);
 
-const isTextVisible = ref(false)
-const dataType = ref('')
-const dataIndex = ref(-1)
+const isTextVisible = ref(false);
+const dataType = ref('');
+const dataIndex = ref(-1);
 
 onMounted(() => {
-  window.addEventListener('keydown', handleKeyboardInput)
-  setTimeout(() => (isTextVisible.value = true), 500)
-})
-onUnmounted(() => window.removeEventListener('keydown', handleKeyboardInput))
+  window.addEventListener('keydown', handleKeyboardInput);
+  setTimeout(() => (isTextVisible.value = true), 500);
+});
+onUnmounted(() => window.removeEventListener('keydown', handleKeyboardInput));
 
 function handleKeyboardInput(evt: KeyboardEvent) {
-  const validKeys = '0123456789ABCDEF'.split('')
+  const validKeys = '0123456789ABCDEF'.split('');
   if (!validKeys.includes(evt.key.toUpperCase())) {
-    return
+    return;
   }
-  const keyIndex = validKeys.indexOf(evt.key.toUpperCase())
-  select(keyIndex > 7 ? 'interest' : 'info', keyIndex > 7 ? keyIndex - 8 : keyIndex)
+  const keyIndex = validKeys.indexOf(evt.key.toUpperCase());
+  select(keyIndex > 7 ? 'interest' : 'info', keyIndex > 7 ? keyIndex - 8 : keyIndex);
 }
 
 function select(type: string, idx: number) {
-  dataType.value = type
-  dataIndex.value = idx
+  dataType.value = type;
+  dataIndex.value = idx;
 }
 
 function getData() {
-  return (dataType.value === 'info' ? infoList.value : interestList.value)[dataIndex.value]
+  return (dataType.value === 'info' ? infoList.value : interestList.value)[dataIndex.value];
 }
 </script>
 

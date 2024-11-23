@@ -1,7 +1,13 @@
 <template>
   <nav>
-    <AppHomeButton />
-    <RouterLink class="nav-link button-link about-link" to="/about" title="About me" aria-label="About page link">
+    <AppHomeButton @click.native="handleNativeClick" />
+    <RouterLink
+      class="nav-link button-link about-link"
+      to="/about"
+      title="About me"
+      aria-label="About page link"
+      @click.native="handleNativeClick"
+    >
       <iconify-icon mode="svg" icon="mingcute:happy-line" height="2.25rem" aria-hidden="true" />
     </RouterLink>
     <RouterLink
@@ -9,6 +15,7 @@
       to="/miscellaneous"
       title="Miscellaneous"
       aria-label="Miscellaneous page link"
+      @click.native="handleNativeClick"
     >
       <iconify-icon mode="svg" icon="mingcute:star-line" height="2.25rem" aria-hidden="true" />
     </RouterLink>
@@ -16,12 +23,17 @@
 </template>
 
 <script setup lang="ts">
-import AppHomeButton from './AppHomeButton.vue'
+import AppHomeButton from './AppHomeButton.vue';
+
+function handleNativeClick(evt: Event) {
+  evt.preventDefault();
+}
 </script>
 
 <!------------------------------------------------------------>
 <style lang="scss">
 nav {
+  grid-column: 1;
   z-index: 1;
   position: sticky;
   top: 0;

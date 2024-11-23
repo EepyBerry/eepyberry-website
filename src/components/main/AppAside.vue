@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import AppThemeSelect from './AppThemeSelect.vue'
+import AppThemeSelect from './AppThemeSelect.vue';
 </script>
 
 <template>
@@ -10,6 +10,7 @@ import AppThemeSelect from './AppThemeSelect.vue'
 
 <style lang="scss">
 aside {
+  grid-column: 3;
   position: sticky;
   top: 0;
   right: 0;

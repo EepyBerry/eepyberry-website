@@ -16,78 +16,78 @@
 
 <!------------------------------------------------------------>
 <script setup lang="ts">
-import ArtSection from '@/components/sections/ArtSection.vue'
-import ProjectsSection from '@/components/sections/ProjectsSection.vue'
-import TitleSection from '@/components/sections/TitleSection.vue'
-import { useHead } from '@unhead/vue'
-import { onMounted, onUnmounted, onUpdated, ref, watch, type Ref } from 'vue'
-import { useRoute, useRouter } from 'vue-router'
+import ArtSection from '@/components/sections/ArtSection.vue';
+import ProjectsSection from '@/components/sections/ProjectsSection.vue';
+import TitleSection from '@/components/sections/TitleSection.vue';
+import { useHead } from '@unhead/vue';
+import { onMounted, onUnmounted, onUpdated, ref, watch, type Ref } from 'vue';
+import { useRoute, useRouter } from 'vue-router';
 
 useHead({
   title: "Home · EepyBerry's Website 🍓",
-})
-const route = useRoute()
-const router = useRouter()
+});
+const route = useRoute();
+const router = useRouter();
 
-const dialogRef: Ref<HTMLDialogElement | null> = ref(null)
-const hashImgSrc: Ref<string | undefined> = ref()
-const hashDialogMode: Ref<'portrait' | 'landscape'> = ref('landscape')
+const dialogRef: Ref<HTMLDialogElement | null> = ref(null);
+const hashImgSrc: Ref<string | undefined> = ref();
+const hashDialogMode: Ref<'portrait' | 'landscape'> = ref('landscape');
 
 onMounted(() => {
-  window.addEventListener('click', handleClick, true)
-  window.addEventListener('resize', computeDialogMode, true)
-  window.addEventListener('deviceorientation', closeDialog, true)
-})
+  window.addEventListener('click', handleClick, true);
+  window.addEventListener('resize', computeDialogMode, true);
+  window.addEventListener('deviceorientation', closeDialog, true);
+});
 onUnmounted(() => {
-  window.removeEventListener('click', handleClick, true)
-  window.removeEventListener('resize', computeDialogMode, true)
-  window.removeEventListener('deviceorientation', closeDialog, true)
-})
+  window.removeEventListener('click', handleClick, true);
+  window.removeEventListener('resize', computeDialogMode, true);
+  window.removeEventListener('deviceorientation', closeDialog, true);
+});
 onUpdated(() => {
   if (dialogRef.value?.open) {
-    dialogRef.value?.classList.add('animate')
+    dialogRef.value?.classList.add('animate');
   }
-})
+});
 
 watch(
   () => route.hash,
   (hash: string) => {
-    computeDialogMode()
+    computeDialogMode();
     if (!hash) {
-      return
+      return;
     }
-    hashImgSrc.value = '/artwork/' + hash.split('/').at(-1)
+    hashImgSrc.value = '/artwork/' + hash.split('/').at(-1);
     setTimeout(() => {
-      dialogRef.value!.showModal()
-      dialogRef.value?.classList.add('animate')
-    }, 50)
+      dialogRef.value!.showModal();
+      dialogRef.value?.classList.add('animate');
+    }, 50);
   },
   { immediate: true },
-)
+);
 
 function computeDialogMode() {
-  hashDialogMode.value = window.innerWidth > window.innerHeight ? 'landscape' : 'portrait'
+  hashDialogMode.value = window.innerWidth > window.innerHeight ? 'landscape' : 'portrait';
 }
 
 function handleClick($event: MouseEvent) {
   if (($event.target as HTMLElement).classList.contains('dialog-container')) {
-    closeDialog()
+    closeDialog();
   }
 }
 
 function closeDialog() {
-  dialogRef.value?.classList.remove('animate')
+  dialogRef.value?.classList.remove('animate');
   setTimeout(
     () => {
-      resetHash()
-      dialogRef.value?.close()
+      resetHash();
+      dialogRef.value?.close();
     },
     window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 0 : 400,
-  )
+  );
 }
 
 function resetHash() {
-  router.replace('/')
+  router.replace('/');
 }
 </script>
 

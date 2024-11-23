@@ -51,26 +51,26 @@
 
 <!------------------------------------------------------------>
 <script setup lang="ts">
-import type { ThemeHelper } from '@/utils/theme.helper'
-import SvgLagrangeLogo from '../svg/SvgLagrangeLogo.vue'
-import { inject, ref, watch, type Ref } from 'vue'
-const themeHelper: ThemeHelper = inject('ThemeHelper') as ThemeHelper
-const counter: Ref<number> = ref(0)
+import type { ThemeHelper } from '@/utils/theme.helper';
+import SvgLagrangeLogo from '../svg/SvgLagrangeLogo.vue';
+import { inject, ref, watch, type Ref } from 'vue';
+const themeHelper: ThemeHelper = inject('ThemeHelper') as ThemeHelper;
+const counter: Ref<number> = ref(0);
 
 watch(
   () => themeHelper.themeRef.value,
   (v) => {
-    if (v === 'light') return
-    incrementCounter()
+    if (v === 'light') return;
+    incrementCounter();
   },
-)
+);
 
 function incrementCounter() {
-  counter.value++
+  counter.value++;
 }
 
 function checkConditions() {
-  return counter.value >= 5 && themeHelper.themeRef.value === 'dark'
+  return counter.value >= 5 && themeHelper.themeRef.value === 'dark';
 }
 </script>
 

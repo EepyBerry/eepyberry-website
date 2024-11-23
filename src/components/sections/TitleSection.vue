@@ -21,14 +21,14 @@
 
 <!------------------------------------------------------------>
 <script setup lang="ts">
-import AppLinks from '../main/AppLinks.vue'
-import SvgEepyBerryLogo from '@/components/svg/SvgEepyBerryLogo.vue'
-import { inject } from 'vue'
-const $theme = inject('$theme')
+import AppLinks from '../main/AppLinks.vue';
+import SvgEepyBerryLogo from '@/components/svg/SvgEepyBerryLogo.vue';
+import { inject } from 'vue';
+const $theme = inject('$theme');
 
 function scrollToProjects() {
-  const projectsRect = document.querySelector('#section-projects > .section-title')!.getBoundingClientRect()
-  window.scrollTo({ behavior: 'smooth', top: projectsRect.top - projectsRect.height })
+  const projectsRect = document.querySelector('#section-projects > .section-title')!.getBoundingClientRect();
+  window.scrollTo({ behavior: 'smooth', top: projectsRect.top - projectsRect.height });
 }
 </script>
 

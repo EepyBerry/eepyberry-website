@@ -19,7 +19,7 @@
 
 <!------------------------------------------------------------>
 <script setup lang="ts">
-import IconEepyBerry from '@/components/svg/icons/IconEepyBerry.vue'
+import IconEepyBerry from '@/components/svg/icons/IconEepyBerry.vue';
 </script>
 
 <!------------------------------------------------------------>
