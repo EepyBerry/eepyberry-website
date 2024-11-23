@@ -123,7 +123,7 @@ function scrollToProjects() {
   }
 
   .scroll-indicator {
-    color: var(--eepy-theme-primary);
+    color: var(--eepy-theme-text);
     position: absolute;
     bottom: 2rem;
   }
