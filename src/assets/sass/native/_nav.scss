@@ -8,6 +8,12 @@ a:not(.button-link, .card-link)[disabled]:visited {
   cursor: not-allowed;
   color: var(--eepy-theme-disabled);
 }
+a:not([disabled]):hover {
+  cursor: pointer;
+}
+a[disabled]:hover {
+  cursor: not-allowed;
+}
 
 // Card-link
 a.card-link:not([disabled]):hover {

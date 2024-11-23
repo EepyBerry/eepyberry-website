@@ -1,13 +1,13 @@
 <template>
-  <section id="section-notfound">
-    <div class="section-content">
-      <SvgNotFound />
-      <p>The requested page could not be found :c</p>
-    </div>
-  </section>
+  <TitleSectionSmall />
+  <div id="not-found">
+    <SvgNotFound />
+    <p>The requested page could not be found :c</p>
+  </div>
 </template>
 
 <script setup lang="ts">
+import TitleSectionSmall from '@/components/sections/TitleSectionSmall.vue';
 import SvgNotFound from '@/components/svg/SvgNotFound.vue';
 import { useHead } from '@unhead/vue';
 useHead({
@@ -20,7 +20,8 @@ useHead({
 </script>
 
 <style scoped lang="scss">
-#section-notfound {
+#not-found {
+  vertical-align: middle;
   width: fit-content;
   font-family: Dosis;
   font-size: clamp(1.25rem, 2.5vw, 1.75rem);
