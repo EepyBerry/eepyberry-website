@@ -1,12 +1,12 @@
-<script setup lang="ts">
-import AppThemeSelect from './AppThemeSelect.vue';
-</script>
-
 <template>
   <aside>
     <AppThemeSelect />
   </aside>
 </template>
+
+<script setup lang="ts">
+import AppThemeSelect from './AppThemeSelect.vue';
+</script>
 
 <style lang="scss">
 aside {

@@ -1,7 +1,12 @@
 <template>
   <section id="section-about-devtools">
     <div class="section-title" role="heading" aria-label="Tools & techs">
-      <iconify-icon icon="carbon:executable-program" width="2.5rem" aria-hidden="true" />
+      <iconify-icon
+        icon="carbon:executable-program"
+        style="width: 2.5rem; height: 2.5rem"
+        width="2.5rem"
+        aria-hidden="true"
+      />
     </div>
     <div class="section-content">
       <ul class="tool-list">

@@ -1,7 +1,12 @@
 <template>
   <section id="section-about-drawingtools">
     <div class="section-title" role="heading" aria-label="Tools & techs">
-      <iconify-icon icon="mingcute:paint-brush-line" width="2.5rem" aria-hidden="true" />
+      <iconify-icon
+        icon="mingcute:paint-brush-line"
+        style="width: 2.5rem; height: 2.5rem"
+        width="2.5rem"
+        aria-hidden="true"
+      />
     </div>
     <div class="section-content">
       <ul class="tool-list">

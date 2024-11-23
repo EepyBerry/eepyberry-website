@@ -14,7 +14,7 @@
       <AppLinks class="title-links" />
     </div>
     <button class="scroll-indicator icon-button" v-on:click="scrollToProjects()" aria-label="Scroll to projects">
-      <iconify-icon icon="mingcute:arrow-down-line" width="3rem" aria-hidden="true" />
+      <iconify-icon icon="mingcute:arrow-down-line" style="width: 3rem; height: 3rem" width="3rem" aria-hidden="true" />
     </button>
   </section>
 </template>
@@ -126,6 +126,13 @@ function scrollToProjects() {
     color: var(--eepy-theme-text);
     position: absolute;
     bottom: 2rem;
+
+    &:hover {
+      transform: scale(105%);
+    }
+    &:active {
+      transform: scale(97.5%);
+    }
   }
 }
 

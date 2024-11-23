@@ -1,7 +1,12 @@
 <template>
   <section id="section-about-info">
     <div class="section-title" role="heading" aria-label="About me">
-      <iconify-icon icon="mingcute:happy-line" width="2.5rem" aria-hidden="true" />
+      <iconify-icon
+        icon="mingcute:happy-line"
+        style="width: 2.5rem; height: 2.5rem"
+        width="2.5rem"
+        aria-hidden="true"
+      />
     </div>
     <div class="section-content">
       <EepyPatchCard class="avatar-wrapper">

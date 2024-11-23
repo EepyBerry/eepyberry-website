@@ -1,7 +1,12 @@
 <template>
   <section id="section-projects">
     <div class="section-title" role="heading" aria-label="Projects">
-      <iconify-icon icon="mingcute:terminal-line" width="2.5rem" aria-hidden="true" />
+      <iconify-icon
+        icon="mingcute:terminal-line"
+        style="width: 2.5rem; height: 2.5rem"
+        width="2.5rem"
+        aria-hidden="true"
+      />
     </div>
     <div class="section-content">
       <a

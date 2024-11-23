@@ -1,7 +1,12 @@
 <template>
   <section id="section-art">
     <div class="section-title" role="heading" aria-label="Drawings">
-      <iconify-icon icon="mingcute:paint-brush-line" width="2.5rem" aria-hidden="true" />
+      <iconify-icon
+        icon="mingcute:paint-brush-line"
+        style="width: 2.5rem; height: 2.5rem"
+        width="2.5rem"
+        aria-hidden="true"
+      />
     </div>
     <div class="section-content">
       <ul class="gallery">

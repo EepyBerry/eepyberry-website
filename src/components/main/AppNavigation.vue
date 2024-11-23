@@ -8,7 +8,13 @@
       aria-label="About page link"
       @click.native="handleNativeClick"
     >
-      <iconify-icon mode="svg" icon="mingcute:happy-line" height="2.25rem" aria-hidden="true" />
+      <iconify-icon
+        mode="svg"
+        icon="mingcute:happy-line"
+        style="width: 2.25rem; height: 2.25rem"
+        height="2.25rem"
+        aria-hidden="true"
+      />
     </RouterLink>
     <RouterLink
       class="nav-link button-link misc-link"
@@ -17,7 +23,13 @@
       aria-label="Miscellaneous page link"
       @click.native="handleNativeClick"
     >
-      <iconify-icon mode="svg" icon="mingcute:star-line" height="2.25rem" aria-hidden="true" />
+      <iconify-icon
+        mode="svg"
+        icon="mingcute:star-line"
+        style="width: 2.25rem; height: 2.25rem"
+        height="2.25rem"
+        aria-hidden="true"
+      />
     </RouterLink>
   </nav>
 </template>
@@ -34,7 +46,7 @@ function handleNativeClick(evt: Event) {
 <style lang="scss">
 nav {
   grid-column: 1;
-  z-index: 1;
+  z-index: 5;
   position: sticky;
   top: 0;
   left: 0;
