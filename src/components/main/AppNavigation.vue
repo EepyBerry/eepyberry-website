@@ -1,31 +1,27 @@
 <template>
   <nav>
-    <AppHomeButton ref="homeLink" @mouseover="startHover(homeFloating)" @mouseleave="stopHover(homeFloating)" />
-    <router-link
+    <AppHomeButton ref="homeLink" />
+    <RouterLink
       ref="aboutLink"
-      class="nav-link button-link"
+      class="nav-link button-link about-link"
       to="/about"
       title="About me"
       aria-label="About page link"
-      @mouseover="startHover(aboutFloating)"
-      @mouseleave="stopHover(aboutFloating)"
     >
       <iconify-icon mode="svg" icon="mingcute:happy-line" height="2.25rem" aria-hidden="true" />
-    </router-link>
-    <router-link
+    </RouterLink>
+    <RouterLink
       ref="miscLink"
-      class="nav-link button-link"
+      class="nav-link button-link misc-link"
       to="/miscellaneous"
       title="Miscellaneous"
       aria-label="Miscellaneous page link"
-      @mouseover="startHover(miscFloating)"
-      @mouseleave="stopHover(miscFloating)"
     >
       <iconify-icon mode="svg" icon="mingcute:star-line" height="2.25rem" aria-hidden="true" />
-    </router-link>
+    </RouterLink>
 
     <!-- floating elements -->
-    <EepyTooltip ref="homeFloating" :style="styles.home.floatingStyles.value">
+    <!-- <EepyTooltip ref="homeFloating" class="tooltip-home" :style="styles.home.floatingStyles.value">
       <span>Home</span>
       <div
         ref="homeArrow"
@@ -36,7 +32,7 @@
         }"
       ></div>
     </EepyTooltip>
-    <EepyTooltip ref="aboutFloating" :style="styles.about.floatingStyles.value">
+    <EepyTooltip ref="aboutFloating" class="tooltip-about" :style="styles.about.floatingStyles.value">
       <span>About me</span>
       <div
         ref="aboutArrow"
@@ -47,7 +43,7 @@
         }"
       ></div>
     </EepyTooltip>
-    <EepyTooltip ref="miscFloating" :style="styles.misc.floatingStyles.value">
+    <EepyTooltip ref="miscFloating" class="tooltip-misc" :style="styles.misc.floatingStyles.value">
       <span>Miscellaneous</span>
       <div
         ref="miscArrow"
@@ -57,7 +53,7 @@
           left: (styles.misc.middlewareData.value.arrow?.x ?? 0) + 'px',
         }"
       ></div>
-    </EepyTooltip>
+    </EepyTooltip> -->
   </nav>
 </template>
 
@@ -93,23 +89,6 @@ const styles = {
     middleware: [offset(5), shift(), arrow({ element: miscArrow })],
     whileElementsMounted: autoUpdate,
   }),
-}
-
-function startHover(elem?: HTMLElement | null) {
-  // @ts-ignore
-  if (!elem || !elem.$el) {
-    return
-  }
-  // @ts-ignore
-  elem.$el.style.visibility = 'visible'
-}
-function stopHover(elem?: HTMLElement | null) {
-  // @ts-ignore
-  if (!elem || !elem.$el) {
-    return
-  }
-  // @ts-ignore
-  elem.$el.style.visibility = 'hidden'
 }
 </script>
 

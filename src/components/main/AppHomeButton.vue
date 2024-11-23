@@ -2,8 +2,8 @@
   <RouterLink
     class="home-link button-link"
     to="/"
-    title="About me"
-    aria-label="Back to landing page"
+    title="Home"
+    aria-label="Home link"
     @mousedown="active = true"
     @mouseup="active = false"
     @mouseleave="active = false"

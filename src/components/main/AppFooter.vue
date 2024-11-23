@@ -12,7 +12,7 @@
       </div>
       <AppLinks class="links-bare" />
       <div id="copyright-notice">
-        <p class="copyright-info">
+        <div class="copyright-info">
           <span class="cc-supertext">all original content under</span>
           <a
             id="cc-deed-link"
@@ -28,7 +28,7 @@
             <SvgCCNCLogo aria-label="Creative Commons noncommercial-use logo" />
             <SvgCCSALogo aria-label="Creative Commons share-alike logo" />
           </a>
-        </p>
+        </div>
         <p class="copyright-author">© {{ new Date().getFullYear() }}, EepyBerry</p>
       </div>
     </div>
@@ -82,6 +82,7 @@ footer {
   }
 
   #copyright-notice {
+    z-index: 1;
     grid-column: 3;
     text-align: end;
 
@@ -127,6 +128,7 @@ footer {
     font-size: clamp(0.875rem, 2vw, 1rem);
     font-weight: 500;
     text-align: start;
+    z-index: 1;
   }
 
   .links-bare::before {
