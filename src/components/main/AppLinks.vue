@@ -4,7 +4,7 @@
       <SvgGithub width="2.5rem" />
     </a>
     <a
-      href="https://bsky.app/profile/eepyberry.bsky.social"
+      href="https://bsky.app/profile/eepyberry.me"
       target="_blank"
       rel="external nofollow noopener"
       aria-label="Bluesky"
