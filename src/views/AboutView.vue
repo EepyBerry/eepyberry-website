@@ -1,8 +1,10 @@
 <template>
-  <TitleSectionSmall />
-  <AboutInfoSection />
-  <AboutDevToolsSection />
-  <AboutDrawingToolsSection />
+  <div class="page-container">
+    <TitleSectionSmall />
+    <AboutInfoSection />
+    <AboutDevToolsSection />
+    <AboutDrawingToolsSection />
+  </div>
 </template>
 
 <!------------------------------------------------------------>

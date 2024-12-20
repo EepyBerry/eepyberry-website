@@ -1,17 +1,26 @@
 <template>
-  <TitleSection />
-  <ProjectsSection />
-  <ArtSection />
-  <dialog ref="dialogRef" class="dialog" :class="hashDialogMode" @abort="resetHash" @keydown.esc="resetHash">
-    <div class="dialog-container">
-      <button class="dialog-close icon-button" @click="closeDialog" tabindex="0">
-        <iconify-icon icon="mingcute:close-line" width="3rem" />
-      </button>
-      <div id="hash-image">
-        <img :src="hashImgSrc" />
+  <div class="page-container">
+    <TitleSection />
+    <ProjectsSection />
+    <ArtSection />
+    <dialog
+      ref="dialogRef"
+      class="dialog"
+      :class="hashDialogMode"
+      @click="handleClick"
+      @abort="resetHash"
+      @keydown.esc="resetHash"
+    >
+      <div class="dialog-container">
+        <button class="dialog-close icon-button" @click="closeDialog" tabindex="0">
+          <iconify-icon icon="mingcute:close-line" width="3rem" />
+        </button>
+        <div id="hash-image">
+          <img :src="hashImgSrc" />
+        </div>
       </div>
-    </div>
-  </dialog>
+    </dialog>
+  </div>
 </template>
 
 <!------------------------------------------------------------>
@@ -33,16 +42,8 @@ const dialogRef: Ref<HTMLDialogElement | null> = ref(null);
 const hashImgSrc: Ref<string | undefined> = ref();
 const hashDialogMode: Ref<'portrait' | 'landscape'> = ref('landscape');
 
-onMounted(() => {
-  window.addEventListener('click', handleClick, true);
-  window.addEventListener('resize', computeDialogMode, true);
-  window.addEventListener('deviceorientation', closeDialog, true);
-});
-onUnmounted(() => {
-  window.removeEventListener('click', handleClick, true);
-  window.removeEventListener('resize', computeDialogMode, true);
-  window.removeEventListener('deviceorientation', closeDialog, true);
-});
+onMounted(() => window.addEventListener('deviceorientation', closeDialog, true));
+onUnmounted(() => window.removeEventListener('deviceorientation', closeDialog, true));
 onUpdated(() => {
   if (dialogRef.value?.open) {
     dialogRef.value?.classList.add('animate');
@@ -87,7 +88,9 @@ function closeDialog() {
 }
 
 function resetHash() {
-  router.replace('/');
+  if (router.currentRoute.value.name === 'Home') {
+    router.replace('/');
+  }
 }
 </script>
 
