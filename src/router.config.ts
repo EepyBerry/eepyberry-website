@@ -44,6 +44,8 @@ const router = createRouter({
   ],
 });
 
+// profoundly stupid workaround to routing completely breaking on mobile
+// because SOMETHING spams routing to /, and I have NO FUCKING IDEA what it is
 let lastNavEvent: number;
 router.beforeEach((to, from) => {
   let navTime = Date.now();
