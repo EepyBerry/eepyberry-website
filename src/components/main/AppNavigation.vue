@@ -3,7 +3,7 @@
     <AppHomeButton @click.native="handleNativeClick" />
     <RouterLink
       class="nav-link button-link about-link"
-      to="/about"
+      :to="{ name: 'About' }"
       title="About me"
       aria-label="About page link"
       @click.native="handleNativeClick"
@@ -18,7 +18,7 @@
     </RouterLink>
     <RouterLink
       class="nav-link button-link misc-link"
-      to="/miscellaneous"
+      :to="{ name: 'Miscellaneous' }"
       title="Miscellaneous"
       aria-label="Miscellaneous page link"
       @click.native="handleNativeClick"
@@ -38,6 +38,8 @@
 import AppHomeButton from './AppHomeButton.vue';
 
 function handleNativeClick(evt: Event) {
+  evt.stopPropagation();
+  evt.stopImmediatePropagation();
   evt.preventDefault();
 }
 </script>

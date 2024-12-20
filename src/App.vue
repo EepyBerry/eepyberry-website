@@ -10,7 +10,7 @@
   <main>
     <RouterView v-slot="{ Component, route }">
       <Transition :name="route.meta.attached ? 'fade' : ''" mode="out-in">
-        <div class="transition-container" :key="route.path">
+        <div class="transition-container" :key="route.name">
           <component :is="Component" />
         </div>
       </Transition>

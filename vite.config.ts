@@ -1,7 +1,6 @@
 import { fileURLToPath, URL } from 'node:url';
 import { defineConfig } from 'vite';
 import vue, { Options } from '@vitejs/plugin-vue';
-import viteCompression from 'vite-plugin-compression';
 
 const vuePluginConfig: Options = {
   template: {
@@ -12,7 +11,7 @@ const vuePluginConfig: Options = {
 };
 
 export default defineConfig({
-  plugins: [vue(vuePluginConfig), viteCompression()],
+  plugins: [vue(vuePluginConfig)],
   css: {
     preprocessorOptions: {
       scss: {
