@@ -1,5 +1,5 @@
 <template>
-  <div class="page-container">
+  <div class="page-container" ref="containerRef">
     <TitleSection />
     <ProjectsSection />
     <ArtSection />
@@ -29,7 +29,7 @@ import ArtSection from '@/components/sections/ArtSection.vue';
 import ProjectsSection from '@/components/sections/ProjectsSection.vue';
 import TitleSection from '@/components/sections/TitleSection.vue';
 import { useHead } from '@unhead/vue';
-import { onMounted, onUnmounted, onUpdated, ref, watch, type Ref } from 'vue';
+import { onUpdated, ref, watch, type Ref } from 'vue';
 import { useRoute, useRouter } from 'vue-router';
 
 useHead({
@@ -42,8 +42,6 @@ const dialogRef: Ref<HTMLDialogElement | null> = ref(null);
 const hashImgSrc: Ref<string | undefined> = ref();
 const hashDialogMode: Ref<'portrait' | 'landscape'> = ref('landscape');
 
-onMounted(() => window.addEventListener('deviceorientation', closeDialog, true));
-onUnmounted(() => window.removeEventListener('deviceorientation', closeDialog, true));
 onUpdated(() => {
   if (dialogRef.value?.open) {
     dialogRef.value?.classList.add('animate');
