@@ -44,17 +44,7 @@ const router = createRouter({
   ],
 });
 
-// profoundly stupid workaround to routing completely breaking on mobile
-// because SOMETHING spams routing to /, and I have NO FUCKING IDEA what it is
-let lastNavEvent: number;
 router.beforeEach((to, from) => {
-  let navTime = Date.now();
-  if (navTime - lastNavEvent <= 500) {
-    console.debug('going too fast, navigation cancelled');
-    return false;
-  }
-
-  lastNavEvent = Date.now();
   console.debug(`Navigation event: ${from.fullPath} -> ${to.fullPath}`);
 });
 
