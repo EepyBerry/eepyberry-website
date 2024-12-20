@@ -10,9 +10,7 @@
   <main>
     <RouterView v-slot="{ Component, route }">
       <Transition :name="route.meta.attached ? 'fade' : ''" mode="out-in">
-        <div class="transition-container" :key="route.path">
-          <component :is="Component" />
-        </div>
+        <component :is="Component" :key="route.path" />
       </Transition>
     </RouterView>
   </main>
@@ -31,25 +29,7 @@ const route = useRoute();
 const AppScatter = defineAsyncComponent(() => import('./components/AppScatter.vue'));
 const themeHelper: ThemeHelper = inject('ThemeHelper') as ThemeHelper;
 
-const displayMenuButton: Ref<boolean> = ref(false);
-const menuOpen: Ref<boolean> = ref(false);
-const showRightBlob: Ref<boolean> = ref(false);
-
-onMounted(() => {
-  themeHelper.loadCurrentTheme();
-  window.addEventListener('resize', handleResize);
-  handleResize();
-});
-onUnmounted(() => {
-  window.removeEventListener('resize', handleResize);
-});
-
-function handleResize() {
-  menuOpen.value = window.innerWidth >= 1024;
-  displayMenuButton.value = window.innerWidth < 1024;
-  showRightBlob.value = window.innerWidth < 768;
-}
-
+onMounted(() => themeHelper.loadCurrentTheme());
 provide('$theme', themeHelper.themeRef);
 </script>
 

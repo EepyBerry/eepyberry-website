@@ -1,6 +1,8 @@
 <template>
-  <TitleSectionSmall />
-  <MiscNerdSection />
+  <div class="page-container">
+    <TitleSectionSmall />
+    <MiscNerdSection />
+  </div>
 </template>
 
 <!------------------------------------------------------------>

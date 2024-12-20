@@ -1,7 +1,7 @@
 <template>
   <RouterLink
     class="home-link button-link"
-    to="/"
+    :to="{ name: 'Home' }"
     title="Home"
     aria-label="Home link"
     @mousedown="active = true"
@@ -17,9 +17,11 @@
 import { inject, ref, type Ref } from 'vue';
 import SvgEepyBerrySmall from '../svg/SvgEepyBerrySmall.vue';
 import SvgEepyBerrySmallBoop from '../svg/SvgEepyBerrySmallBoop.vue';
+import { useRouter } from 'vue-router';
 
 const $theme: string = inject('$theme') as string;
 const active: Ref<boolean> = ref(false);
+const router = useRouter();
 </script>
 
 <style scoped lang="scss">

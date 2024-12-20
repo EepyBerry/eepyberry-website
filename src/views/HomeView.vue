@@ -1,17 +1,26 @@
 <template>
-  <TitleSection />
-  <ProjectsSection />
-  <ArtSection />
-  <dialog ref="dialogRef" class="dialog" :class="hashDialogMode" @abort="resetHash" @keydown.esc="resetHash">
-    <div class="dialog-container">
-      <button class="dialog-close icon-button" @click="closeDialog" tabindex="0">
-        <iconify-icon icon="mingcute:close-line" width="3rem" />
-      </button>
-      <div id="hash-image">
-        <img :src="hashImgSrc" />
+  <div class="page-container" ref="containerRef">
+    <TitleSection />
+    <ProjectsSection />
+    <ArtSection />
+    <dialog
+      ref="dialogRef"
+      class="dialog"
+      :class="hashDialogMode"
+      @click="handleClick"
+      @abort="resetHash"
+      @keydown.esc="resetHash"
+    >
+      <div class="dialog-container">
+        <button class="dialog-close icon-button" @click="closeDialog" tabindex="0">
+          <iconify-icon icon="mingcute:close-line" width="3rem" />
+        </button>
+        <div id="hash-image">
+          <img :src="hashImgSrc" />
+        </div>
       </div>
-    </div>
-  </dialog>
+    </dialog>
+  </div>
 </template>
 
 <!------------------------------------------------------------>
@@ -20,7 +29,7 @@ import ArtSection from '@/components/sections/ArtSection.vue';
 import ProjectsSection from '@/components/sections/ProjectsSection.vue';
 import TitleSection from '@/components/sections/TitleSection.vue';
 import { useHead } from '@unhead/vue';
-import { onMounted, onUnmounted, onUpdated, ref, watch, type Ref } from 'vue';
+import { onUpdated, ref, watch, type Ref } from 'vue';
 import { useRoute, useRouter } from 'vue-router';
 
 useHead({
@@ -33,16 +42,6 @@ const dialogRef: Ref<HTMLDialogElement | null> = ref(null);
 const hashImgSrc: Ref<string | undefined> = ref();
 const hashDialogMode: Ref<'portrait' | 'landscape'> = ref('landscape');
 
-onMounted(() => {
-  window.addEventListener('click', handleClick, true);
-  window.addEventListener('resize', computeDialogMode, true);
-  window.addEventListener('deviceorientation', closeDialog, true);
-});
-onUnmounted(() => {
-  window.removeEventListener('click', handleClick, true);
-  window.removeEventListener('resize', computeDialogMode, true);
-  window.removeEventListener('deviceorientation', closeDialog, true);
-});
 onUpdated(() => {
   if (dialogRef.value?.open) {
     dialogRef.value?.classList.add('animate');
@@ -87,7 +86,9 @@ function closeDialog() {
 }
 
 function resetHash() {
-  router.replace('/');
+  if (router.currentRoute.value.name === 'Home') {
+    router.replace('/');
+  }
 }
 </script>
 
