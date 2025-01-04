@@ -72,7 +72,7 @@ const infoList: Ref<Info[]> = ref([
     ],
   },
   {
-    title: 'pastime illustrator!',
+    title: 'pastime artist!',
     content: [
       'drawing has been a hobby of mine since my chilhood. i am now able to do pixel art, digital painting & vector graphics!',
     ],
