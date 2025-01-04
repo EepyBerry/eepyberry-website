@@ -3,7 +3,7 @@
     <div class="title-small">
       <SvgEepyBerryLogo id="avatar" :dark="$theme === 'dark'" />
       <hr />
-      <p id="intro">developer&nbsp;& artist&nbsp;</p>
+      <p id="intro">developer&nbsp;& hobby-artist&nbsp;</p>
     </div>
   </section>
 </template>
@@ -55,10 +55,10 @@ const $theme = inject('$theme');
       display: flex;
       flex-direction: column;
       gap: 1rem;
-      width: clamp(120px, 25vw, 160px);
+      width: clamp(120px, 25vw, 180px);
 
       font-family: Dosis;
-      font-size: clamp(1.5rem, 5vw, 2rem);
+      font-size: clamp(1.5rem, 4.5vw, 2rem);
       font-weight: 500;
       line-height: 1;
     }

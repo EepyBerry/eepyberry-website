@@ -10,7 +10,7 @@
         aria-label="Sleeping strawberry with the text 'eepy berry'"
       />
       <hr />
-      <p id="intro">developer&nbsp;& artist&nbsp;</p>
+      <p id="intro">developer&nbsp;& hobby-artist&nbsp;</p>
       <AppLinks class="title-links" />
     </div>
     <button class="scroll-indicator icon-button" v-on:click="scrollToProjects()" aria-label="Scroll to projects">
@@ -98,7 +98,7 @@ function scrollToProjects() {
       width: clamp(200px, 12vw, 300px);
 
       font-family: Dosis;
-      font-size: clamp(2.5rem, 2.375vw, 3.5rem);
+      font-size: clamp(2.25rem, 2.25vw, 3.25rem);
       font-weight: 500;
       line-height: 1;
     }
