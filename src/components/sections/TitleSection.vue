@@ -10,7 +10,7 @@
         aria-label="Sleeping strawberry with the text 'eepy berry'"
       />
       <hr />
-      <p id="intro">developer&nbsp;& illustrator&nbsp;</p>
+      <p id="intro">developer&nbsp;& artist&nbsp;</p>
       <AppLinks class="title-links" />
     </div>
     <button class="scroll-indicator icon-button" v-on:click="scrollToProjects()" aria-label="Scroll to projects">

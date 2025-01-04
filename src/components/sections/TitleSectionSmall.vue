@@ -3,7 +3,7 @@
     <div class="title-small">
       <SvgEepyBerryLogo id="avatar" :dark="$theme === 'dark'" />
       <hr />
-      <p id="intro">developer&nbsp;& illustrator&nbsp;</p>
+      <p id="intro">developer&nbsp;& artist&nbsp;</p>
     </div>
   </section>
 </template>
