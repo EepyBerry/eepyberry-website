@@ -11,6 +11,18 @@
     <div class="section-content">
       <ul class="gallery">
         <li class="image-wrapper" style="width: 36rem">
+          <a href="#/artwork/2025-01-21_Catstronauts.jpg"
+            ><img
+              src="/artwork/2025-01-21_Catstronauts.jpg"
+              aria-label="Catstronauts"
+              alt="Catstronauts"
+              style="scale: 120%"
+          /></a>
+          <div class="drawing-title">
+            <span>"Catstronauts"</span>
+          </div>
+        </li>
+        <li class="image-wrapper" style="width: 36rem">
           <a href="#/artwork/2024-08-03_1000-LC_Carrier.jpg"
             ><img src="/artwork/2024-08-03_1000-LC_Carrier.jpg" aria-label="1000-LC" alt="1000-LC Carrier"
           /></a>
@@ -43,9 +55,6 @@
           </div>
         </li>
         <!-- placeholders -->
-        <li class="image-wrapper placeholder" style="width: 20rem">
-          <IconEepyBerry />
-        </li>
         <li class="image-wrapper placeholder" style="width: 20rem">
           <IconEepyBerry />
         </li>
