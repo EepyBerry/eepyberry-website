@@ -1,10 +1,5 @@
 <template>
-  <AppScatter
-    v-if="route.meta.attached"
-    :visible="true"
-    :size="5"
-    :density="8"
-  />
+  <AppScatter v-if="route.meta.attached" :visible="true" :size="5" :density="8" />
   <AppNavigation v-if="route.meta.attached" />
   <main>
     <RouterView v-slot="{ Component, route }">

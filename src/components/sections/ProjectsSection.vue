@@ -2,12 +2,7 @@
   <section id="section-projects">
     <div class="section-title" role="heading" aria-label="Projects">
       <span>projects</span>
-      <iconify-icon
-        icon="mingcute:terminal-line"
-        style="width: 2rem; height: 2rem"
-        width="2rem"
-        aria-hidden="true"
-      />
+      <iconify-icon icon="mingcute:terminal-line" style="width: 2rem; height: 2rem" width="2rem" aria-hidden="true" />
     </div>
     <div class="section-content">
       <a

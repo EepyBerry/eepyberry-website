@@ -4,10 +4,7 @@
       <iconify-icon icon="mingcute:star-fill" class="deco-star star1" width="100%" />
       <iconify-icon icon="mingcute:star-fill" class="deco-star star2" width="100%" />
       <iconify-icon icon="mingcute:star-fill" class="deco-star star3" width="100%" />
-      <SvgEepyBerryLogo
-        id="avatar"
-        aria-label="Sleeping strawberry with the text 'eepy berry'"
-      />
+      <SvgEepyBerryLogo id="avatar" aria-label="Sleeping strawberry with the text 'eepy berry'" />
       <div class="title-intro">
         <p>software engineer</p>
         <p>occasional artist</p>

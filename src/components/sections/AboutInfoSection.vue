@@ -2,12 +2,7 @@
   <section id="section-about-info">
     <div class="section-title" role="heading" aria-label="About me">
       <span>about me</span>
-      <iconify-icon
-        icon="mingcute:happy-line"
-        style="width: 2rem; height: 2rem"
-        width="2rem"
-        aria-hidden="true"
-      />
+      <iconify-icon icon="mingcute:happy-line" style="width: 2rem; height: 2rem" width="2rem" aria-hidden="true" />
     </div>
     <div class="section-content">
       <InfoTerminal />
