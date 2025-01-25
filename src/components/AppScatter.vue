@@ -18,7 +18,6 @@
 </template>
 
 <script setup lang="ts">
-import { random } from '@/utils/functions';
 import { onMounted, ref, type Ref } from 'vue';
 
 defineProps<{ size: number; density: number; visible: boolean }>();
@@ -37,6 +36,10 @@ async function init(): Promise<void> {
     const left = (Number(child.style.left.replace('vmax', '')) / 100) * vmax;
     stars.push({ el$: child, left: left, top: top });
   }
+}
+
+function random(range: number) {
+  return Math.floor(Math.random() * range) + 1;
 }
 </script>
 

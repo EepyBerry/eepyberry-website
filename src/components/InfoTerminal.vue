@@ -1,13 +1,5 @@
 <template>
   <div class="info-terminal">
-    <div class="terminal-header">
-      <span>eepy-os v2.3 --- info-terminal </span>
-      <div class="terminal-header-decoration">
-        <span><iconify-icon icon="material-symbols:minimize-rounded" width="0.875rem" aria-hidden="true" /></span>
-        <span><iconify-icon icon="mdi:maximize" width="0.75rem" aria-hidden="true" /></span>
-        <span><iconify-icon icon="material-symbols:transgender" width="0.875rem" aria-hidden="true" /></span>
-      </div>
-    </div>
     <div class="terminal-content" :style="{ visibility: isTextVisible ? 'visible' : 'hidden' }">
       <p><span class="accent">infoterm@eepyberry.me</span>:<span class="tilde">~</span>$ showinfo</p>
       <br />
@@ -68,7 +60,7 @@ const infoList: Ref<Info[]> = ref([
     content: [
       'i started with java, slowly becoming a full-stack developer over time! :>',
       '---',
-      'current techs: [aws], [docker], [spring boot], [angular]',
+      'current techs: [aws], [docker], [spring boot], [vue]',
     ],
   },
   {
@@ -143,7 +135,7 @@ const interestList: Ref<Info[]> = ref([
   {
     title: 'plushies :>',
     content: [
-      'i have about 25 in my collection, and it keeps growing :3',
+      'i have about 30 in my collection, and it keeps growing :3',
       '(will probably show it later in [miscellaneous] OwO)',
     ],
   },
@@ -201,42 +193,6 @@ function getData() {
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-
-  .terminal-header {
-    position: relative;
-    width: 100%;
-    padding: 0.375rem 2rem;
-
-    border-bottom: 1px solid var(--eepy-theme-terminal-header-border);
-    background: var(--eepy-theme-terminal-header);
-    color: var(--eepy-color-white);
-
-    font-size: 0.8125rem;
-    text-align: center;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    &-decoration {
-      position: absolute;
-      inset: auto 0.5rem auto auto;
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-      user-select: none;
-
-      span {
-        width: 1.25rem;
-        height: 1.25rem;
-        background: var(--eepy-theme-terminal-header-decoration);
-        border-radius: 4px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-      }
-    }
-  }
 
   .terminal-content {
     flex: 1;

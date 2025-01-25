@@ -1,12 +1,8 @@
 <template>
   <section id="section-projects">
     <div class="section-title" role="heading" aria-label="Projects">
-      <iconify-icon
-        icon="mingcute:terminal-line"
-        style="width: 2.5rem; height: 2.5rem"
-        width="2.5rem"
-        aria-hidden="true"
-      />
+      <span>projects</span>
+      <iconify-icon icon="mingcute:terminal-line" style="width: 2rem; height: 2rem" width="2rem" aria-hidden="true" />
     </div>
     <div class="section-content">
       <a
@@ -56,16 +52,13 @@
 
 <!------------------------------------------------------------>
 <script setup lang="ts">
-import type { ThemeHelper } from '@/utils/theme.helper';
 import SvgLagrangeLogo from '../svg/SvgLagrangeLogo.vue';
 import { inject, ref, watch, type Ref } from 'vue';
-const themeHelper: ThemeHelper = inject('ThemeHelper') as ThemeHelper;
 const counter: Ref<number> = ref(0);
 
 watch(
-  () => themeHelper.themeRef.value,
+  () => 0,
   (v) => {
-    if (v === 'light') return;
     incrementCounter();
   },
 );
@@ -75,7 +68,7 @@ function incrementCounter() {
 }
 
 function checkConditions() {
-  return counter.value >= 5 && themeHelper.themeRef.value === 'dark';
+  return counter.value >= 5;
 }
 </script>
 
@@ -85,16 +78,13 @@ function checkConditions() {
   .section-content {
     width: 100%;
 
-    background-color: var(--eepy-theme-background);
-    box-shadow: inset 0 0 4rem 2rem var(--eepy-theme-background);
-
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(24rem, auto));
     gap: 2rem;
 
     & .eepy-card {
       width: 100%;
-      height: 14rem;
+      height: 12rem;
     }
   }
 
@@ -136,12 +126,6 @@ function checkConditions() {
       text-align: center;
       text-wrap: nowrap;
     }
-  }
-}
-
-[data-theme='dark'] #section-projects {
-  .section-content {
-    background-image: url('/svg/hero_circuits_dark.svg');
   }
 }
 

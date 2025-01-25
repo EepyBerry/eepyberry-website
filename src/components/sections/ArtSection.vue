@@ -1,15 +1,28 @@
 <template>
   <section id="section-art">
     <div class="section-title" role="heading" aria-label="Drawings">
+      <span>artwork</span>
       <iconify-icon
         icon="mingcute:paint-brush-line"
-        style="width: 2.5rem; height: 2.5rem"
-        width="2.5rem"
+        style="width: 2rem; height: 2rem"
+        width="2rem"
         aria-hidden="true"
       />
     </div>
     <div class="section-content">
       <ul class="gallery">
+        <li class="image-wrapper" style="width: 36rem">
+          <a href="#/artwork/2025-01-21_Catstronauts.jpg"
+            ><img
+              src="/artwork/2025-01-21_Catstronauts.jpg"
+              aria-label="Catstronauts"
+              alt="Catstronauts"
+              style="scale: 120%"
+          /></a>
+          <div class="drawing-title">
+            <span>"Catstronauts"</span>
+          </div>
+        </li>
         <li class="image-wrapper" style="width: 36rem">
           <a href="#/artwork/2024-08-03_1000-LC_Carrier.jpg"
             ><img src="/artwork/2024-08-03_1000-LC_Carrier.jpg" aria-label="1000-LC" alt="1000-LC Carrier"
@@ -43,9 +56,6 @@
           </div>
         </li>
         <!-- placeholders -->
-        <li class="image-wrapper placeholder" style="width: 20rem">
-          <IconEepyBerry />
-        </li>
         <li class="image-wrapper placeholder" style="width: 20rem">
           <IconEepyBerry />
         </li>
@@ -90,6 +100,7 @@ import IconEepyBerry from '../svg/icons/IconEepyBerry.vue';
     display: flex;
 
     &.placeholder {
+      background: var(--eepy-theme-background);
       border: 2px dashed var(--eepy-theme-primary);
       align-items: center;
       justify-content: center;

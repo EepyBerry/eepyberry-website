@@ -4,14 +4,11 @@
       <iconify-icon icon="mingcute:star-fill" class="deco-star star1" width="100%" />
       <iconify-icon icon="mingcute:star-fill" class="deco-star star2" width="100%" />
       <iconify-icon icon="mingcute:star-fill" class="deco-star star3" width="100%" />
-      <SvgEepyBerryLogo
-        id="avatar"
-        :dark="$theme === 'dark'"
-        aria-label="Sleeping strawberry with the text 'eepy berry'"
-      />
-      <hr />
-      <p id="intro">developer&nbsp;& hobby-artist&nbsp;</p>
-      <AppLinks class="title-links" />
+      <SvgEepyBerryLogo id="avatar" aria-label="Sleeping strawberry with the text 'eepy berry'" />
+      <div class="title-intro">
+        <p>software engineer</p>
+        <p>occasional artist</p>
+      </div>
     </div>
     <button class="scroll-indicator icon-button" v-on:click="scrollToProjects()" aria-label="Scroll to projects">
       <iconify-icon icon="mingcute:arrow-down-line" style="width: 3rem; height: 3rem" width="3rem" aria-hidden="true" />
@@ -21,10 +18,7 @@
 
 <!------------------------------------------------------------>
 <script setup lang="ts">
-import AppLinks from '../main/AppLinks.vue';
 import SvgEepyBerryLogo from '@/components/svg/SvgEepyBerryLogo.vue';
-import { inject } from 'vue';
-const $theme = inject('$theme');
 
 function scrollToProjects() {
   const projectsRect = document.querySelector('#section-projects > .section-title')!.getBoundingClientRect();
@@ -36,13 +30,9 @@ function scrollToProjects() {
 <style scoped lang="scss">
 @use '/src/assets/sass/animations' as anims;
 
-#section-title:before {
-  display: none;
-}
-
 #section-title {
   position: relative;
-  height: 100dvh;
+  height: calc(100dvh - 80px);
   border-radius: 6px;
   background: transparent;
 
@@ -51,75 +41,40 @@ function scrollToProjects() {
   align-items: center;
   justify-content: center;
 
-  .title:before {
-    content: '';
-    position: absolute;
-    inset: -6px;
-    border: 2px solid var(--eepy-theme-background);
-    border-radius: 12px;
-    --diff: calc(50% - 12.25rem);
-    clip-path: polygon(
-      0 0,
-      100% 0,
-      100% 100%,
-      calc(50% + 6rem + 1px) 100%,
-      calc(50% + 6rem + 1px) 95%,
-      calc(50% - 6rem - 1px) 95%,
-      calc(50% - 6rem - 1px) 100%,
-      0 100%
-    );
-  }
-
   .title {
     position: relative;
+    transform: translateY(-40px);
     z-index: 1;
     padding: clamp(0rem, 5vw, 4rem);
-    background: var(--eepy-theme-background);
     border-radius: 8px;
 
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
+    gap: 2rem;
 
     #avatar {
       z-index: 1;
-      width: clamp(200px, 12vw, 300px);
+      width: clamp(200px, 14vw, 300px);
       filter: drop-shadow(0 4px 0 var(--eepy-theme-title-shadow));
       animation: bounce 4s ease-in-out infinite;
     }
 
-    #intro {
-      z-index: 1;
-      padding-left: 0.75rem;
+    .title-intro {
       display: flex;
       flex-direction: column;
-      gap: 1rem;
-      width: clamp(200px, 12vw, 300px);
-
+      align-items: flex-start;
+      justify-content: center;
+    }
+    .title-intro > p {
+      width: clamp(200px, 14vw, 300px);
       font-family: Dosis;
-      font-size: clamp(2.25rem, 2.25vw, 3.25rem);
+      font-size: clamp(2.25rem, 2.5vw, 3.25rem);
       font-weight: 500;
       line-height: 1;
+      text-wrap: nowrap;
     }
-
-    & > hr {
-      margin-left: 1.75rem;
-      margin-right: 1.75rem;
-      height: clamp(7rem, 7.5vw, 10rem);
-      border: 1px solid var(--eepy-theme-primary);
-    }
-  }
-
-  .title-links {
-    z-index: 0;
-    position: absolute;
-    bottom: -3.5rem;
-    margin-top: 0;
-    transform: translateY(-1.5rem);
-  }
-  .title-links::before {
-    clip-path: polygon(0 2.625rem, 100% 2.625rem, 100% 100%, 0 100%);
   }
 
   .scroll-indicator {
@@ -137,9 +92,9 @@ function scrollToProjects() {
 }
 
 .star1 {
-  top: -3rem;
-  left: 7.5%;
-  $size: clamp(4rem, 12vw, 6rem);
+  top: 0;
+  left: 0;
+  $size: clamp(3rem, 12vw, 5rem);
   width: $size;
   height: $size;
 
@@ -182,15 +137,11 @@ function scrollToProjects() {
         width: 240px;
       }
 
-      #intro {
-        width: fit-content;
+      .title-intro {
+        align-items: center;
       }
-
-      & > hr {
-        margin-top: 0.5rem;
-        margin-bottom: 0.75rem;
-        height: 0;
-        width: 4rem;
+      .title-intro > p {
+        width: fit-content;
       }
     }
 
@@ -205,20 +156,19 @@ function scrollToProjects() {
   }
 
   .star2 {
-    top: 4rem;
+    top: 2rem;
     right: 1rem;
   }
 
   .star3 {
-    bottom: 25%;
-    left: 72.5%;
+    bottom: 30%;
+    left: 45%;
   }
 }
 
 @media screen and (max-height: 567px) {
   #section-title {
     height: 110dvh;
-
     .scroll-indicator {
       display: none;
     }

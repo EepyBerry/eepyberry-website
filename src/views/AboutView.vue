@@ -1,6 +1,5 @@
 <template>
   <div class="page-container">
-    <TitleSectionSmall />
     <AboutInfoSection />
     <AboutDevToolsSection />
     <AboutDrawingToolsSection />
@@ -12,7 +11,6 @@
 import AboutInfoSection from '@/components/sections/AboutInfoSection.vue';
 import AboutDevToolsSection from '@/components/sections/AboutDevToolsSection.vue';
 import AboutDrawingToolsSection from '@/components/sections/AboutDrawingToolsSection.vue';
-import TitleSectionSmall from '@/components/sections/TitleSectionSmall.vue';
 import { useHead } from '@unhead/vue';
 useHead({
   title: "About · EepyBerry's Website 🍓",
