@@ -1,6 +1,5 @@
 <template>
   <div class="page-container">
-    <TitleSectionSmall />
     <MiscNerdSection />
   </div>
 </template>
@@ -8,7 +7,6 @@
 <!------------------------------------------------------------>
 <script setup lang="ts">
 import MiscNerdSection from '@/components/sections/MiscNerdSection.vue';
-import TitleSectionSmall from '@/components/sections/TitleSectionSmall.vue';
 import { useHead } from '@unhead/vue';
 useHead({
   title: "Miscellaneous · EepyBerry's Website 🍓",

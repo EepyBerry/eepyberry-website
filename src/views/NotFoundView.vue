@@ -1,5 +1,4 @@
 <template>
-  <TitleSectionSmall />
   <div id="not-found">
     <SvgNotFound />
     <p>The requested page could not be found :c</p>
@@ -7,7 +6,6 @@
 </template>
 
 <script setup lang="ts">
-import TitleSectionSmall from '@/components/sections/TitleSectionSmall.vue';
 import SvgNotFound from '@/components/svg/SvgNotFound.vue';
 import { useHead } from '@unhead/vue';
 useHead({

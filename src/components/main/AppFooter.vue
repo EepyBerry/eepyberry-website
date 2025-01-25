@@ -45,33 +45,21 @@ import SvgCCSALogo from '../svg/creativecommons/SvgCCSALogo.vue';
 
 <style scoped lang="scss">
 footer {
+  bottom: 0;
   width: 100%;
-  grid-column: 2;
-  grid-row: 2;
-  margin-bottom: 2rem;
-
-  backdrop-filter: blur(4px);
-  font-family: Dosis;
+  margin-top: 6rem;
+  padding: 1rem 0;
+  font-family: Poppins;
 
   display: flex;
   flex-direction: column;
   align-items: center;
 
-  .footer-container:before {
-    content: '';
-    position: absolute;
-    inset: -6px;
-    border: 2px solid var(--eepy-theme-background);
-    border-radius: 12px;
-  }
   .footer-container {
     position: relative;
     width: 100%;
-    max-width: 1400px;
-    padding: 1rem 2rem;
-    background: var(--eepy-theme-background);
     border-radius: 8px;
-    font-weight: 600;
+    font-weight: 400;
 
     display: grid;
     grid-template-columns: 1fr auto 1fr;
@@ -125,8 +113,8 @@ footer {
 
   #app-info {
     grid-column: 1;
-    font-size: clamp(0.875rem, 2vw, 1rem);
-    font-weight: 500;
+    font-size: 0.875rem;
+    font-weight: 400;
     text-align: start;
     z-index: 1;
   }
@@ -163,9 +151,8 @@ footer {
 }
 @media screen and (max-width: 767px) {
   footer {
-    margin-bottom: 1rem;
     .footer-container {
-      padding: 1rem;
+      padding: 0 1rem;
     }
   }
 }

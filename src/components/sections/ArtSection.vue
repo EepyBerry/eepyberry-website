@@ -1,10 +1,11 @@
 <template>
   <section id="section-art">
     <div class="section-title" role="heading" aria-label="Drawings">
+      <span>artwork</span>
       <iconify-icon
         icon="mingcute:paint-brush-line"
-        style="width: 2.5rem; height: 2.5rem"
-        width="2.5rem"
+        style="width: 2rem; height: 2rem"
+        width="2rem"
         aria-hidden="true"
       />
     </div>

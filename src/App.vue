@@ -1,12 +1,11 @@
 <template>
   <AppScatter
     v-if="route.meta.attached"
-    :visible="themeHelper.themeRef.value === 'dark'"
-    :size="themeHelper.themeRef.value === 'dark' ? 5 : 16"
-    :density="themeHelper.themeRef.value === 'dark' ? 8 : 6"
+    :visible="true"
+    :size="5"
+    :density="8"
   />
   <AppNavigation v-if="route.meta.attached" />
-  <AppAside v-if="route.meta.attached" />
   <main>
     <RouterView v-slot="{ Component, route }">
       <Transition :name="route.meta.attached ? 'fade' : ''" mode="out-in">
@@ -18,29 +17,23 @@
 </template>
 
 <script setup lang="ts">
-import { defineAsyncComponent, inject, onMounted, onUnmounted, provide, ref, Transition, watch, type Ref } from 'vue';
-import type { ThemeHelper } from '@/utils/theme.helper';
+import { defineAsyncComponent, Transition } from 'vue';
 import AppNavigation from '@/components/main/AppNavigation.vue';
 import AppFooter from './components/main/AppFooter.vue';
-import AppAside from './components/main/AppAside.vue';
 import { useRoute } from 'vue-router';
 
 const route = useRoute();
 const AppScatter = defineAsyncComponent(() => import('./components/AppScatter.vue'));
-const themeHelper: ThemeHelper = inject('ThemeHelper') as ThemeHelper;
-
-onMounted(() => themeHelper.loadCurrentTheme());
-provide('$theme', themeHelper.themeRef);
 </script>
 
 <style lang="scss">
 main {
+  flex: 1;
   align-self: stretch;
   min-width: 0;
   min-height: 0;
-  grid-column: 2;
-  grid-row: 1;
   width: 100%;
+  margin-top: 80px;
 
   display: flex;
   flex-direction: column;

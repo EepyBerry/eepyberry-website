@@ -1,5 +1,4 @@
 import { createApp } from 'vue';
-import { ThemeHelper } from './utils/theme.helper';
 import App from './App.vue';
 import router from './router.config';
 import AppChip from './components/AppChip.vue';
@@ -16,7 +15,6 @@ import AppPatchCard from './components/AppPatchCard.vue';
 createApp(App)
   .use(router)
   .use(createHead())
-  .provide('ThemeHelper', new ThemeHelper())
   .component('EepyCard', AppCard)
   .component('EepyPatchCard', AppPatchCard)
   .component('EepyGroup', AppGroup)

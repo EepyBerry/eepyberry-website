@@ -1,36 +1,32 @@
 <template>
   <nav>
     <AppHomeButton @click.native="handleNativeClick" />
-    <RouterLink
-      class="nav-link button-link about-link"
-      :to="{ name: 'About' }"
-      title="About me"
-      aria-label="About page link"
-      @click.native="handleNativeClick"
-    >
-      <iconify-icon
-        mode="svg"
-        icon="mingcute:happy-line"
-        style="width: 2.25rem; height: 2.25rem"
-        height="2.25rem"
-        aria-hidden="true"
-      />
-    </RouterLink>
-    <RouterLink
-      class="nav-link button-link misc-link"
-      :to="{ name: 'Miscellaneous' }"
-      title="Miscellaneous"
-      aria-label="Miscellaneous page link"
-      @click.native="handleNativeClick"
-    >
-      <iconify-icon
-        mode="svg"
-        icon="mingcute:star-line"
-        style="width: 2.25rem; height: 2.25rem"
-        height="2.25rem"
-        aria-hidden="true"
-      />
-    </RouterLink>
+    <div class="links">
+      <RouterLink
+        class="nav-link button-link about-link"
+        :to="{ name: 'Home' }"
+        aria-label="Home page link"
+        @click.native="handleNativeClick"
+      >
+        home
+      </RouterLink>
+      <RouterLink
+        class="nav-link button-link about-link"
+        :to="{ name: 'About' }"
+        aria-label="About page link"
+        @click.native="handleNativeClick"
+      >
+        about
+      </RouterLink>
+      <RouterLink
+        class="nav-link button-link misc-link"
+        :to="{ name: 'Miscellaneous' }"
+        aria-label="Miscellaneous page link"
+        @click.native="handleNativeClick"
+      >
+        miscellaneous
+      </RouterLink>
+    </div>
   </nav>
 </template>
 
@@ -47,24 +43,34 @@ function handleNativeClick(evt: Event) {
 <!------------------------------------------------------------>
 <style lang="scss">
 nav {
-  grid-column: 1;
   z-index: 5;
-  position: sticky;
+  position: fixed;
   top: 0;
   left: 0;
-  padding: 0.75rem;
+  right: 0;
+  padding: 0.75rem 1rem;
+  height: 80px;
   border-radius: 0 1rem 1rem 0;
   text-decoration: none;
+  font-family: Poppins;
 
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
+  justify-content: space-between;
   gap: 1rem;
+
+  .links {
+    margin-right: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+  }
 }
 
 .nav-link {
-  width: 2.75rem;
-  height: 2.75rem;
+  padding: 0 0.5rem;
+  height: 2rem;
   border-radius: 2rem;
 
   display: flex;
@@ -81,7 +87,7 @@ nav {
 
 .nav-link:not([disabled]):hover,
 .nav-link:not([disabled]):focus-visible {
-  transform: scale(110%) rotateZ(-10deg);
+  transform: scale(105%);
 }
 
 .nav-link:not([disabled]):active {
