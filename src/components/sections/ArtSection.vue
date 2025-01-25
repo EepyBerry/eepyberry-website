@@ -100,6 +100,7 @@ import IconEepyBerry from '../svg/icons/IconEepyBerry.vue';
     display: flex;
 
     &.placeholder {
+      background: var(--eepy-theme-background);
       border: 2px dashed var(--eepy-theme-primary);
       align-items: center;
       justify-content: center;

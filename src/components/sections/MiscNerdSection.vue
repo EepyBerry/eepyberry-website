@@ -1,8 +1,5 @@
 <template>
   <section id="section-nerd">
-    <div class="section-title" role="heading" aria-label="Nerd stuff">
-      <iconify-icon icon="tabler:mood-nerd" style="width: 2.5rem; height: 2.5rem" width="2.5rem" aria-hidden="true" />
-    </div>
     <div class="section-content">
       <a
         class="button-link"
@@ -44,6 +41,7 @@
 
 <style scoped lang="scss">
 #section-nerd {
+  flex: 1;
   .section-content {
     display: flex;
     justify-content: center;

@@ -1,17 +1,18 @@
 <template>
   <section id="section-about-devtools">
     <div class="section-title" role="heading" aria-label="Tools & techs">
+      <span>development tools</span>
       <iconify-icon
         icon="carbon:executable-program"
-        style="width: 2.5rem; height: 2.5rem"
-        width="2.5rem"
+        style="width: 2rem; height: 2rem"
+        width="2rem"
         aria-hidden="true"
       />
     </div>
     <div class="section-content">
       <ul class="tool-list">
         <li>
-          <EepyPatchCard id="tool-intellij" style="transform: rotateZ(-1deg)">
+          <EepyPatchCard id="tool-intellij">
             <div>
               <iconify-icon inline mode="svg" icon="logos:intellij-idea" height="2rem" aria-hidden="true" />
               <span>Intell&ijlig;&nbsp;IDEA</span>
@@ -20,7 +21,7 @@
           </EepyPatchCard>
         </li>
         <li>
-          <EepyPatchCard id="tool-vscode" style="transform: rotateZ(0.5deg)">
+          <EepyPatchCard id="tool-vscode">
             <div>
               <iconify-icon inline mode="svg" icon="devicon:vscode" height="2rem" aria-hidden="true" />
               <span>Visual Studio Code</span>
@@ -29,7 +30,7 @@
           </EepyPatchCard>
         </li>
         <li>
-          <EepyPatchCard id="tool-godot" style="transform: rotateZ(-1.5deg)">
+          <EepyPatchCard id="tool-godot">
             <div>
               <iconify-icon inline mode="svg" icon="logos:godot-icon" height="2rem" aria-hidden="true" />
               <span>Godot Engine</span>

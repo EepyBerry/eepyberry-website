@@ -1,17 +1,18 @@
 <template>
   <section id="section-about-drawingtools">
     <div class="section-title" role="heading" aria-label="Tools & techs">
+      <span>drawing tools</span>
       <iconify-icon
         icon="mingcute:paint-brush-line"
-        style="width: 2.5rem; height: 2.5rem"
-        width="2.5rem"
+        style="width: 2rem; height: 2rem"
+        width="2rem"
         aria-hidden="true"
       />
     </div>
     <div class="section-content">
       <ul class="tool-list">
         <li>
-          <EepyPatchCard id="tool-aseprite" style="transform: rotateZ(1deg)">
+          <EepyPatchCard id="tool-aseprite">
             <div>
               <img
                 src="/svg/aseprite-icon.svg"
@@ -24,7 +25,7 @@
           </EepyPatchCard>
         </li>
         <li>
-          <EepyPatchCard id="tool-krita" style="transform: rotateZ(-1deg)">
+          <EepyPatchCard id="tool-krita">
             <div>
               <img src="/svg/krita-icon.svg" :style="{ width: '2rem', height: '2rem' }" aria-label="Krita logo" />
               <span>Krita</span>
@@ -33,7 +34,7 @@
           </EepyPatchCard>
         </li>
         <li>
-          <EepyPatchCard id="tool-illustrator" style="transform: rotateZ(0.5deg)">
+          <EepyPatchCard id="tool-illustrator">
             <div>
               <iconify-icon inline mode="svg" icon="logos:adobe-illustrator" height="2rem" aria-hidden="true" />
               <span>Illustrator</span>

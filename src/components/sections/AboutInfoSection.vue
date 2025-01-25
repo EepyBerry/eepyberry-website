@@ -1,18 +1,19 @@
 <template>
   <section id="section-about-info">
     <div class="section-title" role="heading" aria-label="About me">
+      <span>about me</span>
       <iconify-icon
         icon="mingcute:happy-line"
-        style="width: 2.5rem; height: 2.5rem"
-        width="2.5rem"
+        style="width: 2rem; height: 2rem"
+        width="2rem"
         aria-hidden="true"
       />
     </div>
     <div class="section-content">
-      <EepyPatchCard class="avatar-wrapper">
-        <img class="avatar" src="/avatar.webp" alt="Avatar" aria-label="avatar" />
-      </EepyPatchCard>
       <InfoTerminal />
+      <div class="avatar-wrapper">
+        <img class="avatar" src="/avatar.webp" alt="Avatar" aria-label="avatar" />
+      </div>
     </div>
   </section>
 </template>
@@ -30,8 +31,8 @@ import InfoTerminal from '../InfoTerminal.vue';
 
   .section-content {
     display: grid;
-    grid-template-areas: 'avatar info';
-    grid-template-columns: 1fr 2.5fr;
+    grid-template-areas: 'info avatar';
+    grid-template-columns: 2.5fr 1fr;
     align-items: center;
     margin: 0 auto;
     gap: 3rem;

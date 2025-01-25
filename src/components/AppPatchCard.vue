@@ -11,8 +11,7 @@
   padding: 0.75rem;
   background: var(--eepy-theme-patch);
   border: 1px solid var(--eepy-theme-border);
-  border-radius: 16px;
-  transform: rotateZ(-1.5deg);
+  border-radius: 6px;
   background-image: url('/misc/wooltexture.png');
   background-size: 192px;
 }
@@ -30,10 +29,8 @@
   width: 100%;
   height: 100%;
 
-  background-image: url('/svg/patch_dashes.svg');
-  filter: drop-shadow(2px 2px 4px var(--eepy-theme-patch-shadow));
   color: var(--eepy-color-white);
-  border-radius: 8px;
+  border-radius: 4px;
 
   font-family: Dosis;
   font-size: 1.75rem;
@@ -43,9 +40,5 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-}
-
-[data-theme='dark'] .eepy-patchcard {
-  background-image: url('/svg/patch_dashes_dark.svg');
 }
 </style>
