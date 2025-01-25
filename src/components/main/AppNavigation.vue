@@ -61,7 +61,7 @@ nav {
   gap: 1rem;
 
   .links {
-    margin-right: 1rem;
+    margin-right: 0.5rem;
     display: flex;
     align-items: center;
     gap: 1.5rem;
