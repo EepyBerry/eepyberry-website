@@ -13,7 +13,7 @@
       <AppLinks class="links-bare" />
       <div id="copyright-notice">
         <div class="copyright-info">
-          <span class="cc-supertext">all original content under</span>
+          <span class="cc-supertext">all original content&nbsp;under</span>
           <a
             id="cc-deed-link"
             class="footer-link"
