@@ -67,7 +67,9 @@
           </template>
         </EepyCard>
       </a>
-      <EepyCard v-for="i in 4" :key="i" class="placeholder" />
+      <EepyCard class="placeholder" />
+      <EepyCard class="placeholder" />
+      <EepyCard class="placeholder" />
     </div>
   </section>
 </template>
