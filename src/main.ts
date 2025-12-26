@@ -5,8 +5,8 @@ import router from './router.config';
 import './assets/sass/index.scss';
 import 'iconify-icon';
 import AppCard from './components/AppCard.vue';
-import { createHead } from '@unhead/vue';
 import AppPatchCard from './components/AppPatchCard.vue';
+import { createHead } from '@unhead/vue/client';
 
 // Main application
 createApp(App)

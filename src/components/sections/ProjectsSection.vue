@@ -29,13 +29,13 @@
       </a>
       <a
         class="card-link"
-        :href="checkConditions() ? '/nothing' : undefined"
+        :href="counter >= 5 ? '/nothing' : undefined"
         target="_blank"
         rel="external nofollow noopener"
         aria-label="Under construction"
-        @click="checkConditions() ? undefined : $event.preventDefault()"
+        @click="checkConditions($event)"
       >
-        <EepyCard id="project-redacted" :class="{ huh: checkConditions() }">
+        <EepyCard id="project-redacted" :class="{ huh: counter >= 5 }">
           <template v-slot:links>
             <iconify-icon mode="svg" icon="noto:construction" height="2rem" />
           </template>
@@ -53,22 +53,14 @@
 <!------------------------------------------------------------>
 <script setup lang="ts">
 import SvgLagrangeLogo from '../svg/SvgLagrangeLogo.vue';
-import { inject, ref, watch, type Ref } from 'vue';
+import { ref, type Ref } from 'vue';
+
 const counter: Ref<number> = ref(0);
-
-watch(
-  () => 0,
-  (v) => {
-    incrementCounter();
-  },
-);
-
-function incrementCounter() {
+function checkConditions($event: Event, increment: boolean = false) {
   counter.value++;
-}
-
-function checkConditions() {
-  return counter.value >= 5;
+  if (counter.value <= 5) {
+    $event.preventDefault();
+  };
 }
 </script>
 

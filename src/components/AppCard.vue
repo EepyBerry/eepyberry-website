@@ -66,6 +66,7 @@ import IconEepyBerry from '@/components/svg/icons/IconEepyBerry.vue';
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    user-select: none;
   }
 
   &-footer {

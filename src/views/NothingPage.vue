@@ -18,16 +18,19 @@ useHead({
 
 <style scoped lang="scss">
 div {
+  flex: 1;
   z-index: 1000;
   position: absolute;
   inset: 0;
+
+  font-family: JetBrains Mono, monospace;
   background-color: #000;
   color: #fcfcfc;
+
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  flex: 1;
 }
 span {
   display: none;
