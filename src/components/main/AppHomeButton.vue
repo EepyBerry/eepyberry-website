@@ -17,7 +17,6 @@
 import { ref, type Ref } from 'vue';
 import SvgEepyBerrySmall from '../svg/SvgEepyBerrySmall.vue';
 import SvgEepyBerrySmallBoop from '../svg/SvgEepyBerrySmallBoop.vue';
-import { useRouter } from 'vue-router';
 
 const active: Ref<boolean> = ref(false);
 </script>

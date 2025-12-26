@@ -7,7 +7,7 @@
           powered by
           <a href="https://vuejs.org" target="_blank" rel="external nofollow noopener">VueJS</a>
           &
-          <a href="https://vitejs.dev" target="_blank" rel="external nofollow noopener">Vite</a>
+          <a href="https://vite.dev" target="_blank" rel="external nofollow noopener">Vite</a>
         </p>
       </div>
       <AppLinks class="links-bare" />

@@ -1,12 +1,12 @@
 <template>
   <nav>
-    <AppHomeButton @click.native="handleNativeClick" />
+    <AppHomeButton @click="handleNativeClick" />
     <div class="links">
       <RouterLink
         class="nav-link button-link about-link"
         :to="{ name: 'Home' }"
         aria-label="Home page link"
-        @click.native="handleNativeClick"
+        @click="handleNativeClick"
       >
         home
       </RouterLink>
@@ -14,7 +14,7 @@
         class="nav-link button-link about-link"
         :to="{ name: 'About' }"
         aria-label="About page link"
-        @click.native="handleNativeClick"
+        @click="handleNativeClick"
       >
         about
       </RouterLink>
@@ -22,7 +22,7 @@
         class="nav-link button-link misc-link"
         :to="{ name: 'Miscellaneous' }"
         aria-label="Miscellaneous page link"
-        @click.native="handleNativeClick"
+        @click="handleNativeClick"
       >
         miscellaneous
       </RouterLink>

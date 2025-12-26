@@ -29,13 +29,35 @@
       </a>
       <a
         class="card-link"
-        :href="checkConditions() ? '/nothing' : undefined"
+        href="https://site-make-text.eepyberry.me"
+        target="_blank"
+        rel="external nofollow noopener"
+        aria-label="SITE MAKE TEXT"
+      >
+        <EepyCard id="project-sitemaketext">
+          <template v-slot:links>
+            <iconify-icon
+              mode="svg"
+              icon="mingcute:external-link-line"
+              style="color: var(--eepy-color-white)"
+              height="2rem"
+            />
+          </template>
+          <img src="/projects/logo-sitemaketext.webp" class="logo" />
+          <template v-slot:footer>
+            <p>A small <i>Baba Is You</i>-like word maker&nbsp;💬</p>
+          </template>
+        </EepyCard>
+      </a>
+      <a
+        class="card-link"
+        :href="counter >= 5 ? '/nothing' : undefined"
         target="_blank"
         rel="external nofollow noopener"
         aria-label="Under construction"
-        @click="checkConditions() ? undefined : $event.preventDefault()"
+        @click="checkConditions($event)"
       >
-        <EepyCard id="project-redacted" :class="{ huh: checkConditions() }">
+        <EepyCard id="project-redacted" :class="{ huh: counter >= 5 }">
           <template v-slot:links>
             <iconify-icon mode="svg" icon="noto:construction" height="2rem" />
           </template>
@@ -45,7 +67,7 @@
           </template>
         </EepyCard>
       </a>
-      <EepyCard v-for="_ in 4" class="placeholder" />
+      <EepyCard v-for="i in 4" :key="i" class="placeholder" />
     </div>
   </section>
 </template>
@@ -53,22 +75,14 @@
 <!------------------------------------------------------------>
 <script setup lang="ts">
 import SvgLagrangeLogo from '../svg/SvgLagrangeLogo.vue';
-import { inject, ref, watch, type Ref } from 'vue';
+import { ref, type Ref } from 'vue';
+
 const counter: Ref<number> = ref(0);
-
-watch(
-  () => 0,
-  (v) => {
-    incrementCounter();
-  },
-);
-
-function incrementCounter() {
+function checkConditions($event: Event) {
   counter.value++;
-}
-
-function checkConditions() {
-  return counter.value >= 5;
+  if (counter.value <= 5) {
+    $event.preventDefault();
+  }
 }
 </script>
 
@@ -97,6 +111,20 @@ function checkConditions() {
       width: 16rem;
       inset: 0;
       margin: auto;
+    }
+  }
+
+  #project-sitemaketext {
+    background-image: url('/projects/project-sitemaketext.webp');
+    background-position: 50%;
+    background-size: contain;
+    .logo {
+      position: absolute;
+      width: 16rem;
+      inset: 0;
+      margin: auto;
+      padding: 0.25rem;
+      background: #0a090c;
     }
   }
 

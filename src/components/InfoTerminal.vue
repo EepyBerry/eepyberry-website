@@ -3,40 +3,43 @@
     <div class="terminal-content" :style="{ visibility: isTextVisible ? 'visible' : 'hidden' }">
       <p><span class="accent">infoterm@eepyberry.me</span>:<span class="tilde">~</span>$ showinfo</p>
       <br />
-      <template v-if="dataIndex < 0">
+      <template v-if="selectedInfoIdx < 0">
         <p>
           <span>select an option (or press the corresponding key) to learn more!</span>
           <BlinkCharacter />
         </p>
       </template>
       <template v-else>
-        <p>{{ getData().title }}</p>
+        <p>{{ getSelectedInfo().title }}</p>
         <p>---</p>
-        <p v-for="content of getData().content.slice(0, getData().content.length - 1)">{{ content }}</p>
+        <p
+          v-for="(content, idx) of getSelectedInfo().content.slice(0, getSelectedInfo().content.length - 1)"
+          :key="idx"
+        >
+          {{ content }}
+        </p>
         <p>
-          <span>{{ getData().content[getData().content.length - 1] }}</span>
+          <span>{{ getSelectedInfo().content[getSelectedInfo().content.length - 1] }}</span>
           <BlinkCharacter />
         </p>
       </template>
     </div>
     <div class="terminal-controls">
-      <button class="terminal-button" @click="select('info', 0)"><span>~0</span>&nbsp;Gender</button>
-      <button class="terminal-button" @click="select('info', 1)"><span>~1</span>&nbsp;Edu</button>
-      <button class="terminal-button" @click="select('info', 2)"><span>~2</span>&nbsp;Draw</button>
-      <button class="terminal-button" @click="select('info', 3)"><span>~3</span>&nbsp;Smol</button>
-      <button class="terminal-button" @click="select('info', 4)"><span>~4</span>&nbsp;Knwldg</button>
-      <button class="terminal-button" @click="select('info', 5)"><span>~5</span>&nbsp;Slep</button>
-      <button class="terminal-button" @click="select('info', 6)"><span>~6</span>&nbsp;Fruit</button>
-      <button class="terminal-button" @click="select('info', 7)"><span>~7</span>&nbsp;Dssrts</button>
+      <button class="terminal-button" @click="selectInfo(0)"><span>~0</span>&nbsp;Gender</button>
+      <button class="terminal-button" @click="selectInfo(1)"><span>~1</span>&nbsp;Education</button>
+      <button class="terminal-button" @click="selectInfo(2)"><span>~2</span>&nbsp;Drawing</button>
+      <button class="terminal-button" @click="selectInfo(3)"><span>~3</span>&nbsp;Knowledge</button>
+      <button class="terminal-button" @click="selectInfo(4)"><span>~4</span>&nbsp;Sleep</button>
+      <button class="terminal-button" @click="selectInfo(5)"><span>~5</span>&nbsp;Fruits</button>
+      <button class="terminal-button" @click="selectInfo(6)"><span>~6</span>&nbsp;Desserts</button>
 
-      <button class="terminal-button" @click="select('interest', 0)"><span>~8</span>&nbsp;Prgm</button>
-      <button class="terminal-button" @click="select('interest', 1)"><span>~9</span>&nbsp;Space</button>
-      <button class="terminal-button" @click="select('interest', 2)"><span>~A</span>&nbsp;SCPFn</button>
-      <button class="terminal-button" @click="select('interest', 3)"><span>~B</span>&nbsp;BrdGms</button>
-      <button class="terminal-button" @click="select('interest', 4)"><span>~C</span>&nbsp;VidGms</button>
-      <button class="terminal-button" @click="select('interest', 5)"><span>~D</span>&nbsp;Cyclng</button>
-      <button class="terminal-button" @click="select('interest', 6)"><span>~E</span>&nbsp;Yoga</button>
-      <button class="terminal-button" @click="select('interest', 7)"><span>~F</span>&nbsp;Plshs</button>
+      <button class="terminal-button" @click="selectInfo(7)"><span>~7</span>&nbsp;Programming</button>
+      <button class="terminal-button" @click="selectInfo(8)"><span>~8</span>&nbsp;Space</button>
+      <button class="terminal-button" @click="selectInfo(9)"><span>~9</span>&nbsp;SCP&nbsp;Wiki</button>
+      <button class="terminal-button" @click="selectInfo(10)"><span>~A</span>&nbsp;Board&nbsp;Games</button>
+      <button class="terminal-button" @click="selectInfo(11)"><span>~B</span>&nbsp;Video&nbsp;Games</button>
+      <button class="terminal-button" @click="selectInfo(12)"><span>~C</span>&nbsp;Cycling</button>
+      <button class="terminal-button" @click="selectInfo(13)"><span>~D</span>&nbsp;Plushies</button>
     </div>
   </div>
 </template>
@@ -49,34 +52,26 @@ type Info = { title: string; content: string[] };
 const infoList: Ref<Info[]> = ref([
   {
     title: 'transfem & proud! 🌈',
-    content: [
-      'seeing myself in the mirror always felt... wrong, at least until i finally discovered who i truly am!',
-      '---',
-      'hrt since: [2023-06-29]',
-    ],
+    content: ["don't like that? my stuff isn't for you, then :3c", '---', 'hrt since: [2023-06-29]'],
   },
   {
-    title: 'software engineer!',
+    title: 'education',
     content: [
-      'i started with java, slowly becoming a full-stack developer over time! :>',
+      'computer science degree; started programming in java, slowly becoming a full-stack developer over time',
       '---',
       'current techs: [aws], [docker], [spring boot], [vue]',
     ],
   },
   {
-    title: 'pastime artist!',
+    title: 'my main hobby: pastime artist',
     content: [
-      'drawing has been a hobby of mine since my chilhood. i am now able to do pixel art, digital painting & vector graphics!',
+      'drawing has been a hobby of mine since my chilhood. i am now able to do pixel art, digital painting & vector graphics',
     ],
   },
   {
-    title: 'very smol :3',
-    content: ["no need to explain, i'm smol :>"],
-  },
-  {
-    title: 'always learning!',
+    title: 'always learning',
     content: [
-      'understanding how stuff works is a never-ending source of fascination for me :>',
+      'understanding how stuff works is a never-ending source of fascination for me',
       'some examples: the human brain, space, 3d modeling, old computer malware, organic chemistry, ...',
     ],
   },
@@ -85,65 +80,58 @@ const infoList: Ref<Info[]> = ref([
     content: ['zzz...'],
   },
   {
-    title: 'favourite fruit!',
-    content: ['strawberries! why? tasty! :>'],
+    title: 'favourite fruit',
+    content: ['strawberries!'],
   },
   {
-    title: 'favourite desserts!',
-    content: ['waffles & crepes! especially with maple syrup :3'],
-  },
-]);
-const interestList: Ref<Info[]> = ref([
-  {
-    title: 'programming!',
-    content: ['not only my job, but a passion as well! :>', "check out my projects if you're interested!"],
+    title: 'favourite desserts',
+    content: ['waffles & crepes! especially with maple syrup!'],
   },
   {
-    title: 'planets & space!',
+    title: 'programming',
+    content: ['not only my job, but a passion as well!', "check out my projects if you're interested!"],
+  },
+  {
+    title: 'planets & space',
     content: [
       'thanks to ratchet & clank for giving me a planet fixation lmao',
-      'fun fact: basically the main reason i made lagrange :3',
+      'fun fact: basically the main reason i made lagrange',
     ],
   },
   {
-    title: 'scp foundation!',
+    title: 'scp foundation',
     content: [
       'a collaborative writing project around the containment of "anomalies", it\'s absolutely amazing!',
       'also, the foundation is [REDACTED BY ORDER OF THE O5 COUNCIL]',
     ],
   },
   {
-    title: 'board games!',
+    title: 'board games',
     content: [
-      'favourites from my collection: "exploding kittens", "unstable unicorns", "terraforming mars", "binding of isaac: four souls" :>',
+      'favourites from my collection: "exploding kittens", "unstable unicorns", "terraforming mars", "binding of isaac: four souls"',
     ],
   },
   {
-    title: 'video games!',
+    title: 'video games',
     content: [
-      'too many to list here, but favs include "the talos principle 1/2", "ultrakill", "factorio", "hades 1/2", "celeste", "oneshot" & "omori" :3',
+      'too many to list here, but favs include "nine sols", "hollow knight (+ silksong)", "the talos principle 1/2", "ultrakill", "factorio", "hades 1/2", "celeste", "oneshot" & "omori"',
     ],
   },
   {
-    title: 'bicycling!',
-    content: ["because it's good for your health! very pleasant too ^w^"],
+    title: 'bicycling',
+    content: ['keeps my legs active with all the sitting i do at home and for my job'],
   },
   {
-    title: 'yoga!',
-    content: ["...at least when i'm motivated enough to do some, which is not often enough sadly :c"],
-  },
-  {
-    title: 'plushies :>',
+    title: 'plushies',
     content: [
-      'i have about 30 in my collection, and it keeps growing :3',
+      'i have about 30 in my collection, and it keeps growing!',
       '(will probably show it later in [miscellaneous] OwO)',
     ],
   },
 ]);
 
 const isTextVisible = ref(false);
-const dataType = ref('');
-const dataIndex = ref(-1);
+const selectedInfoIdx = ref(-1);
 
 onMounted(() => {
   window.addEventListener('keydown', handleKeyboardInput);
@@ -152,21 +140,19 @@ onMounted(() => {
 onUnmounted(() => window.removeEventListener('keydown', handleKeyboardInput));
 
 function handleKeyboardInput(evt: KeyboardEvent) {
-  const validKeys = '0123456789ABCDEF'.split('');
+  const validKeys = '0123456789ABCD'.split('');
   if (!validKeys.includes(evt.key.toUpperCase())) {
     return;
   }
-  const keyIndex = validKeys.indexOf(evt.key.toUpperCase());
-  select(keyIndex > 7 ? 'interest' : 'info', keyIndex > 7 ? keyIndex - 8 : keyIndex);
+  selectInfo(validKeys.indexOf(evt.key.toUpperCase()));
 }
 
-function select(type: string, idx: number) {
-  dataType.value = type;
-  dataIndex.value = idx;
+function selectInfo(idx: number) {
+  selectedInfoIdx.value = idx;
 }
 
-function getData() {
-  return (dataType.value === 'info' ? infoList.value : interestList.value)[dataIndex.value];
+function getSelectedInfo() {
+  return infoList.value[selectedInfoIdx.value];
 }
 </script>
 
@@ -221,7 +207,7 @@ function getData() {
     z-index: 1;
 
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(12ch, auto));
+    grid-template-columns: repeat(auto-fill, minmax(15ch, auto));
     justify-items: start;
     gap: 0.25rem;
   }
@@ -240,6 +226,7 @@ button.terminal-button {
 
   display: flex;
   justify-content: flex-start;
+  gap: 0;
 
   & > span {
     background: var(--eepy-color-terminal-text);
