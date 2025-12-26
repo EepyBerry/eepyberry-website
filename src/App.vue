@@ -12,7 +12,7 @@
 </template>
 
 <script setup lang="ts">
-import { defineAsyncComponent, Transition } from 'vue';
+import { defineAsyncComponent } from 'vue';
 import AppNavigation from '@/components/main/AppNavigation.vue';
 import AppFooter from './components/main/AppFooter.vue';
 import { useRoute } from 'vue-router';

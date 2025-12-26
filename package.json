@@ -1,6 +1,6 @@
 {
   "name": "eepyberry-website",
-  "version": "1.3.1",
+  "version": "1.3.2",
   "description": "EepyBerry's personal website",
   "main": "index.ts",
   "type": "module",
@@ -14,7 +14,7 @@
     "build-only": "vite build",
     "type-check": "vue-tsc --build --force",
     "prettify": "prettier . --write",
-    "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore"
+    "lint": "eslint . --fix --cache"
   },
   "repository": {
     "type": "git",
@@ -41,11 +41,12 @@
   "devDependencies": {
     "@types/node": "^25.0.3",
     "@vitejs/plugin-vue": "^6.0.3",
-    "@vue/tsconfig": "^0.8.1",
     "@vue/eslint-config-prettier": "^10.2.0",
     "@vue/eslint-config-typescript": "^14.6.0",
+    "@vue/tsconfig": "^0.8.1",
     "eslint": "^9.39.2",
     "eslint-plugin-vue": "~10.5.1",
+    "jiti": "^2.6.1",
     "npm-run-all2": "^8.0.4",
     "prettier": "^3.7.4",
     "sass": "^1.97.1",

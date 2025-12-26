@@ -23,7 +23,9 @@ div {
   position: absolute;
   inset: 0;
 
-  font-family: JetBrains Mono, monospace;
+  font-family:
+    JetBrains Mono,
+    monospace;
   background-color: #000;
   color: #fcfcfc;
 

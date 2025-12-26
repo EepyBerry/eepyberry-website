@@ -12,7 +12,12 @@
       <template v-else>
         <p>{{ getSelectedInfo().title }}</p>
         <p>---</p>
-        <p v-for="content of getSelectedInfo().content.slice(0, getSelectedInfo().content.length - 1)">{{ content }}</p>
+        <p
+          v-for="(content, idx) of getSelectedInfo().content.slice(0, getSelectedInfo().content.length - 1)"
+          :key="idx"
+        >
+          {{ content }}
+        </p>
         <p>
           <span>{{ getSelectedInfo().content[getSelectedInfo().content.length - 1] }}</span>
           <BlinkCharacter />
@@ -47,11 +52,7 @@ type Info = { title: string; content: string[] };
 const infoList: Ref<Info[]> = ref([
   {
     title: 'transfem & proud! 🌈',
-    content: [
-      'don\'t like that? my stuff isn\'t for you, then :3c',
-      '---',
-      'hrt since: [2023-06-29]',
-    ],
+    content: ["don't like that? my stuff isn't for you, then :3c", '---', 'hrt since: [2023-06-29]'],
   },
   {
     title: 'education',
@@ -118,7 +119,7 @@ const infoList: Ref<Info[]> = ref([
   },
   {
     title: 'bicycling',
-    content: ["keeps my legs active with all the sitting i do at home and for my job"],
+    content: ['keeps my legs active with all the sitting i do at home and for my job'],
   },
   {
     title: 'plushies',

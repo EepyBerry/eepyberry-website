@@ -6,7 +6,8 @@
     aria-hidden="true"
   >
     <span
-      v-for="_ of 16 * density"
+      v-for="i of 16 * density"
+      :key="i"
       :class="`dot delay-${random(5)}`"
       :style="{
         top: `${random(100)}vmax`,

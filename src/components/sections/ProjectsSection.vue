@@ -43,7 +43,7 @@
               height="2rem"
             />
           </template>
-          <img src="/projects/logo-sitemaketext.webp" class="logo">
+          <img src="/projects/logo-sitemaketext.webp" class="logo" />
           <template v-slot:footer>
             <p>A small <i>Baba Is You</i>-like word maker&nbsp;💬</p>
           </template>
@@ -67,7 +67,7 @@
           </template>
         </EepyCard>
       </a>
-      <EepyCard v-for="_ in 4" class="placeholder" />
+      <EepyCard v-for="i in 4" :key="i" class="placeholder" />
     </div>
   </section>
 </template>
@@ -78,11 +78,11 @@ import SvgLagrangeLogo from '../svg/SvgLagrangeLogo.vue';
 import { ref, type Ref } from 'vue';
 
 const counter: Ref<number> = ref(0);
-function checkConditions($event: Event, increment: boolean = false) {
+function checkConditions($event: Event) {
   counter.value++;
   if (counter.value <= 5) {
     $event.preventDefault();
-  };
+  }
 }
 </script>
 
