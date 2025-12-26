@@ -29,6 +29,28 @@
       </a>
       <a
         class="card-link"
+        href="https://site-make-text.eepyberry.me"
+        target="_blank"
+        rel="external nofollow noopener"
+        aria-label="SITE MAKE TEXT"
+      >
+        <EepyCard id="project-sitemaketext">
+          <template v-slot:links>
+            <iconify-icon
+              mode="svg"
+              icon="mingcute:external-link-line"
+              style="color: var(--eepy-color-white)"
+              height="2rem"
+            />
+          </template>
+          <img src="/projects/logo-sitemaketext.webp" class="logo">
+          <template v-slot:footer>
+            <p>A small <i>Baba Is You</i>-like word maker&nbsp;💬</p>
+          </template>
+        </EepyCard>
+      </a>
+      <a
+        class="card-link"
         :href="counter >= 5 ? '/nothing' : undefined"
         target="_blank"
         rel="external nofollow noopener"
@@ -89,6 +111,20 @@ function checkConditions($event: Event, increment: boolean = false) {
       width: 16rem;
       inset: 0;
       margin: auto;
+    }
+  }
+
+  #project-sitemaketext {
+    background-image: url('/projects/project-sitemaketext.webp');
+    background-position: 50%;
+    background-size: contain;
+    .logo {
+      position: absolute;
+      width: 16rem;
+      inset: 0;
+      margin: auto;
+      padding: 0.25rem;
+      background: #0a090c;
     }
   }
 
