@@ -103,10 +103,10 @@ import { onMounted, ref, type Ref } from 'vue';
 const tickFlip: Ref<boolean> = ref(false);
 const counter: Ref<number> = ref(0);
 
-onMounted(() => setInterval(() => tick(), 1000))
+onMounted(() => setInterval(() => tick(), 1000));
 
 function tick() {
-  tickFlip.value = !tickFlip.value
+  tickFlip.value = !tickFlip.value;
 }
 function checkConditions($event: Event) {
   counter.value++;
@@ -114,7 +114,6 @@ function checkConditions($event: Event) {
     $event.preventDefault();
   }
 }
-
 </script>
 
 <!------------------------------------------------------------>
