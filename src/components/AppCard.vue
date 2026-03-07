@@ -77,6 +77,9 @@ import IconEepyBerry from '@/components/svg/icons/IconEepyBerry.vue';
     width: 100%;
     min-height: 2rem;
     padding: 0 0.75rem 0.5rem;
+
+    display: flex;
+    align-items: center;
   }
 }
 

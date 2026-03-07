@@ -1,6 +1,6 @@
 {
   "name": "eepyberry-website",
-  "version": "1.4.1",
+  "version": "1.4.2",
   "description": "EepyBerry's personal website",
   "main": "index.ts",
   "type": "module",

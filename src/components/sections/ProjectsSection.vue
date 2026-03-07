@@ -51,6 +51,28 @@
       </a>
       <a
         class="card-link"
+        href="https://goose.eepyberry.me"
+        target="_blank"
+        rel="external nofollow noopener"
+        aria-label="Goose"
+      >
+        <EepyCard id="project-goose">
+          <template v-slot:links>
+            <iconify-icon
+              mode="svg"
+              icon="mingcute:external-link-line"
+              style="color: var(--eepy-color-white)"
+              height="2rem"
+            />
+          </template>
+          <img :src="tickFlip ? '/projects/logo-goose2.png' : '/projects/logo-goose.png'" class="logo" />
+          <template v-slot:footer>
+            <p>My digital pet goose, Jose&nbsp;<iconify-icon inline="true" mode="svg" icon="noto:goose" /></p>
+          </template>
+        </EepyCard>
+      </a>
+      <a
+        class="card-link"
         :href="counter >= 5 ? '/nothing' : undefined"
         target="_blank"
         rel="external nofollow noopener"
@@ -69,7 +91,6 @@
       </a>
       <EepyCard class="placeholder" />
       <EepyCard class="placeholder" />
-      <EepyCard class="placeholder" />
     </div>
   </section>
 </template>
@@ -77,15 +98,23 @@
 <!------------------------------------------------------------>
 <script setup lang="ts">
 import SvgLagrangeLogo from '../svg/SvgLagrangeLogo.vue';
-import { ref, type Ref } from 'vue';
+import { onMounted, ref, type Ref } from 'vue';
 
+const tickFlip: Ref<boolean> = ref(false);
 const counter: Ref<number> = ref(0);
+
+onMounted(() => setInterval(() => tick(), 1000))
+
+function tick() {
+  tickFlip.value = !tickFlip.value
+}
 function checkConditions($event: Event) {
   counter.value++;
   if (counter.value <= 5) {
     $event.preventDefault();
   }
 }
+
 </script>
 
 <!------------------------------------------------------------>
@@ -127,6 +156,19 @@ function checkConditions($event: Event) {
       margin: auto;
       padding: 0.25rem;
       background: #0a090c;
+    }
+  }
+
+  #project-goose {
+    background-color: #010102;
+    image-rendering: pixelated;
+
+    .logo {
+      position: absolute;
+      width: 10rem;
+      inset: 0;
+      margin: auto;
+      padding: 0.25rem;
     }
   }
 
